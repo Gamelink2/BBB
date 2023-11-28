@@ -17,10 +17,9 @@
 body{
     font-family: 'Centra', sans-serif !important;
     justify-items: center;
-    background-image: linear-gradient(-45deg,#ffea00 10% ,#06f09a 90%);
+    background-image: url('./Stolen-farmland.png');
     background-position: center center;
     height: 100vh;
-    width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -74,7 +73,7 @@ input{
     width: 100px;
 }
 .toevoeging{
-    width: 60px;
+    width: 63px;
 }
 input::placeholder{
     color: #616060;
@@ -145,8 +144,8 @@ container {
     background-color: #0000004e;
     align-items: center;
     width: 500px;
-    height: 300px;
-    margin-top: 200px;
+    height: 560px;
+    margin-top: 75px;
     outline-color: #fff;
     outline-style: double;
     outline-width: 10px;

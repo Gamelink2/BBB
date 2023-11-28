@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Navbar from './Navbar.tsx';
+import Main from './main.tsx';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <Navbar />
+    <Main />
   </React.StrictMode>
 );
