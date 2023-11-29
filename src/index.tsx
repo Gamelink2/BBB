@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from './main.tsx';
+import Main from './main';
 
 const rootElement = document.getElementById('root') as HTMLElement;
 
