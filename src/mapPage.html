@@ -2,24 +2,47 @@
 <html>
 <head>
     <link rel="stylesheet" href="mapPage.css">
+    <script>
+        function showPopup(id) {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popupContent').innerHTML = 'Clicked on area with id: ' + id;
+
+            fetch(`get_data.php?areaId=${areaId}`)
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById('popup').innerHTML = data;
+            document.getElementById('popup').style.display = 'block';
+        })
+        .catch(error => console.error('Error:', error));
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </head>
 <body class="d-flex">
     <container>
     <img src="./test.png" usemap="#image-map" >
-    <map name="image-map" onchange="aanhefCheck(selected);">
-        <area target="1" alt="test" title="test" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&amp;pp=ygUjcmljayBhc3RsZXkgbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D" coords="200,179,44,47" shape="rect">
-        <area target="2" alt="" title="2" onclick="" coords="23,447,201,608" shape="rect">
-        <area target="3" alt="" title="" href="" coords="439,449,565,569" shape="rect">
-        <area target="4" alt="" title="" href="" coords="585,319,714,440" shape="rect">
-        <area target="5" alt="" title="" href="" coords="438,42,563,150" shape="rect">
-        <area target="6" alt="" title="" href="" coords="714,152,571,42" shape="rect">
-        <area target="7" alt="" title="" href="" coords="784,49,914,154" shape="rect">
-        <area target="8" alt="" title="" href="" coords="785,320,905,449" shape="rect">
-        <area target="9" alt="" title="" href="" coords="919,448,1066,571" shape="rect">
-        <area target="10" alt="" title="" href="" coords="930,154,1072,43" shape="rect">
+    <map name="image-map">
+        <area id="1" alt="1" title="1" onclick="showPopup(id)" coords="200,179,44,47" shape="rect">
+        <area id="2" alt="2" title="2" onclick="showPopup(id)" coords="23,447,201,608" shape="rect">
+        <area id="3" alt="3" title="3" onclick="showPopup(id)" coords="439,449,565,569" shape="rect">
+        <area id="4" alt="4" title="4" onclick="showPopup(id)" coords="585,319,714,440" shape="rect">
+        <area id="5" alt="5" title="5" onclick="showPopup(id)" coords="438,42,563,150" shape="rect">
+        <area id="6" alt="6" title="6" onclick="showPopup(id)" coords="714,152,571,42" shape="rect">
+        <area id="7" alt="7" title="7" onclick="showPopup(id)" coords="784,49,914,154" shape="rect">
+        <area id="8" alt="8" title="8" onclick="showPopup(id)" coords="785,320,905,449" shape="rect">
+        <area id="9" alt="9" title="9" onclick="showPopup(id)" coords="919,448,1066,571" shape="rect">
+        <area id="10" alt="10" title="10" onclick="showPopup(id)" coords="930,154,1072,43" shape="rect">
     </map>
-    <script src="./infoModal.tsx" one="1"></script>
+    <div id="overlay" onclick="closePopup()"></div>
+    <div id="popup">
+        <div id="popupContent"></div>
+        <button onclick="closePopup()">Close</button>
+    </div>
     </container>
-    <button className="btn btn-primary">Click Me</button>
 </body>
 </html>

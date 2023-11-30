@@ -4,3 +4,41 @@ container{
 .map{
     max-width: 200px;
 }
+area {
+    cursor: pointer;
+  }
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 25px;
+}
+#overlay{
+    background-color: rgba(0, 0, 0, 0.596);
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+button {
+    color: black;
+    outline-color: black;
+    outline-style: solid;
+    outline-width: 1px;
+    border-radius: 15px;
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: none;
+}
