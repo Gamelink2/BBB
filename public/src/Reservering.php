@@ -8,10 +8,10 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
 <html lang="en">
 <html>
 <head>
-<link rel="stylesheet" href="Styles/Reservering.css">
+<link rel="stylesheet" href="/public/src/Reservering.css">
 </head> 
-<body class="d-flex">
-    <container>
+<body class="bodyReservering">
+    <container class="reserveringContainer">
     <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
     <form id="contactForm" method="post" action="Scripts/Input.php">
         <input class="email" type="email" id="femail" name="femail" placeholder="Email:"/> 

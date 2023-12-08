@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your HTML Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-<div id="navbar">
-    <!-- Your navbar content goes here -->
-    <a href="javascript:void(0);" onclick="includeHTML('mapPage.html')">mappage</a>
-    <a href="javascript:void(0);" onclick="includeHTML('page2.html')">Page 2</a>
-</div>
-<div id="page-container"></div>
-
-<script>
-async function includeHTML(pageName) {
-    try {
-        const response = await fetch(pageName);
-        if (response.ok) {
-            const text = await response.text();
-            document.getElementById("page-container").innerHTML = text;
-        } else if (response.status === 404) {
-            console.log(`Error: Page not found - ${pageName}`);
-            document.getElementById("page-container").innerHTML = "Page not found.";
-        }
-    } catch (error) {
-        console.error("An error occurred:", error);
+  <container class="Navbar">
+  <ul>
+    <li><a onclick="loadPage('mappage.html')">Home</a></li>
+    <li><a onclick="loadPage('Reservering.php')">reserve</a></li>
+  </ul>
+  </container>
+  <div id="content-placeholder" class="d-flex"></div>
+  <script>
+    function loadPage(page) {
+      $.get('./src/' + page , function(data) {
+        $("#content-placeholder").html(data);
+      });
     }
-}
-</script>
+  </script>
 
 </body>
 </html>

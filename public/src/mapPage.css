@@ -1,8 +1,5 @@
-container{
+.mapContainer{
     max-width: 500px;
-}
-.map{
-    max-width: 200px;
 }
 area {
     cursor: pointer;

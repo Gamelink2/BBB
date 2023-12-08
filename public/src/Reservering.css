@@ -1,20 +1,4 @@
-@font-face {
-	font-family: Centra;
-	src: url('./Assets/font/CentraNo2-Bold.ttf');
-	font-weight: 700;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./Assets/font/CentraNo2-Medium.ttf');
-	font-weight: 500;
-}
-@font-face {
-	font-family: Centra;
-	src: url('./Assets/font/CentraNo2-Book.ttf');
-	font-weight: 400;
-}
-
-body{
+.bodyReservering{
     font-family: 'Centra', sans-serif !important;
     justify-items: center;
     background-image: url('./Stolen-farmland.png');
@@ -140,7 +124,7 @@ textarea::placeholder{
     background-color: #ffffffda;
     transition: 0.3s;
 }
-container {
+.reserveringContainer {
     background-color: #0000004e;
     align-items: center;
     width: 500px;
