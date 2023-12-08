@@ -5,6 +5,7 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
 };
 ?>
 <!DOCTYPE html>
+<html lang="en">
 <html>
 <head>
 <link rel="stylesheet" href="Styles/Reservering.css">

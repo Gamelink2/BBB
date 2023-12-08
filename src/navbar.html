@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your HTML Page</title>
+</head>
+<body>
+
+<div id="navbar">
+    <!-- Your navbar content goes here -->
+    <a href="javascript:void(0);" onclick="includeHTML('mapPage.html')">mappage</a>
+    <a href="javascript:void(0);" onclick="includeHTML('page2.html')">Page 2</a>
+</div>
+<div id="page-container"></div>
+
+<script>
+function includeHTML(pageName) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        console.log(`ReadyState: ${this.readyState}, Status: ${this.status}`);
+        if (this.readyState == 4) {
+            if (this.status == 200) {
+                document.getElementById("page-container").innerHTML = this.responseText;
+            } else if (this.status == 404) {
+                console.log(`Error: Page not found - ${pageName}`);
+                document.getElementById("page-container").innerHTML = "Page not found.";
+            }
+        }
+    };
+    xhttp.open("GET", pageName, true);
+    xhttp.send();
+}
+
+</script>
+
+</body>
+</html>

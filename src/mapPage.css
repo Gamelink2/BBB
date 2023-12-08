@@ -42,3 +42,6 @@ button {
     cursor: pointer;
     box-shadow: none;
 }
+.test{
+    transform: scale(0.5);
+}
