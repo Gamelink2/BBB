@@ -1,7 +1,7 @@
 .bodyReservering{
     font-family: 'Centra', sans-serif !important;
     justify-items: center;
-    background-image: url('./Stolen-farmland.png');
+    background-image: url('/public/src/Stolen-farmland.png');
     background-position: center center;
     height: 100vh;
     background-size: cover;

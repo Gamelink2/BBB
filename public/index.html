@@ -6,7 +6,7 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="indexBody">
   <container class="Navbar">
   <ul>
     <li><a onclick="loadPage('mappage.html')">Home</a></li>
@@ -16,7 +16,7 @@
   <div id="content-placeholder" class="d-flex"></div>
   <script>
     function loadPage(page) {
-      $.get('./src/' + page , function(data) {
+      $.get('./' + page , function(data) {
         $("#content-placeholder").html(data);
       });
     }

@@ -8,7 +8,7 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
 <html lang="en">
 <html>
 <head>
-<link rel="stylesheet" href="/public/src/Reservering.css">
+<link rel="stylesheet" href="./Css/Reservering.css">
 </head> 
 <body class="bodyReservering">
     <container class="reserveringContainer">
