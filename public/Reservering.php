@@ -10,7 +10,8 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
 <head>
 <link rel="stylesheet" href="./Css/Reservering.css">
 </head> 
-<body class="bodyReservering">
+<body >
+    <div class="bodyReservering">
     <container class="reserveringContainer">
     <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
     <form id="contactForm" method="post" action="Scripts/Input.php">
@@ -49,7 +50,7 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
             }
         }
     </script>
-
+    </div>
 <?php
 session_unset();
 ?>
