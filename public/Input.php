@@ -39,38 +39,24 @@ $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
 $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : ''; // Need to include this 
 $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
 
-if (!empty($VoorNaam) && !empty($AchterNaam)) {
-    if (!empty($TelefoonNummer)) {
-        if (!empty($Email)) {
-            if (!empty($PostCode)) {
-                if (!empty($Middelen)) {
-                    // $sql = "INSERT INTO links (Link, Username, userIP, Date) VALUES (:links, :Username, :userIP, NOW())";
-                    // $stmt = $PDO->prepare($sql);
-                    // $stmt->bindParam(':links', $links, PDO::PARAM_STR);
-                    // $stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-                    // $stmt->bindParam(':Username', $Username, PDO::PARAM_STR);
-                    if ($stmt->execute()) {
-                        $successMessage = "reservering is toegevoegd";
-                    };
-                } else {
-                    $error = "Wat neemt u mee?";
-                };
-            } else {
-                $error = "Geen Postcode opgegeven";
-            };
-        } else {
-            $error = "Email AUB"; 
-        };
-    } else {
-    $error= "Telefoon nummer AUB.";
+if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
+    
+    $sql = "INSERT INTO links (Link, Username, userIP, Date) VALUES (:links, :Username, :userIP, NOW())";
+    $stmt = $PDO->prepare($sql);
+    $stmt->bindParam(':links', $links, PDO::PARAM_STR);
+    $stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
+    $stmt->bindParam(':Username', $Username, PDO::PARAM_STR);
+    if ($stmt->execute()) {
+        $Message = "reservering is toegevoegd";
     };
-}
-else {
-    $error = "Geen gegevens ingevuld.";
+
+}else {
+    $Message = "Vul alle gegevens in.";
 }
 
-$_SESSION['ErrorMessage'] = $error;
+$_SESSION['ErrorMessage'] = $Message;
     echo "<script> 
+            aler:'.$e.'
             window.history.go(-1);
           </script>";
 
