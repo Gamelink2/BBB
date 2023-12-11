@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="/public/src/mapPage.css">
+    <link rel="stylesheet" href="mapPage.css">
     <script>
         function showPopup(id) {
             document.getElementById('popup').style.display = 'block';
@@ -24,8 +25,8 @@
     </script>
 </head>
 <body class="d-flex">
-    <container class="mapContainer">
-    <img src="/public/src/test.png" class="test" usemap="#image-map" >
+    <container>
+    <img src="test.png" class="test" usemap="#image-map" >
     <map name="image-map">
         <area id="1" alt="1" title="1" onclick="showPopup(id)" coords="200,179,44,47" shape="rect">
         <area id="2" alt="2" title="2" onclick="showPopup(id)" coords="23,447,201,608" shape="rect">
