@@ -14,7 +14,7 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
     <div class="bodyReservering">
     <container class="reserveringContainer">
     <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
-    <form id="contactForm" method="post" action="Scripts/Input.php">
+    <form id="contactForm" method="post" action="Input.php">
         <input class="email" type="email" id="femail" name="femail" placeholder="Email:"/> 
         <select name="fname" id="fname" onchange="aanhefCheck(selected);">
             <option value="" disabled selected hidden>Hoe wilt u geaddreseerd worden</option>
