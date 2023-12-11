@@ -40,7 +40,7 @@ $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : ''; // 
 $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
 
 if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
-    
+
     $sql = "INSERT INTO links (Link, Username, userIP, Date) VALUES (:links, :Username, :userIP, NOW())";
     $stmt = $PDO->prepare($sql);
     $stmt->bindParam(':links', $links, PDO::PARAM_STR);
@@ -62,4 +62,4 @@ $_SESSION['ErrorMessage'] = $Message;
 
 };
 
-    echo '<script>window.close</script>;';
+    echo '<script>window.close;</script>;';
