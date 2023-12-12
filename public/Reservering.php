@@ -26,7 +26,7 @@ if (isset($_SESSION['ErrorMessage'])) {
                 <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:" autocomplete="given-name" />
                 <input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" autocomplete="additional-name" />
                 <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:" autocomplete="family-name" />
-                <input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678" autocomplete="tel" inputmode="numeric" value="06"/>
+                <input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678" autocomplete="tel" inputmode="numeric" />
                 <input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:" autocomplete="postal-code" />
                 <input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" />
                 <input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" />
