@@ -34,22 +34,34 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
         <input class="toevoeging" type="text" id="huisNmr+" name="huisNmr+" placeholder="Toevoeging:"/>
         <input type="text" id="gemeente" name="gemeente" placeholder="Gemeente:"/>
         <input type="text" id="land" name="land" placeholder="Land:"/>
-        <textarea class="fmsg" id="middelen" name="middelen" form="contactForm" placeholder="Kampeermiddelen (Camper, tenten, etc.)"></textarea>
+        <select name="middelen" id="middelen" required>
+            <option value="">Selecteer een optie</option>
+            <option value="Tent">Tent</option>
+            <option value="caravan">Caravan</option>
+            <option value="Anders">Anders</option>
+        </select>
+        <div id="andersInput" style="display: none;">
+            <label for="anders">Anders, specificeren:</label>
+            <input type="text" name="anders" id="anders">
+        </div>
         <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>
         <input class="submit" type="submit" value="Submit"/>
     </form>
     </container>
     <script>
-        function aanhefCheck(selected) {
-            const ifYesElement = document.getElementById("anders");
+            const middelenSelect = document.getElementById('middelen');
+            const andersInput = document.getElementById('andersInput');
 
-            if (selected.value == "Anders:" && ifYesElement !== null) {
-                ifYesElement.style.display = "block";
-            } else if (ifYesElement !== null) {
-                ifYesElement.style.display = "none";
-            }
-        }
-    </script>
+            middelenSelect.addEventListener('change', function() {
+                if (this.value === 'Anders') {
+                    andersInput.style.display = 'block';
+                    andersInput.querySelector('input').setAttribute('required', 'true');
+                } else {
+                    andersInput.style.display = 'none';
+                    andersInput.querySelector('input').removeAttribute('required');
+                }
+            });
+        </script>
     </div>
 <?php
 session_unset();
