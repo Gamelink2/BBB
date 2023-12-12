@@ -28,17 +28,22 @@
     outline-style: solid;
     background-color: black;
     color: white;
+    margin: 0;
+    padding: 0;
 }
+
 .Navbar li{
     list-style: none;
     display: inline-block;
     margin: 0 10px;
     cursor: pointer;
 }
+
 .indexBody{
     margin: 0;
     padding: 0;
     font-size: 15px;
     font-weight: 500;
     display: inline-block;
+    overflow-x: hidden;
 }

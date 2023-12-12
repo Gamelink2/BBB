@@ -1,28 +1,9 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: index.html");
-    die();
-} else {
-session_start();
-
-define('DB_HOST', 'localhost');
-define('DB_PORT', 3306);
-define('DB_NAME', 'Reserveringen');
-define('DB_USER', 'root');
-define('DB_PASS', 'ROOT_PASSWORD');
+include_once("Connection.php");
 
 
 global $PDO;
-
-try {
-    // Use the constants in the PDO connection string
-    $PDO = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME, DB_USER, DB_PASS);
-    // set the PDO error mode to exception
-    $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
 
 
 $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : ''; // Need to include this
@@ -60,6 +41,6 @@ $_SESSION['ErrorMessage'] = $Message;
             window.history.go(-1);
           </script>";
 
-};
+          
 
-    echo '<script>window.close;</script>;';
+    echo '<script>window.close</script>;';

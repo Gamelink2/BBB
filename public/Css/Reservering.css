@@ -3,12 +3,14 @@
     justify-items: center;
     background-image: url('../Images/Stolen-farmland.png');
     background-position: center center;
-    height: 100vh;
+    height: calc(100vh + 20px);
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     margin: 0;
+    padding: 0;
 }
 
 h1{
