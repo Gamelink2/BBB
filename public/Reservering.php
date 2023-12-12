@@ -35,7 +35,7 @@ if(isset($_SESSION['ErrorMessage'])&&isset($_SESSION['ErrorMessage'])){
         <input type="text" id="gemeente" name="gemeente" placeholder="Gemeente:"/>
         <input type="text" id="land" name="land" placeholder="Land:"/>
         <select name="middelen" id="middelen" required>
-            <option value="">Waarmee komt u kamperen?</option>
+            <option value="">Waarmee komt u kamperen</option>
             <option value="Tent">Tent</option>
             <option value="caravan">Caravan</option>
             <option value="Anders">Anders</option>
