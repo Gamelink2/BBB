@@ -1,87 +1,95 @@
 <?php
+session_start(); // Start the session
+require 'vendor/autoload.php'; // Load Composer's autoloader
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 include_once("Connection.php");
-
-
 global $PDO;
 
+$mail = new PHPMailer(true);
 
-$VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : ''; // Need to include this
-$TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
-$AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : ''; // Need to include this
-$TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : ''; // Need to include this
-$Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : ''; // Need to include this
-$PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : ''; // Need to include this
-$StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
-$HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
-$HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
-$Gemeente = isset($_REQUEST['gemeente']) ? trim($_REQUEST['gemeente']) : ''; 
-$Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
-$Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : ''; // Need to include this 
-$Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+try {
+    $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
+    $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
+    $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
+    $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+    $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
+    $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
+    $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
+    $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
+    $Gemeente = isset($_REQUEST['gemeente']) ? trim($_REQUEST['gemeente']) : '';
+    $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
+    $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
 
-if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
+        // Inserting into the database
+        $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
+        $stmt = $PDO->prepare($sql);
+        $stmt->bindParam(':Postcode', $PostCode, PDO::PARAM_STR);
+        $stmt->bindParam(':Huisnummer', $HuisNummer, PDO::PARAM_STR);
+        $stmt->bindParam(':Toevoeging', $HuisNummerToeVoegsel, PDO::PARAM_STR);
+        $stmt->bindParam(':Straatnaam', $StraatNaam, PDO::PARAM_STR);
+        $stmt->bindParam(':Woonplaats', $Gemeente, PDO::PARAM_STR);
+        $stmt->bindParam(':Land', $Land, PDO::PARAM_STR);
+        $stmt->bindParam(':Kampeermiddel', $Middelen, PDO::PARAM_STR);
+        $stmt->execute();
 
-    $sql = "INSERT INTO links (Link, Username, userIP, Date) VALUES (:links, :Username, :userIP, NOW())";
-    $stmt = $PDO->prepare($sql);
-    $stmt->bindParam(':links', $links, PDO::PARAM_STR);
-    $stmt->bindParam(':userIP', $userIP, PDO::PARAM_STR);
-    $stmt->bindParam(':Username', $Username, PDO::PARAM_STR);
-    if ($stmt->execute()) {
-        $ErrorMessage = "reservering is toegevoegd";
+        $sql2 = "INSERT INTO persoonsgegevens (VoorNaam, TussenVoegsel, AchterNaam, TelefoonNummer, Email, Verzoek) VALUES (:voornaam, :tussen, :achternaam, :telNmr, :femail, :verzoek)";
+        $stmt2 = $PDO->prepare($sql2);
+        $stmt2->bindParam(':voornaam', $VoorNaam, PDO::PARAM_STR);
+        $stmt2->bindParam(':tussen', $TussenVoegsel, PDO::PARAM_STR);
+        $stmt2->bindParam(':achternaam', $AchterNaam, PDO::PARAM_STR);
+        $stmt2->bindParam(':telNmr', $TelefoonNummer, PDO::PARAM_STR);
+        $stmt2->bindParam(':femail', $Email, PDO::PARAM_STR);
+        $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
+        $stmt2->execute();
+
         // Send confirmation email
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'your-email@gmail.com';
+        $mail->Password = 'your-password';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-        $to = $Email; // note the comma
-
-        // Subject
-        $subject = 'Birthday Reminders for August';
-
-        // Message
-        $message = '
-            <html>
-            <head>
-            <title>Birthday Reminders for August</title>
-            </head>
-            <body>
-            <p>Here are the birthdays upcoming in August!</p>
-            <table>
-                <tr>
-                <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-                </tr>
-                <tr>
-                <td>Johny</td><td>10th</td><td>August</td><td>1970</td>
-                </tr>
-                <tr>
-                <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-                </tr>
-            </table>
-            </body>
-            </html>
-            ';
-
-        // To send HTML mail, the Content-type header must be set
-        $headers[] = 'MIME-Version: 1.0';
-        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-        // Additional headers
-        $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
-        $headers[] = 'From: Birthday Reminder <birthday@example.com>';
-        $headers[] = 'Cc: birthdayarchive@example.com';
-        $headers[] = 'Bcc: birthdaycheck@example.com';
-
-        // Mail it
-        mail($to, $subject, $message, implode("\r\n", $headers));
-
-
+        $mail->setFrom('BouwenVoorBoerBert@gmail.com', 'Boer Bert');
+        $mail->addAddress($Email, $VoorNaam);
+        $mail->addReplyTo('info@example.com', 'Information');
+        $mail->isHTML(true);
+        $mail->Subject = 'Confirmation Email';
+        
+        // Read HTML file contents
+        $htmlContent = file_get_contents('email_template.html');
+        
+        // Replace placeholders with actual values
+        $htmlContent = str_replace('{{VoorNaam}}', $VoorNaam, $htmlContent);
+        
+        // Assign the modified HTML content to the email body
+        $mail->Body = $htmlContent;
+        $mail->AltBody = 'Your reservation has been added successfully.'; // Plain text alternative
+        
+        $mail->send();
+        echo 'Message has been sent';
     } else {
-        $ErrorMessage = 'Er is iets fout gegaan, probeer later opnieuw';
-    };
-} else {
-    $ErrorMessage = "Vul alle gegevens in.";
+        $ErrorMessage = "Fill in all required fields.";
+    }
+} catch (Exception $e) {
+    $ErrorMessage = 'There was an error: ' . $e->getMessage();
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header($_SERVER['HTTP_REFERER']);
+echo "<script> 
+    alert('" . $ErrorMessage . "');
+    window.history.go(-1);
+</script>";
+
+echo '<script>window.close();</script>';
 
 
-die();
+
