@@ -12,10 +12,19 @@
 
 -->
 
-<form method="post">
+<form method="post" action="" >
         <input type="submit" name="showData" value="GO" />
 </form>
 
+<?php
+
+if (isset($_POST['showData'])) {
+    show();
+    unset($_POST['showData']);
+
+}
+
+?>
 
 <!-- dit is dan nu een stukje wat ik geprobeerd werkend te maken vanaf die link die je stuurde... werkt nu niet tho...-->
 
@@ -23,26 +32,32 @@
 <body>
 
 <?php
+ 
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['showData'])) 
-{
-    show();
-}
 
+
+ function show($conn) {
     $sql = "SELECT * FROM popupInhoud;";
     $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result);
-
-    function show() {
-    if ($resultCheck > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row['PlekID'] . "<br>";            
-            echo $row['lengte'] . "<br>";
-            echo $row['breedte'];
+    
+    if (!$result) {
+        // Handle query error
+        echo "Error: " . mysqli_error($conn);
+    } else {
+        $resultCheck = mysqli_num_rows($result);
+        
+        if ($resultCheck > 0) {
+            foreach ($row = mysqli_fetch_assoc($result)) {
+                echo $row['PlekID'] . "<br>";            
+                echo $row['lengte'] . "<br>";
+                echo $row['breedte'] . "<br>";
+            }
+        } else {
+            echo "No results found.";
         }
     }
-
-}    
+}
+ 
 
 
 
