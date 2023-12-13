@@ -28,7 +28,7 @@ function show($conn) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Title</title>
+    <title>anything</title>
 </head>
 <body>
 
