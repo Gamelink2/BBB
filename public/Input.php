@@ -1,15 +1,15 @@
 <?php
 session_start(); // Start the session
-require 'vendor/autoload.php'; // Load Composer's autoloader
+//require 'vendor/autoload.php'; // Load Composer's autoloader
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+//use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\SMTP;
+//use PHPMailer\PHPMailer\Exception;
 
-include_once("Connection.php");
-global $PDO;
+//include_once("Connection.php");
+//global $PDO;
 
-$mail = new PHPMailer(true);
+//$mail = new PHPMailer(true);
 
 try {
     $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
@@ -50,32 +50,32 @@ try {
         $stmt2->execute();
 
         // Send confirmation email
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'your-email@gmail.com';
-        $mail->Password = 'your-password';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        //$mail->isSMTP();
+        //$mail->Host = 'smtp.gmail.com';
+        //$mail->SMTPAuth = true;
+        //$mail->Username = 'your-email@gmail.com';
+        //$mail->Password = 'your-password';
+        //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        //$mail->Port = 587;
 
-        $mail->setFrom('BouwenVoorBoerBert@gmail.com', 'Boer Bert');
-        $mail->addAddress($Email, $VoorNaam);
-        $mail->addReplyTo('info@example.com', 'Information');
-        $mail->isHTML(true);
-        $mail->Subject = 'Confirmation Email';
+        //$mail->setFrom('BouwenVoorBoerBert@gmail.com', 'Boer Bert');
+        //$mail->addAddress($Email, $VoorNaam);
+        //$mail->addReplyTo('info@example.com', 'Information');
+        //$mail->isHTML(true);
+        //$mail->Subject = 'Confirmation Email';
         
         // Read HTML file contents
-        $htmlContent = file_get_contents('email_template.html');
+        //$htmlContent = file_get_contents('email_template.html');
         
         // Replace placeholders with actual values
-        $htmlContent = str_replace('{{VoorNaam}}', $VoorNaam, $htmlContent);
+        //$htmlContent = str_replace('{{VoorNaam}}', $VoorNaam, $htmlContent);
         
         // Assign the modified HTML content to the email body
-        $mail->Body = $htmlContent;
-        $mail->AltBody = 'Your reservation has been added successfully.'; // Plain text alternative
+        //$mail->Body = $htmlContent;
+        //$mail->AltBody = 'Your reservation has been added successfully.'; // Plain text alternative
         
-        $mail->send();
-        echo 'Message has been sent';
+       // $mail->send();
+       // echo 'Message has been sent';
     } else {
         $ErrorMessage = "Fill in all required fields.";
     }
