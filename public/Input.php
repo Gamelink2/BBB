@@ -6,7 +6,7 @@ session_start(); // Start the session
 //use PHPMailer\PHPMailer\SMTP;
 //use PHPMailer\PHPMailer\Exception;
 
-//include_once("Connection.php");
+include_once("Connection.php");
 //global $PDO;
 
 //$mail = new PHPMailer(true);
