@@ -1,5 +1,27 @@
 <?php
+// Start the session to manage user access
 session_start();
+
+// Define the allowed users
+// Fetch allowed users from the database
+$stmt_allowed_users = $PDO->query("SELECT Gebruikersnaam FROM Personeel");
+$allowed_users = [];
+
+while ($row_allowed_users = $stmt_allowed_users->fetch(PDO::FETCH_ASSOC)) {
+    $allowed_users[] = $row_allowed_users['Gebruikersnaam'];
+}
+
+// Check if the user is logged in and has access
+if (!isset($_SESSION['user']) || !in_array($_SESSION['user'], $allowed_users)) {
+    // User doesn't have access, redirect them to another page
+    header('Location: index.php');
+    exit;
+} 
+
+// User has access, allow them to view the page
+echo "Welcome, " . $_SESSION['user'] . "!";
+// Continue with the rest of the content
+
 
 include_once("Connection.php");
 $query = "SELECT * FROM Table";
