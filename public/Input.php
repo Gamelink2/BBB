@@ -47,7 +47,9 @@ try {
         $stmt2->bindParam(':telNmr', $TelefoonNummer, PDO::PARAM_STR);
         $stmt2->bindParam(':femail', $Email, PDO::PARAM_STR);
         $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
-        $stmt2->execute();
+        if ($stmt2->execute()){
+            $ErrorMessage = "Reservering is toegevoegd";
+        } ;
 
         // Send confirmation email
         //$mail->isSMTP();
@@ -89,7 +91,9 @@ echo "<script>
     window.history.go(-1);
 </script>";
 
-echo '<script>window.close();</script>';
+
+echo '<script>window.close(0);</script>';
+
 
 
 
