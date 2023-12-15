@@ -1,25 +1,24 @@
 <?php
 include_once 'Connection.php';
 
-function show($conn) {
+function show(PDO $pdo) {
     $areaId = $_POST['value'];
-    // Haal alle resultaten op uit de database
-    $sql = "SELECT * FROM popupInhoud WHERE PlekID = $areaId;";
-    $result = mysqli_query($conn, $sql);
+    // Prepare the query with a placeholder for the ID
+    $query = "SELECT * FROM popupInhoud WHERE PlekID = :areaId";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(':areaId', $areaId);
+    $stmt->execute();
     
-    if ($result) {
-        // Haal het aantal rijen op
-        $rowCount = mysqli_num_rows($result);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Toon het aantal resultaten
-        // echo "Totaal aantal resultaten: " . $rowCount . "<br>";
-
-        // Toon elk resultaat aanvankelijk verborgen
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo "<p class='Pop-Up' id='spot_1" . $row['PlekID'] . " display= 'block''>
+    if (count($results) > 0) {
+        foreach ($results as $row) {
+            echo "<p class='Pop-Up' id='spot_1" . $row['PlekID'] . " display='block'>
             De plek is (lengte bij breedte) "
-                . $row['lengte'] ." x ". $row['breedte']  . " meter " . ".</p>";
+            . $row['lengte'] ." x ". $row['breedte']  . " meter " . ".</p>";
         }
+    } else {
+        echo "Geen resultaten voor deze plek."
     }
 }
 
