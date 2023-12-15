@@ -92,4 +92,4 @@ if (isset($_POST['showData']) && (!empty($_POST['showData']))  ) {
 // Dus voor de terug knop, terug sturen naar het originel url (plek id weghalen/ geen value geven)
 
 ?>
-<button onclick="window.location.href='popup.php';">reset knopie</button>
+<button onclick="window.location.href='mapInfo.php';">reset knopie</button>
