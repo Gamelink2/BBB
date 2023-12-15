@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/dbPage.inc.php';
+include_once 'Connection.php';
 
 function show($conn) {
     $areaId = $_POST['value'];
