@@ -54,4 +54,4 @@ INSERT INTO popupInhoud (lengte, breedte)
 
 SELECT * FROM popupInhoud;
 
-select * from users
+select * from users;
