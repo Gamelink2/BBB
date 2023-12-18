@@ -92,7 +92,7 @@ echo "<script>
 </script>";
 
 
-echo '<button onclick="window.location.href="index.html";">Mits u blijft hangen, druk hier.</button>
+echo '<button onclick=' . header("location: index.html").';">Mits u blijft hangen, druk hier.</button>
 ';
 
 
