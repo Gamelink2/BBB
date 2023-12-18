@@ -26,8 +26,8 @@ try {
 }
 
 $dbServername = DB_HOST;
-$dbUsername = root;
-$dbPassword = ;
+$dbUsername = DB_USER;
+$dbPassword = DB_PASS;
 $dbName = DB_NAME;
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

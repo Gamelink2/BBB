@@ -59,10 +59,4 @@ function show($conn) {
 </body>
 </html>
 
-// Je kan schijnbaar de url verandere met javascript
-// Dus als Nick de pagina laat herladen met een id van de plek, 
-// wordt de data van de specifieke plek opgevraagd 
-// Dus voor de terug knop, terug sturen naar het originel url (plek id weghalen/ geen value geven)
-
-?>
 <button onclick="window.location.href='mapInfo.php';">reset knopie</button>
