@@ -47,10 +47,11 @@ CREATE TABLE popupInhoud (
 );
 
 INSERT INTO popupInhoud (lengte, breedte)
-    VALUES ('1', '1'), 
-     ('2', '2'),
-     ('3', '3'),
-     ('4', '4');
+    VALUES 
+    ('1', '1'), 
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4');
 
 SELECT * FROM popupInhoud;
 
