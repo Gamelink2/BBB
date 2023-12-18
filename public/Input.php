@@ -86,11 +86,7 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-echo "<script> 
-    alert('" . $ErrorMessage . "');
-    window.history.go(-1);
-</script>";
-
+header("Location: index.html");
 
 echo '<button onclick=' . header("location: index.html").';">Mits u blijft hangen, druk hier.</button>
 ';
