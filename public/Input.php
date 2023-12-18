@@ -1,17 +1,11 @@
 <?php
-session_start(); // Start the session
-//require 'vendor/autoload.php'; // Load Composer's autoloader
-
-//use PHPMailer\PHPMailer\PHPMailer;
-//use PHPMailer\PHPMailer\SMTP;
-//use PHPMailer\PHPMailer\Exception;
+session_start(); 
 
 include_once("Connection.php");
 global $PDO;
 
-//$mail = new PHPMailer(true);
-
 try {
+    $Aanhef = isset($_REQUEST['fname']) ? trim($_REQUEST['fname']) : ''; // moet nog wel ergens aan worden toegevoegd
     $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
     $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
@@ -50,34 +44,7 @@ try {
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
         } ;
-
-        // Send confirmation email
-        //$mail->isSMTP();
-        //$mail->Host = 'smtp.gmail.com';
-        //$mail->SMTPAuth = true;
-        //$mail->Username = 'your-email@gmail.com';
-        //$mail->Password = 'your-password';
-        //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        //$mail->Port = 587;
-
-        //$mail->setFrom('BouwenVoorBoerBert@gmail.com', 'Boer Bert');
-        //$mail->addAddress($Email, $VoorNaam);
-        //$mail->addReplyTo('info@example.com', 'Information');
-        //$mail->isHTML(true);
-        //$mail->Subject = 'Confirmation Email';
         
-        // Read HTML file contents
-        //$htmlContent = file_get_contents('email_template.html');
-        
-        // Replace placeholders with actual values
-        //$htmlContent = str_replace('{{VoorNaam}}', $VoorNaam, $htmlContent);
-        
-        // Assign the modified HTML content to the email body
-        //$mail->Body = $htmlContent;
-        //$mail->AltBody = 'Your reservation has been added successfully.'; // Plain text alternative
-        
-       // $mail->send();
-       // echo 'Message has been sent';
     } else {
         $ErrorMessage = "Fill in all required fields.";
     }
