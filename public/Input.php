@@ -19,7 +19,7 @@ try {
     $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
     $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
     $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
-    $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
+    $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
     $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
     $Gemeente = isset($_REQUEST['gemeente']) ? trim($_REQUEST['gemeente']) : '';
     $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
