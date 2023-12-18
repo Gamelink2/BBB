@@ -1,10 +1,5 @@
 <?php
 
-// if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-//     header("Location: index.html");
-//     die();
-    
-// }   
 session_start();
 
 define('DB_HOST', 'localhost');
