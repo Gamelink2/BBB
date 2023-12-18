@@ -92,7 +92,8 @@ echo "<script>
 </script>";
 
 
-echo '<script>window.close(0);</script>';
+echo '<button onclick="window.location.href="index.html";">Mits u blijft hangen, druk hier.</button>
+';
 
 
 

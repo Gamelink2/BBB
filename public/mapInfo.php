@@ -18,7 +18,7 @@ function show(PDO $pdo) {
             . $row['lengte'] ." x ". $row['breedte']  . " meter " . ".</p>";
         }
     } else {
-        echo "Geen resultaten voor deze plek."
+        echo "Geen resultaten voor deze plek.";
     }
 }
 
