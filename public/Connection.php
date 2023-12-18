@@ -24,3 +24,14 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
+$dbServername = DB_HOST;
+$dbUsername = root;
+$dbPassword = ;
+$dbName = DB_NAME;
+
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+if (!$conn) {
+    die("Connectie error:". mysqli_connect_error());
+}
