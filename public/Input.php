@@ -86,7 +86,7 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header("Location: index.html");
+header("Location: Reservering.php");
 
 echo '<button onclick=' . header("location: index.html").';">Mits u blijft hangen, druk hier.</button>
 ';
