@@ -17,7 +17,7 @@ if (isset($_SESSION['ErrorMessage'])) {
   />
   <title>BBB</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
     <div class="bodyReservering">
