@@ -46,7 +46,6 @@ try {
         
     } else {
         $ErrorMessage = "Fill in all required fields.";
-        exit();
     }
 } catch (Exception $e) {
     $ErrorMessage = 'There was an error: ' . $e->getMessage();
