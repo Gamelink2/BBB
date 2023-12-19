@@ -75,7 +75,7 @@ session_start();
                     echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1">';
                 }
                 if (isset($_SESSION['huisnummer'])) {
-                    echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value='. $_SESSION['huinummer'] . '>'; 
+                    echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. $_SESSION['huinummer'] . '"/>'; 
                 } else {
                     echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2">';
                 }
