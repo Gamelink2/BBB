@@ -45,9 +45,9 @@ session_start();
                     <input type="text" id="anders" name="anders" style="display: none;" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
                 }
                     if (isset($_SESSION["voornaam"])) { 
-                    echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:" value="'. $_SESSION['voornaam'] .'" autocomplete="given-name" required />';
+                    echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="'. $_SESSION['voornaam'] .'" autocomplete="given-name" required />';
                 } else {
-                    echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:" autocomplete="given-name" required/>';
+                    echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" autocomplete="given-name" required/>';
                 }
                 if (isset($_SESSION['tussenvoegsel'])) { 
                     echo '<input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" value="'.$_SESSION['tussenvoegsel'].'" autocomplete="additional-name" />';
@@ -55,14 +55,14 @@ session_start();
                     echo '<input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" autocomplete="additional-name" />';
                 }
                 if (isset($_SESSION['achternaam'])) { 
-                    echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:" autocomplete="family-name" required value="'. $_SESSION['straatnaam'] .'"/>';
+                    echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required value="'. $_SESSION['straatnaam'] .'"/>';
                 } else {
-                    echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:" autocomplete="family-name" required/>';
+                    echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required/>';
                 }
                 if (isset($_SESSION['nummer'])) { 
-                    echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678" autocomplete="tel" inputmode="numeric" required/value="'. $_SESSION['straatnaam'] .'"/>';
+                    echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="'. $_SESSION['straatnaam'] .'"/>';
                 } else {
-                    echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678" autocomplete="tel" inputmode="numeric" required/>';
+                    echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/>';
                 }
                 if (isset($_SESSION['postcode'])) { 
                     echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:" autocomplete="postal-code" value="'. $_SESSION['straatnaam'] .'"/>';
@@ -91,26 +91,26 @@ session_start();
                 }
                 if (isset($_SESSION['middelen'])) {
                     echo '<select name="middelen" id="middelen" required>
-                    <option value="">Waarmee komt u kamperen</option>
+                    <option value="">Waarmee komt u kamperen*</option>
                     <option value="Tent" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Tent" ? 'selected' : '').'>Tent</option>
                     <option value="caravan" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "caravan" ? 'selected' : '').'>Caravan</option>
                     <option value="Anders" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Anders" ? 'selected' : '').'>Anders</option>
                 </select>
                 <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:</label>
+                    <label for="anders">Anders, specificeren:*</label>
                     <input type="text" name="anders" id="anders">
                 </div>';
             
                 } else {
                 echo '
                 <select name="middelen" id="middelen" required>
-                    <option value="">Waarmee komt u kamperen</option>
+                    <option value="">Waarmee komt u kamperen*</option>
                     <option value="Tent">Tent</option>
                     <option value="caravan">Caravan</option>
                     <option value="Anders">Anders</option>
                 </select>
                 <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:</label>
+                    <label for="anders">Anders, specificeren:*</label>
                     <input type="text" name="anders" id="anders">
                 </div>';
                 }
