@@ -50,7 +50,13 @@ function show($pdo) {
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
+<container class="Navbar">
+  <ul>
+    <li><a onclick="loadPage('mapPage.html')">Map</a></li>
+    <li><a href="Reservering.php" >Reservation</a></li>
+    <li><a href="mapInfo.php">Map Information</a></li>
+  </ul>
+  </container>
 <form method="post">
         <input value="1" type="submit" placeholder="plek 1" name="value"></input>
         <input value="2" type="submit" placeholder="plek 2" name="value"></input>
