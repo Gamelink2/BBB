@@ -5,22 +5,21 @@ include_once("Connection.php");
 global $PDO;
 
 try {
-    $Aanhef = isset($_REQUEST['fname']) ? trim($_REQUEST['fname']) : ''; // moet nog wel ergens aan worden toegevoegd
-    $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
-    $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
-    $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
-    $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
-    $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
-    $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
-    $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
-    $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
-    $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
-    $Gemeente = isset($_REQUEST['gemeente']) ? trim($_REQUEST['gemeente']) : '';
-    $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
-    $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
-    $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+    $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['fname']) ? trim($_REQUEST['fname']) : ''; // moet nog wel ergens aan worden toegevoegd
+    $_SESSION["voornaam"] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
+    $_SESSION["tussenvoegel"] = $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
+    $_SESSION["achternaam"] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
+    $_SESSION["nummer"] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $_SESSION["email"] = $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+    $_SESSION["postcode"] = $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
+    $_SESSION["straatnaam"] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
+    $_SESSION["huisnummer"] = $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
+    $_SESSION["Huisnummertoevoeging"] = $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
+    $_SESSION["land"] = $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
+    $_SESSION["midellen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
 
-    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen)) {
         // Inserting into the database
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
@@ -47,6 +46,7 @@ try {
         
     } else {
         $ErrorMessage = "Fill in all required fields.";
+        exit();
     }
 } catch (Exception $e) {
     $ErrorMessage = 'There was an error: ' . $e->getMessage();
