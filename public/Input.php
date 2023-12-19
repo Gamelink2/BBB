@@ -1,6 +1,7 @@
-<?php
-session_start(); 
+<!-- Mocht de gebruiker blijven hangen om een of andere reden... -->
+<a href="Reservering.php">Oeps, terug naar pagina..</a>
 
+<?php
 include_once("Connection.php");
 global $PDO;
 
@@ -55,5 +56,3 @@ $_SESSION['ErrorMessage'] = $ErrorMessage;
 header("Location: Reservering.php");
 exit();
 ?>
-<!-- Mocht de gebruiker blijven hangen om een of andere reden... -->
-<a href="Reservering.php">oeps, terug naar pagina   </a>
