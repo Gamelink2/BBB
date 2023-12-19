@@ -13,7 +13,7 @@ try {
     $mail->Host = 'smtp.gmail.com';  // Your SMTP server
     $mail->SMTPAuth = true;
     $mail->Username = 'bouwenvoorboerbert@gmail.com'; // SMTP username
-    $mail->Password = 'placeholder'; // SMTP password
+    $mail->Password = 'olilkfxcmdohbxbb'; // SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587; // TCP port to connect to
 
@@ -23,10 +23,10 @@ try {
 
     // Email content
     $mail->isHTML(true);
-    $mail->Subject = 'Test Email via PHPMailer';
+    $mail->Subject = 'Test Email via PHPMailer';    
     $emailContent = file_get_contents('email_template.html');
     $mail->Body = $emailContent !== false ? $emailContent : 'Reservering is toegevoegd';
-    
+
     // Send email
     $mail->send();
     echo 'Email has been sent successfully';
