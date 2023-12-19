@@ -19,9 +19,14 @@ session_start();
             <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
             <form id="contactForm" method="post" action="Input.php">
             <?php
-                if(isset($_SESSION["ErrorMessage"])) { // ERROR MY GUYS
-                    echo $_SESSION["ErrorMessage"];
-                };
+                if (isset($_SESSION["ErrorMessage"])) {
+                    echo '<div 
+                            style="font-family: Arial, Helvetica, sans-serif;
+                            font-size: large;
+                            color: red;">
+                            '.$_SESSION["ErrorMessage"].'
+                            </div>';
+                }
                 if (isset($_SESSION['email'])) {
                     echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="'. $_SESSION["email"] .'" required />';
                 } else {
