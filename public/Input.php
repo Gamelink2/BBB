@@ -43,6 +43,7 @@ try {
         $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
+            include_once("Send_Email.php");
         } ;
         
     } else {
