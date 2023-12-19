@@ -54,12 +54,7 @@ try {
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
 header("Location: Reservering.php");
-
-echo '<button onclick=' . header("location: index.html").';">Mits u blijft hangen, druk hier.</button>
-';
+exit();
 ?>
-
+<!-- Mocht de gebruiker blijven hangen om een of andere reden... -->
 <a href="Reservering.php">oeps, terug naar pagina   </a>
-
-
-
