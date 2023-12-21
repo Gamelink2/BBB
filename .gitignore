@@ -22,11 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-Connection.php
-.sql
-.sh
+
 public/test.sh
-public/Connection.php
-vendor/phpmailer/phpmailer/
-public/Connection.php
-public/Send_Email.php
+
