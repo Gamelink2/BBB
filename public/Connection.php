@@ -6,7 +6,7 @@ define('DB_HOST', 'Lovey dovey');
 define('DB_PORT', '6969' );
 define('DB_NAME', 'SO YOU HAVE CHOSEN.. DEATH?');
 define('DB_USER', 'Santa Claus');
-define('DB_PASS', 'Lolly pop');
+define('DB_PASS', 'pop pop');
 
 
 global $PDO;

@@ -26,3 +26,6 @@ Connection.php
 .sql
 .sh
 public/test.sh
+public/Connection.php
+vendor/phpmailer/phpmailer/
+public/Connection.php
