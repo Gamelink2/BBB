@@ -29,3 +29,6 @@ public/test.sh
 public/Connection.php
 vendor/phpmailer/phpmailer/
 public/Connection.php
+public/Send_Email.php
+public/Send_Email.php
+public/Connection.php
