@@ -128,6 +128,14 @@ session_start();
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
                 }
+                if (isset($_SESSION['BeginDatum'])) {
+                    echo '<input type="text" id="begindatum" name="begindatum" value="'. $_SESSION['BeginDatum'] .'" placeholde="Begin datum?">';
+                } else {
+                    echo '<input type="text" id="begindatum" name="begindatum" placeholde="Begin datum?">';
+                }
+
+
+
             ?>
             <input class="submit" type="submit" value="Submit">
 
