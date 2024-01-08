@@ -56,3 +56,47 @@ INSERT INTO popupInhoud (lengte, breedte)
 SELECT * FROM popupInhoud;
 
 select * from users;
+
+
+-- Maak tabel voor inhoud van kampeerplekken popups
+CREATE TABLE popupInhoud (
+    PlekID INT AUTO_INCREMENT PRIMARY KEY,
+    Grootte CHAR(255),
+    Kampeermiddel VARCHAR(255),
+    PlekNmr CHAR(3),
+    Personen CHAR(2),
+    Bijzettentjes CHAR(1),
+    Stroom VARCHAR(4),
+    Water VARCHAR(4)
+);
+
+-- Data invullen in de tabel popupInhoud
+INSERT INTO popupInhoud (Grootte, Kampeermiddel, PlekNmr, Personen, Bijzettentjes, Stroom, Water)
+    VALUES 
+     ('28', 'caravan/ camper', '1', '5', '2', 'wel', 'ook'),
+     ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+     ('28', 'caravan/ camper', '3', '5', '2', 'wel', 'ook');
+
+SELECT * FROM popupInhoud;
+
+-- Maak tabel voor inhoud van gebouwpopups
+CREATE TABLE gebouwPopup(
+	GebouwID INT AUTO_INCREMENT PRIMARY KEY,
+	Soortgebouw VARCHAR(255),
+	Openingstijd CHAR(4),
+    Sluitingstijd CHAR(5)
+);
+
+-- Data invullen in de tabel gebouwPopup
+INSERT INTO gebouwPopup(Soortgebouw, Openingstijd, Sluitingstijd)
+	VALUES
+		('sanitair', '0:00', '0:00'),
+        ('afwasmogelijkheid', '0:00', '0:00'),
+        ('wasserette', '7:00', '21:00'),
+        ('activiteitlocatie', '9:00', '20:00');
+        
+
+SELECT * FROM gebouwPopup;
+
+
+
