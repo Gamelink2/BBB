@@ -136,11 +136,23 @@ session_start();
                     } else {
                         echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
                     }
+
                     if (isset($_SESSION['BeginDatum'])) {
-                        echo '<input type="text" id="begindatum" name="begindatum" value="'. $_SESSION['BeginDatum'] .'" placeholde="Begin datum?">';
+                        echo '<input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d', time()) . '" value="' . $_SESSION['BeginDatum'] . '">';
                     } else {
-                        echo '<input type="text" id="begindatum" name="begindatum" placeholde="Begin datum?">';
+                        echo '<input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d', time()) . '" placeholder="Begin datum?">';
                     }
+                    
+                    if (isset($_SESSION['EindDatum'])) {
+                        $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
+                        echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum?">';
+                    } else {
+                        $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
+                        echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum?">';
+                    }
+
+                    echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen?">';
+                    echo '<input type="number"> name="kinderen" placeholder="Hoeveel kinderen?">';
                     
                     ?>
 

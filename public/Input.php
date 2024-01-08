@@ -19,8 +19,12 @@ try {
     $_SESSION["land"] = $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
     $_SESSION["midellen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
     $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+    $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
+    $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
+    $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
+    $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
 
-    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen)) {
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode) ) {
         // Inserting into the database
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
@@ -40,7 +44,10 @@ try {
         $stmt2->bindParam(':achternaam', $AchterNaam, PDO::PARAM_STR);
         $stmt2->bindParam(':telNmr', $TelefoonNummer, PDO::PARAM_STR);
         $stmt2->bindParam(':femail', $Email, PDO::PARAM_STR);
-        $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
+        $stmt2->bindParam(':Begindatum', $BeginDatum, PDO::PARAM_STR);
+        $stmt2->bindParam(':einddatum', $EindDatum, PDO::PARAM_STR);
+        $stmt2->bindParam(':volwassenen', $Volwassenen, PDO::PARAM_STR);
+        $stmt2->bindParam(':kinderen', $Kinderen, PDO::PARAM_STR);
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
             include_once("Send_Email.php");
