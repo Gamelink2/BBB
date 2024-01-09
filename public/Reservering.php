@@ -39,7 +39,7 @@ session_start();
                 <option value="Heer" ' . ($_SESSION["aanhef"] == "Heer" ? 'selected' : 'heer') . '>Heer</option>
                 <option value="Mvr." ' . ($_SESSION["aanhef"] == "Mvr." ? 'selected' : 'mvr') . '>Mvr.</option>
                 <option value="Geen" ' . ($_SESSION["aanhef"] == "Geen" ? 'selected' : 'geen') . '>Geen</option>
-                <option value="Anders:" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'Anders') . '>Anders:</option>
+                <option value="Anders:" id="anders"' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'Anders') . '>Anders:</option>
                 </select>
                 <input type="text" id="anders" name="anders" style="display: ' . ($_SESSION["aanhef"] == "Anders:" ? 'block' : 'none') . ';" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
                 } else {
@@ -73,39 +73,31 @@ session_start();
                 echo '<input type="text" id="land" name="land" placeholder="Land:" autocomplete="country" value="'. (isset($_SESSION['land']) ? $_SESSION["land"] : '') .'">';
 
                 if (isset($_SESSION['middelen'])) {
-                    echo 
-                    '
-                    <select name="middelen" id="middelen" required>
-                    <option value="">Waarmee komt u kamperen*</option>
+                    echo '<select name="middelen" id="middelen" required>
+                    <option value="">Waarmee komt u kamperen</option>
                     <option value="Tent" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Tent" ? 'selected' : '').'>Tent</option>
                     <option value="caravan" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "caravan" ? 'selected' : '').'>Caravan</option>
                     <option value="Anders" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Anders" ? 'selected' : '').'>Anders</option>
-                    </select>
-                    <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:*</label>
-                    <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
-                    </div>
-                    ';
-                } else {
-                    echo 
-                    '
-                    <select name="middelen" id="middelen" required>
-                    <option value="">Waarmee komt u kamperen*</option>
-                    <option value="Tent">Tent</option>
-                    <option value="caravan">Caravan</option>
-                    <option value="Anders">Anders</option>
-                    </select>
-                    <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:*</label>
+                </select>
+                <div id="andersInput" style="display: none;">
+                    <label for="anders">Anders, specificeren:</label>
                     <input type="text" name="anders" id="anders">
-                    </div>
-                    ';
-                    }
+                </div>';
+            } else {
+                echo '
+                <select name="middelen" id="middelen" required>
+                    <option value="">Waarmee komt u kamperen</option>
+                    <option value="Tent">Tent</option>
+                <div id="andersInput" style="display: none;">
+                    <label for="anders">Anders, specificeren:</label>
+                    <input type="text" name="anders" id="anders">
+                </div>';
+                }
 
                 if (isset($_SESSION['verzoek'])) {
                     echo '
                     <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
-                    value="'. (isset( $_SESSION['verzoek']) ? $_SESSION['verzoek'] : '') .'"
+                    value="'. $_SESSION['verzoek'] .'"
                     </textarea>';
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
