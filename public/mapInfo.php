@@ -68,20 +68,20 @@ function show2($PDO) {
     <title>anything</title>
 </head>
 <body>
-<!-- Knoppen, value word gecheckd in database dus moet overeenkomen met het id in de database -->
-    <form method="post">
-            <input value="1" type="submit" name="value"></input>
-            <input value="2" type="submit" name="value"></input>
-            <input value="3" type="submit" name="value"></input>
-    </form>
-
-    <form method ="post">
-            <input value="1" type="submit" name="value2"></input>
-            <input value="2" type="submit" name="value2"></input>
-            <input value="3" type="submit" name="value2"></input>
-            <input value="4" type="submit" name="value2"></input>
-    </form>
-
+    <h2>Kampeerplekken:</h2>
+    <!-- Knoppen, value word gecheckd in database dus moet overeenkomen met het id in de database -->
+        <form method="post">
+                <input value="1" type="submit" name="value"></input>
+                <input value="2" type="submit" name="value"></input>
+                <input value="3" type="submit" name="value"></input>
+        </form>
+    <h2>Gebouwen:</h2>
+        <form method ="post">
+                <input value="1" type="submit" name="value2"></input>
+                <input value="2" type="submit" name="value2"></input>
+                <input value="3" type="submit" name="value2"></input>
+                <input value="4" type="submit" name="value2"></input>
+        </form>
     <button onclick="window.location.href='mapInfo.php';">Terug knop</button>
 </body>
 </html>
