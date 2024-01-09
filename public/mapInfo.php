@@ -1,21 +1,18 @@
 <?php
-include_once 'Connection.php';
+include_once 'includes/dbPage.inc.php';
 
+//kampeerplekken popup
 
-//kampeerplek popup
-
-function show($PDO) {
+function show($conn) {
     $areaId = $_POST['value'];
-    // Haal alle resultaten op uit de database
+    // Haal alle data op uit de database
     $sql = "SELECT * FROM popupInhoud WHERE PlekID = $areaId;";
-    $result = mysqli_query($PDO, $sql);
-    
+    $result = mysqli_query($conn, $sql);
     
     if ($result) {
-        // Haal het aantal rijen op
+        // Aantal resultaten optellen
         $rowCount = mysqli_num_rows($result);
-
-        // Toon het aantal resultaten
+        // Toon het aantal resultaten:
         // echo "Totaal aantal resultaten: " . $rowCount . "<br>";
 
         // Toon elk resultaat aanvankelijk verborgen
@@ -34,24 +31,21 @@ function show($PDO) {
             "Deze plek heeft " 
                 . $row['Stroom'] . " beschikking tot stroom," . " en " . $row['Water'] . " " . "water" . ".
             </p>";
-                
         }
     }
 }
 
 
-function show2($PDO) {
+function show2($conn) {
     $areaId = $_POST['value2'];
-    // Haal alle resultaten op uit de database
+    // Haal alle data op uit de database
     $sql = "SELECT * FROM gebouwPopup WHERE GebouwID = $areaId;";
-    $result = mysqli_query($PDO, $sql);
-    
+    $result = mysqli_query($conn, $sql);
     
     if ($result) {
-        // Haal het aantal rijen op
+        // Aantal resultaten optellen
         $rowCount = mysqli_num_rows($result);
-
-        // Toon het aantal resultaten
+        // Toon het aantal resultaten:
         // echo "Totaal aantal resultaten: " . $rowCount . "<br>";
 
         // Toon elk resultaat aanvankelijk verborgen
@@ -64,56 +58,45 @@ function show2($PDO) {
             Dit gebouw sluit om precies "
                 . $row['Sluitingstijd'] . " uur" . ".
             </p>";
-                
         }
     }
 }
-
-
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>anything</title>
 </head>
 <body>
-
-<form method="post">
-        <input value="1" type="submit" name="value"></input>
-        <input value="2" type="submit" name="value"></input>
-        <input value="3" type="submit" name="value"></input>
-</form>
-
-<form method ="post">
-        <input value="1" type="submit" name="value2"></input>
-        <input value="2" type="submit" name="value2"></input>
-        <input value="3" type="submit" name="value2"></input>
-        <input value="4" type="submit" name="value2"></input>
+<!-- Knoppen, value word gecheckd in database dus moet overeenkomen met het id in de database -->
+    <form method="post">
+            <input value="1" type="submit" name="value"></input>
+            <input value="2" type="submit" name="value"></input>
+            <input value="3" type="submit" name="value"></input>
     </form>
 
+    <form method ="post">
+            <input value="1" type="submit" name="value2"></input>
+            <input value="2" type="submit" name="value2"></input>
+            <input value="3" type="submit" name="value2"></input>
+            <input value="4" type="submit" name="value2"></input>
+    </form>
 
-
-
-<?php
-    if (isset($_POST['value'])) {
-        show($PDO);
-        unset($_POST['value']);
-    }
-
-    if (isset($_POST['value2'])) {
-        show2($PDO);
-        unset($_POST['value2']);
-    }
-?>
-
-
+    <button onclick="window.location.href='popup.php';">Terug knop</button>
 </body>
 </html>
 
 <?php
- //Connect with the database with the login from Connection.php
+    // Connectie tussen database en popup.php
+    if (isset($_POST['value'])) {
+        show($conn);
+        unset($_POST['value']);
+    }
+
+    if (isset($_POST['value2'])) {
+        show2($conn);
+        unset($_POST['value2']);
+    }
 
 if (isset($_POST['showData']) && (!empty($_POST['showData']))  ) {
     $areaId = $_POST['PlekID'];
@@ -138,11 +121,3 @@ if (isset($_POST['showData']) && (!empty($_POST['showData']))  ) {
         echo 'No data found for this area ID.';
     }
 }
-
-// Je kan schijnbaar de url verandere met javascript
-// Dus als Nick de pagina laat herladen met een id van de plek, 
-// wordt de data van de specifieke plek opgevraagd 
-// Dus voor de terug knop, terug sturen naar het originel url (plek id weghalen/ geen value geven)
-
-?>
-<button onclick="window.location.href='mapInfo.php';">Terug knop</button>
