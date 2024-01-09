@@ -36,10 +36,10 @@ session_start();
             if (isset($_SESSION["aanhef"])) {
                 echo '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
                 <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
-                <option value="Heer" ' . ($_SESSION["aanhef"] == "Heer" ? 'selected' : '') . '>Heer</option>
-                <option value="Mvr." ' . ($_SESSION["aanhef"] == "Mvr." ? 'selected' : '') . '>Mvr.</option>
-                <option value="Geen" ' . ($_SESSION["aanhef"] == "Geen" ? 'selected' : '') . '>Geen</option>
-                <option value="Anders:" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : '') . '>Anders:</option>
+                <option value="Heer" ' . ($_SESSION["aanhef"] == "Heer" ? 'selected' : 'heer') . '>Heer</option>
+                <option value="Mvr." ' . ($_SESSION["aanhef"] == "Mvr." ? 'selected' : 'mvr') . '>Mvr.</option>
+                <option value="Geen" ' . ($_SESSION["aanhef"] == "Geen" ? 'selected' : 'geen') . '>Geen</option>
+                <option value="Anders:" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'anders') . '>Anders:</option>
                 </select>
                 <input type="text" id="anders" name="anders" style="display: ' . ($_SESSION["aanhef"] == "Anders:" ? 'block' : 'none') . ';" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
                 } else {
