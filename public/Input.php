@@ -23,6 +23,7 @@ try {
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
     $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
     $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
+    $aantal = $_SESSION["kinderen"] + $_SESSION["Volwassenen"];
 
     if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode) ) {
         // Inserting into the database
@@ -37,7 +38,7 @@ try {
         $stmt->bindParam(':Kampeermiddel', $Middelen, PDO::PARAM_STR);
         $stmt->execute();
 
-        $sql2 = "INSERT INTO persoonsgegevens (VoorNaam, TussenVoegsel, AchterNaam, TelefoonNummer, Email, Verzoek) VALUES (:voornaam, :tussen, :achternaam, :telNmr, :femail, :verzoek)";
+        $sql2 = "INSERT INTO persoonsgegevens (VoorNaam, TussenVoegsel, AchterNaam, TelefoonNummer, Email, Verzoek, Volwassenen, kinderen, Aantal_Personen) VALUES (:voornaam, :tussen, :achternaam, :telNmr, :femail, :verzoek, :volwassenen, :kinderen, :aantal)";
         $stmt2 = $PDO->prepare($sql2);
         $stmt2->bindParam(':voornaam', $VoorNaam, PDO::PARAM_STR);
         $stmt2->bindParam(':tussen', $TussenVoegsel, PDO::PARAM_STR);
@@ -46,11 +47,14 @@ try {
         $stmt2->bindParam(':femail', $Email, PDO::PARAM_STR);
         $stmt2->bindParam(':Begindatum', $BeginDatum, PDO::PARAM_STR);
         $stmt2->bindParam(':einddatum', $EindDatum, PDO::PARAM_STR);
+        $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
         $stmt2->bindParam(':volwassenen', $Volwassenen, PDO::PARAM_STR);
         $stmt2->bindParam(':kinderen', $Kinderen, PDO::PARAM_STR);
+        $stmt2->bindParam(':aantal', $aantal, PDO::PARAM_STR);
+        
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
-            include_once("Send_Email.php");
+            // include_once("Send_Email.php");
         } ;
         
     } else {
@@ -61,6 +65,6 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header("Location: Reservering.php");
+header("Location: ./");
 exit();
 ?>

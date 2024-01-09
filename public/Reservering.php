@@ -62,7 +62,7 @@ session_start();
 
                 echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>';
 
-                echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:" autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
+                echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode: * " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
 
                 echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
 
@@ -105,7 +105,7 @@ session_start();
                 if (isset($_SESSION['verzoek'])) {
                     echo '
                     <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
-                    value="'. (isset( $_SESSION['verzoek']) ? $_SESSION['verzoek'] : '') .'"
+                    value="'. $_SESSION['verzoek'].'"
                     </textarea>';
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
