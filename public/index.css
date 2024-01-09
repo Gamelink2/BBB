@@ -19,10 +19,6 @@
 }
 
 /************ General ************/
-.indexBody{
-    overflow-y: hidden;
-}
-
 .Navbar{
     font-family: 'Centra', sans-serif;
     width: 100vw;
