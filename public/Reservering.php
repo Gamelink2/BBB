@@ -164,6 +164,9 @@ session_start();
             unset($_SESSION['land']);
             unset($_SESSION['middelen']);
             unset($_SESSION['verzoek']);
+            unset($_SESSION['Volwassenen']);
+            unset($_SESSION['BeginDatum']);
+            unset($_SESSION['EindDatum']);
             ?>
             </body>
             </html>
