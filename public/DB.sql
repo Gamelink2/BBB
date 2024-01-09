@@ -50,9 +50,9 @@ CREATE TABLE popupInhoud (
 
 INSERT INTO popupInhoud (Grootte, Kampeermiddel, PlekNmr, Personen, Bijzettentjes, Stroom, Water)
 VALUES 
-    ('28', 'caravan/ camper', '1', '5', '2', 'wel', 'ook'),
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
     ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
-    ('28', 'caravan/ camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
 
 SELECT * FROM popupInhoud;
 
