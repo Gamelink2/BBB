@@ -1,32 +1,30 @@
+<!-- Mocht de gebruiker blijven hangen om een of andere reden... -->
+<a href="Reservering.php">Oeps, terug naar pagina..</a>
+
 <?php
-session_start(); // Start the session
-//require 'vendor/autoload.php'; // Load Composer's autoloader
-
-//use PHPMailer\PHPMailer\PHPMailer;
-//use PHPMailer\PHPMailer\SMTP;
-//use PHPMailer\PHPMailer\Exception;
-
 include_once("Connection.php");
-//global $PDO;
-
-//$mail = new PHPMailer(true);
+global $PDO;
 
 try {
-    $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
-    $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
-    $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
-    $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
-    $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
-    $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
-    $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
-    $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
-    $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
-    $Gemeente = isset($_REQUEST['gemeente']) ? trim($_REQUEST['gemeente']) : '';
-    $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
-    $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
-    $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+    $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['fname']) ? trim($_REQUEST['fname']) : ''; // moet nog wel ergens aan worden toegevoegd
+    $_SESSION["voornaam"] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
+    $_SESSION["tussenvoegel"] = $TussenVoegsel = isset($_REQUEST['tussen']) ? trim($_REQUEST['tussen']) : '';
+    $_SESSION["achternaam"] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
+    $_SESSION["nummer"] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $_SESSION["email"] = $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+    $_SESSION["postcode"] = $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
+    $_SESSION["straatnaam"] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
+    $_SESSION["huisnummer"] = $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
+    $_SESSION["Huisnummertoevoeging"] = $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
+    $_SESSION["land"] = $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
+    $_SESSION["midellen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+    $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
+    $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
+    $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
+    $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
 
-    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($PostCode) && !empty($Middelen)) {
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCodeKO) ) {
         // Inserting into the database
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
@@ -46,38 +44,15 @@ try {
         $stmt2->bindParam(':achternaam', $AchterNaam, PDO::PARAM_STR);
         $stmt2->bindParam(':telNmr', $TelefoonNummer, PDO::PARAM_STR);
         $stmt2->bindParam(':femail', $Email, PDO::PARAM_STR);
-        $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
+        $stmt2->bindParam(':Begindatum', $BeginDatum, PDO::PARAM_STR);
+        $stmt2->bindParam(':einddatum', $EindDatum, PDO::PARAM_STR);
+        $stmt2->bindParam(':volwassenen', $Volwassenen, PDO::PARAM_STR);
+        $stmt2->bindParam(':kinderen', $Kinderen, PDO::PARAM_STR);
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
+            include_once("Send_Email.php");
         } ;
-
-        // Send confirmation email
-        //$mail->isSMTP();
-        //$mail->Host = 'smtp.gmail.com';
-        //$mail->SMTPAuth = true;
-        //$mail->Username = 'your-email@gmail.com';
-        //$mail->Password = 'your-password';
-        //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        //$mail->Port = 587;
-
-        //$mail->setFrom('BouwenVoorBoerBert@gmail.com', 'Boer Bert');
-        //$mail->addAddress($Email, $VoorNaam);
-        //$mail->addReplyTo('info@example.com', 'Information');
-        //$mail->isHTML(true);
-        //$mail->Subject = 'Confirmation Email';
         
-        // Read HTML file contents
-        //$htmlContent = file_get_contents('email_template.html');
-        
-        // Replace placeholders with actual values
-        //$htmlContent = str_replace('{{VoorNaam}}', $VoorNaam, $htmlContent);
-        
-        // Assign the modified HTML content to the email body
-        //$mail->Body = $htmlContent;
-        //$mail->AltBody = 'Your reservation has been added successfully.'; // Plain text alternative
-        
-       // $mail->send();
-       // echo 'Message has been sent';
     } else {
         $ErrorMessage = "Fill in all required fields.";
     }
@@ -86,14 +61,6 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-echo "<script> 
-    alert('" . $ErrorMessage . "');
-    window.history.go(-1);
-</script>";
-
-
-echo '<script>window.close(0);</script>';
-
-
-
-
+header("Location: Reservering.php");
+exit();
+?>

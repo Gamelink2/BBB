@@ -22,5 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-Connection.php
-vendor/
+
+public/test.sh
+public/Connection.php
+public/Send_Email.php

@@ -61,3 +61,7 @@
     display: inline-block;
     overflow-x: hidden;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }

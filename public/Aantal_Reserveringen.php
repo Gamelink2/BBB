@@ -38,6 +38,13 @@ $stmt = $PDO->query($query);
     <title>Reserveringen</title>
 </head>
 <body class="BackGround Color">
+<container class="Navbar">
+    <ul>
+      <li><a onclick="loadPage('mapPage.html')">Map</a></li>
+      <li><a href="Reservering.php" >Reservation</a></li>
+      <li><a href="mapInfo.php">Map Information</a></li>
+    </ul>  
+</container> 
     <div class="Container">
         <div class="Row"> 
             <div class="Column"> 
