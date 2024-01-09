@@ -83,7 +83,7 @@ session_start();
                     </select>
                     <div id="andersInput" style="display: none;">
                     <label for="anders">Anders, specificeren:*</label>
-                    <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['anders']) ? $_SESSION["anders"] : '') .'">
+                    <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
                     </div>
                     ';
                 } else {
@@ -104,8 +104,8 @@ session_start();
 
                 if (isset($_SESSION['verzoek'])) {
                     echo '
-                    <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)">
-                    '. $_SESSION['verzoek'] .'
+                    <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
+                    value="'. (isset( $_SESSION['verzoek']) ? $_SESSION['verzoek'] : '') .'"
                     </textarea>';
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
@@ -119,13 +119,13 @@ session_start();
 
                 if (isset($_SESSION['EindDatum'])) {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
-                echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum?">';
+                echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * ">';
                 } else {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
-                echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum?">';
+                echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">';
                 }
 
-                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen?">';
+                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? * "> '. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'';
                 echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?">';
          ?>
 
