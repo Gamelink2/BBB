@@ -14,7 +14,7 @@ try {
     $mail->Host = 'smtp.gmail.com';  // Your SMTP server
     $mail->SMTPAuth = true;
     $mail->Username = 'bouwenvoorboerbert@gmail.com'; // SMTP username
-    $mail->Password = 'Lol'; // SMTP password
+    $mail->Password = 'NANI?!?'; // SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587; // TCP port to connect to
 
