@@ -62,7 +62,7 @@ session_start();
 
                 echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>';
 
-                echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode: * " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
+                echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:* " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
 
                 echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
 
@@ -82,7 +82,7 @@ session_start();
                     <option value="Anders" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Anders" ? 'selected' : '').'>Anders</option>
                     </select>
                     <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:*</label>
+                    <label for="anders" style="background-color: inherit;">Anders, specificeren:*</label>
                     <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
                     </div>
                     ';
@@ -96,7 +96,7 @@ session_start();
                     <option value="Anders">Anders</option>
                     </select>
                     <div id="andersInput" style="display: none;">
-                    <label for="anders">Anders, specificeren:*</label>
+                    <label for="anders" style="background-color: inherit;">Anders, specificeren:*</label>
                     <input type="text" name="anders" id="anders">
                     </div>
                     ';
