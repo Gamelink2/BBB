@@ -31,8 +31,7 @@ session_start();
                 '.$_SESSION["ErrorMessage"].'
                 </div>';
             }
-            echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
-
+            
             if (isset($_SESSION["aanhef"])) {
                 echo '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
                 <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
@@ -42,33 +41,35 @@ session_start();
                 <option value="Anders: id="anders" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'Anders') . '>Anders:</option>
                 </select>
                 <input type="text" id="anders" name="anders" style="display: ' . ($_SESSION["aanhef"] == "Anders:" ? 'block' : 'none') . ';" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
-                } else {
-                    echo 
-                    '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
-                    <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
-                    <option value="Heer">Heer</option>
-                    <option value="Mvr.">Mvr.</option>
-                    <option value="Geen">Geen</option>
-                    <option value="Anders:" id="anders">Anders:</option>
-                    </select>
-                    <input type="text" id="anders" name="anders" style="display: none;" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
-                }
-
-                echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="' . (isset($_SESSION['voornaam']) ? $_SESSION["voornaam"] : '') . '" autocomplete="given-name" required />';
-
-                echo '<input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" value="' . (isset($_SESSION['tussenvoegel']) ? $_SESSION["tussenvoegel"] : '') . '" autocomplete="additional-name" />';
-
-                echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required value="' . (isset($_SESSION['achternaam']) ? $_SESSION["achternaam"] : '') . '"/>';
-
-                echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>';
-
-                echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:* " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
-
-                echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
-
-                echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huinummer']) ? $_SESSION["huisnummer"] : '') . '"/>';
-
-                echo '<input class="toevoeging" type="text" id="huisNmr+" name="huisNmr+" placeholder="Toevoeging:" autocomplete="address-line3" value="'. (isset($_SESSION['toevoeging']) ? $_SESSION["toevoeging"] : '') . '"/>';
+            } else {
+                echo 
+                '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
+                <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
+                <option value="Heer">Heer</option>
+                <option value="Mvr.">Mvr.</option>
+                <option value="Geen">Geen</option>
+                <option value="Anders:" id="anders">Anders:</option>
+                </select>
+                <input type="text" id="anders" name="anders" style="display: none;" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
+            }
+            
+            echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="' . (isset($_SESSION['voornaam']) ? $_SESSION["voornaam"] : '') . '" autocomplete="given-name" required />';
+            
+            echo '<input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" value="' . (isset($_SESSION['tussenvoegel']) ? $_SESSION["tussenvoegel"] : '') . '" autocomplete="additional-name" />';
+            
+            echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required value="' . (isset($_SESSION['achternaam']) ? $_SESSION["achternaam"] : '') . '"/>';
+            
+            echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>';
+            
+            echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
+            
+            echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:* " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
+            
+            echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
+            
+            echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huinummer']) ? $_SESSION["huisnummer"] : '') . '"/>';
+            
+            echo '<input class="toevoeging" type="text" id="huisNmr+" name="huisNmr+" placeholder="Toevoeging:" autocomplete="address-line3" value="'. (isset($_SESSION['Huisnummertoevoeging']) ? $_SESSION["Huisnummertoevoeging"] : '') . '"/>';
 
                 echo '<input type="text" id="land" name="land" placeholder="Land:" autocomplete="country" value="'. (isset($_SESSION['land']) ? $_SESSION["land"] : '') .'">';
 
@@ -160,7 +161,7 @@ session_start();
             unset($_SESSION['postcode']);
             unset($_SESSION['straatnaam']);
             unset($_SESSION['huisnummer']);
-            unset($_SESSION['toevoeging']);
+            unset($_SESSION['Huisnummertoevoeging']);
             unset($_SESSION['land']);
             unset($_SESSION['middelen']);
             unset($_SESSION['verzoek']);

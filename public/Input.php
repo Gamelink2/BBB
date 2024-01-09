@@ -17,7 +17,7 @@ try {
     $_SESSION["huisnummer"] = $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
     $_SESSION["Huisnummertoevoeging"] = $HuisNummerToeVoegsel = isset($_REQUEST['huisNmr+']) ? trim($_REQUEST['huisNmr+']) : '';
     $_SESSION["land"] = $Land = isset($_REQUEST['land']) ? trim($_REQUEST['land']) : '';
-    $_SESSION["midellen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    $_SESSION["middelen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
     $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
     $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
