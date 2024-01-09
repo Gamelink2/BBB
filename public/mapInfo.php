@@ -1,11 +1,6 @@
 <?php
 include_once 'Connection.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-unset($_POST['value']);
-unset($_POST['value2']);
-}
-
 //kampeerplekken popup
 
 function show($PDO) {
@@ -80,10 +75,12 @@ function show2($pdo) {
     // Connectie tussen database en popup.php
     if (isset($_POST['value'])) {
         show($PDO);
+        unset($_POST['value']);
     }
 
     if (isset($_POST['value2'])) {
         show2($PDO);
+        unset($_POST['value2']);
     }
 
     if (isset($_POST['showData']) && !empty($_POST['showData'])) {
