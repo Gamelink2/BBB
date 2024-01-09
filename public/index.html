@@ -15,18 +15,27 @@
 </head>
 <body class="indexBody">
   <container class="Navbar">
-  <ul>
-    <li><a onclick="loadPage('mapPage.html')">Home</a></li>
-    <li><a onclick="loadPage('Reservering.php')">reserve</a></li>
+  <ul id="linkList">
+    <li><a onclick="loadPage(this, '')">Home</a></li>
+    <li><a onclick="loadPage(this, '')">Camping</a></li>
+    <li><a onclick="loadPage(this, 'mapPage.html')">Plattegrond</a></li>
+    <li><a onclick="loadPage(this, 'Reservering.php')">Reserveren</a></li>
   </ul>
   </container>
   <div id="content-placeholder" class="d-flex"></div>
-  <script>
-    function loadPage(page) {
-      $.get('./' + page , function(data) {
-        $("#content-placeholder").html(data);
-      });
-    }
+  <script>      
+  function loadPage(link, page) {
+  $.get('./' + page , function(data) {
+    $("#content-placeholder").html(data);
+  });
+
+  // Remove the 'active' class from all list items
+  var listItems = document.querySelectorAll('#linkList li');
+  listItems.forEach(item => item.classList.remove('active'));
+
+  // Add the 'active' class to the parent li of the clicked link
+  link.closest('li').classList.add('active');
+  }
   </script>
 
 </body>
