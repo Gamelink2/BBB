@@ -39,7 +39,7 @@ session_start();
                 <option value="Heer" ' . ($_SESSION["aanhef"] == "Heer" ? 'selected' : 'heer') . '>Heer</option>
                 <option value="Mvr." ' . ($_SESSION["aanhef"] == "Mvr." ? 'selected' : 'mvr') . '>Mvr.</option>
                 <option value="Geen" ' . ($_SESSION["aanhef"] == "Geen" ? 'selected' : 'geen') . '>Geen</option>
-                <option value="Anders:" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'anders') . '>Anders:</option>
+                <option value="Anders:" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'Anders') . '>Anders:</option>
                 </select>
                 <input type="text" id="anders" name="anders" style="display: ' . ($_SESSION["aanhef"] == "Anders:" ? 'block' : 'none') . ';" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
                 } else {
