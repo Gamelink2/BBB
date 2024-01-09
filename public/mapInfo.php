@@ -1,13 +1,13 @@
 <?php
-include_once 'includes/dbPage.inc.php';
+include_once 'Connection.php';
 
 //kampeerplekken popup
 
-function show($conn) {
+function show($PDO) {
     $areaId = $_POST['value'];
     // Haal alle data op uit de database
     $sql = "SELECT * FROM popupInhoud WHERE PlekID = $areaId;";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($PDO, $sql);
     
     if ($result) {
         // Aantal resultaten optellen
@@ -36,11 +36,11 @@ function show($conn) {
 }
 
 
-function show2($conn) {
+function show2($PDO) {
     $areaId = $_POST['value2'];
     // Haal alle data op uit de database
     $sql = "SELECT * FROM gebouwPopup WHERE GebouwID = $areaId;";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($PDO, $sql);
     
     if ($result) {
         // Aantal resultaten optellen
@@ -82,19 +82,19 @@ function show2($conn) {
             <input value="4" type="submit" name="value2"></input>
     </form>
 
-    <button onclick="window.location.href='popup.php';">Terug knop</button>
+    <button onclick="window.location.href='mapInfo.php';">Terug knop</button>
 </body>
 </html>
 
 <?php
     // Connectie tussen database en popup.php
     if (isset($_POST['value'])) {
-        show($conn);
+        show($PDO);
         unset($_POST['value']);
     }
 
     if (isset($_POST['value2'])) {
-        show2($conn);
+        show2($PDO);
         unset($_POST['value2']);
     }
 
