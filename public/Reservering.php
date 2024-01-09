@@ -19,9 +19,9 @@ session_start();
     <div class="bodyReservering">
         <container class="reserveringContainer">
             <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
-             <form id="contactForm" method="post" action="Input.php">
-        
-        <?php
+            <form id="contactForm" method="post" action="Input.php">
+                
+                <?php
             if (isset($_SESSION["ErrorMessage"])) {
                 echo 
                 '<div 
@@ -31,7 +31,9 @@ session_start();
                 '.$_SESSION["ErrorMessage"].'
                 </div>';
             }
+            echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
             
+
             if (isset($_SESSION["aanhef"])) {
                 echo '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
                 <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
@@ -60,9 +62,7 @@ session_start();
             echo '<input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required value="' . (isset($_SESSION['achternaam']) ? $_SESSION["achternaam"] : '') . '"/>';
             
             echo '<input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>';
-            
-            echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
-            
+                        
             echo '<input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:* " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>';
             
             echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
