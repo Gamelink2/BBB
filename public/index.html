@@ -13,35 +13,36 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
-<body class="indexBody">
+<body class="indexBody" onload="loadPage('homeLink', 'homePage.html')">
   <container class="Navbar">
+    <div class="logo">
+      <img src="./Images/BBB.ico" alt="logo" width="50px" height="50px">
+      <div>De Groene Weide</div>
+    </div>
   <ul id="linkList">
-    <li><a href="./" style="text-decoration: none;">Home</a></li>
+    <li id="homeLink" onclick="loadPage('homeLink', 'homePage.html')">Home</li>
     <!-- Empty string, so it broke -->
-    <li><a onclick="loadPage(this, 'camping.html')">De Camping</a></li> 
-    <!--                           -->
-    <li><a onclick="loadPage(this, 'mapPage.html')">Plattegrond</a></li>
-    <li><a onclick="loadPage(this, 'Reservering.php')">Reserveren</a></li>
-    <li><a onclick="loadPage(this, 'mapInfo.php')">Map Information</a></li>
-
-  </ul>
+    <li id="campingLink" onclick="loadPage('campingLink', 'camping.html')">Camping</li> 
+      <li id="plattegrondLink" onclick="loadPage('plattegrondLink', 'mapPage.html')">Plattegrond</li>
+      <li id="reserverenLink" onclick="loadPage('reserverenLink', 'Reservering.php')">Reserveren</li>
+      <li id="mapInfoLink" onclick="loadPage('mapInfoLink', 'mapInfo.php')">Map Information</li>
+    </ul>
   </container>
   <div id="content-placeholder" class="d-flex"></div>
   <script>      
-  function loadPage(link, page) {
-  $.get('./' + page , function(data) {
-    $("#content-placeholder").html(data);
-  });
+    function loadPage(linkId, page) {
+    // Remove the 'active' class from all list items
+    var listItems = document.querySelectorAll('#linkList li');
+    listItems.forEach(item => item.classList.remove('active'));
 
-  // Remove the 'active' class from all list items
-  var listItems = document.querySelectorAll('#linkList li');
-  listItems.forEach(item => item.classList.remove('active'));
+    // Load the selected page into the content div
+    $.get('./' + page , function(data) {
+      $('#content-placeholder').html(data);
+    });
 
-  // Add the 'active' class to the parent li of the clicked link
-  link.closest('li').classList.add('active');
-  }
+    // Add the 'active' class to the parent li of the clicked link
+    document.getElementById(linkId).classList.add('active');
+    }
   </script>
-
-
 </body>
 </html>
