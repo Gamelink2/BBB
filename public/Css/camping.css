@@ -1,0 +1,49 @@
+
+body{
+    background-color: brown;
+    height: 100%;
+}
+/************ Custom Font ************/
+@font-face {
+	font-family: Centra;
+	src: url('./font/CentraNo2-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra;
+	src: url('./font/CentraNo2-Medium.ttf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra;
+	src: url('./font/CentraNo2-Book.ttf');
+	font-weight: 400;
+}
+
+/************ General ************/
+
+.Navbar{
+    font-family: 'Centra', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline-color: black;
+    outline-width: 5px;
+    outline-style: solid;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
