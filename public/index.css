@@ -42,6 +42,7 @@
     margin-left: 60px;
     display: flex;
     align-items: center; /* Align items vertically within .logo */
+    cursor: pointer;
 }
 .Navbar ul{
     margin: 0;
