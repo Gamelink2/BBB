@@ -6,7 +6,7 @@
 
 
 body {
-    background-image: url('../Images/campingbackground.jpg');
+    background-image: url('public/Images/campingbackground.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
