@@ -25,6 +25,17 @@
     </script>
 </head>
 <body>
+    <div class="mapBackground">
+    <container class="mapContainer">
+        <container class="infoContainer">
+            <div class="info">
+                <li>Staanplaatsen</li>
+                <li>Toiletten</li>
+                <li>Zwembaden</li>
+                <li>Slipperwinkel</li>
+            </div>
+        </container>
+        <container class="imageContainer">
     <img src="./Images/test.png" class="test" usemap="#image-map" >
     <map name="image-map">
         <area id="1" alt="1" title="1" onclick="showPopup(id)" coords="200,179,44,47" shape="rect">
@@ -38,12 +49,14 @@
         <area id="9" alt="9" title="9" onclick="showPopup(id)" coords="919,448,1066,571" shape="rect">
         <area id="10" alt="10" title="10" onclick="showPopup(id)" coords="930,154,1072,43" shape="rect">
     </map>
+    </container>    
+    </container>
     <div id="overlay" onclick="closePopup()"></div>
     <div id="popup">
         <div id="popupContent"></div>
         <button onclick="closePopup()">Close</button>
     </div>
-    </container>
+    </div>
 </body>
 
 </html>
