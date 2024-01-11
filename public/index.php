@@ -1,7 +1,11 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
 <head>
+<?php include('nav-bar.php'); ?>
     <link rel="stylesheet" href="./Css/home.css">
 </head>
 <body>

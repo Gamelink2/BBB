@@ -50,6 +50,7 @@ function show2($pdo) {
 <!DOCTYPE html>
 <html>
 <head>
+<?php include('nav-bar.php'); ?>
     <title>anything</title>
 </head>
 <body>
