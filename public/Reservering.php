@@ -80,17 +80,7 @@ if (!isset($_SESSION['ErrorMessage'])) {
             echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
             
 
-            if (isset($_SESSION["aanhef"])) {
-                echo '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
-                <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
-                <option value="Heer" ' . ($_SESSION["aanhef"] == "Heer" ? 'selected' : 'heer') . '>Heer</option>
-                <option value="Mvr." ' . ($_SESSION["aanhef"] == "Mvr." ? 'selected' : 'mvr') . '>Mvr.</option>
-                <option value="Geen" ' . ($_SESSION["aanhef"] == "Geen" ? 'selected' : 'geen') . '>Geen</option>
-                <option value="Anders: id="anders" ' . ($_SESSION["aanhef"] == "Anders:" ? 'selected' : 'Anders') . '>Anders:</option>
-                </select>
-                <input type="text" id="anders" name="anders" style="display: ' . ($_SESSION["aanhef"] == "Anders:" ? 'block' : 'none') . ';" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
-            } else {
-                echo 
+            echo 
                 '<select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
                 <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
                 <option value="Heer">Heer</option>
@@ -99,7 +89,6 @@ if (!isset($_SESSION['ErrorMessage'])) {
                 <option value="Anders:" id="anders">Anders:</option>
                 </select>
                 <input type="text" id="anders" name="anders" style="display: none;" placeholder="Aanhef:" autocomplete="honorific-suffix" />';
-            }
             
             echo '<input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="' . (isset($_SESSION['voornaam']) ? $_SESSION["voornaam"] : '') . '" autocomplete="given-name" required />';
             
