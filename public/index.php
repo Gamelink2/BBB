@@ -13,7 +13,13 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
+<?php
+if (!isset($_SESSION["ErrorMessage"])) {
+?>
 <body class="indexBody" onload="loadPage('homeLink', 'homePage.html')">
+<?php
+}
+?>
   <container class="Navbar">
     <div class="logo" onclick="loadPage('homeLink', 'homePage.html')">
       <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
@@ -44,5 +50,18 @@
     document.getElementById(linkId).classList.add('active');
     }
   </script>
+  <?php
+
+  if (isset($_SESSION["ErrorMessage"])) {
+    echo 
+    '<div 
+    style="font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: red;">
+    '.$_SESSION["ErrorMessage"].'
+    </div>';
+  }
+  
+  ?>
 </body>
 </html>
