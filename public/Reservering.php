@@ -6,6 +6,8 @@ if (isset($_SESSION['ErrorMessage'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Images/BBB.ico" />
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="Css/Reservering.css">
+
     <meta
       name="description"
       content="BBB"
