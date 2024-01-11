@@ -1,52 +1,14 @@
 <?php
-session_start();
-if (isset($_SESSION['ErrorMessage'])) {
-    ?>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Images/BBB.ico" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="Css/Reservering.css">
 
-    <meta
-      name="description"
-      content="BBB"
-    />
-    <title>BBB</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <?php
-  if (!isset($_SESSION["ErrorMessage"])) {
-  ?>
-  <body class="indexBody" onload="loadPage('homeLink', 'homePage.html')">
-  <?php
-  }
-  ?>
-    <container class="Navbar">
-      <div class="logo" onclick="loadPage('homeLink', 'homePage.html')">
-        <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
-        <div>De Groene Weide</div>
-      </div>
-    <ul id="linkList">
-      <li id="homeLink" onclick="loadPage('homeLink', 'homePage.html')">Home</li>
-      </ul>
-    </container>
-    <div id="content-placeholder" class="d-flex"></div>
-    <script>      
-      function loadPage(linkId, page) {
-        window.location.href('./')
-      }
-    </script>
-    <?php
-    
-}
+session_start();
 
 if (!isset($_SESSION['ErrorMessage'])) {
     ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+<?php include('navbar.php'); ?>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./Images/BBB.ico" />
