@@ -1,5 +1,5 @@
 <!-- Mocht de gebruiker blijven hangen om een of andere reden... -->
-<a href="Reservering.php">Oeps, terug naar pagina..</a>
+<a href="./">Oeps, terug naar pagina..</a>
 
 <?php
 include_once("Connection.php");
@@ -23,10 +23,11 @@ try {
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
     $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
     $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
-    $aantal = $_SESSION["kinderen"] + $_SESSION["Volwassenen"];
 
     if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode) ) {
-        // Inserting into the database
+        if (isset($_SESSION["kinderen"])) {
+            $aantal = $_SESSION["kinderen"] + $_SESSION["Volwassenen"];
+            }
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
         $stmt->bindParam(':Postcode', $PostCode, PDO::PARAM_STR);
@@ -50,8 +51,9 @@ try {
         $stmt2->bindParam(':verzoek', $Verzoek, PDO::PARAM_STR);
         $stmt2->bindParam(':volwassenen', $Volwassenen, PDO::PARAM_STR);
         $stmt2->bindParam(':kinderen', $Kinderen, PDO::PARAM_STR);
+        if (isset($aantal)){
         $stmt2->bindParam(':aantal', $aantal, PDO::PARAM_STR);
-        
+        }
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
