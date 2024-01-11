@@ -28,7 +28,7 @@ if (isset($_SESSION['ErrorMessage'])) {
         <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
         <div>De Groene Weide</div>
       </div>
-    <ul id="linkList" style="text-decoration: none;" >
+    <ul id="linkList">
       <li id="homeLink" onclick="loadPage('homeLink', 'homePage.html')">Home</li>
       </ul>
     </container>
