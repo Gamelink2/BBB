@@ -54,19 +54,7 @@ if (isset($_SESSION['ErrorMessage'])) {
       }
     </script>
     <?php
-  
-    if (isset($_SESSION["ErrorMessage"])) {
-      echo 
-      '<div 
-      style="font-family: Arial, Helvetica, sans-serif;
-      font-size: large;
-      color: red;">
-      '.$_SESSION["ErrorMessage"].'
-      </div>';
-    }
     
-    
-
 }
 
 if (!isset($_SESSION['ErrorMessage'])) {
