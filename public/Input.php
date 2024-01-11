@@ -67,6 +67,6 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header("Location: ./");
+header("Location: ./Reservering.php");
 exit();
 ?>
