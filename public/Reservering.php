@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['ErrorMessage'])) {
+if (!isset($_SESSION['ErrorMessage'])) {}
     ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -126,7 +126,7 @@ if (!isset($_SESSION['ErrorMessage'])) {
                 echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?">';
          ?>
 
-
+            
             <input class="submit" type="submit" value="Submit">
 
             </form>

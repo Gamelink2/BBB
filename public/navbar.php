@@ -12,10 +12,11 @@
 </head>
 <body class="indexBody">
   <container class="Navbar">
-    <div class="logo" >
+    <a class="logo" href="./index.php">
       <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
+      <div>  </div>
       <div>De Groene Weide</div>
-    </div>
+</a>
     <div class="navlink">
       <a href="./index.php">Home</a>
       <a href="./camping.php">De Camping</a>
