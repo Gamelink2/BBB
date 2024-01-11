@@ -25,9 +25,9 @@ try {
     $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
 
     if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode) ) {
-        if (isset($_SESSION["kinderen"])) {
+        if (isset($_SESSION["kinderen"]) && isset($_SESSION["Volwassenen"])) {
             $aantal = $_SESSION["kinderen"] + $_SESSION["Volwassenen"];
-            }
+        }        
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
         $stmt->bindParam(':Postcode', $PostCode, PDO::PARAM_STR);
@@ -67,7 +67,6 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-echo "<script> alert(". $ErrorMessage . ") </>script";
-header("Location: ./Reservering.php");
+header("Location: Reservering.php");
 exit();
 ?>

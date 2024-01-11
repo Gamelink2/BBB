@@ -19,26 +19,25 @@ if (!isset($_SESSION['ErrorMessage'])) {
   <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
-<?php
-}
-?>
+
 
 <container>
     <div class="bodyReservering">
         <container class="reserveringContainer">
             <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
-            <form id="contactForm" method="post" action="">
+            <form id="contactForm" method="post" action="Input.php">
                 
                 <?php
             if (isset($_SESSION["ErrorMessage"])) {
-                echo 
-                '<p>
-                style="font-family: Arial, Helvetica, sans-serif;
-                font-size: large;
-                color: red;">
-                '.$_SESSION["ErrorMessage"].'
-                </p>';
+                echo '
+                    <p style="font-family: Arial, Helvetica, sans-serif;
+                            font-size: large;
+                            color: red;">
+                        '.$_SESSION["ErrorMessage"].'
+                    </p>';
             }
+
+
             echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
             
 
@@ -85,7 +84,7 @@ if (!isset($_SESSION['ErrorMessage'])) {
                     </div>
                     ';
                 } else {
-                    echo 
+                    echo    
                     '
                     <select name="middelen" id="middelen" required>
                     <option value="">Waarmee komt u kamperen*</option>
