@@ -1,10 +1,13 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['ErrorMessage'])) {}
+    ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<?php 
-include('nav-bar.php'); 
-session_start();
-?>
+<?php include('navbar.php'); ?>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,7 +129,7 @@ session_start();
                 echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?">';
          ?>
 
-
+            
             <input class="submit" type="submit" value="Submit">
 
             </form>

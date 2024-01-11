@@ -2,7 +2,7 @@
 <html lang="en">
 <html>
 <head>
-    <?php include('nav-bar.php'); ?>
+    <?php include('navbar.php'); ?>
     <link rel="stylesheet" href="./Css/mapPage.css">
     <script>
         function showPopup(id) {
