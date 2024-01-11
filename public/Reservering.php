@@ -106,7 +106,7 @@ session_start();
                 if (isset($_SESSION['verzoek'])) {
                     echo '
                     <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
-                    value="'. $_SESSION['verzoek'].'">
+                    value="' . $_SESSION['verzoek'] . '">
                     </textarea>';
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
@@ -126,7 +126,7 @@ session_start();
                 echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">';
                 }
 
-                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? * "> '. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'';
+                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? * "'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'>';
                 echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?">';
          ?>
 
