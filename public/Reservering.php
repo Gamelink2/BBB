@@ -65,7 +65,7 @@ if (!isset($_SESSION['ErrorMessage'])) {
     <div class="bodyReservering">
         <container class="reserveringContainer">
             <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
-            <form id="contactForm" method="post" action="Input.php">
+            <form id="contactForm" method="post" action="">
                 
                 <?php
             if (isset($_SESSION["ErrorMessage"])) {

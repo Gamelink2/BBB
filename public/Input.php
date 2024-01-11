@@ -67,6 +67,7 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
+echo "<script> alert(". $ErrorMessage . ") </>script";
 header("Location: ./Reservering.php");
 exit();
 ?>
