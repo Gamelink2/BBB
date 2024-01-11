@@ -28,29 +28,14 @@ if (isset($_SESSION['ErrorMessage'])) {
         <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
         <div>De Groene Weide</div>
       </div>
-    <ul id="linkList">
+    <ul id="linkList" style="text-decoration: none;" >
       <li id="homeLink" onclick="loadPage('homeLink', 'homePage.html')">Home</li>
-      <!-- Empty string, so it broke -->
-      <li id="campingLink" onclick="loadPage('campingLink', 'camping.html')">De Camping</li> 
-        <li id="plattegrondLink" onclick="loadPage('plattegrondLink', 'mapPage.html')">Plattegrond</li>
-        <li id="reserverenLink" onclick="loadPage('reserverenLink', 'Reservering.php')">Reserveren</li>
-        <li id="mapInfoLink" onclick="loadPage('mapInfoLink', 'mapInfo.php')">Map Information</li>
       </ul>
     </container>
     <div id="content-placeholder" class="d-flex"></div>
     <script>      
       function loadPage(linkId, page) {
-      // Remove the 'active' class from all list items
-      var listItems = document.querySelectorAll('#linkList li');
-      listItems.forEach(item => item.classList.remove('active'));
-  
-      // Load the selected page into the content div
-      $.get('./' + page , function(data) {
-        $('#content-placeholder').html(data);
-      });
-  
-      // Add the 'active' class to the parent li of the clicked link
-      document.getElementById(linkId).classList.add('active');
+        window.location.href('./')
       }
     </script>
     <?php
