@@ -36,19 +36,26 @@ if (!isset($_SESSION["ErrorMessage"])) {
   </container>
   <div id="content-placeholder" class="d-flex"></div>
   <script>      
-    function loadPage(linkId, page) {
-    // Remove the 'active' class from all list items
-    var listItems = document.querySelectorAll('#linkList li');
-    listItems.forEach(item => item.classList.remove('active'));
+   function loadPage(linkId, page) {
+  // Remove the 'active' class from all list items
+  var listItems = document.querySelectorAll('#linkList li');
+  listItems.forEach(item => item.classList.remove('active'));
 
-    // Load the selected page into the content div
-    $.get('./' + page , function(data) {
+  // Load the selected page into the content div using AJAX
+  $.ajax({
+    url: './' + page,
+    method: 'GET',
+    success: function(data) {
       $('#content-placeholder').html(data);
-    });
 
-    // Add the 'active' class to the parent li of the clicked link
-    document.getElementById(linkId).classList.add('active');
+      // Add the 'active' class to the parent li of the clicked link
+      document.getElementById(linkId).classList.add('active');
+    },
+    error: function() {
+      console.error('Error loading page');
     }
+  });
+}
   </script>
   <?php
 
