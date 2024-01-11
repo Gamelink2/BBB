@@ -70,12 +70,12 @@ if (!isset($_SESSION['ErrorMessage'])) {
                 <?php
             if (isset($_SESSION["ErrorMessage"])) {
                 echo 
-                '<div 
+                '<p>
                 style="font-family: Arial, Helvetica, sans-serif;
                 font-size: large;
                 color: red;">
                 '.$_SESSION["ErrorMessage"].'
-                </div>';
+                </p>';
             }
             echo '<input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />';
             
