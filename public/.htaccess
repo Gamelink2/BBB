@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# If .php file exists, use it
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)$ $1.php [NC,L]
+
+# If .php file doesn't exist, check for .html
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [NC,L]

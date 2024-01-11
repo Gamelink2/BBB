@@ -16,6 +16,9 @@ session_start();
   <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
+    <script>
+        document.title = 'Noice';
+    </script>
 
 
 <container>

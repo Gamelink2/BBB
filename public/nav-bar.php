@@ -17,11 +17,11 @@
       <div>De Groene Weide</div>
     </div>
     <ul id="linkList">
-      <li><a href="./index.php">Home</a></li>
-      <li><a href="./camping.php">De Camping</a></li>
-      <li><a href="./mapPage.php">Plattegrond</a></li>
-      <li><a href="./Reservering.php">Reserveren</a></li>
-      <li><a href="./mapInfo.php">Map Information</a></li>
+      <li><a href="./index">Home</a></li>
+      <li><a href="./camping">De Camping</a></li>
+      <li><a href="./mapPage">Plattegrond</a></li>
+      <li><a href="./Reservering">Reserveren</a></li>
+      <li><a href="./mapInfo">Map Information</a></li>
     </ul>
   </container>
 </body>

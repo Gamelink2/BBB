@@ -11,8 +11,13 @@
 <body>
     <div class="homeBody">
         <row class="title">De Groene Weide</row>
-        <row class="homeButton" onclick="loadPage('campingLink', 'camping.html')">Lees meer</row>
+        <row class="homeButton" onclick="camping()">Lees meer</row>
     </div>
 </body>
+<script>
+    function camping(){
+        window.location.href = "camping";
+    }
+</script>
 
 </html>
