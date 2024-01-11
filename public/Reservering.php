@@ -27,11 +27,11 @@ session_start();
                 <?php
             if (isset($_SESSION["ErrorMessage"])) {
                 echo '
-                    <h1 style="font-family: Arial, Helvetica, sans-serif;
+                    <p style="font-family: Arial, Helvetica, sans-serif;
                             font-size: large;
                             color: red;">
                         '.$_SESSION["ErrorMessage"].'
-                    </h1>';
+                    </p>';
             }
 
 
@@ -81,7 +81,7 @@ session_start();
                     </div>
                     ';
                 } else {
-                    echo 
+                    echo    
                     '
                     <select name="middelen" id="middelen" required>
                     <option value="">Waarmee komt u kamperen*</option>
