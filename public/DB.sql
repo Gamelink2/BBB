@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS persoonsgegevens (
     TelefoonNummer VARCHAR(20),
     Email VARCHAR(255),
     Aantal_Personen INT,
-    Verzoek VARCHAR(255).
+    Verzoek VARCHAR(255),
     kinderen INT,
     Volwassenen INT
 );
