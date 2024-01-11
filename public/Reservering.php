@@ -106,7 +106,7 @@ session_start();
                 if (isset($_SESSION['verzoek'])) {
                     echo '
                     <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
-                    value="'. $_SESSION['verzoek'].'"
+                    value="'. $_SESSION['verzoek'].'">
                     </textarea>';
                 } else {
                     echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
