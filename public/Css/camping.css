@@ -7,31 +7,36 @@
     background-repeat: no-repeat;
     justify-content: top;
     align-items: top;
-    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    max-height: calc(100vh - 60px);
 }
 
 .flex-container {
     display: flex;
     flex-direction: row; 
     margin-inline: 10px;
+    margin-top: 2.5%;
     max-width: fit-content;
-    height: 200 px;
+    height: calc(100vh);
+
 }
 
 .campText { 
-    flex-direction: row;
-    margin-inline: 10px;
-    height: 200 px;
-
+    margin-inline: 2.5%;
+    height: 90%;
+    width: 300px;
+    border: 10px solid #838383;
+    border-radius: 10%;
 }
 
 .campText2 {
-   flex-direction: row;
    margin-inline: 10px;
-   height: 200 px;
+   height: 200px;
+   border: 10px solid #838383;
+   width: 300px;
+   border-radius: 10%;
 
 }
 
