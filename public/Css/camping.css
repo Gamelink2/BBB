@@ -1,5 +1,7 @@
 
-
+:root{
+    overflow: hidden;
+}
 .campBody{
     background-image: url('../Images/campingbackground.jpg');
     background-position: center center;
