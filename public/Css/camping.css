@@ -1,3 +1,5 @@
+
+
 .campBody{
     background-image: url('../Images/campingbackground.jpg');
     background-position: center center;
@@ -11,6 +13,19 @@
     flex-direction: column;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.campText { 
+    
+}
+
+.campText2 {
+
+
+}
 
 
 
