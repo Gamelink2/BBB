@@ -131,23 +131,9 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             </script>
             </div>
             <?php
-            unset($_SESSION['ErrorMessage']);
-            unset($_SESSION['email']);
-            unset($_SESSION['aanhef']);
-            unset($_SESSION['voornaam']);
-            unset($_SESSION['tussenvoegsel']);
-            unset($_SESSION['achternaam']);
-            unset($_SESSION['nummer']);
-            unset($_SESSION['postcode']);
-            unset($_SESSION['straatnaam']);
-            unset($_SESSION['huisnummer']);
-            unset($_SESSION['Huisnummertoevoeging']);
-            unset($_SESSION['land']);
-            unset($_SESSION['middelen']);
-            unset($_SESSION['verzoek']);
-            unset($_SESSION['Volwassenen']);
-            unset($_SESSION['BeginDatum']);
-            unset($_SESSION['EindDatum']);
+            if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reservering is toegevoegd"){
+                session_unset();
+            }
             ?>
             </body>
             </html>

@@ -60,13 +60,13 @@ try {
         } ;
         
     } else {
-        $ErrorMessage = "Fill in all required fields.";
+        $ErrorMessage = "Vul alle velden in aub.";
     }
 } catch (Exception $e) {
     $ErrorMessage = 'There was an error: ' . $e->getMessage();
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header("Location: Reservering.php");
+header("Location: Reservering");
 exit();
 ?>
