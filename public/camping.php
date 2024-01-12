@@ -19,13 +19,22 @@
  <body>
     <div class="campBody">
       <div class="flex-container"> 
-        <div class="campText">
-        <l>Damn daniel
-        </l>
+        <div class="Text-Box">
+          <div class="campText">
+            <l>
+              Damn daniel
+            </l>
+          </div>
         </div>
+        <div class="Text-Box2">
+          <img src="./Images/Stolen-farmland.png" alt="">
+
         <div class="campText2">
-        <l>Damn daniel
-        </l>
+          <l>
+            Damn daniel
+          </l>
+        </div>
+
         </div>
       </div>
  </body>
