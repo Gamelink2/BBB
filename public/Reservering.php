@@ -68,7 +68,6 @@ if (!isset($_SESSION['ErrorMessage'])) {}
 
                 echo '<input type="text" id="land" name="land" placeholder="Land:" autocomplete="country" value="'. (isset($_SESSION['land']) ? $_SESSION["land"] : '') .'">';
 
-                if (isset($_SESSION['middelen'])) {
                     echo 
                     '
                     <select name="middelen" id="middelen" required>
@@ -82,21 +81,7 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                     <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
                     </div>
                     ';
-                } else {
-                    echo    
-                    '
-                    <select name="middelen" id="middelen" required>
-                    <option value="">Waarmee komt u kamperen*</option>
-                    <option value="Tent">Tent</option>
-                    <option value="caravan">Caravan</option>
-                    <option value="Anders">Anders</option>
-                    </select>
-                    <div id="andersInput" style="display: none;">
-                    <label for="anders" style="background-color: inherit;">Anders, specificeren:*</label>
-                    <input type="text" name="anders" id="anders">
-                    </div>
-                    ';
-                    }
+               
 
                     if (isset($_SESSION['verzoek'])) {
                         echo '
