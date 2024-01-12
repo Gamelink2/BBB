@@ -26,8 +26,8 @@ try {
 
     if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode) ) {
         if (isset($_SESSION["kinderen"]) && isset($_SESSION["Volwassenen"])) {
-            $aantal = $_SESSION["kinderen"] + $_SESSION["Volwassenen"];
-        }        
+            $aantal = $Kinderen + $Volwassenen;
+        }  else $aantal = $Volwassenen;   
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Toevoeging, Straatnaam, Woonplaats, Land, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Toevoeging, :Straatnaam, :Woonplaats, :Land, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
         $stmt->bindParam(':Postcode', $PostCode, PDO::PARAM_STR);

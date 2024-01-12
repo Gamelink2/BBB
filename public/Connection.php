@@ -2,11 +2,11 @@
 
 session_start();
 
-define('DB_HOST', 'Lovey dovey');
-define('DB_PORT', '6969' );
-define('DB_NAME', 'SO YOU HAVE CHOSEN.. DEATH?');
-define('DB_USER', 'Santa Claus');
-define('DB_PASS', 'pop pop');
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306' );
+define('DB_NAME', 'Reserveringen');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
 
 global $PDO;

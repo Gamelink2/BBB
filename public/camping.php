@@ -18,10 +18,7 @@
 </head>
  <body>
     <div class="campBody">
-    <l>Lorem,
-    ipsum dolor sit amet consectetur adipisicing elit.
-    Vero placeat magnam explicabo aperiam, 
-    fuga repellat temporibus est cum quo tempore ea nisi laudantium consequatur corrupti nesciunt omnis quod excepturi deleniti?
+    <l>Damn
     </l>
     </div>
  </body>
