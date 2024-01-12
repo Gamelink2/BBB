@@ -1,3 +1,6 @@
+:root, body, html {
+    overflow-y: hidden;
+}
 
 :root{
     overflow: hidden;
@@ -9,19 +12,30 @@
     background-repeat: no-repeat;
     justify-content: top;
     align-items: top;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    max-height: calc(100vh - 60px);
+    height: 100vh;
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: row; 
+    display: inline-grid;
+    grid-template-columns: 500px 300px;
     margin-inline: 10px;
     margin-top: 2.5%;
     height: calc(100vh);
+}
 
+.Text-box {
+    height: auto;
+    display: block;
+    width: 5%;
+}
+
+.Text-box2 {
+    width: 50%;
+    height: auto;
+    display: flex;
 }
 
 .campText { 
@@ -33,13 +47,15 @@
 }
 
 .campText2 {
-   margin-inline: 10px;
-   height: 200px;
-   border: 10px solid #838383;
-   width: 300px;
-   border-radius: 10%;
-
+    margin-inline: 10px;
+    height: 200px;
+    border: 10px solid #838383;
+    width: 50%;
+    border-radius: 10%;
 }
 
-
-
+.flex-container img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: fill;
+}
