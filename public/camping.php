@@ -18,10 +18,15 @@
 </head>
  <body>
     <div class="campBody">
-    <l>Damn daniel
-    </l>
-    </div>
+      <div class="flex-container"> 
+        <div class="campText">
+        <l>Damn daniel
+        </l>
+        </div>
+        <div class="campText2">
+        <l>Damn daniel
+        </l>
+        </div>
+      </div>
  </body>
-</html>
- <!DOCTYPE html>
  

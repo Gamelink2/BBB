@@ -15,15 +15,23 @@
 
 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+    margin-inline: 10px;
+    max-width: fit-content;
+    height: 200 px;
 }
 
 .campText { 
-    
+    flex-direction: row;
+    margin-inline: 10px;
+    height: 200 px;
+
 }
 
 .campText2 {
-
+   flex-direction: row;
+   margin-inline: 10px;
+   height: 200 px;
 
 }
 
