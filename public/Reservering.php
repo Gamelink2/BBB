@@ -129,60 +129,92 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                 ';
             }                    
 
+
             if (isset($_SESSION['BeginDatum'])) {
-            echo '
-            <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d', time()) . '" value="' . $_SESSION['BeginDatum'] . '">
-            ';
+                echo '
+                    <label for="begindatum">Begin datum:</label>
+                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" value="' . $_SESSION['BeginDatum'] . '" required>
+                ';
             } else {
-            echo '
-            <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d', time()) . '" placeholder="Begin datum?">
-            ';
+                echo '
+                    <label for="begindatum">Begin datum:</label>
+                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" placeholder="Begin datum?" required>
+                ';
             }
 
             if (isset($_SESSION['EindDatum'])) {
-            $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
-            echo '
-            <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * ">
-            ';
+                $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
+                echo '
+                    <label for="einddatum">Eind datum:</label>
+                    <input type="date" id="einddatum" name="einddatum" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * " required>
+                ';
             } else {
-            $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
-            echo '
-            <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">
-            ';
+                $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
+                echo '
+                    <label for="einddatum">Eind datum:</label>
+                    <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * " required>
+                ';
             }
 
             echo '
-            <input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? *" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'">
+                <label for="volwassenen">Hoeveel volwassenen? *</label>
+                <input type="number" name="volwassenen" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'" required>
             ';
+
             echo '
-            <input type="number" name="kinderen" placeholder="Hoeveel kinderen?"value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'" >
+                <label for="kinderen">Hoeveel kinderen?</label>
+                <input type="number" name="kinderen" value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'">
             ';
-        ?>
 
-        
-        <input class="submit" type="submit" value="Submit">
+            ?>  
 
-        </form>
-        </container>
-        <script>
-        const middelenSelect = document.getElementById('middelen');
-        const andersInput = document.getElementById('andersInput');
+<input class="submit" type="submit" value="Submit">
 
-        middelenSelect.addEventListener('change', function() {
-        if (this.value === 'Anders') {
+</form>
+</container>
+<script>
+const middelenSelect = document.getElementById('middelen');
+const andersInput = document.getElementById('andersInput');
+
+middelenSelect.addEventListener('change', function() {
+    if (this.value === 'Anders') {
         andersInput.style.display = 'block';
         andersInput.querySelector('input').setAttribute('required', 'true');
-        } else {
+    } else {
         andersInput.style.display = 'none';
         andersInput.querySelector('input').removeAttribute('required');
-        }
-        });
-        </script>
-        </div>
-        <?php
-        if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reservering is toegevoegd"){
-            session_unset();
-        }
-        ?>
-        </body>
-        </html>
+    }
+});
+
+// JavaScript to validate the end date against the start date
+document.getElementById('begindatum').addEventListener('input', function () {
+    var startDate = new Date(this.value);
+    var endDateInput = document.getElementById('einddatum');
+    
+    // If an end date is already selected and it's before the new start date, clear the end date
+    if (endDateInput.value !== '' && new Date(endDateInput.value) < startDate) {
+        endDateInput.value = '';
+    }
+
+    // Update the minimum allowed date for the end date to be the new start date
+    endDateInput.min = this.value;
+    
+    // Calculate the maximum allowed date for the end date (60 days after the start date)
+    var maxEndDate = new Date(startDate.getTime() + (60 * 24 * 60 * 60 * 1000));
+    endDateInput.max = maxEndDate.toISOString().split('T')[0];
+});
+</script>
+</div>
+
+<?php
+if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reservering is toegevoegd"){
+    $_SESSION["loginPerson"] = $logged;
+    session_unset();
+    $logged = $_SESSION["loginPerson"];
+};  
+
+unset($_SESSION["ErrorMessage"]);
+
+?>
+</body>
+</html>
