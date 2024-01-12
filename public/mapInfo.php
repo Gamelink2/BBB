@@ -51,7 +51,6 @@ function show2($pdo) {
 <html>
 <head>
 <?php include('navbar.php'); ?>
-    <title>anything</title>
 </head>
 <body>
     <h2>Kampeerplekken:</h2>
