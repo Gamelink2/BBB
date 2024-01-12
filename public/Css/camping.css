@@ -26,7 +26,7 @@
     height: calc(100vh);
 }
 
-.Text-box {
+.campText3 {
     height: auto;
     display: block;
     width: 5%;
@@ -52,10 +52,4 @@
     border: 10px solid #838383;
     width: 50%;
     border-radius: 10%;
-}
-
-.flex-container img {
-    max-width: 75%;
-    max-height: 75%;
-    object-fit: fill;
 }
