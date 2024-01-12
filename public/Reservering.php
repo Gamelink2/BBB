@@ -19,10 +19,6 @@ if (!isset($_SESSION['ErrorMessage'])) {}
   <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
-    <script>
-        document.title = 'Noice';
-    </script>
-
 
 <container>
     <div class="bodyReservering">
@@ -66,7 +62,7 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             
             echo '<input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>';
             
-            echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huinummer']) ? $_SESSION["huisnummer"] : '') . '"/>';
+            echo '<input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huisnummer']) ? $_SESSION["huisnummer"] : '') . '"/>';
             
             echo '<input class="toevoeging" type="text" id="huisNmr+" name="huisNmr+" placeholder="Toevoeging:" autocomplete="address-line3" value="'. (isset($_SESSION['Huisnummertoevoeging']) ? $_SESSION["Huisnummertoevoeging"] : '') . '"/>';
 
@@ -102,14 +98,14 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                     ';
                     }
 
-                if (isset($_SESSION['verzoek'])) {
-                    echo '
-                    <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)" 
-                    value="' . $_SESSION['verzoek'] . '">
-                    </textarea>';
-                } else {
-                    echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
-                }
+                    if (isset($_SESSION['verzoek'])) {
+                        echo '
+                        <textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)">
+                            ' . $_SESSION['verzoek'] . '
+                        </textarea>';
+                    } else {
+                        echo '<textarea class="fmsg" id="verzoek" name="verzoek" form="contactForm" placeholder="Speciale verzoeken: (Mogelijk ten extra kosten i.v.m. verzoek)"></textarea>';
+                    }                    
 
                 if (isset($_SESSION['BeginDatum'])) {
                 echo '<input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d', time()) . '" value="' . $_SESSION['BeginDatum'] . '">';
@@ -125,8 +121,8 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                 echo '<input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">';
                 }
 
-                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? * "'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'>';
-                echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?">';
+                echo '<input type="number" name="volwassenen" placeholder="Hoeveel volwassenen? *" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'">';
+                echo '<input type="number" name="kinderen" placeholder="Hoeveel kinderen?"value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'" >';
          ?>
 
             

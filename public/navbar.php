@@ -18,11 +18,11 @@
       <div>De Groene Weide</div>
 </a>
     <div class="navlink">
-      <a href="./index.php">Home</a>
-      <a href="./camping.php">De Camping</a>
-      <a href="./mapPage.php">Plattegrond</a>
-      <a href="./Reservering.php">Reserveren</a>
-      <a href="./mapInfo.php">Map Information</a>
+      <a href="./index">Home</a>
+      <a href="./camping">De Camping</a>
+      <a href="./mapPage">Plattegrond</a>
+      <a href="./Reservering">Reserveren</a>
+      <a href="./mapInfo">Map Information</a>
     </div>
     <script>
   var currentPagePath = window.location.pathname;
