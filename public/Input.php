@@ -57,7 +57,7 @@ try {
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
-        } ;
+        };
         
     } else {
         $ErrorMessage = "Vul alle velden in aub.";
@@ -69,4 +69,3 @@ try {
 $_SESSION['ErrorMessage'] = $ErrorMessage;
 header("Location: Reservering");
 exit();
-?>
