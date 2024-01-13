@@ -33,7 +33,7 @@
                 </div>
                 <div class="campText3">
                     <p>
-                        Content for the additional box
+                     dammmmmmmmmmmm damiel
                     </p>
                 </div>
             </div>
