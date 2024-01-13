@@ -16,25 +16,30 @@
 
     <link rel="stylesheet" href="./Css/camping.css">
 </head>
- <body>
+<body>
     <div class="campBody">
-      <div class="flex-container"> 
-        <div class="Text-Box">
-          <div class="campText">
-            <l>
-              Damn daniel
-            </l>
-          </div>
-        </div>
-        <div class="Text-Box2">
-          <img src="./Images/Stolen-farmland.png" alt="">
+        <div class="flex-container">
 
-        <div class="campText2">
-          <l>
-            Damn daniel
-          </l>
-        </div>
+            <div class="campText">
+                <p>
+                    Damn daniel
+                </p>
+            </div>
+            <div class="nested-flex-container">
+                <div class="campText2">
+                    <p>
+                        Damn daniel
+                    </p>
+                </div>
+                <div class="campText3">
+                    <p>
+                        Content for the additional box
+                    </p>
+                </div>
+            </div>
 
         </div>
-      </div>
- </body>
+    </div>
+</body>
+
+</html>
