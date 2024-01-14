@@ -1,20 +1,43 @@
 .bodyReservering{
-    font-family: 'Centra', sans-serif !important;
+    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     justify-items: center;
-    background-image: url('../Images/Stolen-farmland.png');
+    background-image: url('../Images/Home.jpg');
     background-position: center center;
-    height: calc(100vh + 20px);
+    height: calc(100vh - 60px);
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
-
+.reserveringContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    outline-color: #000000;
+    outline-style: solid;
+    outline-width: 5px;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+}
+.reserveringForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
 h1{
-    color: #ffffff;
+    color: #000000;
     font-weight: 500;
     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -24,9 +47,9 @@ h1{
 
 p{
     color:#00eaff;
-    outline-style: double;
+    outline-style: solid;
     outline-width: 3px;
-    outline-color:#fff;
+    outline-color:#000000;
     margin: 0;
     margin-bottom: 5px;
     height: 30px;
@@ -37,9 +60,9 @@ input{
     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     font-weight: 500;
-    outline-style: double;
+    outline-style: solid;
     outline-width: 3px;
-    outline-color:#fff;
+    outline-color:#000000;
     margin: 0;
     margin-bottom: 5px;
     height: 24px;
@@ -49,17 +72,31 @@ input{
     padding-left: 5px;
     display: inline-flex;
 }
+label{
+    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color:#000000;
+    margin: 0;
+    margin-bottom: 5px;
+    height: 24px;
+    width: 496px;
+    padding: 0;
+    align-items: center;
+    padding-left: 5px;
+    display: inline-flex;
+    background-color: #a9a9a9;
+}
 .postcode{
-    width: 80px;
+    width: 160px;
 }
 .straatnaam{
-    width: 210px;
+    width: 200px;
 }
 .huisnummer{
-    width: 100px;
-}
-.toevoeging{
-    width: 63px;
+    width: 105px;
 }
 input::placeholder{
     color: #616060;
@@ -68,13 +105,13 @@ select{
     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     font-weight: 500;
-    outline-style: double;
+    outline-style: solid;
     outline-width: 3px;
-    outline-color:#fff;
+    outline-color:#000000;
     margin: 0;
     margin-bottom: 5px;
     height: 24px;
-    width: 500px;
+    width: 501px;
     padding: 0;
     align-items: center;
     display: flex;
@@ -83,12 +120,16 @@ select{
 select::placeholder{
     color: #616060;
 }
-.email{
+.topForm{
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
+.bottomForm{
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
 .fmsg{
-    height: 79px;
+    height: 55px;
     color: #000000;
     justify-content: start;
     align-items: start;
@@ -97,9 +138,9 @@ select::placeholder{
     justify-items: start;
     align-content: start;
     text-wrap: wrap;
-    outline-style: double;
+    outline-style: solid;
     outline-width: 3px;
-    outline-color:#fff;
+    outline-color:#000000;
     margin: 0;
     margin-bottom: 5px;
     width: 492px;
@@ -114,28 +155,21 @@ textarea::placeholder{
 }
 .submit{
     background-color: #ffffff90;
-    width: 500px;
+    width: 501px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    height: 40px;
+    height: 36px;
     font-size: 20px;
     justify-content: center;
     transition: 0.3s;
+    cursor: default;
 }
 .submit:hover {
-    background-color: #ffffffda;
+    background-color: #00ff84da;
     transition: 0.3s;
 }
-.reserveringContainer {
-    background-color: #0000004e;
-    align-items: center;
-    width: 500px;
-    height: 560px;
-    margin-top: 75px;
-    outline-color: #fff;
-    outline-style: double;
-    outline-width: 10px;
-    border-radius: 25px;
-    padding: 15px;
+.emptyField{
+    outline-color: red ;
+    outline-style: solid;
+    outline-width: 3px;
 }
-
