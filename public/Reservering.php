@@ -210,11 +210,7 @@ var isAlertShown = false;
 
 function validateForm(excludedIds) {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        if (isAlertShown) {
-            // If the alert has already been shown, prevent further alerts
-            event.preventDefault();
-            return;
-        }
+        isAlertShown = false; // Reset the flag to false on submit
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
         var isEmptyFieldFound = false;
