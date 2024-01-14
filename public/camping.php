@@ -57,7 +57,6 @@
     </div>
 
     <script>
-        <script>
             $(document).ready(function(){
                 $(".dropdown-option").click(function(e){
                     e.preventDefault(); // Prevent the default behavior of the anchor link
