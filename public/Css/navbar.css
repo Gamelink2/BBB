@@ -20,7 +20,7 @@
 
 /************ General ************/
 .Navbar{
-    font-family: 'Centra', sans-serif;
+    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100vw;
     height: 60px;
     display: flex;
