@@ -19,12 +19,8 @@ if (!isset($_SESSION['ErrorMessage'])) {}
   <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
-
-<container>
     <div class="bodyReservering">
-        <container class="reserveringContainer">
-            <h1>Reserveren voor xx/xx/xxxx t/m xx/xx/xxx</h1>
-            <form id="contactForm" method="post" action="Input.php">
+            <form class="reserveringForm" id="contactForm" method="post" action="Input.php">
                 
             <?php
             if (isset($_SESSION["ErrorMessage"])) {
@@ -49,41 +45,37 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                             ' . $errorMessage . '
                         </p>';
                 }
-            }
-
-
+            }        
+            echo '<container class="reserveringContainer">';
             echo '
-            <input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" required />
-            ';
-            
-
-            echo '
-            <select name="fname" id="fname" onchange="aanhefCheck(this.value);" autocomplete="honorific-prefix">
-            <option value="" disabled selected hidden>Hoe wilt u geaddresseerd worden?</option>
-            <option value="Heer">Heer</option>
-            <option value="Mvr.">Mvr.</option>
-            <option value="Geen">Geen</option>
-            <option value="Anders:" id="anders">Anders:</option>
+            <select class="topForm" ame="aanhef" id="aanhef">
+            <option value="">Hoe wilt u geaddreseerd worden?</option>
+            <option value="Meneer" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Meneer" ? 'selected' : '').'>Meneer</option>
+            <option value="Mevrouw" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Mevrouw" ? 'selected' : '').'>Mevrouw</option>
+            <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
-            <input type="text" id="anders" name="anders" style="display: none;" placeholder="Aanhef:" autocomplete="honorific-suffix" />
-                ';
-            
+            <div id="andersInputA" style="display: none;">
+            <input type="text" name="andersA" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            </div>
+            ';
+
             echo '
-            <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="' . (isset($_SESSION['voornaam']) ? $_SESSION["voornaam"] : '') . '" autocomplete="given-name" required />
+            <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam:*" value="' . (isset($_SESSION['voornaam']) ? $_SESSION["voornaam"] : '') . '" autocomplete="given-name" />
             ';
             
             echo '
-            <input type="text" id="tussen" name="tussen" placeholder="Tussenvoegsel:" value="' . (isset($_SESSION['tussenvoegel']) ? $_SESSION["tussenvoegel"] : '') . '" autocomplete="additional-name" />
+            <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" value="' . (isset($_SESSION['achternaam']) ? $_SESSION["achternaam"] : '') . '"/>
+            ';
+
+            echo '
+            <input class="email" type="email" id="femail" name="femail" placeholder="Email:*" autocomplete="email" value="' . (isset($_SESSION['email']) ? $_SESSION["email"] : '') . '" />
             ';
             
             echo '
-            <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam:*" autocomplete="family-name" required value="' . (isset($_SESSION['achternaam']) ? $_SESSION["achternaam"] : '') . '"/>
+            <input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric"/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>
             ';
             
-            echo '
-            <input type="tel" id="telNmr" name="telNmr" placeholder="06 12345678*" autocomplete="tel" inputmode="numeric" required/value="' . (isset($_SESSION['nummer']) ? $_SESSION["nummer"] : '') . '"/>
-            ';
-                        
+            echo '<div class="adress">';
             echo '
             <input class="postcode" type="text" id="postcode" name="postcode" placeholder="Postcode:* " autocomplete="postal-code" value="' . (isset($_SESSION['postcode']) ? $_SESSION["postcode"] : '') . '"/>
             ';
@@ -95,25 +87,28 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             echo '
             <input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huisnummer']) ? $_SESSION["huisnummer"] : '') . '"/>
             ';
-            
+            echo '</div>';
+
             echo '
-            <input class="toevoeging" type="text" id="huisNmr+" name="huisNmr+" placeholder="Toevoeging:" autocomplete="address-line3" value="'. (isset($_SESSION['Huisnummertoevoeging']) ? $_SESSION["Huisnummertoevoeging"] : '') . '"/>
+                <input type="number" name="volwassenen" placeholder="Aantal volwassenen:*" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'">
             ';
 
             echo '
-            <input type="text" id="land" name="land" placeholder="Land:" autocomplete="country" value="'. (isset($_SESSION['land']) ? $_SESSION["land"] : '') .'">
+                <input type="number" class="bottomForm" name="kinderen" placeholder="Aantal kinderen:*" value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'">
             ';
 
+            echo '</container>';
+            echo '<container class="reserveringContainer">';
+
             echo '
-            <select name="middelen" id="middelen" required>
+            <select class="topForm" name="middelen" id="middelen">
             <option value="">Waarmee komt u kamperen*</option>
             <option value="Tent" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Tent" ? 'selected' : '').'>Tent</option>
             <option value="caravan" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "caravan" ? 'selected' : '').'>Caravan</option>
             <option value="Anders" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
             <div id="andersInput" style="display: none;">
-            <label for="anders" style="background-color: inherit;">Anders, specificeren:*</label>
-            <input type="text" name="anders" id="anders" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="anders" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
             </div>
             ';
             
@@ -133,12 +128,12 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             if (isset($_SESSION['BeginDatum'])) {
                 echo '
                     <label for="begindatum">Begin datum:</label>
-                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" value="' . $_SESSION['BeginDatum'] . '" required>
+                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" value="' . $_SESSION['BeginDatum'] . '">
                 ';
             } else {
                 echo '
                     <label for="begindatum">Begin datum:</label>
-                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" placeholder="Begin datum?" required>
+                    <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" placeholder="Begin datum?">
                 ';
             }
 
@@ -146,32 +141,22 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
                     <label for="einddatum">Eind datum:</label>
-                    <input type="date" id="einddatum" name="einddatum" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * " required>
+                    <input type="date" id="einddatum" name="einddatum" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * ">
                 ';
             } else {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
                     <label for="einddatum">Eind datum:</label>
-                    <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * " required>
+                    <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">
                 ';
             }
-
-            echo '
-                <label for="volwassenen">Hoeveel volwassenen? *</label>
-                <input type="number" name="volwassenen" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'" required>
-            ';
-
-            echo '
-                <label for="kinderen">Hoeveel kinderen?</label>
-                <input type="number" name="kinderen" value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'">
-            ';
 
             ?>  
 
 <input class="submit" type="submit" value="Submit">
-
-</form>
 </container>
+</form>
+
 <script>
 const middelenSelect = document.getElementById('middelen');
 const andersInput = document.getElementById('andersInput');
@@ -179,10 +164,22 @@ const andersInput = document.getElementById('andersInput');
 middelenSelect.addEventListener('change', function() {
     if (this.value === 'Anders') {
         andersInput.style.display = 'block';
-        andersInput.querySelector('input').setAttribute('required', 'true');
+        excludedFields = excludedFields.filter(item => item !== 'anders');
     } else {
         andersInput.style.display = 'none';
-        andersInput.querySelector('input').removeAttribute('required');
+        excludedFields.push('anders');
+    }
+});
+
+const aanhefSelect = document.getElementById('aanhef');
+const andersInput2 = document.getElementById('andersInputA');
+aanhefSelect.addEventListener('change', function() {
+    if (this.value === 'Anders') {
+        andersInput2.style.display = 'block';
+        excludedFields = excludedFields.filter(item => item !== 'andersA');
+    } else {
+        andersInput2.style.display = 'none';
+        excludedFields.push('andersA');
     }
 });
 
@@ -203,6 +200,36 @@ document.getElementById('begindatum').addEventListener('input', function () {
     var maxEndDate = new Date(startDate.getTime() + (60 * 24 * 60 * 60 * 1000));
     endDateInput.max = maxEndDate.toISOString().split('T')[0];
 });
+
+var excludedFields = ['andersA', 'verzoek', 'anders']; // Add the IDs of fields you want to exclude
+validateForm(excludedFields);
+
+function validateForm(excludedIds) {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Get all input elements within the form
+        var inputs = this.querySelectorAll('input, select, textarea');
+        var isEmptyFieldFound = false;
+
+        // Loop through each input element
+        inputs.forEach(function(input) {
+            // Check if the input has no value and is not in the excludedIds array
+            if (!input.value.trim() && !excludedIds.includes(input.id)) {
+                // Add the "emptyField" class to the input
+                input.classList.add('emptyField');
+                isEmptyFieldFound = true;
+            }
+            // Add an event listener to remove the "emptyField" class on focus
+            input.addEventListener('focus', function() {
+                this.classList.remove('emptyField');
+            });
+        });
+        if (isEmptyFieldFound) {
+            // Prevent the form from submitting if any empty fields were found
+            event.preventDefault();
+            alert('Vul alle verplichte velden in')
+        }
+    });
+}
 </script>
 </div>
 
@@ -211,10 +238,12 @@ if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reserveri
     $_SESSION["loginPerson"] = $logged;
     session_unset();
     $logged = $_SESSION["loginPerson"];
-};  
 
+    // Redirect to confirm.php
+    header("Location: confirm.php");
+    exit(); // Make sure to exit after the redirect
+}
 unset($_SESSION["ErrorMessage"]);
-
 ?>
 </body>
 </html>

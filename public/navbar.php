@@ -8,15 +8,15 @@
   <meta name="description" content="BBB" />
   <title>BBB</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="./Css/navbar.css">
 </head>
 <body class="indexBody">
   <container class="Navbar">
-    <a class="logo" href="./index.php">
+    <a class="logo" href="./index">
       <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
       <div>  </div>
       <div>De Groene Weide</div>
-</a>
+    </a>
     <div class="navlink">
       <a href="./index">Home</a>
       <a href="./camping">De Camping</a>
