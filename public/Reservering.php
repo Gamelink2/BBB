@@ -162,26 +162,29 @@ const middelenSelect = document.getElementById('middelen');
 const andersInput = document.getElementById('andersInput');
 
 middelenSelect.addEventListener('change', function() {
-    if (this.value === 'Anders') {
-        andersInput.style.display = 'block';
-        excludedFields = excludedFields.filter(item => item !== 'anders');
-    } else {
-        andersInput.style.display = 'none';
-        excludedFields.push('anders');
-    }
+    handleSelectChange(this, andersInput, 'anders');
 });
 
 const aanhefSelect = document.getElementById('aanhef');
 const andersInput2 = document.getElementById('andersInputA');
+
 aanhefSelect.addEventListener('change', function() {
-    if (this.value === 'Anders') {
-        andersInput2.style.display = 'block';
-        excludedFields = excludedFields.filter(item => item !== 'andersA');
-    } else {
-        andersInput2.style.display = 'none';
-        excludedFields.push('andersA');
-    }
+    handleSelectChange(this, andersInput2, 'andersA');
 });
+
+function handleSelectChange(selectElement, targetElement, exclusionId) {
+    if (selectElement.value === 'Anders') {
+        targetElement.style.display = 'block';
+        excludedFields = excludedFields.filter(item => item !== exclusionId);
+
+    } else {
+        targetElement.style.display = 'none';
+        if (!excludedFields.includes(exclusionId)) {
+            excludedFields.push(exclusionId);
+        }
+    }
+    validateForm(excludedFields);
+}
 
 // JavaScript to validate the end date against the start date
 document.getElementById('begindatum').addEventListener('input', function () {
@@ -201,7 +204,7 @@ document.getElementById('begindatum').addEventListener('input', function () {
     endDateInput.max = maxEndDate.toISOString().split('T')[0];
 });
 
-var excludedFields = ['andersA', 'verzoek', 'anders']; //fields that are not required
+var excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not required
 validateForm(excludedFields);
 
 function validateForm(excludedIds) {
@@ -212,15 +215,30 @@ function validateForm(excludedIds) {
 
         // Loop through each input element
         inputs.forEach(function(input) {
-            // Check if the input is empty and is not in the excludedIds list
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
-                // Add the "emptyField" class to the input
-                input.classList.add('emptyField');
                 isEmptyFieldFound = true;
+                if (input.id === 'andersA') {
+                    document.getElementById('andersInputA').classList.add('emptyField');
+                }
+                else if (input.id === 'anders') {
+                    document.getElementById('andersInput').classList.add('emptyField');
+                }
+                else {
+                    input.classList.add('emptyField');
+                }
             }
-            // remove the "emptyField" class on focus
+
+            // Remove the "emptyField" class on focus
             input.addEventListener('focus', function() {
-                this.classList.remove('emptyField');
+                if (input.id === 'andersA') {
+                    document.getElementById('andersInputA').classList.remove('emptyField');
+                }
+                else if (input.id === 'anders') {
+                    document.getElementById('andersInput').classList.remove('emptyField');
+                }
+                else {
+                    input.classList.remove('emptyField');
+                }
             });
         });
         if (isEmptyFieldFound) {
@@ -229,6 +247,7 @@ function validateForm(excludedIds) {
             alert('Vul alle verplichte velden in')
         }
     });
+    
 }
 </script>
 </div>
@@ -237,7 +256,6 @@ function validateForm(excludedIds) {
     $_SESSION["loginPerson"] = $logged;
     session_unset();
     $logged = $_SESSION["loginPerson"];    
-
 ?>
 </body>
 </html>
