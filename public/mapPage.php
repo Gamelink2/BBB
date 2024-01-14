@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
     <?php include('navbar.php'); ?>
     <link rel="stylesheet" href="./Css/mapPage.css">
@@ -59,7 +58,6 @@
     </div>
     </div>
 </body>
-
 </html>
 
 

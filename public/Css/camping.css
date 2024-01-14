@@ -25,10 +25,11 @@
 .campText {
     margin-inline: 2.5%;
     width: calc(45% - 10px);
-    border: 10px solid #25851c;
+    outline: 10px solid #25851c;
     border-radius: 10px;
     background-color: #d6edd4;
-    height: calc(90% - 60px);
+    height: calc(90% - 56px);
+    padding-inline: 10px;
 }
 
 .nested-flex-container {
@@ -42,17 +43,27 @@
 .campText3 {
     margin-inline: 2.5%;
     width: 100%;
-    border: 10px solid #25851c;
+    outline: 10px solid #25851c;
     border-radius: 10px;
     background-color: #d6edd4;
 }
 
 .campText2 {
     height: calc(78% - 60px);
-
+    
 }
 
 .campText3 {
     margin-top: 8%;
     height: 14%;
+    padding-inline: 10px;
+}
+
+.photo{
+    background-image: url('../Images/camping2.png');
+    margin: 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;   
 }
