@@ -26,15 +26,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline-color: black;
-    outline-width: 1px;
-    outline-style: solid;
+    border-bottom: black solid 1px;
     background-color: #086700;
     color: white;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 0 !important;
 }
 a{
     text-decoration: none;
@@ -90,7 +90,3 @@ a{
     display: inline-block;
     overflow-x: hidden;
 }
-
-a, a:visited, a:hover, a:active {
-    color: inherit;
-  }

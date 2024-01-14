@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./Css/navbar.css">
 </head>
 <body class="indexBody">
-  <container class="Navbar">
+  <div class="Navbar">
     <a class="logo" href="./index">
       <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
       <div>  </div>
@@ -24,7 +24,9 @@
       <a href="./Reservering">Reserveren</a>
       <a href="./mapInfo">Map Information</a>
     </div>
-    <script>
+  </div>
+</body>
+<script>
   var currentPagePath = window.location.pathname;
   var currentPageFile = currentPagePath.split('/').pop(); // get path, split by /, get last element
 
@@ -32,6 +34,4 @@
 
   $('.navlink a[href*="' + currentPageFile + '"]').addClass('active'); // add active class to link that contains the current page
   </script>
-  </container>
-</body>
 </html>

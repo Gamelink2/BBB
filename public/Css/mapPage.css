@@ -1,16 +1,3 @@
-body{
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-bottom: 0 !important;
-}
-head{
-    margin: 0 !important;
-    padding: 0 !important;
-}
-html{
-    margin: 0 !important;
-    padding: 0 !important;
-}
 .mapBackground{
     background-image: url('../Images/Home.jpg');
     background-position: center center;
@@ -21,6 +8,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 .mapContainer{
     
@@ -75,6 +63,8 @@ area {
     width: 100vw;
     height: 100vh;
     display: none;
+    margin: 0;
+    padding: 0;
 }
 button {
     color: black;

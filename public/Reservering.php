@@ -206,9 +206,15 @@ document.getElementById('begindatum').addEventListener('input', function () {
 
 var excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not required
 validateForm(excludedFields);
+var isAlertShown = false;
 
 function validateForm(excludedIds) {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
+        if (isAlertShown) {
+            // If the alert has already been shown, prevent further alerts
+            event.preventDefault();
+            return;
+        }
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
         var isEmptyFieldFound = false;
@@ -244,7 +250,11 @@ function validateForm(excludedIds) {
         if (isEmptyFieldFound) {
             // Prevent the form from submitting if any empty fields were found
             event.preventDefault();
-            alert('Vul alle verplichte velden in')
+            if (!isAlertShown) {
+                // Show the alert only if it hasn't been shown before
+                alert('Vul alle verplichte velden in');
+                isAlertShown = true; // Set the flag to true after showing the alert
+            }
         }
     });
     
