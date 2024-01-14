@@ -27,9 +27,7 @@
             </div>
             <div class="nested-flex-container">
                 <div class="campText2">
-                    <p>
-                        Damn daniel
-                    </p>
+                    
                 </div>
                 <div class="campText3">
                     <p>

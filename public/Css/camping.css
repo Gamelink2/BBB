@@ -38,7 +38,14 @@
     height: calc(95% - 60px);
 }
 
-.campText2,
+.campText2 {
+    margin-inline: 2.5%;
+    width: 100%;
+    border: 10px solid #25851c;
+    border-radius: 10px;
+    background: url('./public/Images/campingbackground.jpg') center center/cover no-repeat;
+}
+
 .campText3 {
     margin-inline: 2.5%;
     width: 100%;
