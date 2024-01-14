@@ -201,24 +201,24 @@ document.getElementById('begindatum').addEventListener('input', function () {
     endDateInput.max = maxEndDate.toISOString().split('T')[0];
 });
 
-var excludedFields = ['andersA', 'verzoek', 'anders']; // Add the IDs of fields you want to exclude
+var excludedFields = ['andersA', 'verzoek', 'anders']; //fields that are not required
 validateForm(excludedFields);
 
 function validateForm(excludedIds) {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        // Get all input elements within the form
+        // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
         var isEmptyFieldFound = false;
 
         // Loop through each input element
         inputs.forEach(function(input) {
-            // Check if the input has no value and is not in the excludedIds array
+            // Check if the input is empty and is not in the excludedIds list
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
                 // Add the "emptyField" class to the input
                 input.classList.add('emptyField');
                 isEmptyFieldFound = true;
             }
-            // Add an event listener to remove the "emptyField" class on focus
+            // remove the "emptyField" class on focus
             input.addEventListener('focus', function() {
                 this.classList.remove('emptyField');
             });
@@ -237,11 +237,7 @@ function validateForm(excludedIds) {
 if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reservering is toegevoegd"){
     $_SESSION["loginPerson"] = $logged;
     session_unset();
-    $logged = $_SESSION["loginPerson"];
-
-    // Redirect to confirm.php
-    header("Location: confirm.php");
-    exit(); // Make sure to exit after the redirect
+    $logged = $_SESSION["loginPerson"];    
 }
 unset($_SESSION["ErrorMessage"]);
 ?>

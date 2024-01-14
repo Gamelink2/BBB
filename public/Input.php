@@ -39,7 +39,7 @@ try {
         $stmt->bindParam(':Kampeermiddel', $Middelen, PDO::PARAM_STR);
         $stmt->execute();
 
-        $sql2 = "INSERT INTO persoonsgegevens (VoorNaam, TussenVoegsel, AchterNaam, TelefoonNummer, Email, Verzoek, Volwassenen, kinderen, Aantal_Personen) VALUES (:voornaam, :tussen, :achternaam, :telNmr, :femail, :verzoek, :volwassenen, :kinderen, :aantal)";
+        $sql2 = "INSERT INTO persoonsgegevens (VoorNaam, AchterNaam, TelefoonNummer, Email, Verzoek, Volwassenen, kinderen, Aantal_Personen) VALUES (:voornaam, :achternaam, :telNmr, :femail, :verzoek, :volwassenen, :kinderen, :aantal)";
         $stmt2 = $PDO->prepare($sql2);
         $stmt2->bindParam(':voornaam', $VoorNaam, PDO::PARAM_STR);
         //$stmt2->bindParam(':tussen', $TussenVoegsel, PDO::PARAM_STR);
@@ -57,6 +57,8 @@ try {
         if ($stmt2->execute()){
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
+            header("Location: confirm.php");
+            die();
         };
         
     } else {
