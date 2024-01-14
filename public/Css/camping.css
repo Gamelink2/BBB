@@ -1,14 +1,10 @@
-:root, body, html {
-    overflow-y: hidden;
-}
-
 .campBody {
     background-image: url('../Images/campingbackground.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    justify-content: top; /* Change 'top' to 'center' for vertical alignment */
-    align-items: top; /* Change 'top' to 'center' for horizontal alignment */
+    justify-content: top;
+    align-items: top;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -33,7 +29,7 @@
 
 .nested-flex-container {
     display: flex;
-    flex-direction: column; /* Stacking items vertically inside the nested container */
+    flex-direction: column;
     width: 45%;
     height: calc(95% - 60px);
 }
@@ -43,7 +39,10 @@
     width: 100%;
     border: 10px solid #25851c;
     border-radius: 10px;
-    background: url('./public/Images/campingbackground.jpg') center center/cover no-repeat;
+    background-image: url('../Images/camping.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    height: calc(78% - 60px);
 }
 
 .campText3 {
@@ -52,14 +51,57 @@
     border: 10px solid #25851c;
     border-radius: 10px;
     background-color: #d6edd4;
-}
-
-.campText2 {
-    height: calc(78% - 60px);
-
-}
-
-.campText3 {
     margin-top: 8%;
     height: 14%;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.label {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.option-content {
+    margin-top: 10px;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease;
+}
+
+.option-content:target {
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
