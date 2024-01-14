@@ -47,8 +47,8 @@ if (!isset($_SESSION['ErrorMessage'])) {}
                 }
             }        
             echo '<container class="reserveringContainer">';
-            echo '
-            <select class="topForm" ame="aanhef" id="aanhef">
+            echo '  
+            <select class="topForm" name="aanhef" id="aanhef">
             <option value="">Hoe wilt u geaddreseerd worden?</option>
             <option value="Meneer" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Meneer" ? 'selected' : '').'>Meneer</option>
             <option value="Mevrouw" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Mevrouw" ? 'selected' : '').'>Mevrouw</option>
@@ -234,12 +234,10 @@ function validateForm(excludedIds) {
 </div>
 
 <?php
-if (isset($_SESSION["ErrorMessage"]) && $_SESSION["ErrorMessage"] === "Reservering is toegevoegd"){
     $_SESSION["loginPerson"] = $logged;
     session_unset();
     $logged = $_SESSION["loginPerson"];    
-}
-unset($_SESSION["ErrorMessage"]);
+
 ?>
 </body>
 </html>
