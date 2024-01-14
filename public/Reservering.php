@@ -103,9 +103,9 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             echo '
             <select class="topForm" name="middelen" id="middelen">
             <option value="">Waarmee komt u kamperen*</option>
-            <option value="Tent" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Tent" ? 'selected' : '').'>Tent</option>
-            <option value="caravan" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "caravan" ? 'selected' : '').'>Caravan</option>
-            <option value="Anders" '.(isset($_SESSION['middelen']) && $_SESSION['middelen'] === "Anders" ? 'selected' : '').'>Anders</option>
+            <option value="Tent">Tent</option>
+            <option value="caravan" ).>Caravan</option>
+            <option value="Anders">Anders</option>
             </select>
             <div id="andersInput" style="display: none;">
             <input type="text" name="anders" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
