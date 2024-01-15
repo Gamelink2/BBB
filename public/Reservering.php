@@ -73,11 +73,11 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             ';
             
             echo '
-            <input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam:" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>
+            <input class="straatnaam" type="text" id="straat" name="straat" placeholder="Straatnaam: *" autocomplete="address-line1" value="' . (isset($_SESSION['straatnaam']) ? $_SESSION["straatnaam"] : '') . '"/>
             ';
             
             echo '
-            <input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer:" autocomplete="address-line2" value="'. (isset($_SESSION['huisnummer']) ? $_SESSION["huisnummer"] : '') . '"/>
+            <input class="huisnummer" type="text" id="huisNmr" name="huisNmr" placeholder="Huisnummer: *" autocomplete="address-line2" value="'. (isset($_SESSION['huisnummer']) ? $_SESSION["huisnummer"] : '') . '"/>
             ';
             echo '</div>';
 
