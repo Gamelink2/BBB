@@ -28,6 +28,8 @@ CREATE TABLE IF NOT EXISTS adresgegevens (
     Kampeermiddel VARCHAR(255)
 );
 
+SELECT * FROM adresgegevens;
+
 
 CREATE TABLE IF NOT EXISTS users (
     PersonID INT AUTO_INCREMENT PRIMARY KEY,

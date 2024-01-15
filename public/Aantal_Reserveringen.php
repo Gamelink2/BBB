@@ -24,9 +24,9 @@ echo "Welcome, " . $_SESSION['user'] . "!";
 
 
 include_once("Connection.php");
-$query = "SELECT * FROM Table";
-$stmt = $PDO->query($query);
-
+$query = "SELECT * FROM persoonsgegevens";
+$stmt = $PDO->prepare($query);
+$stmt->execute()
 ?>
 
 <!DOCTYPE html>

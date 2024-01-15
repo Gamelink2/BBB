@@ -82,11 +82,11 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             echo '</div>';
 
             echo '
-                <input type="number" name="volwassenen" placeholder="Aantal volwassenen:*" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'">
+                <input type="number" min="0" max="25" name="volwassenen" placeholder="Aantal volwassenen:*" value="'. (isset($_SESSION['Volwassenen']) ? $_SESSION["Volwassenen"] : '') .'">
             ';
 
             echo '
-                <input type="number" class="bottomForm" name="kinderen" placeholder="Aantal kinderen:*" value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'">
+                <input type="number" min="0" max="25" class="bottomForm" name="kinderen" placeholder="Aantal kinderen:*" value="'.(isset($_SESSION["kinderen"]) ? $_SESSION["kinderen"] : '').'">
             ';
 
             echo '</container>';
