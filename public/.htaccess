@@ -10,7 +10,7 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^([^/]+)$ $1.html [NC,L,QSA]
 
 # Set the default directory index page order
-DirectoryIndex index.php Home.php
+# DirectoryIndex index.php Home.php
 
 # Forbid access to .htaccess and Connection.php files
 <FilesMatch "(.htaccess|Connection.php)">
