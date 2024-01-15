@@ -145,7 +145,7 @@ if (!isset($_SESSION['ErrorMessage'])) {}
 
             ?>  
 
-<input class="submit" type="submit" value="Submit">
+<input class="submit" type="submit" value="Reserveren">
 </container>
 </form>
 
