@@ -47,7 +47,7 @@ try {
         if ($stmt2->execute()) {
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
-            header("Location: confirm.php");
+            header("Location: confirm");
             die();
         };
         
