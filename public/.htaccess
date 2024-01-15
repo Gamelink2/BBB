@@ -1,9 +1,19 @@
+# Turn on the rewrite engine
 RewriteEngine on
 
-# If .php file exists, use it
+# If the requested URL without the .php extension exists as a file, internally rewrite the URL to append the .php extension
 RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^([^/]+)$ $1.php [NC,L]
+RewriteRule ^([^/]+)$ $1.php [NC,L,QSA]
 
-# If .php file doesn't exist, check for .html
+# If the requested URL without the .html extension exists as a file, internally rewrite the URL to append the .html extension
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)$ $1.html [NC,L]
+RewriteRule ^([^/]+)$ $1.html [NC,L,QSA]
+
+# Set the default directory index page order
+DirectoryIndex index.php Home.php
+
+# Forbid access to .htaccess and Connection.php files
+<FilesMatch "(.htaccess|Connection.php)">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
