@@ -110,7 +110,7 @@
                     $(".dropdown-content").hide();
                     
                     // Scroll back to the top of the page
-                    $('html, body').animate({scrollTop: 0}, 'slow');
+                    $('html, body').animate({scrollTop: 0});
                 });
 
                 $("#dropdownLabel").click(function(){
