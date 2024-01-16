@@ -10,6 +10,7 @@ include_once("navbar.php");
         justify-content: center;
         text-align: center;
         background-repeat: no-repeat;
+        background-size: cover;
 
     }
 
