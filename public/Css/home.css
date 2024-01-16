@@ -27,7 +27,7 @@ body {
     outline-color: rgb(0, 0, 0);
     outline-width: 3px;
     background-color: rgba(0, 0, 0, 0.281);
-    color: white;
+    color: rgba(215, 215, 215);
     font-size: 50px;
     padding: 15px 30px;
     border-radius: 20px;
@@ -36,5 +36,6 @@ body {
 }
 .homeButton:hover{
     background-color: rgba(0, 0, 0, 0.681);
+    color: white;
     transition: 0.3s;
 }
