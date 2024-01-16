@@ -7,7 +7,6 @@
 <body>
     <div class="homeBody">
         <row class="title">De Groene Weide</row>
-        <a class="homeButton" href="./camping">Lees meer</a>
     </div>
 </body>
 </html>
