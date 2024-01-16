@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
     <?php include('navbar.php'); ?>
-    <link rel="stylesheet" href="./Css/camping.css">
+    <link rel="stylesheet" href="./Css/navbar.css">
 </head>
 <body>
     <div class="errorBody">
