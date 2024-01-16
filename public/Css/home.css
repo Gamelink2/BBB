@@ -27,7 +27,7 @@ body {
     outline-color: black;
     outline-width: 3px;
     background-color: #086700;
-    color: #d6edd4;
+    color: white;
     font-size: 50px;
     padding: 15px 30px;
     border-radius: 20px;
@@ -37,5 +37,4 @@ body {
 .homeButton:hover{
     background-color: #d6edd4;
     transition: 0.3s;
-    color: black;
 }
