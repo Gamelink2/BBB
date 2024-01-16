@@ -1,5 +1,5 @@
 .campBody {
-    background-image: url('../Images/campingbackground.jpg');
+    background-image: url('../Images/Home.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,7 +64,7 @@
 
 .label {
     background-color: #333;
-    color: white;
+    color: #d6edd4;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -73,7 +73,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #d6edd4;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -85,7 +85,7 @@
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #d6edd4;
 }
 
 .dropdown:hover .dropdown-content {

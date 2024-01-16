@@ -18,7 +18,7 @@ body {
     font-size: 100px;
     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
-    color: white;
+    color: #d6edd4;
     -webkit-text-stroke: 4px black;
     margin-bottom: 50px;
 }
@@ -27,7 +27,7 @@ body {
     outline-color: black;
     outline-width: 3px;
     background-color: #086700;
-    color: white;
+    color: #d6edd4;
     font-size: 50px;
     padding: 15px 30px;
     border-radius: 20px;
@@ -35,7 +35,7 @@ body {
     transition: 0.3s;
 }
 .homeButton:hover{
-    background-color: #93ff87;
+    background-color: #d6edd4;
     transition: 0.3s;
     color: black;
 }
