@@ -1,3 +1,4 @@
+<html>
 <head>
     <?php include('navbar.php'); ?>
     <meta charset="UTF-8">
@@ -8,15 +9,14 @@
     <title>BBB</title>
 </head>
 <body class="campBody">
-    
-
-<div class="errors">
-    <h1>
-        404
-    </h1>
-<br>
-    <h2>
-        Pagina bestaat niet.
-    </h2>
-</div>
+    <div class="errors">
+        <h1>
+            404
+        </h1>
+        <br>
+        <h2>
+            Pagina bestaat niet.
+        </h2>
+    </div>
 </body>
+</html>
