@@ -11,7 +11,6 @@
             <h1>
                 404
             </h1>
-            <br>
             <h2>
                 Pagina bestaat niet.
             </h2>
