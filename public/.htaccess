@@ -15,4 +15,4 @@ DirectoryIndex index.php Home.php
     Deny from all
 </FilesMatch>
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /404.php [NC]
