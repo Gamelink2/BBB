@@ -41,6 +41,9 @@
 area {
     cursor: pointer;
 }
+area:hover{
+    background-color: rgba(0, 0, 0, 0.37);
+}
 #popup {
     display: none;
     position: fixed;
