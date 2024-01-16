@@ -8,14 +8,8 @@
     <title>BBB</title>
 </head>
 
-<style>
-    h1 {
-        align-items: center;
-        align-self: center;
-        align-content: center;
-        text-align: center;
-        margin-block: auto;
-    }
-</style>
-
-   <h1>404 Pagina bestaat niet.</h1>
+   <h1 class="errors">
+    404
+    <br>
+     Pagina bestaat niet.
+    </h1>
