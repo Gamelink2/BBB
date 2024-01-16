@@ -1,29 +1,11 @@
-<?php
-include_once("navbar.php");
-
-?>
-
-<style>
-    :root {
-        overflow: hidden;
-        background-image: url(./Images/Home.jpg);
-        justify-content: center;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0px;
-    }
-    h1 {
-        color: whitesmoke;
-        font-size: 3rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        justify-self: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        margin-block: 50%;
-    }
-
-</style>
+<head>
+    <?php include('navbar.php'); ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/BBB.ico" />
+    <link rel="stylesheet" href="./Css/camping.css">
+    <meta name="description" content="BBB" />
+    <title>BBB</title>
+</head>
 
    <h1>404 Pagina bestaat niet.</h1>
