@@ -105,7 +105,7 @@ a{
     align-items: top;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
 }  
 
