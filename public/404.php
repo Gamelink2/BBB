@@ -8,10 +8,12 @@
     <title>BBB</title>
 </head>
 
-   <h1 class="errors">
-    404
+<div class="errors">
+    <h1>
+        404
     </h1>
-    <br>
+<br>
     <h2>
         Pagina bestaat niet.
     </h2>
+</div>
