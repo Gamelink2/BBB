@@ -91,7 +91,9 @@
             </div>
             <div class="nested-flex-container">
                 <div class="campText2">
-                    <img src="Images/highfidnumbered2.png" alt="Camping Image" style="width: 100%; height: 100%; object-fit: contain;">
+                   <div class="campBackground">
+                     
+                   </div>
                 </div>
                 <div class="campText3">
                     <p>[description on how to use drop down menu and what the numbers on the map correspond to]</p>
@@ -110,7 +112,7 @@
                     $(".dropdown-content").hide();
                     
                     // Scroll back to the top of the page
-                    $('html, body').animate({scrollTop: 0}, 'slow');
+                    $('html, body').animate({scrollTop: 0});
                 });
 
                 $("#dropdownLabel").click(function(){

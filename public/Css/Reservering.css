@@ -17,7 +17,7 @@
 .reserveringContainer {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #d6edd4;
     align-items: center;
     width: fit-content;
     height: fit-content;
@@ -46,7 +46,7 @@ h1{
 }
 
 p{
-    color:#00eaff;
+    color:#d6edd4;
     outline-style: solid;
     outline-width: 3px;
     outline-color:#000000;
@@ -87,7 +87,7 @@ label{
     align-items: center;
     padding-left: 5px;
     display: inline-flex;
-    background-color: #a9a9a9;
+    background-color: #d6edd4;
 }
 .postcode{
     width: 160px;
@@ -165,11 +165,11 @@ textarea::placeholder{
     cursor: default;
 }
 .submit:hover {
-    background-color: #00ff84da;
+    background-color: #086700;
     transition: 0.3s;
 }
 .emptyField{
-    outline-color: red ;
+    outline-color: rgb(194, 0, 0) ;
     outline-style: solid;
     outline-width: 3px;
 }
