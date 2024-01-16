@@ -116,8 +116,10 @@ a{
     text-align: center;
     margin-block: auto;
     font-size: 3rem;
+    color: red;
+
 }
 
 .errors br {
-    height: 1rem;
+    height: ;
 }
