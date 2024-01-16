@@ -11,7 +11,9 @@ include_once("navbar.php");
         text-align: center;
         background-repeat: no-repeat;
         background-size: cover;
-
+    }
+    h1 {
+        color: whitesmoke
     }
 
 </style>
