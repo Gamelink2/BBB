@@ -17,3 +17,5 @@ DirectoryIndex index.php Home.php
     Order deny,allow
     Deny from all
 </FilesMatch>
+
+ErrorDocument 404 /404.php

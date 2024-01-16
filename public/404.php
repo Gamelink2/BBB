@@ -1,0 +1,16 @@
+<?php
+include_once("navbar.php");
+
+?>
+
+<style>
+    :root {
+        overflow: hidden;
+        background-image: url(./Images/Home.jpg);
+        justify-content: center;
+        text-align: center;
+    }
+
+</style>
+
+   <h1>404 Pagina bestaat niet.</h1>
