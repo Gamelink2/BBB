@@ -12,6 +12,7 @@
 }
 body {
     margin: 0;
+    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title{
@@ -22,6 +23,7 @@ body {
     -webkit-text-stroke: 2px black;
     margin-bottom: 50px;
 }
+
 .homeButton{
     outline-style: solid;
     outline-color: rgb(0, 0, 0);
@@ -29,12 +31,13 @@ body {
     background-color: rgba(255, 255, 255, 0.281);
     color: rgba(215, 215, 215);
     -webkit-text-stroke: 1px black;
-    font-size: 50px;
+    font-size: 50px;    
     padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
+
 .homeButton:hover{
     background-color: rgba(255, 255, 255, 0.681);
     color: white;
