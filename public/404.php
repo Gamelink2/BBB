@@ -21,7 +21,7 @@ include_once("navbar.php");
         justify-content: center;
         text-align: center;
         align-items: center;
-        margin-top: 40%;
+        margin-block: 50%;
     }
 
 </style>
