@@ -13,6 +13,8 @@
         align-items: center;
         align-self: center;
         align-content: center;
+        text-align: center;
+        margin-block: auto;
     }
 </style>
 
