@@ -44,7 +44,8 @@ area {
 }
 area:hover{
     background-color: rgba(0, 0, 0, 0.37);
-    z-index: 10;
+    opacity: 100;
+    color: black;
 }
 #popup {
     display: none;
