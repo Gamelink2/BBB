@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./Css/home.css">
 </head>
 <body class="homeBody">
-    <div class="errors">
+    <div class="homeBody">
         <h1>
             404
         </h1>
