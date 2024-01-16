@@ -27,6 +27,7 @@
     width: 100%;
     height: 100%;
     border-radius: 15px;
+    z-index: 5;
 }
 .infoContainer{
     outline-width: 3px;
@@ -43,6 +44,7 @@ area {
 }
 area:hover{
     background-color: rgba(0, 0, 0, 0.37);
+    z-index: 10;
 }
 #popup {
     display: none;
