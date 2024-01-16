@@ -7,6 +7,8 @@
     <meta name="description" content="BBB" />
     <title>BBB</title>
 </head>
+<body class="campBody">
+    
 
 <div class="errors">
     <h1>
@@ -17,3 +19,4 @@
         Pagina bestaat niet.
     </h2>
 </div>
+</body>
