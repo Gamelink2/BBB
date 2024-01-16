@@ -18,4 +18,8 @@
     }
 </style>
 
-   <h1>404 Pagina bestaat niet.</h1>
+   <h1>
+    404
+    <br>
+     Pagina bestaat niet.
+    </h1>
