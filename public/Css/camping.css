@@ -124,3 +124,7 @@
         margin-block: auto;
         font-size: 3rem;
     }
+
+    .errors br {
+        size: 1rem;
+    }
