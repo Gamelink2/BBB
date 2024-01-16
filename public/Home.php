@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl  ">
 <head>
 <?php include('navbar.php'); ?>
 <link rel="stylesheet" href="./Css/home.css">
