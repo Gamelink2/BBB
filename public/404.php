@@ -20,6 +20,8 @@ include_once("navbar.php");
         justify-self: center;
         justify-content: center;
         text-align: center;
+        align-items: center;
+        margin-top: 40%;
     }
 
 </style>
