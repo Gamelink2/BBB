@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <?php include('navbar.php'); ?>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Images/BBB.ico" />
-    <link rel="stylesheet" href="./Css/camping.css">
-    <meta name="description" content="BBB" />
-    <title>BBB</title>
+    <link rel="stylesheet" href="./Css/home.css">
 </head>
-<body class="campBody">
+<body class="homeBody">
     <div class="errors">
         <h1>
             404
