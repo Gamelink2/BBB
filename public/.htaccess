@@ -13,7 +13,7 @@ RewriteRule ^([^/]+)$ $1.html [NC,L,QSA]
 DirectoryIndex index.php Home.php
 
 # Forbid access to .htaccess and Connection.php files
-<FilesMatch "(.htaccess|Connection.php)">
+<FilesMatch "(.htaccess|Connection.php)$">
     Order deny,allow
     Deny from all
 </FilesMatch>
