@@ -9,6 +9,8 @@ include_once("navbar.php");
         background-image: url(./Images/Home.jpg);
         justify-content: center;
         text-align: center;
+        background-repeat: no-repeat;
+
     }
 
 </style>
