@@ -24,9 +24,9 @@ body {
 }
 .homeButton{
     outline-style: solid;
-    outline-color: black;
+    outline-color: rgb(0, 0, 0);
     outline-width: 3px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.281);
     opacity: 0.3;
     color: white;
     font-size: 50px;
@@ -36,6 +36,6 @@ body {
     transition: 0.3s;
 }
 .homeButton:hover{
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.681);
     transition: 0.3s;
 }
