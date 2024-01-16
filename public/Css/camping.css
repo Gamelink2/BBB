@@ -116,3 +116,11 @@
     background-repeat: no-repeat;
 }
 
+.errors {
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        text-align: center;
+        margin-block: auto;
+        font-size: 3rem;
+    }
