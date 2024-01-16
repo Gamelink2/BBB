@@ -10,6 +10,8 @@
 
    <h1 class="errors">
     404
-    <br>
-     Pagina bestaat niet.
     </h1>
+    <br>
+    <h2>
+        Pagina bestaat niet.
+    </h2>
