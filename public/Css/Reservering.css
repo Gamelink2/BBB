@@ -1,3 +1,10 @@
+.C-Outline, .reserveringContainer {
+  outline-width: 3px;
+  outline-color: black;
+  outline-style: solid;
+  border-radius: 10px;
+}
+
 .bodyReservering {
   font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   justify-items: center;
@@ -22,10 +29,6 @@
   align-items: center;
   width: fit-content;
   height: fit-content;
-  outline-color: #000000;
-  outline-style: solid;
-  outline-width: 5px;
-  border-radius: 25px;
   padding: 15px;
   margin: 15px;
 }

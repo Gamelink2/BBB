@@ -1,3 +1,5 @@
+@import "./Style.scss";
+
 .bodyReservering{
     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     justify-items: center;
@@ -21,10 +23,7 @@
     align-items: center;
     width: fit-content;
     height: fit-content;
-    outline-color: #000000;
-    outline-style: solid;
-    outline-width: 5px;
-    border-radius: 25px;
+    @extend .C-Outline;
     padding: 15px;
     margin: 15px;
 }
