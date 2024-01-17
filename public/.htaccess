@@ -1,16 +1,13 @@
-# Enable MultiViews option
 Options +MultiViews
 
-# Enable the Rewrite Engine
-RewriteEngine on
+RewriteEngine On
 
 # Redirect requests for .php files to URLs without the .php extension
-## Example: /example.php -> /example
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
 RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
 
 # Serve files without .php extension if the corresponding .php file exists
-RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^/?(.*)$ /$1.php [L]
 
 # Set the default index files
