@@ -20,7 +20,7 @@ try {
 
     // Recipients
     $mail->setFrom('bouwenvoorboerbert@gmail.com', 'Boer Bert');
-    $mail->addAddress('korverdamian@gmail.com','Damian');
+    $mail->addAddress(trim('korverdamian@gmail.com'));
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
     $mail->addBCC('bouwenvoorboerbert@gmail.com');
