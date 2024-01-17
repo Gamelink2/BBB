@@ -1,23 +1,24 @@
-:root{
-    overflow-x: hidden;
-    background-image: url(../Images/Home.jpg);
+:root {
+  overflow-x: hidden;
+  background-image: url(../Images/Home.jpg);
 }
+
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 ul {
-    display: grid;
-    list-style: none;
-    
+  display: grid;
+  list-style: none;
 }
 
 li {
-    display: inline;
-
+  display: inline;
 }
 
 .persoonsgegevens {
-    opacity: 1;
-    color: rebeccapurple;
+  opacity: 1;
+  color: rebeccapurple;
 }
+
+/*# sourceMappingURL=Aantal.css.map */

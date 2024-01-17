@@ -1,0 +1,23 @@
+:root{
+    overflow-x: hidden;
+    background-image: url(../Images/Home.jpg);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    display: grid;
+    list-style: none;
+    
+}
+
+li {
+    display: inline;
+
+}
+
+.persoonsgegevens {
+    opacity: 1;
+    color: rebeccapurple;
+}

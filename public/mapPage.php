@@ -3,6 +3,7 @@
 <head>
     <?php include('navbar.php'); ?>
     <link rel="stylesheet" href="./Css/mapPage.css">
+    <link rel="stylesheet" href="./Css/Style.css">
     <script>
         function showPopup(id) {
             document.getElementById('popup').style.display = 'block';
