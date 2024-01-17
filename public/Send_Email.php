@@ -19,7 +19,7 @@ try {
     $mail->Port       = 587;
 
     // Recipients
-    $mail->setFrom('bouwenvoorboerbert@gmail.com', 'Mailer');
+    $mail->setFrom('bouwenvoorboerbert@gmail.com', 'Boer Bert');
     $mail->addAddress($_SESSION["email"]);
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
