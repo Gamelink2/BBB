@@ -1,175 +1,195 @@
-.bodyReservering{
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-    justify-items: center;
-    background-image: url('../Images/Home.jpg');
-    background-position: center center;
-    height: calc(100vh - 60px);
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-.reserveringContainer {
-    display: flex;
-    flex-direction: column;
-    background-color: #d6edd4;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    outline-color: #000000;
-    outline-style: solid;
-    outline-width: 5px;
-    border-radius: 25px;
-    padding: 15px;
-    margin: 15px;
-}
-.reserveringForm{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: fit-content;
-    margin: 0;
-    padding: 0;
-}
-h1{
-    color: #000000;
-    font-weight: 500;
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
-    margin: 0;
-    margin-bottom: 20px;
+.bodyReservering {
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  justify-items: center;
+  background-image: url("../Images/Home.jpg");
+  background-position: center center;
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-p{
-    color:#d6edd4;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 30px;
-    align-items: center;
-    display: flex;
+.reserveringContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #d6edd4;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  outline-color: #000000;
+  outline-style: solid;
+  outline-width: 5px;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 15px;
 }
-input{
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 24px;
-    width: 492px;
-    padding: 0;
-    align-items: center;
-    padding-left: 5px;
-    display: inline-flex;
+
+.reserveringForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
 }
-label{
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 24px;
-    width: 496px;
-    padding: 0;
-    align-items: center;
-    padding-left: 5px;
-    display: inline-flex;
-    background-color: #d6edd4;
+
+h1 {
+  color: #000000;
+  font-weight: 500;
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 20px;
 }
-.postcode{
-    width: 160px;
+
+p {
+  color: #d6edd4;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #000000;
+  margin: 0;
+  margin-bottom: 5px;
+  height: 30px;
+  align-items: center;
+  display: flex;
 }
-.straatnaam{
-    width: 200px;
+
+input {
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #000000;
+  margin: 0;
+  margin-bottom: 5px;
+  height: 24px;
+  width: 492px;
+  padding: 0;
+  align-items: center;
+  padding-left: 5px;
+  display: inline-flex;
 }
-.huisnummer{
-    width: 105px;
+
+label {
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #000000;
+  margin: 0;
+  margin-bottom: 5px;
+  height: 24px;
+  width: 496px;
+  padding: 0;
+  align-items: center;
+  padding-left: 5px;
+  display: inline-flex;
+  background-color: #d6edd4;
 }
-input::placeholder{
-    color: #616060;
+
+.postcode {
+  width: 160px;
 }
-select{
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 24px;
-    width: 501px;
-    padding: 0;
-    align-items: center;
-    display: flex;
-    padding-left: 5px;
+
+.straatnaam {
+  width: 200px;
 }
-select::placeholder{
-    color: #616060;
+
+.huisnummer {
+  width: 105px;
 }
-.topForm{
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+
+input::placeholder {
+  color: #616060;
 }
-.bottomForm{
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
+
+select {
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #000000;
+  margin: 0;
+  margin-bottom: 5px;
+  height: 24px;
+  width: 501px;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  padding-left: 5px;
 }
-.fmsg{
-    height: 55px;
-    color: #000000;
-    justify-content: start;
-    align-items: start;
-    display: flex;
-    text-align: start;
-    justify-items: start;
-    align-content: start;
-    text-wrap: wrap;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    width: 492px;
-    resize: none;
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    padding-left: 5px;
+
+select::placeholder {
+  color: #616060;
 }
-textarea::placeholder{
-    color: #616060;
+
+.topForm {
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
 }
-.submit{
-    background-color: #ffffff90;
-    width: 501px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 36px;
-    font-size: 20px;
-    justify-content: center;
-    transition: 0.3s;
-    cursor: default;
+
+.bottomForm {
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
+
+.fmsg {
+  height: 55px;
+  color: #000000;
+  justify-content: start;
+  align-items: start;
+  display: flex;
+  text-align: start;
+  justify-items: start;
+  align-content: start;
+  text-wrap: wrap;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-color: #000000;
+  margin: 0;
+  margin-bottom: 5px;
+  width: 492px;
+  resize: none;
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+textarea::placeholder {
+  color: #616060;
+}
+
+.submit {
+  background-color: rgba(255, 255, 255, 0.5647058824);
+  width: 501px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 36px;
+  font-size: 20px;
+  justify-content: center;
+  transition: 0.3s;
+  cursor: default;
+}
+
 .submit:hover {
-    background-color: #086700;
-    transition: 0.3s;
+  background-color: #086700;
+  transition: 0.3s;
 }
-.emptyField{
-    outline-color: rgb(194, 0, 0) ;
-    outline-style: solid;
-    outline-width: 3px;
+
+.emptyField {
+  outline-color: rgb(194, 0, 0);
+  outline-style: solid;
+  outline-width: 3px;
 }
+
+/*# sourceMappingURL=Reservering.css.map */
