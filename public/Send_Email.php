@@ -20,14 +20,14 @@ try {
 
     // Recipients
     $mail->setFrom('bouwenvoorboerbert@gmail.com', 'Boer Bert');
-    $mail->addAddress($_SESSION["email"]);
+    $mail->addAddress($Email);
     $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('cc@example.com');
     $mail->addBCC('bouwenvoorboerbert@gmail.com');
 
     // Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');
+    // $mail->addAttachment('/var/tmp/file.tar.gz');
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');
 
     // Content
     $mail->isHTML(true);
@@ -63,4 +63,3 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-?>
