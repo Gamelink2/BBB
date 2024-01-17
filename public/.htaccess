@@ -1,17 +1,62 @@
-# Turn on the rewrite engine
+## Flaf for GoDaddy
+Options +MultiViews
+
+## Turn on the rewrite engine
 RewriteEngine on
 
-# If the requested URL without the .php extension exists as a file, internally rewrite the URL to append the .php extension
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^([^/]+)$ $1.php [L,QSA]
+## Let the other htaccess do its thing
+RewriteBase /
 
-# Set the default directory index page order
+## If the requested URL without the .php extension exists as a file, internally rewrite the URL to append the .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L,QSA]
+## If requested url has the .html extension, remove it from the url while still loading the content
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L,QSA]
+
+## remove File extension after entering it yourself
+# So redirect to ./home after putting in ./home.php
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,NE,L]
+
+## Set the default directory index page order
 DirectoryIndex index.php Home.php
 
-# Forbid access to .htaccess and Connection.php files
+## Forbid access to .htaccess and Connection.php files
 <FilesMatch "(.htaccess|Connection.php)">
     Order deny,allow
     Deny from all
 </FilesMatch>
 
+## Error Pages
+ErrorDocument 401 /401.php
+ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+## Redirect non-existing pages to index page
+# Best use for single page applications
+
+<ifmodule SumLinks>
+# options +SymLinksIfOwnerMatch
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /index.php [L]
+</ifmodule>
+
+## server only
+# redirect WWW -> non-WWW
+RewriteCond %{HTTP_POST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/%1 [R=301,L]
+# redirect non-WWW -> WWW
+RewriteCond %{HTTP_POST} ^"DomainName"\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://www."DomainName"/%1 [L,R=301]
+
+## SSL Redirect
+
+RewriteEngine on
+RewiteCond %{HTTPS} !=On
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
