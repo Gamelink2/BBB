@@ -36,6 +36,14 @@ ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
 
+## Only the farmer has access to these files:
+<FilesMatch "Aantal_Reserveringen">
+    AuthType basic
+    AuthName 'Inloggen'
+    AuthUserFile .htpasswd
+    Require valid-user
+</FilesMatch>
+
 ## Redirect non-existing pages to index page
 # Best use for single page applications
 
