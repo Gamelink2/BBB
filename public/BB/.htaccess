@@ -1,12 +1,13 @@
 RewriteEngine On
 RewriteBase /BB/
 
-## Protect a file
-
-AuthType basic
-AuthName 'Inloggen'
-AuthUserFile /BB/.htpasswd
-Require valid-user
+## Protect specific files
+<FilesMatch "Aantal_Reserveringen">
+    AuthType basic
+    AuthName 'Inloggen'
+    AuthUserFile /BB/.htpasswd
+    Require valid-user
+</FilesMatch>
 
 ErrorDocument 401 /401.php
 ErrorDocument 403 /403.php
