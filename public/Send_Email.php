@@ -58,8 +58,11 @@ try {
     $mail->Body    = $body;
     $mail->AltBody = 'Beste , uw reservering is toegevoegd.';
 
-    $mail->send(); 
-    echo 'Message has been sent';
+   if($mail->send()) {   
+       echo 'Message has been sent';
+    } else {
+        echo "Email kon niet worden verzonden";
+    }
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
