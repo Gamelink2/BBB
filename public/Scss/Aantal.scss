@@ -12,13 +12,11 @@
     text-align: center;
 }
 
-
 ul, li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 
 .Table {
     display: flex;
@@ -26,15 +24,15 @@ ul, li {
     align-items: center;
 }
 
-
 .Table-head {
     background-color: black;
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     display: flex;
     width: 100%;
     padding: 10px;
     border-radius: 5px;
+    justify-content: space-evenly;
 }
 
 .Table-content {
@@ -45,7 +43,9 @@ ul, li {
     text-align: center;
     border-radius: 5px;
     width: 200px;
-    display: row;
+    display: flex; /* Corrected to flex */
+    flex-direction: row; /* Display horizontally */
+    justify-content: space-evenly;
 }
 
 .Table-content:nth-child(odd) {
@@ -62,7 +62,12 @@ ul, li {
     opacity: 1;
     color: rebeccapurple;
     display: flex;
-    flex-direction: grid; /* Display horizontally */
+    flex-direction: column; /* Display vertically */
     max-height: 100vh;
     overflow-y: auto;
+}
+
+/* Additional style for child elements within persoonsgegevens */
+.persoonsgegevens .Table-content {
+    width: 100%; /* Full width of the container */
 }
