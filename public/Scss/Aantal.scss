@@ -32,7 +32,7 @@ ul, li {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .Table-content {
@@ -45,7 +45,7 @@ ul, li {
     width: 200px;
     display: flex; /* Corrected to flex */
     flex-direction: row; /* Display horizontally */
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .Table-content:nth-child(odd) {
@@ -69,5 +69,5 @@ ul, li {
 
 /* Additional style for child elements within persoonsgegevens */
 .persoonsgegevens .Table-content {
-    width: 100%; /* Full width of the container */
+    width: 75%; /* Full width of the container */
 }
