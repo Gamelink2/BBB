@@ -7,8 +7,12 @@
   display: none;
 }
 
+.bg {
+  background-color: gray, 0.5;
+}
+
 ul {
-  display: grid;
+  display: inline-block;
   list-style: none;
 }
 
@@ -19,6 +23,4 @@ li {
 .persoonsgegevens {
   opacity: 1;
   color: rebeccapurple;
-}
-
-/*# sourceMappingURL=Aantal.css.map */
+}/*# sourceMappingURL=Aantal.css.map */

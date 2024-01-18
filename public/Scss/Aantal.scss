@@ -5,9 +5,12 @@
 ::-webkit-scrollbar {
     display: none;
 }
+.bg {
+    background-color: gray, .5;
+}
 
 ul {
-    display: grid;
+    display: inline-block;
     list-style: none;
     
 }
