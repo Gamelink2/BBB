@@ -1,13 +1,15 @@
 RewriteEngine On
 RewriteBase /BB/
 
-## Protect specific files
-<FilesMatch "Aantal_Reserveringen">
-    AuthType basic
-    AuthName 'Inloggen'
-    AuthUserFile /BB/.htpasswd
-    Require valid-user
-</FilesMatch>
+# Exclude existing files and directories from rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+## Protect the entire "BB" directory
+AuthType basic
+AuthName 'Inloggen'
+AuthUserFile /BB/.htpasswd
+Require valid-user
 
 ErrorDocument 401 /401.php
 ErrorDocument 403 /403.php
