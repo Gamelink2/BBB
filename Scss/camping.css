@@ -1,0 +1,117 @@
+.campBody {
+  background-image: url("../Images/Home.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: top;
+  align-items: top;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  margin-inline: 10px;
+  margin-top: calc(2.5% + 10px);
+  width: 100%;
+}
+
+.campText {
+  margin-inline: 2.5%;
+  width: calc(45% - 10px);
+  outline: 10px solid #25851c;
+  border-radius: 10px;
+  background-color: #d6edd4;
+  height: calc(90% - 56px);
+  padding-inline: 10px;
+}
+
+.nested-flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: calc(98.5% - 59px);
+}
+
+.campText2 {
+  margin-inline: 2.5%;
+  width: 100%;
+  outline: 10px solid #25851c;
+  border-radius: 10px;
+  background-image: url("../Images/highfidnumbered2background.png");
+  background-size: cover;
+  background-position: center center;
+  height: calc(78% - 60px);
+}
+
+.campText3 {
+  margin-inline: 2.5%;
+  width: 97.5%;
+  outline: 10px solid #25851c;
+  border-radius: 10px;
+  background-color: #d6edd4;
+  margin-top: 8%;
+  height: 14%;
+  padding-inline: 10px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.label {
+  background-color: #333;
+  color: #d6edd4;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d6edd4;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 4px 26.5px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #d6edd4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.option-content {
+  margin-top: 10px;
+  display: block;
+  visibility: hidden; /* Corrected value */
+  opacity: 0;
+}
+
+.option-content:target {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.campBackground {
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/camping.jpg"); /* Updated path */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=camping.css.map */

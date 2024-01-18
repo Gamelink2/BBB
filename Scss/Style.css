@@ -1,0 +1,14 @@
+.Outline {
+  outline-width: 3px;
+  outline-color: black;
+  outline-style: solid;
+  border-radius: 10px;
+}
+
+/* 
+Voorbeeld hoe je dit kan toevoegen aan andere code:
+.imageContainer{
+    @extend .Outline;   Dit voegt de outline toe aan de code.
+    margin-left: 50px;
+}
+*//*# sourceMappingURL=Style.css.map */

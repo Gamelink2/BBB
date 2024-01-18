@@ -30,7 +30,7 @@
     <container class="mapContainer">
         <container class="infoContainer">
             <div class="info">
-                <li>Staanplaatsen</li>
+                <li class="staanplaatsen">Staanplaatsen</li>
                 <li>Toiletten</li>
                 <li>Zwembaden</li>
                 <li>Slipperwinkel</li>
