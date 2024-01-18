@@ -12,6 +12,9 @@
   border-style: solid;
   border-color: black;
   border-radius: 10%;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 ul {
@@ -21,7 +24,7 @@ ul {
 }
 
 ul:nth-child(even) {
-  background-color: gray;
+  background-color: lightgray;
 }
 
 ul:nth-child(odd) {
@@ -36,4 +39,11 @@ li {
 .persoonsgegevens {
   opacity: 1;
   color: rebeccapurple;
+}
+
+.Table-head {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
 }/*# sourceMappingURL=Aantal.css.map */
