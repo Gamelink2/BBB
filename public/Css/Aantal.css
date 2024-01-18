@@ -8,43 +8,60 @@
 }
 
 .bg {
-  background-color: gray;
-  border-style: solid;
-  border-color: black;
-  border-radius: 10%;
   justify-content: center;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
 }
 
-ul {
-  display: inline-block;
+/* Reset default styles for ul and li */
+ul, li {
   list-style: none;
-  color: white;
+  padding: 0;
+  margin: 0;
 }
 
-ul:nth-child(even) {
-  background-color: lightgray;
+/* Styling for the entire table */
+.Table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-ul:nth-child(odd) {
-  background-color: slategrey;
-}
-
-li {
-  font-size: 1rem;
-  font-family: sans-serif;
-}
-
-.persoonsgegevens {
-  opacity: 1;
-  color: rebeccapurple;
-}
-
+/* Styling for the table headers */
 .Table-head {
   background-color: black;
   color: white;
-  display: inline-block;
   font-size: 2rem;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Styling for each row in the table */
+.Table-content {
+  background-color: lightgrey;
+  margin: 5px;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+  width: 200px; /* Adjust as needed */
+}
+
+/* Alternating row styling */
+.Table-content:nth-child(odd) {
+  background-color: slategrey;
+  color: white;
+}
+
+/* Styling for the first column in each row */
+.Table-content > :first-child {
+  background-color: black;
+  color: white;
+}
+
+/* Additional styling for the .persoonsgegevens class */
+.persoonsgegevens {
+  opacity: 1;
+  color: rebeccapurple;
 }/*# sourceMappingURL=Aantal.css.map */
