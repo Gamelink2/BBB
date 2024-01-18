@@ -17,6 +17,7 @@
 ul {
   display: inline-block;
   list-style: none;
+  color: white;
 }
 
 ul:nth-child(even) {
@@ -28,9 +29,8 @@ ul:nth-child(odd) {
 }
 
 li {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: sans-serif;
-  color: whitesmoke;
 }
 
 .persoonsgegevens {
