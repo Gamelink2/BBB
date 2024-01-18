@@ -27,3 +27,4 @@ public/test.sh
 public/Connection.php
 public/Send_Email.php
 public/GitHub.sh
+vendor/phpmailer/phpmailer/
