@@ -9,11 +9,10 @@ session_start();
     <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
+    <div class="bodyReservering">
     <?php
     if (isset($_SESSION["ErrorMessage"])) {
         $errorMessage = $_SESSION["ErrorMessage"];
-    
-        if ($errorMessage) {
             echo '
                 <p style="
                     font-family: Arial, Helvetica, sans-serif;
@@ -24,11 +23,10 @@ session_start();
                 </p>';
         }
          ?>
-    <div class="bodyReservering">
             <form class="reserveringForm" id="contactForm" method="post" action="Input.php">
                 
             <?php
-            }        
+                  
             echo '<container class="reserveringContainer">';
             echo '  
             <select class="topForm" name="aanhef" id="aanhef">
