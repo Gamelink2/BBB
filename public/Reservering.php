@@ -5,36 +5,29 @@ session_start();
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<?php include('navbar.php'); ?>
-<link rel="stylesheet" href="Css/Reservering.css">
+    <?php include('navbar.php'); ?>
+    <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
+    <?php
+    if (isset($_SESSION["ErrorMessage"])) {
+        $errorMessage = $_SESSION["ErrorMessage"];
+    
+        if ($errorMessage) {
+            echo '
+                <p style="
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: large;
+                    color: red;
+                ">
+                    ' . $errorMessage . '
+                </p>';
+        }
+         ?>
     <div class="bodyReservering">
             <form class="reserveringForm" id="contactForm" method="post" action="Input.php">
                 
             <?php
-            if (isset($_SESSION["ErrorMessage"])) {
-                $errorMessage = $_SESSION["ErrorMessage"];
-
-                if ($errorMessage !== "Reservering is toegevoegd") {
-                    echo '
-                        <p style="
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: large;
-                            color: red;
-                        ">
-                            ' . $errorMessage . '
-                        </p>';
-                } else {
-                    echo '
-                        <p style="
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: large;
-                            color: green;
-                        ">
-                            ' . $errorMessage . '
-                        </p>';
-                }
             }        
             echo '<container class="reserveringContainer">';
             echo '  
@@ -45,7 +38,7 @@ session_start();
             <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
             <div id="andersInputA" style="display: none;">
-            <input type="text" name="andersA" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="aanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
             </div>
             ';
 
@@ -98,7 +91,7 @@ session_start();
             <option value="Anders">Anders</option>
             </select>
             <div id="andersInput" style="display: none;">
-            <input type="text" name="anders" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="middelen" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
             </div>
             ';
             
@@ -249,9 +242,12 @@ function validateForm(excludedIds) {
 </div>
 
 <?php
+    if (isset($_SESSION["loginPerson"])) {
     $_SESSION["loginPerson"] = $logged;
     session_unset();
-    $logged = $_SESSION["loginPerson"];    
+    $logged = $_SESSION["loginPerson"];   
+    }; 
+    session_unset();
 ?>
 </body>
 </html>
