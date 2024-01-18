@@ -1,5 +1,5 @@
 ## Flaf for GoDaddy
-Options +MultiViews
+#Options +MultiViews
 
 ## Turn on the rewrite engine
 RewriteEngine on
