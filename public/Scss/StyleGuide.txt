@@ -1,0 +1,11 @@
+Outlines: (voor de velden, niet voor kleine knoppen)
+3px breed 
+10px border radius
+zwart
+stijl solid
+
+tekst:
+nederlands
+wit/zwart
+font:     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
