@@ -35,38 +35,38 @@ include_once("navbar.php")
     $stmt = $PDO->prepare($query);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if ($result) {  ?>
-<ul id="<?php echo $result['UserID'] ?>" class="Table-content">
-    <li>
-        <?php echo $result['UserID'] ?>
-    </li>
-    <li>
-        <?php echo $result['Aanhef'] ?>
-    </li>
-    <li>
-        <?php echo $result['VoorNaam'] ?>
-    </li>
-    <li>
-        <?php echo $result['AchterNaam'] ?>
-    </li>
-    <li>
-        <?php echo $result['TelefoonNummer'] ?>
-    </li>
-    <li>
-        <?php echo $result['Email'] ?>
-    </li>
-    <li>
-        <?php echo $result['Verzoek'] ?>
-    </li>
-    <li>
-        <?php echo $result['Aantal_Personen'] ?>
-    </li>
-    <li>
-        <?php echo $result['Volwassenen'] ?>
-    </li>
-    <li>
-        <?php echo $result['kinderen'] ?>
-    </li>
-</ul>
+        <ul id="<?php echo $result['UserID'] ?>" class="Table-content">
+            <li>
+                <?php echo $result['UserID'] ?>
+            </li>
+            <li>
+                <?php echo $result['Aanhef'] ?>
+            </li>
+            <li>
+                <?php echo $result['VoorNaam'] ?>
+            </li>
+            <li>
+                <?php echo $result['AchterNaam'] ?>
+            </li>
+            <li>
+                <?php echo $result['TelefoonNummer'] ?>
+            </li>
+            <li>
+                <?php echo $result['Email'] ?>
+            </li>
+            <li>
+                <?php echo $result['Verzoek'] ?>
+            </li>
+            <li>
+                <?php echo $result['Aantal_Personen'] ?>
+            </li>
+            <li>
+                <?php echo $result['Volwassenen'] ?>
+            </li>
+            <li>
+                <?php echo $result['kinderen'] ?>
+            </li>
+        </ul>
     <?php
     } else {?>
 
