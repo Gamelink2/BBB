@@ -65,11 +65,12 @@ ul, li {
 
 .persoonsgegevens {
     opacity: 1;
-    color: rebeccapurple;
+    color: white;
     display: flex;
     flex-direction: column; /* Display vertically */
     max-height: 100vh;
     overflow-y: auto;
+    background-color: black;
 }
 
 /* Additional style for child elements within persoonsgegevens */
