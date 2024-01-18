@@ -71,6 +71,8 @@ ul, li {
     max-height: 100vh;
     overflow-y: auto;
     background-color: black;
+    max-width: 80%;
+    margin-inline: auto;
 }
 
 /* Additional style for child elements within persoonsgegevens */
