@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <html>
 <head>
     <?php include('navbar.php'); ?>
