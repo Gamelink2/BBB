@@ -14,7 +14,14 @@
     </div>
     </div>
 </body>
-
+<?php
+    if (isset($_SESSION["loginPerson"])) {
+    $_SESSION["loginPerson"] = $logged;
+    session_unset();
+    $logged = $_SESSION["loginPerson"];   
+    }; 
+    session_unset();
+?>
 </html>
 
 
