@@ -39,9 +39,10 @@ ErrorDocument 500 /500.php
 <FilesMatch "Aantal_Reserveringen">
     AuthType basic
     AuthName 'Inloggen'
-    AuthUserFile ./.htpasswd
+    AuthUserFile /var/www/html/BBB/public/.htpasswd
     Require valid-user
 </FilesMatch>
+
 
 ## Redirect non-existing pages to index page
 # Best use for single page applications
