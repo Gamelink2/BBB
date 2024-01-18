@@ -28,7 +28,7 @@
     z-index: 5;
 }
 .infoContainer{
-    @extend .C-Outline;
+    @extend .Outline;
     background-color: #d6edd4;
     padding: 10px 20px;
     width: 250px;
@@ -69,10 +69,15 @@ area:hover{
 }
 button {
     color: black;
-    @extend .C-Outline;
+    @extend .Outline;
     display: block;
     margin-top: 10px;
     padding: 5px 10px;
     cursor: pointer;
     box-shadow: none;
+}
+.staanplaatsen::marker{
+    content: url(../Images/BBB.ico);
+    width: 5px; /* Adjust the width as needed */
+    height: 5px; /* Adjust the height as needed */
 }

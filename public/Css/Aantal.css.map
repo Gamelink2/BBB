@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../Scss/Aantal.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;AAEJ;EACI;;;AAGJ;EACI;EACA;;;AAIJ;EACI;;;AAIJ;EACI;EACA","file":"Aantal.css"}
+{"version":3,"sources":["../Scss/Aantal.scss","Aantal.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,yCAAA;ACCJ;;ADCA;EACI,aAAA;ACEJ;;ADCA;EACI,aAAA;EACA,gBAAA;ACEJ;;ADEA;EACI,eAAA;ACCJ;;ADGA;EACI,UAAA;EACA,oBAAA;ACAJ","file":"Aantal.css"}
