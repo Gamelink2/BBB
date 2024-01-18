@@ -18,8 +18,19 @@ ul {
     
 }
 
+ul:nth-child(even) {
+    background-color: gray;
+
+}
+
+ul:nth-child(odd) {
+    background-color: slategrey;
+}
+
 li {
-    display: inline;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: whitesmoke;
 
 }
 
