@@ -39,24 +39,25 @@ ErrorDocument 500 /500.php
 ## Redirect non-existing pages to index page
 # Best use for single page applications
 
-<ifmodule SumLinks>
+#<ifmodule SumLinks>
 # options +SymLinksIfOwnerMatch
 # RewriteEngine On
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule . /index.php [L]
-</ifmodule>
+
+#</ifmodule>
 
 ## server only
 # redirect WWW -> non-WWW
-RewriteCond %{HTTP_POST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ http://%1/%1 [R=301,L]
+#RewriteCond %{HTTP_POST} ^www\.(.+)$ [NC]
+#RewriteRule ^(.*)$ http://%1/%1 [R=301,L]
 # redirect non-WWW -> WWW
-RewriteCond %{HTTP_POST} ^"DomainName"\.(.+)$ [NC]
-RewriteRule ^(.*)$ http://www."DomainName"/%1 [L,R=301]
+#RewriteCond %{HTTP_POST} ^"DomainName"\.(.+)$ [NC]
+#RewriteRule ^(.*)$ http://www."DomainName"/%1 [L,R=301]
 
 ## SSL Redirect
 
-RewriteEngine on
-RewiteCond %{HTTPS} !=On
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+#RewriteEngine on
+#RewiteCond %{HTTPS} !=On
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
