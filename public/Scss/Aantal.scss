@@ -1,30 +1,32 @@
-:root{
+:root {
     overflow-x: hidden;
     background-image: url(../Images/Home.jpg);
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
+
 .bg {
     justify-content: center;
     text-align: center;
 }
 
-/* Reset default styles for ul and li */
+
 ul, li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Styling for the entire table */
+
 .Table {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Styling for the table headers */
+
 .Table-head {
     background-color: black;
     color: white;
@@ -35,7 +37,6 @@ ul, li {
     border-radius: 5px;
 }
 
-/* Styling for each row in the table */
 .Table-content {
     background-color: lightgrey;
     margin: 5px;
@@ -43,27 +44,24 @@ ul, li {
     flex: 1;
     text-align: center;
     border-radius: 5px;
-    width: 200px; /* Adjust as needed */
+    width: 200px;
 }
 
-/* Alternating row styling */
 .Table-content:nth-child(odd) {
     background-color: slategrey;
     color: white;
 }
 
-/* Styling for the first column in each row */
 .Table-content > :first-child {
     background-color: black;
     color: white;
 }
 
-/* Additional styling for the .persoonsgegevens class */
 .persoonsgegevens {
     opacity: 1;
     color: rebeccapurple;
     display: flex;
-    flex-direction: column;
-    max-height: 100svh;
+    flex-direction: row; /* Display horizontally */
+    max-height: 100vh;
     overflow-y: auto;
 }

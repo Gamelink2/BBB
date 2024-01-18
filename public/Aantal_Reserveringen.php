@@ -12,26 +12,26 @@ include_once("navbar.php");
 </head>
 <body>
     <div class="BG">
+        <ul class="Table-head">
+            <li>
+                Reservering:
+            </li>
+            <li>
+                Aanhef:
+            </li>
+            <li>
+                Voornaam:
+            </li>
+            <li>
+                Achternaam:
+            </li>
+            <li>
+                Email:
+            </li>
+        </ul>
+        
         <div class="persoonsgegevens">
-            <ul class="Table-head">
-                <li>
-                    Reservering:
-                </li>
-                <li>
-                    Aanhef:
-                </li>
-                <li>
-                    Voornaam:
-                </li>
-                <li>
-                    Achternaam:
-                </li>
-                <li>
-                    Email:
-                </li>
-            </ul>
-
-            <?php
+        <?php
             $query = "SELECT * FROM persoonsgegevens";
             $stmt = $PDO->prepare($query);
             $stmt->execute(); // Execute the prepared statement
