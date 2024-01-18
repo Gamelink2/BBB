@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 
-public/test.sh
 public/Connection.php
 public/Send_Email.php
 public/GitHub.sh
