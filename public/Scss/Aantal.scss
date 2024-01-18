@@ -45,6 +45,7 @@ ul, li {
     text-align: center;
     border-radius: 5px;
     width: 200px;
+    display: row;
 }
 
 .Table-content:nth-child(odd) {
@@ -61,7 +62,7 @@ ul, li {
     opacity: 1;
     color: rebeccapurple;
     display: flex;
-    flex-direction: row; /* Display horizontally */
+    flex-direction: grid; /* Display horizontally */
     max-height: 100vh;
     overflow-y: auto;
 }

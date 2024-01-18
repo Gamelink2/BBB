@@ -28,6 +28,18 @@ include_once("navbar.php");
             <li>
                 Email:
             </li>
+            <li>
+            Verzoek:
+            </li>
+            <li>
+            Aantal_Personen:
+            </li>
+            <li>
+            Volwassenen:
+            </li>
+            <li>
+            Kinderen:
+            </li>
         </ul>
         
         <div class="persoonsgegevens">
