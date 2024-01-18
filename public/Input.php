@@ -2,7 +2,6 @@
 <a href="./">Oeps, terug naar pagina..</a>
 
 <?php
-session_start();
 include_once("Connection.php");
 global $PDO;
 
@@ -21,8 +20,8 @@ try {
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
     $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
     $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
-                //                      //                      //                      //                                  //                          //                  //                      //
-    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($Email) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode)) {
+
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode)) {
         $aantal = (isset($_SESSION["kinderen"]) && isset($_SESSION["Volwassenen"])) ? ($Kinderen + $Volwassenen) : $Volwassenen;    
     
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Straatnaam, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Straatnaam, :Kampeermiddel)";
