@@ -1,11 +1,30 @@
+Disclaimer:
+Deze styling is voor nu alleen nog een prototype en niet een vaste keuze.
+
+|------------------------------------------------------------------------|
+
+https://www.w3schools.com/html/html5_syntax.asp
+
 Outlines: (voor de velden, niet voor kleine knoppen)
-3px breed 
-10px border radius
-zwart
-stijl solid
+- 3px breed 
+- 10px border radius
+- zwart
+- solid
 
 tekst:
-nederlands
-wit/zwart
-font:     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+- nederlands
+- wit/zwart
+- font:     font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+- 3 sizes: (voor nu px, moet mogelijk verranderd worden naar iets wat mee scaled)
+- - 30px
+- - 20px
+- - 10px
+
+Kleuren website:
+- kleur 1: #086700;
+- kleur 2: wit;
+- kleur 3: zwart;
+
+Zelfde achtergrond op elke pagina
+
 

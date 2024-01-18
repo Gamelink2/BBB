@@ -52,6 +52,7 @@
     </map>
     </container>    
     </container>
+    
     <div id="overlay" onclick="closePopup()"></div>
     <div id="popup">
         <div id="popupContent"></div>
