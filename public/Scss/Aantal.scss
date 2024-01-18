@@ -62,4 +62,8 @@ ul, li {
 .persoonsgegevens {
     opacity: 1;
     color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    max-height: 100svh;
+    overflow-y: auto;
 }
