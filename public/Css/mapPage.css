@@ -1,25 +1,13 @@
-.Outline, button, .infoContainer, .imageContainer {
-  outline-width: 3px;
-  outline-color: black;
-  outline-style: solid;
-  border-radius: 10px;
-  background-color: #ffffff;
-}
-
-/* 
-Voorbeeld hoe je dit kan toevoegen aan andere code:
-.imageContainer{
-    @extend .Outline;   Dit voegt de outline toe aan de code.
-    margin-left: 50px;
-}
-*/
 .mapBackground {
   background-image: url("../Images/Home.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  background-repeat: no-repeat;
   height: calc(100vh - 60px);
+  width: 100%;
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +15,7 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
 }
 
 .mapContainer {
-  width: -moz-fit-content;
-  width: fit-content;
-  transform: scale(0.9);
+  height: 60rem;
   display: flex;
 }
 
@@ -38,20 +24,27 @@ area {
 }
 
 .imageContainer {
-  margin-left: 50px;
+  outline: 3px solid black;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 2em;
+  margin-left: 5em;
 }
 
 .imageContainer img {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  z-index: 5;
 }
 
 .infoContainer {
+  outline: 3px solid black;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 2em;
+  font-size: 2.5rem;
   padding: 10px 20px;
-  width: 250px;
-  font-size: 30px;
+  width: 35rem;
   display: flex;
   justify-content: center;
 }
@@ -85,6 +78,10 @@ area {
 
 button {
   color: black;
+  outline: 3px solid black;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 2em;
   display: block;
   margin-top: 10px;
   padding: 5px 10px;
@@ -93,7 +90,10 @@ button {
 }
 
 li::marker {
-  font-size: 50px;
+  font-size: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 

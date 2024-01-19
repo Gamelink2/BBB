@@ -8,123 +8,47 @@
     <link rel="stylesheet" href="./Css/camping.css">
     <meta name="description" content="BBB" />
     <title>BBB</title>
-    <style>
-        /* Add or modify styles if necessary */
-        .option-content {
-            display: none;
-        }
-
-        .option-content p {
-            /* Add styles for the text within <p> tags */
-            color: black; /* You can customize the color */
-            font-size: 16px; /* You can customize the font size */
-            /* Add other styles as needed */
-        }
-    </style>
 </head>
 <body>
     <div class="campBody">
         <div class="flex-container">
-            <div class="campText">
-                <div class="dropdown">
-                    <div class="label" id="dropdownLabel">Locatie</div>
-                    <div class="dropdown-content">
-                        <a href="#option1" class="dropdown-option" data-target="option1">1</a>
-                        <a href="#option2" class="dropdown-option" data-target="option2">2</a>
-                        <a href="#option3" class="dropdown-option" data-target="option3">3</a>
-                        <a href="#option4" class="dropdown-option" data-target="option4">4</a>
-                        <a href="#option5" class="dropdown-option" data-target="option5">5</a>
-                        <a href="#option6" class="dropdown-option" data-target="option6">6</a>
-                        <a href="#option7" class="dropdown-option" data-target="option7">7</a>
-                        <a href="#option8" class="dropdown-option" data-target="option8">8</a>
-                        <a href="#option9" class="dropdown-option" data-target="option9">9</a>
-                        <a href="#option10" class="dropdown-option" data-target="option10">10</a>
-                        <a href="#option11" class="dropdown-option" data-target="option11">11</a>
-                        <a href="#option12" class="dropdown-option" data-target="option12">12</a>
-                        <a href="#option13" class="dropdown-option" data-target="option13">13</a>
-                        <a href="#option14" class="dropdown-option" data-target="option14">14</a>
-                    </div>
-                </div>
-                <div id="option1" class="option-content">
-                    <p>Selected Option Text: Option 1</p>
-                </div>
-                <div id="option2" class="option-content">
-                    <p>Selected Option Text: Option 2</p>
-                </div>
-                <div id="option3" class="option-content">
-                    <p>Selected Option Text: Option 3</p>
-                </div>
-                <div id="option4" class="option-content">
-                    <p>Selected Option Text: Option 4</p>
-                </div>
-                <div id="option5" class="option-content">
-                    <p>Selected Option Text: Option 5</p>
-                </div>
-                <div id="option6" class="option-content">
-                    <p>Selected Option Text: Option 6</p>
-                </div>
-                <div id="option7" class="option-content">
-                    <p>Selected Option Text: Option 7</p>
-                </div>
-                <div id="option8" class="option-content">
-                    <p>Selected Option Text: Option 8</p>
-                </div>
-                <div id="option9" class="option-content">
-                    <p>Selected Option Text: Option 9</p>
-                </div>
-                <div id="option10" class="option-content">
-                    <p>Selected Option Text: Option 10</p>
-                </div>
-                <div id="option11" class="option-content">
-                    <p>Selected Option Text: Option 11</p>
-                </div>
-                <div id="option12" class="option-content">
-                    <p>Selected Option Text: Option 12</p>
-                </div>
-                <div id="option13" class="option-content">
-                    <p>Selected Option Text: Option 13</p>
-                </div>
-                <div id="option14" class="option-content">
-                    <p>Selected Option Text: Option 14</p>
-                </div>
-                
-            </div>
-            <div class="nested-flex-container">
-                <div class="campText2">
-                   <div class="campBackground">
-                     
-                   </div>
-                </div>
-                <div class="campText3">
-                    <p>[description on how to use drop down menu and what the numbers on the map correspond to]</p>
-                </div>
-            </div>
+            <column class="campText">
+                <p class="title">Boer Bert's Nieuwe Camping: Een Oase van Rust en Natuur</p>
+
+                <p class="text">Beste vrienden van het platteland,</p>
+
+                <p class="text">Ik ben verheugd jullie te verwelkomen op onze gloednieuwe camping hier op de boerderij. Ik ben Boer Bert, en deze plek is mijn trots en vreugde. Op ons stukje land hebben we een oase van rust gecreëerd, waar gasten kunnen genieten van de eenvoudige geneugten van het boerenleven.</p>
+
+                <p class="caption">Wat maakt onze camping speciaal?</p>
+
+                <ul>
+                <li><span class="textBold">Duurzaam Leven:</span> We geloven in een duurzame manier van leven, en onze camping weerspiegelt dat. Geïnspireerd door permacultuur streven we naar harmonie met de natuur. Hier kunnen jullie de schoonheid van duurzaamheid ervaren, omringd door groene velden en fluitende vogels.</li>
+                <li><span class="textBold">Rust en Ontspanning:</span> Ver weg van de drukte van de stad biedt onze camping een oase van rust. Of je nu luistert naar een audioboek, een rustige fietstocht maakt, of gewoon geniet van de serene omgeving, hier kun je echt ontspannen.</li>
+                <li><span class="textBold">Creatieve Workshops:</span> Voor de avontuurlijke geesten onder jullie, organiseren we workshops zoals bushcraft, creatief schrijven, en andere activiteiten die jullie verbinding met de natuur versterken.</li>
+                </ul>
+
+                <p><span class="caption">Ontsnap naar de Boerderij</span></p>
+                <p class="text">Of je nu kampeert met je tent, caravan, of kiest voor iets anders, hier op Boer Bert's Camping staat de deur altijd open. Kom en ervaar de poëtische kant van het boerenleven.</p>
+
+                <p class="text">We hopen jullie binnenkort te mogen begroeten op onze boerderij. Tot dan, geniet van de eenvoudige geneugten van het buitenleven!</p>
+
+                <p class="text">Met vriendelijke groet,<br> Boer Bert</p>
+            </column>
+            <column class="nested-flex-container">
+                <row class="campText2">
+                   <div class="campBackground"></div>
+                </row>
+                <row class="campText3">
+                    <div class="text">Vossegatsedijk 5</div>
+                    <div class="text">3981 HS Bunnik</div>
+                    <div class="text">Nederland</div>
+                    <div class="text">T +31 (0)570 54 63 95</div>
+                    <div class="text">BoerBert@gmail.com</div>
+                    <div class="text">Bereikbaar elke dag tussen 08:00 en 16:00</div>
+                </row>
+            </column>
         </div>
     </div>
-
-    <script>
-            $(document).ready(function(){
-                $(".dropdown-option").click(function(e){
-                    e.preventDefault(); // Prevent the default behavior of the anchor link
-                    var targetId = $(this).data("target");
-                    $(".option-content").hide();
-                    $("#" + targetId).show();
-                    $(".dropdown-content").hide();
-                    
-                    // Scroll back to the top of the page
-                    $('html, body').animate({scrollTop: 0});
-                });
-
-                $("#dropdownLabel").click(function(){
-                    $(".dropdown-content").toggle();
-                });
-            });
-       
-
-
-
-
-    </script>
 </body>
 </html>
 

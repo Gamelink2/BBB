@@ -10,7 +10,7 @@
         function showPopup(id) {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('overlay').style.display = 'block';
-            document.getElementById('popupContent').innerHTML = 'Clicked on area with id: ' + id;
+            document.getElementById('popupContent').innerHTML = 'Dit is plaats: ' + id;
             
             fetch(`get_data.php?areaId=${areaId}`)
             .then(response => response.text())
@@ -60,7 +60,7 @@
     <div id="overlay" onclick="closePopup()"></div>
     <div id="popup">
         <div id="popupContent"></div>
-        <button onclick="closePopup()">Close</button>
+        <button onclick="closePopup()">Terug</button>
     </div>
     </div>
 </body>

@@ -1,15 +1,8 @@
-@import "./Style.scss";
+@use "./Style.scss" as s;
 
 .bodyReservering{
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    @include s.Background;
     justify-items: center;
-    background-image: url('../Images/Home.jpg');
-    background-position: center center;
-    height: calc(100vh - 60px);
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -23,7 +16,7 @@
     align-items: center;
     width: fit-content;
     height: fit-content;
-    @extend .Outline;
+    @include s.Outline;
     padding: 15px;
     margin: 15px;
 }

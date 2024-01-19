@@ -1,28 +1,15 @@
-.Outline, .reserveringContainer {
-  outline-width: 3px;
-  outline-color: black;
-  outline-style: solid;
-  border-radius: 10px;
-  background-color: #ffffff;
-}
-
-/* 
-Voorbeeld hoe je dit kan toevoegen aan andere code:
-.imageContainer{
-    @extend .Outline;   Dit voegt de outline toe aan de code.
-    margin-left: 50px;
-}
-*/
 .bodyReservering {
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  justify-items: center;
   background-image: url("../Images/Home.jpg");
   background-position: center center;
-  height: calc(100vh - 60px);
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(100vh - 60px);
+  width: 100%;
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -39,6 +26,9 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  outline: 3px solid black;
+  border-radius: 10px;
+  background-color: #ffffff;
   padding: 15px;
   margin: 15px;
 }
