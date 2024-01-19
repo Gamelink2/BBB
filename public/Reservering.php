@@ -36,7 +36,7 @@ session_start();
             <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
             <div id="andersInputA" style="display: none;">
-            <input type="text" name="aanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="aanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION["middelen"]) ? $_SESSION["middelen"] : '') .'">
             </div>
             ';
 
@@ -82,16 +82,20 @@ session_start();
             echo '<container class="reserveringContainer">';
 
             echo '
-            <select class="topForm" name="middelen" id="middelen">
-            <option value="">Waarmee komt u kamperen*</option>
-            <option value="Tent">Tent</option>
-            <option value="caravan" ).>Caravan</option>
-            <option value="Anders">Anders</option>
+            <select class="topForm" name="middelen" id="middelen" onchange="toggleAndersInput()">
+                <option value="">Waarmee komt u kamperen*</option>
+                <option value="Tent" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Tent" ? "selected" : "") . '>Tent</option>
+                <option value="Caravan" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Caravan" ? "selected" : "") . '>Caravan</option>
+                <option value="Anders" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Anders" ? "selected" : "") . '>Anders</option>
             </select>
+        
             <div id="andersInput" style="display: none;">
-            <input type="text" name="middelen" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+                <input type="text" name="andersMiddelen" id="anders" placeholder="Anders, specificeren:*" value="' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == 'Anders' ? $_SESSION["middelen"] : '') . '">
             </div>
-            ';
+        ';
+        
+        
+        
             
 
             if (isset($_SESSION['verzoek'])) {
@@ -139,7 +143,7 @@ session_start();
 </form>
 
 <script>
-const middelenSelect = document.getElementById('middelen');
+const middelenSelect = document.getElementById("middelen");
 const andersInput = document.getElementById('andersInput');
 
 middelenSelect.addEventListener('change', function() {
@@ -153,19 +157,6 @@ aanhefSelect.addEventListener('change', function() {
     handleSelectChange(this, andersInput2, 'andersA');
 });
 
-function handleSelectChange(selectElement, targetElement, exclusionId) {
-    if (selectElement.value === 'Anders') {
-        targetElement.style.display = 'block';
-        excludedFields = excludedFields.filter(item => item !== exclusionId);
-
-    } else {
-        targetElement.style.display = 'none';
-        if (!excludedFields.includes(exclusionId)) {
-            excludedFields.push(exclusionId);
-        }
-    }
-    validateForm(excludedFields);
-}
 
 // JavaScript to validate the end date against the start date
 document.getElementById('begindatum').addEventListener('input', function () {
@@ -234,8 +225,8 @@ function validateForm(excludedIds) {
             }
         }
     });
-    
 }
+
 </script>
 </div>
 

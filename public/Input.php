@@ -6,6 +6,7 @@ include_once("Connection.php");
 global $PDO;
 
 try {
+    
     $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['aanhef']) ? trim($_REQUEST['aanhef']) : ''; 
     $_SESSION["voornaam"] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $_SESSION["achternaam"] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
@@ -47,7 +48,7 @@ try {
         if ($stmt2->execute()) {
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
-            header("Location: confirm");
+            header("Location: confirm?token=your_generated_token");
             die();
         };
         
@@ -61,3 +62,13 @@ try {
 $_SESSION['ErrorMessage'] = $ErrorMessage;
 header("Location: Reservering");
 exit();
+
+// Debug Stuff
+
+// $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// var_dump(!empty($VoorNaam), !empty($AchterNaam), !empty($TelefoonNummer), !empty($Email), !empty($Middelen), !empty($Volwassenen), !empty($EindDatum), !empty($BeginDatum), !empty($PostCode));
+
+
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
