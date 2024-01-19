@@ -207,7 +207,7 @@ function validateForm(excludedIds) {
                     document.getElementById('andersInput').classList.add('emptyField');
                 }
                 else {
-                    input.classList.add('emptyField');
+                    input.classList.remove('emptyField');
                 }
             }
 
