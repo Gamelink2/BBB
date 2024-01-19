@@ -6,6 +6,7 @@ include_once("Connection.php");
 global $PDO;
 
 try {
+    
     $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['aanhef']) ? trim($_REQUEST['aanhef']) : ''; 
     $_SESSION["voornaam"] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $_SESSION["achternaam"] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
@@ -15,6 +16,9 @@ try {
     $_SESSION["straatnaam"] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
     $_SESSION["huisnummer"] = $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
     $_SESSION["middelen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    if (!isset ($Middelen)){
+    $_SESSION["middelen"] = $Middelen = isset($_REQUEST['Middelen']) ? trim($_REQUEST['Middelen']) : '';
+    }
     $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
     $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
@@ -47,7 +51,7 @@ try {
         if ($stmt2->execute()) {
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
-            header("Location: confirm");
+            header("Location: confirm?token=your_generated_token");
             die();
         };
         
@@ -61,3 +65,13 @@ try {
 $_SESSION['ErrorMessage'] = $ErrorMessage;
 header("Location: Reservering");
 exit();
+
+// Debug Stuff
+
+// $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+// var_dump(!empty($VoorNaam), !empty($AchterNaam), !empty($TelefoonNummer), !empty($Email), !empty($Middelen), !empty($Volwassenen), !empty($EindDatum), !empty($BeginDatum), !empty($PostCode));
+
+
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);

@@ -82,16 +82,18 @@ session_start();
             echo '<container class="reserveringContainer">';
 
             echo '
-            <select class="topForm" name="middelen" id="middelen">
-            <option value="">Waarmee komt u kamperen*</option>
-            <option value="Tent">Tent</option>
-            <option value="caravan" ).>Caravan</option>
-            <option value="Anders">Anders</option>
+            <select class="topForm" name="middelen" id="middelen" onchange="toggleAndersInput()">
+                <option value="">Waarmee komt u kamperen*</option>
+                <option value="Tent" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Tent" ? "selected" : "") . '>Tent</option>
+                <option value="Caravan" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Caravan" ? "selected" : "") . '>Caravan</option>
+                <option value="Anders" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Anders" ? "selected" : "") . '>Anders</option>
             </select>
+            
             <div id="andersInput" style="display: none;">
-            <input type="text" name="middelen" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
-            </div>
-            ';
+                <input type="text" name=Middelen" id="anders" placeholder="Anders, specificeren:*" value="' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == 'Anders' ? $_SESSION["middelen"] : '') . '">
+            </div>';
+
+        
             
 
             if (isset($_SESSION['verzoek'])) {
@@ -207,7 +209,7 @@ function validateForm(excludedIds) {
                     document.getElementById('andersInput').classList.add('emptyField');
                 }
                 else {
-                    input.classList.add('emptyField');
+                    input.classList.remove('emptyField');
                 }
             }
 
@@ -234,8 +236,9 @@ function validateForm(excludedIds) {
             }
         }
     });
-    
 }
+
+
 </script>
 </div>
 

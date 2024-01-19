@@ -26,6 +26,9 @@ include_once("navbar.php");
                 Achternaam:
             </li>
             <li>
+                Nummer:
+            </li>
+            <li>
                 Email:
             </li>
             <li>
@@ -57,8 +60,15 @@ include_once("navbar.php");
                             <?php echo $result['UserID']; ?>
                         </li>
                         <li>
-                            <?php echo $result['Aanhef']; ?>
+                            <?php 
+                            if (empty($result['Aanhef'])) {
+                                echo '&nbsp;';
+                            } else {
+                                echo $result['Aanhef'];
+                            }
+                            ; ?>
                         </li>
+
                         <li>
                             <?php echo $result['VoorNaam']; ?>
                         </li>

@@ -7,6 +7,7 @@ RewriteEngine on
 ## Let the other htaccess do its thing
 
 ## If the requested URL without the .php extension exists as a file, internally rewrite the URL to append the .php extension
+# Redirect to ./Home and have it load ./Home.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L,QSA]
@@ -39,7 +40,7 @@ ErrorDocument 500 /500.php
 <FilesMatch "Aantal_Reserveringen.php">
     AuthType basic
     AuthName 'Inloggen'
-    AuthUserFile /var/www/html/BBB/public/.htpasswd
+    AuthUserFile /home/Damian/.htpasswd
     Require valid-user
 </FilesMatch>
 
