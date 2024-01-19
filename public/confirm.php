@@ -23,7 +23,7 @@ if ($userToken !== $expectedToken) {
         <div class="confirm">
             <h1>Bedankt voor uw reservering!</h1>
             <h2>Wij wensen u een fijne vakantie!</h2>
-            <a class="button" href="index.php">Terug naar de home pagina</a>
+            <a class="button" href="./Home">Terug naar de home pagina</a>
         </div>
     </div>
 </body>
