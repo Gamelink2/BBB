@@ -16,6 +16,9 @@ try {
     $_SESSION["straatnaam"] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
     $_SESSION["huisnummer"] = $HuisNummer = isset($_REQUEST['huisNmr']) && $_REQUEST['huisNmr'] !== '' ? trim($_REQUEST['huisNmr']) : null;
     $_SESSION["middelen"] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    if (!isset ($Middelen)){
+    $_SESSION["middelen"] = $Middelen = isset($_REQUEST['Middelen']) ? trim($_REQUEST['Middelen']) : '';
+    }
     $_SESSION["verzoek"] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
     $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
