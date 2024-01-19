@@ -60,15 +60,15 @@ try {
 }
 
 $_SESSION['ErrorMessage'] = $ErrorMessage;
-header("Location: Reservering");
-exit();
+// header("Location: Reservering");
+// exit();
 
 // Debug Stuff
 
-// $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// var_dump(!empty($VoorNaam), !empty($AchterNaam), !empty($TelefoonNummer), !empty($Email), !empty($Middelen), !empty($Volwassenen), !empty($EindDatum), !empty($BeginDatum), !empty($PostCode));
+var_dump(!empty($VoorNaam), !empty($AchterNaam), !empty($TelefoonNummer), !empty($Email), !empty($Middelen), !empty($Volwassenen), !empty($EindDatum), !empty($BeginDatum), !empty($PostCode));
 
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
