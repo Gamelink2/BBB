@@ -18,8 +18,8 @@ RewriteRule ^(.*)$ $1.html [NC,L,QSA]
 
 ## remove File extension after entering it yourself
 # So redirect to ./home after putting in ./home.php
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-RewriteRule ^ /%1 [R=301,NE,L]
+# RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+# RewriteRule ^ /%1 [R=301,NE,L]
 
 ## Set the default directory index page order
 DirectoryIndex index.php Home.php
