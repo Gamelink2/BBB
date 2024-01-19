@@ -26,6 +26,9 @@ include_once("navbar.php");
                 Achternaam:
             </li>
             <li>
+                Nummer:
+            </li>
+            <li>
                 Email:
             </li>
             <li>
