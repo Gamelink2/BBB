@@ -22,6 +22,9 @@
       <a href="./mapPage">Plattegrond</a>
       <a href="./Reservering">Reserveren</a>
       <a href="./mapInfo">Map Informatie</a>
+     <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
+      <a href="./Aantal_Reserveringen">Reserveringen</a>
+
     </div>
   </div>
 </body>
