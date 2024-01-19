@@ -3,6 +3,7 @@
   outline-color: black;
   outline-style: solid;
   border-radius: 10px;
+  background-color: #ffffff;
 }
 
 /* 
@@ -34,7 +35,9 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
   flex-direction: column;
   background-color: #d6edd4;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 15px;
   margin: 15px;
@@ -44,6 +47,7 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0;
   padding: 0;
@@ -117,6 +121,10 @@ label {
   width: 105px;
 }
 
+input::-moz-placeholder {
+  color: #616060;
+}
+
 input::placeholder {
   color: #616060;
 }
@@ -136,6 +144,10 @@ select {
   align-items: center;
   display: flex;
   padding-left: 5px;
+}
+
+select::-moz-placeholder {
+  color: #616060;
 }
 
 select::placeholder {
@@ -173,6 +185,10 @@ select::placeholder {
   font-size: 15px;
   font-weight: 500;
   padding-left: 5px;
+}
+
+textarea::-moz-placeholder {
+  color: #616060;
 }
 
 textarea::placeholder {

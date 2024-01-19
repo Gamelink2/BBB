@@ -3,6 +3,7 @@
   outline-color: black;
   outline-style: solid;
   border-radius: 10px;
+  background-color: #ffffff;
 }
 
 /* 
@@ -32,6 +33,10 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
   display: flex;
 }
 
+area {
+  cursor: pointer;
+}
+
 .imageContainer {
   margin-left: 50px;
 }
@@ -44,20 +49,11 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
 }
 
 .infoContainer {
-  background-color: #d6edd4;
   padding: 10px 20px;
   width: 250px;
   font-size: 30px;
-}
-
-area {
-  cursor: pointer;
-}
-
-area:hover {
-  background-color: rgba(0, 0, 0, 0.37);
-  opacity: 100;
-  color: black;
+  display: flex;
+  justify-content: center;
 }
 
 #popup {
@@ -96,8 +92,31 @@ button {
   box-shadow: none;
 }
 
-.staanplaatsen::marker {
-  content: url(../Images/BBB.ico);
-  width: 5px; /* Adjust the width as needed */
-  height: 5px; /* Adjust the height as needed */
+li::marker {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.staanplaatsen {
+  list-style-image: url("../images/staanplaatsen.svg");
+}
+
+.toiletten {
+  list-style-image: url("../images/toiletten.svg");
+}
+
+.zwembad {
+  list-style-image: url("../images/zwembad.svg");
+}
+
+.speeltuin {
+  list-style-image: url("../images/speeltuin.svg");
+}
+
+.huisBert {
+  list-style-image: url("../images/huisBert.svg");
+}
+
+.parkeerplekken {
+  list-style-image: url("../images/parkeerplekken.svg");
 }/*# sourceMappingURL=mapPage.css.map */

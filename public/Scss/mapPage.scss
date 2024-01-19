@@ -17,6 +17,9 @@
     transform: scale(.9);
     display: flex;
 }
+area{
+    cursor: pointer;
+}
 .imageContainer{
     @extend .Outline;
     margin-left: 50px;
@@ -29,18 +32,11 @@
 }
 .infoContainer{
     @extend .Outline;
-    background-color: #d6edd4;
     padding: 10px 20px;
     width: 250px;
     font-size: 30px;
-}
-area {
-    cursor: pointer;
-}
-area:hover{
-    background-color: rgba(0, 0, 0, 0.37);
-    opacity: 100;
-    color: black;
+    display: flex;
+    justify-content: center;
 }
 #popup {
     display: none;
@@ -76,8 +72,13 @@ button {
     cursor: pointer;
     box-shadow: none;
 }
-.staanplaatsen::marker{
-    content: url(../Images/BBB.ico);
-    width: 5px; /* Adjust the width as needed */
-    height: 5px; /* Adjust the height as needed */
+li::marker{
+    font-size: 50px;
+    cursor: pointer;
+}
+$listItems : staanplaatsen toiletten zwembad speeltuin huisBert parkeerplekken;
+@each $item in $listItems {
+    .#{$item}{
+        list-style-image: url('../images/#{$item}.svg');
+    }
 }
