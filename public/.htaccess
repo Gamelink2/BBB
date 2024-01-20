@@ -70,5 +70,5 @@ ErrorDocument 500 /500.php
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Redirect from ip to Domain
-RewriteCond %{HTTP_HOST} ^145\.89\.192\.242$
-RewriteRule ^(.*)$ groeneweide.dkorver.com [L,R=301]
+# RewriteCond %{HTTP_HOST} ^145\.89\.192\.242$
+# RewriteRule ^(.*)$ groeneweide.dkorver.com [L,R=301]
