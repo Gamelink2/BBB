@@ -11,6 +11,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L,QSA]
+
 ## If requested url has the .html extension, remove it from the url while still loading the content
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
@@ -60,12 +61,13 @@ ErrorDocument 500 /500.php
 # Redirect WWW -> non-WWW
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 # Redirect non-WWW -> WWW
+# Uncomment and replace "DomainName" with your actual domain name
 #RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 #RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
 ## SSL Redirect
-#RewriteEngine on
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
