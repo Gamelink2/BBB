@@ -58,16 +58,16 @@ ErrorDocument 500 /500.php
 
 ## server only
 # redirect WWW -> non-WWW
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 # redirect non-WWW -> WWW
 # RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
 ## SSL Redirect
 # RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Redirect from ip to Domain
 RewriteCond %{HTTP_HOST} !^groeneweide\.dkorver\.com$
