@@ -23,7 +23,7 @@ session_start();
                 </p>';
         }
          ?>
-            <form class="reserveringForm" id="contactForm" method="post" action="Input.php">
+            <form class="reserveringForm" id="contactForm" method="post" action="Input">
                 
             <?php
                   
