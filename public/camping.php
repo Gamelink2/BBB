@@ -22,9 +22,9 @@
                 <p class="caption">Wat maakt onze camping speciaal?</p>
 
                 <ul>
-                <li><span class="textBold">Duurzaam Leven:</span> We geloven in een duurzame manier van leven, en onze camping weerspiegelt dat. Geïnspireerd door permacultuur streven we naar harmonie met de natuur. Hier kunnen jullie de schoonheid van duurzaamheid ervaren, omringd door groene velden en fluitende vogels.</li>
-                <li><span class="textBold">Rust en Ontspanning:</span> Ver weg van de drukte van de stad biedt onze camping een oase van rust. Of je nu luistert naar een audioboek, een rustige fietstocht maakt, of gewoon geniet van de serene omgeving, hier kun je echt ontspannen.</li>
-                <li><span class="textBold">Creatieve Workshops:</span> Voor de avontuurlijke geesten onder jullie, organiseren we workshops zoals bushcraft, creatief schrijven, en andere activiteiten die jullie verbinding met de natuur versterken.</li>
+                <li class="text"><span class="textBold">Duurzaam Leven:</span> We geloven in een duurzame manier van leven, en onze camping weerspiegelt dat. Geïnspireerd door permacultuur streven we naar harmonie met de natuur. Hier kunnen jullie de schoonheid van duurzaamheid ervaren, omringd door groene velden en fluitende vogels.</li>
+                <li class="text"><span class="textBold">Rust en Ontspanning:</span> Ver weg van de drukte van de stad biedt onze camping een oase van rust. Of je nu luistert naar een audioboek, een rustige fietstocht maakt, of gewoon geniet van de serene omgeving, hier kun je echt ontspannen.</li>
+                <li class="text"><span class="textBold">Creatieve Workshops:</span> Voor de avontuurlijke geesten onder jullie, organiseren we workshops zoals bushcraft, creatief schrijven, en andere activiteiten die jullie verbinding met de natuur versterken.</li>
                 </ul>
 
                 <p><span class="caption">Ontsnap naar de Boerderij</span></p>

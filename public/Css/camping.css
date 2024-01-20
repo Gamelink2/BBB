@@ -1,3 +1,7 @@
+html {
+  font-size: 75%;
+}
+
 .campBody {
   background-image: url("../Images/Home.jpg");
   background-position: center center;
@@ -16,34 +20,34 @@
 
 .flex-container {
   display: flex;
-  padding: 5%;
-  width: 100vw;
-  height: 80vh;
+  padding: 5rem;
+  width: calc(100vw - 10rem);
+  height: fit-content;
   flex-direction: row;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .campText {
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
-  flex: 5;
-  width: auto;
+  padding: 1rem;
+  padding: 1rem;
+  flex: 4;
 }
 
 .nested-flex-container {
   display: flex;
   flex-direction: column;
   flex: 3;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .campText2 {
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1rem;
   background-image: url("../Images/camping.jpg");
   background-size: cover;
   background-position: center center;
@@ -52,10 +56,10 @@
 }
 
 .campText3 {
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1rem;
   flex-grow: 1;
 }
 

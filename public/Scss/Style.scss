@@ -1,3 +1,7 @@
+@mixin Html{
+    font-size: 75%;
+}
+
 @mixin Background{
     background-image: url('../Images/Home.jpg');
     background-position: center center;
@@ -12,10 +16,16 @@
 }
 
 @mixin Outline{
-    outline: 3px solid black;
-    border-radius: 10px;
+    outline: 0.2rem solid black;
+    border-radius: 1rem;
     background-color: #ffffff;
-    padding: 2em;
+    padding: 1rem;
+}
+@mixin OutlineSmall{
+    outline: 0.2rem solid black;
+    border-radius: 0.2rem;
+    background-color: #ffffff;
+    padding: 0rem;
 }
 
 @mixin TextBig{
