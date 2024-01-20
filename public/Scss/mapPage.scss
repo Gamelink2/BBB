@@ -82,6 +82,6 @@ li::marker{
 $listItems : staanplaatsen toiletten zwembad speeltuin huisBert parkeerplekken;
 @each $item in $listItems {
     .#{$item}{
-        list-style-image: url('../images/#{$item}.svg');
+        list-style-image: url('../Images/#{$item}.svg');
     }
 }
