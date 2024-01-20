@@ -1,5 +1,5 @@
 ## Flag for GoDaddy
-#Options +MultiViews
+# Options +MultiViews
 
 ## Turn on the rewrite engine
 RewriteEngine on
@@ -48,29 +48,28 @@ ErrorDocument 500 /500.php
 ## Redirect non-existing pages to index page
 # Best use for single page applications
 
-#<ifmodule mod_rewrite.c>
-# options +SymLinksIfOwnerMatch
-# RewriteEngine On
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule . /index.php [L]
-
-#</ifmodule>
+# <IfModule mod_rewrite.c>
+#     Options +SymLinksIfOwnerMatch
+#     RewriteEngine On
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteCond %{REQUEST_FILENAME} !-d
+#     RewriteRule . /index.php [L]
+# </IfModule>
 
 ## server only
-# Redirect WWW -> non-WWW
+# redirect WWW -> non-WWW
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-# Redirect non-WWW -> WWW
-# Uncomment and replace "DomainName" with your actual domain name
-#RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
-#RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
+# redirect non-WWW -> WWW
+# RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
+# RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
 ## SSL Redirect
-RewriteCond %{HTTPS} !=on
+# RewriteEngine on
+RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-## Redirect from IP to Domain
-RewriteCond %{HTTP_HOST} ^145\.89\.188\.242$
+## Redirect from ip to Domain
+RewriteCond %{HTTP_HOST} !^groeneweide\.dkorver\.com$
+RewriteCond %{REMOTE_ADDR} ^145\.89\.188\.242$
 RewriteRule ^(.*)$ https://groeneweide.dkorver.com/$1 [L,R=301]
