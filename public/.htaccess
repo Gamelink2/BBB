@@ -18,7 +18,7 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L,QSA]
 
 ## Remove File extension after entering it yourself
-So redirect to ./home after putting in ./home.php
+# So redirect to ./home after putting in ./home.php
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,NE,L]
 
