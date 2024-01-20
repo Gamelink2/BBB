@@ -30,7 +30,7 @@ session_start();
             echo '<container class="reserveringContainer">';
             echo '  
             <select class="topForm" name="aanhef" id="aanhef">
-            <option value="">Hoe wilt u geaddreseerd worden?</option>
+            <option value="">Hoe wilt u geaddreseerd worden?*</option>
             <option value="Meneer" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Meneer" ? 'selected' : '').'>Meneer</option>
             <option value="Mevrouw" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Mevrouw" ? 'selected' : '').'>Mevrouw</option>
             <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
@@ -110,12 +110,12 @@ session_start();
 
             if (isset($_SESSION['BeginDatum'])) {
                 echo '
-                    <label for="begindatum">Begin datum:</label>
+                    <label class="label "for="begindatum">Begin datum:*</label>
                     <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" value="' . $_SESSION['BeginDatum'] . '">
                 ';
             } else {
                 echo '
-                    <label for="begindatum">Begin datum:</label>
+                    <label class="label for="begindatum">Begin datum:*</label>
                     <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" placeholder="Begin datum?">
                 ';
             }
@@ -123,13 +123,13 @@ session_start();
             if (isset($_SESSION['EindDatum'])) {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
-                    <label for="einddatum">Eind datum:</label>
+                    <label class="label for="einddatum">Eind datum:*</label>
                     <input type="date" id="einddatum" name="einddatum" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * ">
                 ';
             } else {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
-                    <label for="einddatum">Eind datum:</label>
+                    <label class="label for="einddatum">Eind datum:*</label>
                     <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">
                 ';
             }

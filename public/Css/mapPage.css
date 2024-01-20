@@ -1,3 +1,7 @@
+html {
+  font-size: 90%;
+}
+
 .mapBackground {
   background-image: url("../Images/Home.jpg");
   background-position: center center;
@@ -15,7 +19,8 @@
 }
 
 .mapContainer {
-  height: 60rem;
+  height: 35rem;
+  width: calc(height * 1.5);
   display: flex;
 }
 
@@ -44,7 +49,7 @@ area {
   padding: 2em;
   font-size: 2.5rem;
   padding: 10px 20px;
-  width: 35rem;
+  width: 25rem;
   display: flex;
   justify-content: center;
 }
@@ -90,33 +95,31 @@ button {
 }
 
 li::marker {
-  font-size: 5rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  font-size: 4rem;
+  user-select: none;
   cursor: pointer;
 }
 
 .staanplaatsen {
-  list-style-image: url("../images/staanplaatsen.svg");
+  list-style-image: url("../Images/staanplaatsen.svg");
 }
 
 .toiletten {
-  list-style-image: url("../images/toiletten.svg");
+  list-style-image: url("../Images/toiletten.svg");
 }
 
 .zwembad {
-  list-style-image: url("../images/zwembad.svg");
+  list-style-image: url("../Images/zwembad.svg");
 }
 
 .speeltuin {
-  list-style-image: url("../images/speeltuin.svg");
+  list-style-image: url("../Images/speeltuin.svg");
 }
 
 .huisBert {
-  list-style-image: url("../images/huisBert.svg");
+  list-style-image: url("../Images/huisBert.svg");
 }
 
 .parkeerplekken {
-  list-style-image: url("../images/parkeerplekken.svg");
+  list-style-image: url("../Images/parkeerplekken.svg");
 }/*# sourceMappingURL=mapPage.css.map */

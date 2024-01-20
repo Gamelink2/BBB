@@ -1,5 +1,9 @@
 @use "./Style.scss" as s;
 
+html{
+    @include s.Html;
+}
+
 .mapBackground{
     @include s.Background;
     align-items: center;
@@ -8,7 +12,8 @@
 }
 
 .mapContainer{
-    height: 60rem;
+    height: 35rem;
+    width: calc(height*1.5);
     display: flex;
 }
 
@@ -31,7 +36,7 @@ area{
     @include s.Outline;
     @include s.TextBig;
     padding: 10px 20px;
-    width: 35rem;
+    width: 25rem;
     display: flex;
     justify-content: center;
 }
@@ -74,7 +79,7 @@ button {
 }
 
 li::marker{
-    font-size: 5rem;
+    font-size: 4rem;
     user-select: none;
     cursor: pointer;
 }
