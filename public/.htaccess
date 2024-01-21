@@ -35,25 +35,25 @@ DirectoryIndex index.php Home.php
 # Note, cant use | to select multiple
 ## Also say 404 instead of 401, giving less info on the existence of the directory
 
-<Directory "Css">
+<Directory "./Css/">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "font">
+<Directory "./font/">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "Images">
+<Directory "./Images/">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "Scss">
+<Directory "./Scss/">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
