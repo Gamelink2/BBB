@@ -32,10 +32,10 @@ DirectoryIndex index.php Home.php
 </FilesMatch>
 
 ## Forbid access to Directory/Directories:
-RewriteRule ^Images/$ / [R=404,L]
-RewriteRule ^Scss/$ / [R=404,L]
-RewriteRule ^font/$ / [R=404,L]
-RewriteRule ^Css/$ / [R=404,L]
+# Return 404 not 403/401 So it gives away less info if the directory even exists
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [R=404,L]
+
 
 
 
