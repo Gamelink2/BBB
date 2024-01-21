@@ -32,11 +32,11 @@ DirectoryIndex index.php Home.php
 </FilesMatch>
 
 ## Forbid access to Directory/Directories:
-RewriteCond %{REQUEST_URI} ^/Images/ [OR]
-RewriteCond %{REQUEST_URI} ^/Scss/ [OR]
-RewriteCond %{REQUEST_URI} ^/font/ [OR]
-RewriteCond %{REQUEST_URI} ^/Css/ 
-RewriteRule ^ - [R=404,L]
+RewriteRule ^Images/ - [R=404,L]
+RewriteRule ^Scss/ - [R=404,L]
+RewriteRule ^font/ - [R=404,L]
+RewriteRule ^Css/ - [R=404,L]
+
 
 
 
