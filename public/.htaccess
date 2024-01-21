@@ -12,7 +12,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L,QSA]
 
-## If requested url has the .html extension, remove it from the url while still loading the content
+## If requested URL has the .html extension, remove it from the URL while still loading the content
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L,QSA]
@@ -26,10 +26,19 @@ RewriteRule ^ /%1 [R=301,NE,L]
 DirectoryIndex index.php Home.php
 
 ## Forbid access to .htaccess and Connection.php files
-<FilesMatch "(\.htaccess|Connection\.php)">
+<FilesMatch "(\.htaccess|Connection\.php|Send_Email\.php)">
     Order deny,allow
     Deny from all
 </FilesMatch>
+
+## Forbid access to Directory/Directories:
+# Note: RewriteRule to trigger a 404 response for specified directories
+# Also the <Directory> format gave an internal error
+
+RewriteRule ^Css($|/) - [L,R=404]
+RewriteRule ^font($|/) - [L,R=404]
+RewriteRule ^Images($|/) - [L,R=404]
+RewriteRule ^Scss($|/) - [L,R=404]
 
 ## Error Pages
 ErrorDocument 401 /401.php
@@ -56,11 +65,11 @@ ErrorDocument 500 /500.php
 #     RewriteRule . /index.php [L]
 # </IfModule>
 
-## server only
-# redirect WWW -> non-WWW
+## Server only
+# Redirect WWW -> non-WWW
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-# redirect non-WWW -> WWW
+# Redirect non-WWW -> WWW
 # RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
@@ -69,6 +78,6 @@ ErrorDocument 500 /500.php
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-## Redirect from ip to Domain
+## Redirect from IP to Domain
 RewriteCond %{HTTP_HOST} ^145\.89\.192\.242
 RewriteRule ^(.*)$ https://groeneweide.dkorver.com/ [L,R=301]
