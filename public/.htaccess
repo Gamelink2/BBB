@@ -12,7 +12,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L,QSA]
 
-## If requested url has the .html extension, remove it from the url while still loading the content
+## If requested URL has the .html extension, remove it from the URL while still loading the content
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L,QSA]
@@ -32,33 +32,32 @@ DirectoryIndex index.php Home.php
 </FilesMatch>
 
 ## Forbid access to Directory/Directories:
-# Note, cant use | to select multiple
+# Note: Relative paths for directories in the same directory as .htaccess
 ## Also say 404 instead of 401, giving less info on the existence of the directory
 
-<Directory "./Css/">
+<Directory "Css">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "./font/">
+<Directory "font">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "./Images/">
+<Directory "Images">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
 
-<Directory "./Scss/">
+<Directory "Scss">
     Order deny,allow
     Deny from all
     ErrorDocument 404 /404.php
 </Directory>
-
 
 ## Error Pages
 ErrorDocument 401 /401.php
@@ -85,11 +84,11 @@ ErrorDocument 500 /500.php
 #     RewriteRule . /index.php [L]
 # </IfModule>
 
-## server only
-# redirect WWW -> non-WWW
+## Server only
+# Redirect WWW -> non-WWW
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-# redirect non-WWW -> WWW
+# Redirect non-WWW -> WWW
 # RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
@@ -98,6 +97,6 @@ ErrorDocument 500 /500.php
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-## Redirect from ip to Domain
+## Redirect from IP to Domain
 RewriteCond %{HTTP_HOST} ^145\.89\.192\.242
 RewriteRule ^(.*)$ https://groeneweide.dkorver.com/ [L,R=301]
