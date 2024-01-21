@@ -12,7 +12,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L,QSA]
 
-## If requested URL has the .html extension, remove it from the URL while still loading the content
+## If requested url has the .html extension, remove it from the url while still loading the content
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L,QSA]
@@ -26,38 +26,10 @@ RewriteRule ^ /%1 [R=301,NE,L]
 DirectoryIndex index.php Home.php
 
 ## Forbid access to .htaccess and Connection.php files
-<FilesMatch "(\.htaccess|Connection\.php|Send_Email\.php)">
+<FilesMatch "(\.htaccess|Connection\.php)">
     Order deny,allow
     Deny from all
 </FilesMatch>
-
-## Forbid access to Directory/Directories:
-# Note: Relative paths for directories in the same directory as .htaccess
-## Also say 404 instead of 401, giving less info on the existence of the directory
-
-<Directory "Css">
-    Order deny,allow
-    Deny from all
-    ErrorDocument 404 /404.php
-</Directory>
-
-<Directory "font">
-    Order deny,allow
-    Deny from all
-    ErrorDocument 404 /404.php
-</Directory>
-
-<Directory "Images">
-    Order deny,allow
-    Deny from all
-    ErrorDocument 404 /404.php
-</Directory>
-
-<Directory "Scss">
-    Order deny,allow
-    Deny from all
-    ErrorDocument 404 /404.php
-</Directory>
 
 ## Error Pages
 ErrorDocument 401 /401.php
@@ -84,11 +56,11 @@ ErrorDocument 500 /500.php
 #     RewriteRule . /index.php [L]
 # </IfModule>
 
-## Server only
-# Redirect WWW -> non-WWW
+## server only
+# redirect WWW -> non-WWW
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-# Redirect non-WWW -> WWW
+# redirect non-WWW -> WWW
 # RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
 
@@ -97,6 +69,6 @@ ErrorDocument 500 /500.php
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-## Redirect from IP to Domain
+## Redirect from ip to Domain
 RewriteCond %{HTTP_HOST} ^145\.89\.192\.242
 RewriteRule ^(.*)$ https://groeneweide.dkorver.com/ [L,R=301]
