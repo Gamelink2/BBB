@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <?php include('navbar.php'); ?>
+<?php include('Error-Navbar.php'); ?>
+<link rel="stylesheet" href="/Css/navbar.css">
+
 </head>
 <body>
     <div class="errorBody">
