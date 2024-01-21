@@ -23,22 +23,13 @@ RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,NE,L]
 
 ## Set the default directory index page order
-DirectoryIndex index.php Home.php
+DirectoryIndex index.php Home.php 500.php
 
 ## Forbid access to .htaccess and Connection.php files
 <FilesMatch "(\.htaccess|Connection\.php|Send_Email\.php)">
     Order deny,allow
     Deny from all
 </FilesMatch>
-
-## Forbid access to Directory/Directories:
-# Return 404 not 403/401 So it gives away less info if the directory even exists
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [R=404,L]
-
-
-
-
 
 ## Error Pages
 ErrorDocument 401 /401.php
@@ -81,3 +72,9 @@ ErrorDocument 500 /500.php
 ## Redirect from IP to Domain
 RewriteCond %{HTTP_HOST} ^145\.89\.192\.242
 RewriteRule ^(.*)$ https://groeneweide.dkorver.com/ [L,R=301]
+
+## Forbid access to Directory/Directories:
+# Return 404 not 403/401 So it gives away less info if the directory even exists
+# Also try to do this last
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ - [R=404,L]
