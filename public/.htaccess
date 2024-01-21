@@ -32,13 +32,9 @@ DirectoryIndex index.php Home.php
 </FilesMatch>
 
 ## Forbid access to Directory/Directories:
-# Note: RewriteRule to trigger a 404 response for specified directories
-# Also the <Directory> format gave an internal error
-
-#RewriteRule ^Css($|/) - [L,R=404]
-#RewriteRule ^font($|/) - [L,R=404]
-#RewriteRule ^Images($|/) - [L,R=404]
-RewriteRule ^Scss($|/) - [L,R=404]
+# This is one way:
+RewriteCond %{HTTP_REQUEST} -d
+RewriteRule ^(.*) https://groeneweide.dkorver.com/ [L,R=301]
 
 
 ## Error Pages
