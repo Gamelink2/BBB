@@ -1,5 +1,5 @@
 html {
-  font-size: 90%;
+  font-size: 1.5vh;
 }
 
 .mapBackground {
@@ -29,10 +29,10 @@ area {
 }
 
 .imageContainer {
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1rem;
   margin-left: 5em;
 }
 
@@ -43,10 +43,10 @@ area {
 }
 
 .infoContainer {
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1rem;
   font-size: 2.5rem;
   padding: 10px 20px;
   width: 25rem;
@@ -83,10 +83,10 @@ area {
 
 button {
   color: black;
-  outline: 3px solid black;
-  border-radius: 10px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
   background-color: #ffffff;
-  padding: 2em;
+  padding: 1rem;
   display: block;
   margin-top: 10px;
   padding: 5px 10px;
@@ -96,7 +96,9 @@ button {
 
 li::marker {
   font-size: 4rem;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
 

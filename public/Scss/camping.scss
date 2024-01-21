@@ -18,7 +18,6 @@ html{
     flex-direction: row;
     gap: 3rem;
 }
-
 .campText {
     @include s.Outline;
     padding: 1rem;
@@ -60,7 +59,23 @@ html{
     @include s.TextSmall;
     font-weight: bold;
 }
+@media (max-width: 992px ){
+    .flex-container {
+        flex-direction: column;
+    }
+    .campBody {
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(145, 145, 145);
+        background-size: cover
+    }
+    .campText2{
+        width: 90%;
+        height: 10rem;
+        background-size: contain
+    }
 
+}
 /*
 .dropdown {
     display: inline-block;

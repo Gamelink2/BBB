@@ -164,3 +164,13 @@ textarea::placeholder{
     outline-style: solid;
     outline-width: 3px;
 }
+@media (max-width: 992px ){
+.reserveringForm{
+    margin-top: 15rem;
+    flex-direction: column;
+    height: fit-content;
+    background-image: none;
+    background-color: rgb(145, 145, 145);
+    padding-bottom: 10rem;
+}
+}

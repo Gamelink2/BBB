@@ -35,9 +35,9 @@ DirectoryIndex index.php Home.php
 # Note: RewriteRule to trigger a 404 response for specified directories
 # Also the <Directory> format gave an internal error
 
-RewriteRule ^Css($|/) - [L,R=404]
-RewriteRule ^font($|/) - [L,R=404]
-RewriteRule ^Images($|/) - [L,R=404]
+#RewriteRule ^Css($|/) - [L,R=404]
+#RewriteRule ^font($|/) - [L,R=404]
+#RewriteRule ^Images($|/) - [L,R=404]
 RewriteRule ^Scss($|/) - [L,R=404]
 
 ## Error Pages
