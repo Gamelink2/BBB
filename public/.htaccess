@@ -40,8 +40,6 @@ DirectoryIndex index.php Home.php
 #RewriteRule ^Images($|/) - [L,R=404]
 RewriteRule ^Scss($|/) - [L,R=404]
 
-Options -Indexes
-IndexIgnore *
 
 ## Error Pages
 ErrorDocument 401 /401.php
