@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./Images/BBB.ico" />
+  <link rel="icon" href="/Images/BBB.ico" />
   <meta name="description" content="BBB" />
   <title>BBB</title>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <link rel="stylesheet" href="./Css/navbar.css">
+  <link rel="stylesheet" href="/Css/navbar.css">
 </head>
 <body class="indexBody">
   <div class="Navbar">
-    <a class="logo" href="./Home">
-      <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
+    <a class="logo" href="/Home">
+      <img src="/Images/BBB2.png" alt="logo" width="50px" height="50px">
       <div>  </div>
       <div>De Groene Weide</div>
     </a>
