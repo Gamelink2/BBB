@@ -37,7 +37,7 @@ DirectoryIndex index.php Home.php
 
 #RewriteRule ^Css($|/) - [L,R=404]
 #RewriteRule ^font($|/) - [L,R=404]
-#RewriteRule ^Images($|/) - [L,R=404]
+RewriteRule ^Images($|/) - [L,R=404]
 RewriteRule ^Scss($|/) - [L,R=404]
 
 
