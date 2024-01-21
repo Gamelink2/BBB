@@ -32,9 +32,12 @@ DirectoryIndex index.php Home.php
 </FilesMatch>
 
 ## Forbid access to Directory/Directories:
-# This is one way:
-RewriteCond %{HTTP_REQUEST} -d
-RewriteRule ^(.*) https://groeneweide.dkorver.com/ [L,R=301]
+RewriteCond %{REQUEST_URI} ^/Images/ [OR]
+RewriteCond %{REQUEST_URI} ^/Scss/ [OR]
+RewriteCond %{REQUEST_URI} ^/font/ [OR]
+RewriteCond %{REQUEST_URI} ^/Css/ 
+RewriteRule ^ - [R=404,L]
+
 
 
 ## Error Pages
