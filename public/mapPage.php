@@ -23,8 +23,6 @@ function show($PDO) {
     </script>
 <?php }} ?>
         
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>

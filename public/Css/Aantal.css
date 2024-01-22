@@ -4,7 +4,7 @@ html {
   margin: 0 !important;
 }
 
-body {
+.bg {
   background-image: url("../Images/Home.jpg");
   background-position: center center;
   background-size: cover;
@@ -40,11 +40,6 @@ body {
   margin-inline: auto;
   width: 85%; /* Full width of the container */
   border-radius: 10%;
-}
-
-.bg {
-  justify-content: center;
-  text-align: center;
 }
 
 ul, li {

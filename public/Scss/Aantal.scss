@@ -1,6 +1,6 @@
 @use "./Style.scss" as s;
 
-body {
+.bg{
     @include s.Background;
     align-items: center;
     justify-content: center;
@@ -26,11 +26,6 @@ body {
     margin-inline: auto;
     width: 85%; /* Full width of the container */
     border-radius: 10%;
-}
-
-.bg {
-    justify-content: center;
-    text-align: center;
 }
 
 ul, li {
