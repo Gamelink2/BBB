@@ -1,20 +1,18 @@
 @use "./Style.scss" as s;
 
-html{
-    @include s.Html;
-}
-
 .mapBackground{
     @include s.Background;
     align-items: center;
     justify-content: center;
     margin: 0;
+    display: flex;
 }
 
 .mapContainer{
-    height: 35rem;
-    width: calc(height*1.5);
+    height: 50rem;
+    aspect-ratio: 2.5;
     display: flex;
+    width: calc(height*1.5);
 }
 @media (max-width: 992px ){
     .mapContainer{
