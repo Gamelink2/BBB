@@ -103,9 +103,9 @@ area {
 button {
   color: black;
   outline: 0.2rem solid black;
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   background-color: #ffffff;
-  padding: 1rem;
+  padding: 0rem;
   display: block;
   margin-top: 10px;
   padding: 5px 10px;

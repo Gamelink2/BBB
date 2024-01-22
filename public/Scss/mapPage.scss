@@ -83,7 +83,7 @@ area{
 
 button {
     color: black;
-    @include s.Outline;
+    @include s.OutlineSmall;
     display: block;
     margin-top: 10px;
     padding: 5px 10px;
