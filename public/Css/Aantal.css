@@ -62,6 +62,7 @@ html {
 
 li {
   flex: 1;
+  list-style: none;
 }
 
 li::marker {
