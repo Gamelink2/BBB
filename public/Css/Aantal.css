@@ -23,12 +23,20 @@ html {
 }
 
 .Table-head {
-  margin-top: 1rem;
+  margin-top: 3rem;
   background-color: black;
   color: white;
   display: flex;
   width: 90%;
   text-align: center;
+}
+
+.Table-head:first-child {
+  border-top-left-radius: 1rem;
+}
+
+.Table-head:last-child {
+  border-top-right-radius: 1rem;
 }
 
 .persoonsgegevens {
