@@ -23,6 +23,17 @@ html {
   padding: 0;
 }
 
+.reserveringForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  transform: translateX(10rem) scale(1.4);
+}
+
 .reserveringContainer {
   display: flex;
   flex-direction: column;
@@ -39,17 +50,6 @@ html {
   padding: 1rem;
   margin: 1rem;
   margin-right: 20rem;
-  transform: translateX(10rem) scale(1.4);
-}
-
-.reserveringForm {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0;
-  padding: 0;
 }
 
 input {
