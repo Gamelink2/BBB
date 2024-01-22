@@ -17,7 +17,7 @@
     width: 90%;
     text-align: center;
 }
-.Table-head > :first-child{
+ul.Table-head > li:first-child{
     border-top-left-radius: 3rem;
     color: red;
 } 
@@ -43,7 +43,7 @@
     display: flex; /* Corrected to flex */
     flex-direction: row; /* Display horizontally */
 }
-.Table-content:nth-child(odd):not(:first-child) > li{
+ul.Table-content:nth-child(odd) > li:not(:first-child){
     background-color: slategrey;
     color: white;
 }
