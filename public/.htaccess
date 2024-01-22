@@ -38,7 +38,7 @@ ErrorDocument 404 /404.php
 ErrorDocument 500 /500.php
 
 ## Only the farmer has access to these files:
-<FilesMatch "Aantal_Reserveringen.php">
+## <FilesMatch "Aantal_Reserveringen.php">
     AuthType basic
     AuthName 'Inloggen'
     AuthUserFile /home/Damian/.htpasswd
