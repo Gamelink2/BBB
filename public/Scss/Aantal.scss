@@ -17,10 +17,10 @@
     width: 90%;
     text-align: center;
 }
-.Table-head:first-child{
+.Table-head:first-child > li{
     border-top-left-radius: 1rem;
 } 
-.Table-head:last-child{
+.Table-head:last-child > li{
     border-top-right-radius: 1rem;
 }
 .persoonsgegevens {
