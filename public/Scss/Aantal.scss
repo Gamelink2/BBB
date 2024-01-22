@@ -17,6 +17,9 @@
     width: 90%;
     text-align: center;
 }
+.Table-head:first-child{
+    border-top-left-radius: 5px;
+}
 .persoonsgegevens {
     background-color: black;
     color: white;
@@ -49,13 +52,12 @@ ul{
     margin: 0;
 }
 li{ 
-    padding-top: 01rem;
-    padding-bottom: 01rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include s.TextSmall;
     flex: 1;
     list-style: none;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    outline: 1px solid white;
 }
 
 li::marker{
