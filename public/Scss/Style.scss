@@ -1,9 +1,14 @@
-
+* {
+    padding: 0;
+    margin: 0;
+}
 
 html{
     font-size: 1.5vh;
+    background-color:#086700;
     padding: 0 !important;
     margin: 0 !important;
+    
 }
 
 @mixin Background{
@@ -33,13 +38,13 @@ html{
 }
 
 @mixin TextBig{
-    font-size: 2.7rem;
+    font-size: 2.5rem;
 }
 
 @mixin TextMid{
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 @mixin TextSmall{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
