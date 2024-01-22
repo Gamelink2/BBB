@@ -57,7 +57,7 @@ html {
   color: white;
 }
 
-.Table-content:first-child {
+.Table-content > :first-child li {
   background-color: black;
   color: rgb(255, 255, 255);
 }
