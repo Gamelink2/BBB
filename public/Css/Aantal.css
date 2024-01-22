@@ -66,7 +66,7 @@ li {
 }
 
 li::marker {
-  list-style: none;
+  list-style-image: none;
 }
 
 .Table-content {
