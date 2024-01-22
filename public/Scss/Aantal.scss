@@ -68,6 +68,7 @@ li{
     @include s.TextSmall;
     list-style: none;
     outline: 1px solid white;
+    min-width: 0;
 }
 li:first-child{
     flex: 1;

@@ -94,6 +94,7 @@ li {
   font-size: 1.2rem;
   list-style: none;
   outline: 1px solid white;
+  min-width: 0;
 }
 
 li:first-child {
