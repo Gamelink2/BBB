@@ -7,7 +7,25 @@ body {
     margin: 0;
     display: flex;
 }
+.persoonsgegevens {
+    opacity: 1;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Display vertically */
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: black;
+    max-width: 80%;
+    margin-inline: auto;
+}
 
+/* Additional style for child elements within persoonsgegevens */
+.persoonsgegevens .Table-content {
+    background-color: black;
+    margin-inline: auto;
+    width: 85%; /* Full width of the container */
+    border-radius: 10%;
+}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -70,22 +88,4 @@ ul, li {
     color: white;
 }
 
-.persoonsgegevens {
-    opacity: 1;
-    color: white;
-    display: flex;
-    flex-direction: row; /* Display vertically */
-    max-height: 100vh;
-    overflow-y: auto;
-    background-color: black;
-    max-width: 80%;
-    margin-inline: auto;
-}
 
-/* Additional style for child elements within persoonsgegevens */
-.persoonsgegevens .Table-content {
-    background-color: black;
-    margin-inline: auto;
-    width: 85%; /* Full width of the container */
-    border-radius: 10%;
-}
