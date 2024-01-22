@@ -37,7 +37,7 @@ function show($PDO) {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('popupContent').innerHTML = 'Dit is plaats: ' + id;
-            plek.get(id -1)
+            console.log(plek.get(id -1))
             
             fetch(`get_data.php?areaId=${areaId}`)
             .then(response => response.text())
