@@ -15,7 +15,7 @@
     width: 90%;
     text-align: center;
 }
-.Table-head > li{
+ul.Table-head > li{
     background-color: black;
     color: white;
 }
@@ -39,7 +39,7 @@ ul.Table-head > li:last-child{
     display: flex; /* Corrected to flex */
     flex-direction: row; /* Display horizontally */
 }
-.Table-content > li{
+ul.Table-content > li{
     background-color: lightgrey;
     color: black;
 }
