@@ -59,9 +59,12 @@ html {
   color: white;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 li {
-  padding: 0%;
-  margin: 0%;
   flex: 1;
   list-style: none;
   border-left: 1px solid white;
