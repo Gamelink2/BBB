@@ -49,7 +49,7 @@ ul.Table-head > li:last-child {
   width: 90%;
 }
 
-.persoonsgegevens li {
+.persoonsgegevens > li {
   background-color: lightgrey;
   color: black;
 }
