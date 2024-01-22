@@ -18,6 +18,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .persoonsgegevens {
@@ -38,10 +40,6 @@ body {
   margin-inline: auto;
   width: 85%; /* Full width of the container */
   border-radius: 10%;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .bg {
