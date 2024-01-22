@@ -62,12 +62,18 @@ ul{
     margin: 0;
 }
 li{
+    flex: 1;
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include s.TextSmall;
-    flex: 1;
     list-style: none;
     outline: 1px solid white;
+}
+li:first-child{
+    flex: 1;
+}
+li:second-child{
+    flex: 2;
 }
 
 li::marker{
