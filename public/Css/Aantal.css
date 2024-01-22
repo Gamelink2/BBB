@@ -30,7 +30,7 @@ html {
   max-height: 100vh;
   overflow-y: auto;
   background-color: black;
-  max-width: 80%;
+  width: 80%;
   margin-inline: auto;
 }
 
