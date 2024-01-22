@@ -1,3 +1,31 @@
+<?php
+function show($PDO) {
+    $areaId = $_POST['value'];
+    $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
+    $stmt->execute([$areaId]);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($results) {
+        foreach ($results as $row) {
+            ?>
+            <p class='Pop-Up' id='spot_<?php echo $row['PlekID']; ?>' style='display: none;'>
+                Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>
+                Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>
+                Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>
+                Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>
+                Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>
+                Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.
+            </p>
+            <?php
+        }
+    }
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
