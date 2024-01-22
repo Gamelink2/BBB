@@ -23,29 +23,8 @@
     max-height: 100vh;
     width: 90%;
 }
-
-
-
-.Table {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-li{
-    flex: 1;
-    list-style: none;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-}
-li::marker{
-    list-style-image: none;
-}
 .Table-content {
     background-color: lightgrey;
-    margin: 5px;
-    padding: 10px;
     flex: 1;
     text-align: center;
     border-radius: 5px;
@@ -64,5 +43,17 @@ li::marker{
     background-color: black;
     color: white;
 }
+
+li{
+    flex: 1;
+    list-style: none;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+li::marker{
+    list-style-image: none;
+}
+
 
 
