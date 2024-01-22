@@ -65,6 +65,9 @@ ul {
 }
 
 li {
+  font-size: 1.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   flex: 1;
   list-style: none;
   border-left: 1px solid white;

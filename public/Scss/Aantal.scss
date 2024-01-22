@@ -48,6 +48,9 @@ ul{
     margin: 0;
 }
 li{ 
+    @include s.TextSmall;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     flex: 1;
     list-style: none;
     border-left: 1px solid white;
