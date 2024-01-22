@@ -26,7 +26,7 @@ html {
   opacity: 1;
   color: white;
   display: flex;
-  flex-direction: column; /* Display vertically */
+  flex-direction: row; /* Display vertically */
   max-height: 100vh;
   overflow-y: auto;
   background-color: black;
@@ -80,7 +80,7 @@ li::marker {
   border-radius: 5px;
   width: 200px;
   display: flex; /* Corrected to flex */
-  flex-direction: column; /* Display horizontally */
+  flex-direction: row; /* Display horizontally */
   justify-content: space-between;
 }
 
