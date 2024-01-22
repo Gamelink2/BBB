@@ -27,6 +27,7 @@ html {
   color: white;
   display: flex;
   width: 90%;
+  text-align: center;
 }
 
 .persoonsgegevens {
@@ -40,9 +41,7 @@ html {
 
 .Table-content {
   background-color: lightgrey;
-  margin: 5px;
-  padding: 10px;
-  flex: 1;
+  height: 1rem;
   text-align: center;
   border-radius: 5px;
   width: 200px;
