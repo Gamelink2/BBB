@@ -28,17 +28,6 @@
     border-radius: 10%;
 }
 
-ul, li {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: 80%;
-    text-wrap: stable;
-    justify-content: space-between;
-    flex: 1;
-}
-
 .Table {
     display: flex;
     flex-direction: column;
