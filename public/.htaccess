@@ -81,7 +81,7 @@ RewriteRule ^(.*)$ https://groeneweide.dkorver.com/ [L,R=301]
 # Also try to do this last
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f [NC]
-RewriteRule ^ - [R=404,L]
+RewriteRule ^(.*)$ https://groeneweide.dkorver.com/404 [L,R=301]
 
 # RewriteCond %{REQUEST_FILENAME} -d
 # RewriteRule ^ - [R=404,L]
