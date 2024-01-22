@@ -35,12 +35,12 @@
     flex-direction: row; /* Display horizontally */
 }
 
-.Table-content:nth-child(odd) {
+.Table-content:nth-child(odd) li{
     background-color: slategrey;
     color: white;
 }
 
-.Table-content > :first-child {
+.Table-content > :first-child{
     background-color: black;
     color: white;
     padding-top: 1rem;
@@ -49,10 +49,10 @@
 ul{
     padding: 0;
     margin: 0;
-    padding-top: 01rem;
-    padding-bottom: 01rem;
 }
 li{ 
+    padding-top: 01rem;
+    padding-bottom: 01rem;
     @include s.TextSmall;
     flex: 1;
     list-style: none;
