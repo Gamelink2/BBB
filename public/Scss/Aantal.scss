@@ -17,6 +17,7 @@
 }
 .Table-head > li{
     background-color: black;
+    color: white;
 }
 ul.Table-head > li:first-child{
     border-top-left-radius: 1.5rem;
@@ -31,16 +32,16 @@ ul.Table-head > li:last-child{
     max-height: 100vh;
     width: 90%;
 }
-.persoonsgegevens > li{
-    background-color: lightgrey;
-    color: black;
-}
 .Table-content {
     width: 100%;
     height: fit-content;
     text-align: center;
     display: flex; /* Corrected to flex */
     flex-direction: row; /* Display horizontally */
+}
+.Table-content > li{
+    background-color: lightgrey;
+    color: black;
 }
 ul.Table-content:nth-child(odd) > li:not(:first-child){
     background-color: slategrey;
