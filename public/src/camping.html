@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/BBB.ico">
+   <link rel="body" href="public/Css/camping.css">
+    <meta name="description" content="BBB">
+    <title>BBB</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   
+  
+      <link rel="stylesheet" href="./Css/camping.css">
+  
+   
+      <div class="campBody">
+    
+     <l>Lorem,
+     ipsum dolor sit amet consectetur adipisicing elit.
+     Vero placeat magnam explicabo aperiam, 
+     fuga repellat temporibus est cum quo tempore ea nisi laudantium consequatur corrupti nesciunt omnis quod excepturi deleniti?</l>
+      </div>
+   
+  
+   </div>
+    <script>      
+      function loadPage(linkId, page) {
+      // Remove the 'active' class from all list items
+      var listItems = document.querySelectorAll('#linkList li');
+      listItems.forEach(item => item.classList.remove('active'));
+  
+      // Load the selected page into the content div
+      $.get('./' + page , function(data) {
+        $('#content-placeholder').html(data);
+      });
+  
+      // Add the 'active' class to the parent li of the clicked link
+      document.getElementById(linkId).classList.add('active');
+      }
+    </script>
+  
+  
+  </body></html>
