@@ -63,6 +63,8 @@ html {
 li {
   flex: 1;
   list-style: none;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 li::marker {
