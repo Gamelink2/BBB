@@ -25,7 +25,6 @@ html {
   height: 50rem;
   aspect-ratio: 2.5;
   display: flex;
-  width: calc(height * 1.5);
 }
 
 @media (max-width: 992px) {
