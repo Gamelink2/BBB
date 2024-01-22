@@ -43,6 +43,7 @@ html {
 .Table-content {
   width: 100%;
   background-color: lightgrey;
+  color: black;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
@@ -56,9 +57,9 @@ html {
   color: white;
 }
 
-.Table-content > :first-child {
+.Table-content:first-child {
   background-color: black;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 ul {
