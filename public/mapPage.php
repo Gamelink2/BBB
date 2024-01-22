@@ -7,10 +7,10 @@ function show($PDO) {
 
     if ($results) {?>
     <script>
-        var array = [];
+        var plek = [];
         <?php foreach ($results as $row) : ?>
-            array.push([
-                '<p class="Pop-Up" id="spot_<?php echo $row['PlekID']; ?>" style="display: none;">',
+            plek.push([
+                '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: none;">',
                 'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
                 'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
                 'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
@@ -32,10 +32,12 @@ function show($PDO) {
     <script type="text/javascript" src="./es6-promise.js"></script>
     <script type="text/javascript" src="./jquery.imagemapster.js"></script>
     <script>
+        // Misschien 2 maken? 1 voor de plekken 1 voor de gebouwen?
         function showPopup(id) {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('overlay').style.display = 'block';
             document.getElementById('popupContent').innerHTML = 'Dit is plaats: ' + id;
+            plek.get(id -1)
             
             fetch(`get_data.php?areaId=${areaId}`)
             .then(response => response.text())
@@ -45,6 +47,7 @@ function show($PDO) {
         })
         .catch(error => console.error('Error:', error));
         }
+
 
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
