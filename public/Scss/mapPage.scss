@@ -12,6 +12,8 @@
     height: 45rem;
     aspect-ratio: 2.5;
     display: flex;
+    padding-right: 0;
+    margin-right: 0;
 }
 @media (max-width: 992px ){
     .mapContainer{
