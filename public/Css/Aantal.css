@@ -16,7 +16,7 @@ html {
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -40,17 +40,6 @@ html {
   margin-inline: auto;
   width: 85%; /* Full width of the container */
   border-radius: 10%;
-}
-
-ul, li {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-width: 80%;
-  text-wrap: stable;
-  justify-content: space-between;
-  flex: 1;
 }
 
 .Table {
