@@ -56,7 +56,7 @@ include_once("Connection.php");
                 foreach ($results as $result) {
                     ?>
                     <ul id="<?php echo $result['UserID']; ?>" class="Table-content">
-                        <li>
+                        <li class="firstLi">
                             <?php echo $result['UserID']; ?>
                         </li>
                         <li>
