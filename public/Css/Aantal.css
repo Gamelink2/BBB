@@ -80,7 +80,7 @@ li::marker {
   border-radius: 5px;
   width: 200px;
   display: flex; /* Corrected to flex */
-  flex-direction: row; /* Display horizontally */
+  flex-direction: column; /* Display horizontally */
   justify-content: space-between;
 }
 
