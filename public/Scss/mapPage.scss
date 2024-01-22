@@ -37,14 +37,14 @@ area{
 .imageContainer{
     @include s.Outline;
     margin-left: 3em;
-    
+    aspect-ratio: 2;
 }
 
 .imageContainer img{
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    aspect-ratio: 1.5;
+    aspect-ratio: 2;
 }
 
 .infoContainer{
