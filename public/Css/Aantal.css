@@ -68,9 +68,14 @@ ul.Table-content:nth-child(odd) > li:not(:first-child) {
   color: white;
 }
 
-.firstLi {
-  background-color: black;
-  color: rgb(255, 255, 255);
+.persoonsgegevens > .Table-content:last-child > li:first-child {
+  border-bottom-left-radius: 1.5rem;
+  color: red;
+}
+
+.persoonsgegevens > .Table-content:last-child > li:last-child {
+  border-bottom-right-radius: 1.5rem;
+  color: red;
 }
 
 ul {
