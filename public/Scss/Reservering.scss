@@ -16,7 +16,7 @@
     height: fit-content;
     margin: 0;
     padding: 0;
-    transform: translateX(10rem) scale(1.4);
+    transform: scale(1.25);
 }
 .reserveringContainer {
     display: flex;
@@ -28,7 +28,6 @@
     @include s.Outline;
     padding: 1rem;
     margin: 1rem;
-    margin-right: 20rem;
 }
 
 input{
