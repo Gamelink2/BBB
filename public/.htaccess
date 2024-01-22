@@ -79,12 +79,11 @@ RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [L,R=301]
 ## Forbid access to Directory/Directories:
 # Return 404 not 403/401 So it gives away less info if the directory even exists
 # Also try to do this last
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_FILENAME} !-/
-# RewriteCond %{REQUEST_FILENAME} !-f [NC]
-# RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [R=404,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-/
+RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [R=404,L]
 
-# RewriteCond %{REQUEST_FILENAME} -d
-# RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [R=404,L]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [R=404,L]
 
-Options -Indexes
