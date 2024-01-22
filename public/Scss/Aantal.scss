@@ -15,9 +15,8 @@
     width: 90%;
     text-align: center;
 }
-.Table-head .li{
+.Table-head > .li{
     background-color: black;
-    color: white;
 }
 ul.Table-head > li:first-child{
     border-top-left-radius: 1.5rem;
