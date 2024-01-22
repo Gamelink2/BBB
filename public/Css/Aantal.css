@@ -54,8 +54,6 @@ ul.Table-head > li:last-child {
 
 .Table-content {
   width: 100%;
-  background-color: lightgrey;
-  color: black;
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
@@ -68,12 +66,17 @@ ul.Table-content:nth-child(odd) > li:not(:first-child) {
   color: white;
 }
 
-.persoonsgegevens > .Table-content:last-child > li:first-child {
+.firstLi {
+  background-color: black;
+  color: rgb(255, 255, 255);
+}
+
+.persoonsgegevens > ul.Table-content:last-child > li:first-child {
   border-bottom-left-radius: 1.5rem;
   color: red;
 }
 
-.persoonsgegevens > .Table-content:last-child > li:last-child {
+.persoonsgegevens > ul.Table-content:last-child > li:last-child {
   border-bottom-right-radius: 1.5rem;
   color: red;
 }
@@ -84,6 +87,8 @@ ul {
 }
 
 li {
+  background-color: lightgrey;
+  color: black;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.2rem;
