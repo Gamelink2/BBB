@@ -70,9 +70,8 @@ html{
         background-size: cover
     }
     .campText2{
-        width: 90%;
-        height: 10rem;
-        background-size: contain
+        min-width: auto;
+        aspect-ratio: 1.5;
     }
 
 }

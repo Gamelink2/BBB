@@ -1,7 +1,5 @@
 @use "./Style.scss" as s;
-html{
-    @include s.Html;
-}
+
 .homeBody{
     @include s.Background;
     justify-content: center;
