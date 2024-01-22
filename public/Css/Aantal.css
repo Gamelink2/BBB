@@ -31,10 +31,6 @@ html {
   text-align: center;
 }
 
-.Table-head > :first-child {
-  border-top-left-radius: 5px;
-}
-
 .persoonsgegevens {
   background-color: black;
   color: white;
