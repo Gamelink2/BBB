@@ -58,7 +58,7 @@ html {
 
 .Table-content > :first-child {
   background-color: black;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 ul {
