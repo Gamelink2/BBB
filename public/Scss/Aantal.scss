@@ -1,6 +1,6 @@
 @use "./Style.scss" as s;
 
-.bg{
+.BG{
     @include s.Background;
     align-items: center;
     justify-content: center;
