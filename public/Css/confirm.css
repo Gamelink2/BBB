@@ -1,3 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 1.5vh;
+  background-color: #086700;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 body {
   background-image: url("../Images/Home.jpg");
   background-position: center center;
@@ -30,9 +42,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   outline-color: #000000;
   outline-style: solid;

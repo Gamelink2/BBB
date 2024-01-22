@@ -1,7 +1,5 @@
 @use "./Style.scss" as s;
-html{
-    @include s.Html;
-}
+
 .bodyReservering{
     @include s.Background;
     justify-items: center;
@@ -62,6 +60,7 @@ input{
     align-items: center;
     padding-left: 5px;
     display: inline-flex;
+    border-style: none;
 }
 label{
     @include s.TextSmall;
@@ -112,6 +111,7 @@ select{
     align-items: center;
     padding-left: 5px;
     display: inline-flex;
+    border-style: none;
 }
 select::placeholder{
     color: #616060;
@@ -131,6 +131,7 @@ select::placeholder{
     width: 39.5rem;
     resize: none;
     padding: 1rem ;
+    border-style: none;
 }
 textarea::placeholder{
     color: #616060;
@@ -148,7 +149,7 @@ textarea::placeholder{
     background-color: #ffffff90;
     @include s.OutlineSmall;
     height: 4rem;
-    width: 42rem;
+    width: 41.5rem;
     @include s.TextBig;
     justify-content: center;
     transition: 0.3s;
