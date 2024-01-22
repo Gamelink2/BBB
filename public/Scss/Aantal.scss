@@ -20,11 +20,9 @@
 }
 ul.Table-head > li:first-child{
     border-top-left-radius: 1.5rem;
-    color: red;
 } 
 ul.Table-head > li:last-child{
     border-top-right-radius: 1.5rem;
-    color: red;
 }
 .persoonsgegevens {
     color: white;
@@ -54,11 +52,9 @@ ul.Table-content:nth-child(odd) > li:not(:first-child){
 }
 .persoonsgegevens > ul.Table-content:last-child > li:first-child{
     border-bottom-left-radius: 1.5rem;
-    color: red;
 }
 .persoonsgegevens > ul.Table-content:last-child > li:last-child{
     border-bottom-right-radius: 1.5rem;
-    color: red;
 }
 ul{
     padding: 0;
