@@ -1,5 +1,5 @@
 <?php
-include_once('Connection.php')
+include_once('Connection.php');
 function show($PDO) {
     $areaId = $_POST['value'];
     $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
