@@ -64,6 +64,10 @@ li {
   flex: 1;
 }
 
+li::marker {
+  list-style: none;
+}
+
 .Table-content {
   background-color: lightgrey;
   margin: 5px;
