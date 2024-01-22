@@ -29,7 +29,6 @@ html {
   display: flex;
   width: 90%;
   border-radius: 5px;
-  justify-content: space-between;
   margin-inline: auto;
 }
 
@@ -42,7 +41,6 @@ html {
   overflow-y: auto;
   background-color: black;
   width: 90%;
-  margin-inline: auto;
 }
 
 /* Additional style for child elements within persoonsgegevens */
