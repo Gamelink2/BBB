@@ -8,7 +8,8 @@ include_once("navbar.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservaties</title>
-    <link rel="stylesheet" href="Css/Aantal.css">
+    <link rel="stylesheet" href=".Css/Aantal.css">
+    <meta http-equiv="refresh" content="5">
 </head>
 <body>
     <div class="BG">
