@@ -52,12 +52,12 @@ html {
   flex-direction: row; /* Display horizontally */
 }
 
-.Table-content:nth-child(odd) li {
+.Table-content:nth-child(odd) > li {
   background-color: slategrey;
   color: white;
 }
 
-ul > :first-child {
+.Table-content > :first-child {
   background-color: black;
   color: rgb(255, 255, 255);
 }
