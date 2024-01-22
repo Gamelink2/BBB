@@ -40,6 +40,7 @@ html {
 }
 
 .Table-content {
+  width: 100%;
   background-color: lightgrey;
   height: 1rem;
   text-align: center;
