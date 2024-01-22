@@ -31,7 +31,7 @@ html {
   text-align: center;
 }
 
-.Table-head:first-child {
+.Table-head > :first-child {
   border-top-left-radius: 5px;
 }
 
