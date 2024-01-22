@@ -1,8 +1,5 @@
 @use "./Style.scss" as s;
 
-html{
-    @include s.Html
-}
 .campBody {
     @include s.Background;
     justify-content: top;
@@ -13,8 +10,9 @@ html{
 .flex-container {
     display: flex;
     padding: 5rem;
+    padding-bottom: 0;
     width: calc(100vw - 10rem);
-    height: fit-content;
+    height: calc(95vh - 10rem);
     flex-direction: row;
     gap: 3rem;
 }
