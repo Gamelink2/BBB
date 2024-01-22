@@ -45,7 +45,9 @@
     justify-content: space-between;
     margin-inline: auto;
 }
-
+li{
+    flex: 1;
+}
 .Table-content {
     background-color: lightgrey;
     margin: 5px;
