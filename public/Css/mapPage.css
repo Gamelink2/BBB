@@ -23,7 +23,7 @@ html {
 
 .mapContainer {
   height: 50rem;
-  aspect-ratio: 2.5;
+  aspect-ratio: 2;
   display: flex;
 }
 
