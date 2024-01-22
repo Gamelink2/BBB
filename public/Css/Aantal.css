@@ -36,7 +36,7 @@ ul.Table-head > li:first-child {
   color: red;
 }
 
-.Table-head:last-child > li {
+ul.Table-head > li:last-child {
   border-top-right-radius: 1rem;
   color: red;
 }
@@ -57,7 +57,6 @@ ul.Table-head > li:first-child {
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-  border-radius: 5px;
   display: flex; /* Corrected to flex */
   flex-direction: row; /* Display horizontally */
 }
