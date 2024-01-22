@@ -10,7 +10,6 @@
 
 .mapContainer{
     height: 45rem;
-    aspect-ratio: 2.5;
     display: flex;
     padding-right: 0;
     margin-right: 0;
@@ -38,6 +37,7 @@ area{
 .imageContainer{
     @include s.Outline;
     margin-left: 3em;
+    aspect-ratio: 2.5;
 }
 
 .imageContainer img{
