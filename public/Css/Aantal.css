@@ -42,7 +42,8 @@ html {
 .Table-content {
   width: 100%;
   background-color: lightgrey;
-  height: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
   border-radius: 5px;
   display: flex; /* Corrected to flex */
@@ -62,12 +63,12 @@ html {
 ul {
   padding: 0;
   margin: 0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 li {
   font-size: 1.2rem;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
   flex: 1;
   list-style: none;
   border-left: 1px solid white;
