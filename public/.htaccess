@@ -57,9 +57,12 @@ ErrorDocument 500 /500.php
 # </IfModule>
 
 ## Server only
+# Is already being done by Domain and SSL providers
+
 # Redirect WWW -> non-WWW
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 # Redirect non-WWW -> WWW
 # RewriteCond %{HTTP_HOST} ^"DomainName"\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://www."DomainName"/$1 [L,R=301]
