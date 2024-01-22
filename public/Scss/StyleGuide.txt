@@ -21,13 +21,13 @@ Gebruik van sass:
 
 https://www.w3schools.com/html/html5_syntax.asp
 
-Outlines: (voor de velden, niet voor kleine knoppen)
+Outlines big corners:
 - 0.2rem breed 
 - 1rem border radius
 - zwart
 - solid
 
-Outlines: (voor kleine knoppen)
+Outlines small corners: 
 - 0.2rem breed 
 - 0.2rem border radius
 - zwart
@@ -43,7 +43,7 @@ tekst:
 - - 1rem
 
 Kleuren website:
-- kleur 1: #086700;
+- kleur 1: #086700 (navbar green);
 - kleur 2: wit;
 - kleur 3: zwart;
 

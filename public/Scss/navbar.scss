@@ -29,7 +29,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: black solid 1px;
     background-color: #086700;
     color: #ffffff;
     margin: 0;
@@ -40,7 +39,6 @@ body {
     box-sizing: border-box;
     margin-bottom: 0 !important;
 }
-
 a{
     text-decoration: none;
 }
@@ -88,15 +86,6 @@ a{
 }
 .active{
     background: radial-gradient(ellipse 50% 30% at bottom, #a2ffc9 -20% , #ffffff00 100%);
-}
-
-.indexBody{
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    font-weight: 500;
-    display: inline-block;
-    overflow-x: hidden;
 }
 
 

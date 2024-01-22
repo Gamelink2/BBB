@@ -22,7 +22,6 @@ html {
   display: flex;
   padding: 5rem;
   width: calc(100vw - 10rem);
-  height: -moz-fit-content;
   height: fit-content;
   flex-direction: row;
   gap: 3rem;
@@ -88,16 +87,14 @@ html {
     flex-direction: column;
   }
   .campBody {
-    height: -moz-fit-content;
     height: fit-content;
     background-image: none;
     background-color: rgb(145, 145, 145);
     background-size: cover;
   }
   .campText2 {
-    width: 90%;
-    height: 10rem;
-    background-size: contain;
+    min-width: auto;
+    aspect-ratio: 1.5;
   }
 }
 /*
