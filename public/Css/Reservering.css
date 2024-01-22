@@ -28,7 +28,9 @@ html {
   flex-direction: column;
   background-color: #d6edd4;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   outline: 0.2rem solid black;
   border-radius: 1rem;
@@ -44,6 +46,7 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0;
   padding: 0;
@@ -141,6 +144,10 @@ label {
   min-width: 0;
 }
 
+input::-moz-placeholder {
+  color: #616060;
+}
+
 input::placeholder {
   color: #616060;
 }
@@ -159,6 +166,10 @@ select {
   padding-left: 5px;
   display: inline-flex;
   border-style: none;
+}
+
+select::-moz-placeholder {
+  color: #616060;
 }
 
 select::placeholder {
@@ -185,6 +196,10 @@ select::placeholder {
   padding: 1rem;
   padding-top: 0.1rem;
   border-style: none;
+}
+
+textarea::-moz-placeholder {
+  color: #616060;
 }
 
 textarea::placeholder {
@@ -234,6 +249,7 @@ textarea::placeholder {
   .reserveringForm {
     margin-top: 15rem;
     flex-direction: column;
+    height: -moz-fit-content;
     height: fit-content;
     background-image: none;
     gap: 15rem;
