@@ -1,47 +1,46 @@
-@import "./Style.scss";
+@use "./Style.scss" as s;
+
+html{
+    @include s.Html;
+}
 
 .mapBackground{
-    background-image: url('../Images/Home.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: calc(100vh - 60px);
-    display: flex;
+    @include s.Background;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
+
 .mapContainer{
-    width: fit-content;
-    transform: scale(.9);
+    height: 35rem;
+    width: calc(height*1.5);
     display: flex;
 }
-.imageContainer{
-    @extend .Outline;
-    margin-left: 50px;
+
+area{
+    cursor: pointer;
 }
+
+.imageContainer{
+    @include s.Outline;
+    margin-left: 5em;
+}
+
 .imageContainer img{
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    z-index: 5;
-}
+    }
+
 .infoContainer{
-    @extend .Outline;
-    background-color: #d6edd4;
+    @include s.Outline;
+    @include s.TextBig;
     padding: 10px 20px;
-    width: 250px;
-    font-size: 30px;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
 }
-area {
-    cursor: pointer;
-}
-area:hover{
-    background-color: rgba(0, 0, 0, 0.37);
-    opacity: 100;
-    color: black;
-}
+
 #popup {
     display: none;
     position: fixed;
@@ -55,6 +54,7 @@ area:hover{
     z-index: 1000;
     border-radius: 25px;
 }
+
 #overlay{
     background-color: rgba(0, 0, 0, 0.596);
     z-index: 15;
@@ -67,17 +67,26 @@ area:hover{
     margin: 0;
     padding: 0;
 }
+
 button {
     color: black;
-    @extend .Outline;
+    @include s.Outline;
     display: block;
     margin-top: 10px;
     padding: 5px 10px;
     cursor: pointer;
     box-shadow: none;
 }
-.staanplaatsen::marker{
-    content: url(../Images/BBB.ico);
-    width: 5px; /* Adjust the width as needed */
-    height: 5px; /* Adjust the height as needed */
+
+li::marker{
+    font-size: 4rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+$listItems : staanplaatsen toiletten zwembad speeltuin huisBert parkeerplekken;
+@each $item in $listItems {
+    .#{$item}{
+        list-style-image: url('../Images/#{$item}.svg');
+    }
 }

@@ -1,27 +1,19 @@
-.Outline, .reserveringContainer {
-  outline-width: 3px;
-  outline-color: black;
-  outline-style: solid;
-  border-radius: 10px;
+html {
+  font-size: 1.5vh;
 }
 
-/* 
-Voorbeeld hoe je dit kan toevoegen aan andere code:
-.imageContainer{
-    @extend .Outline;   Dit voegt de outline toe aan de code.
-    margin-left: 50px;
-}
-*/
 .bodyReservering {
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  justify-items: center;
   background-image: url("../Images/Home.jpg");
   background-position: center center;
-  height: calc(100vh - 60px);
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(100vh - 60px);
+  width: 100%;
+  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -34,16 +26,23 @@ Voorbeeld hoe je dit kan toevoegen aan andere code:
   flex-direction: column;
   background-color: #d6edd4;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
-  padding: 15px;
-  margin: 15px;
+  outline: 0.2rem solid black;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .reserveringForm {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0;
   padding: 0;
@@ -71,16 +70,15 @@ p {
 }
 
 input {
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  outline-style: solid;
-  outline-width: 3px;
-  outline-color: #000000;
-  margin: 0;
+  font-size: 1rem;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  margin-top: 1rem;
   margin-bottom: 5px;
-  height: 24px;
-  width: 492px;
+  height: 2rem;
+  width: 41rem;
   padding: 0;
   align-items: center;
   padding-left: 5px;
@@ -88,12 +86,11 @@ input {
 }
 
 label {
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  outline-style: solid;
-  outline-width: 3px;
-  outline-color: #000000;
+  font-size: 1rem;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
   margin: 0;
   margin-bottom: 5px;
   height: 24px;
@@ -105,16 +102,41 @@ label {
   background-color: #d6edd4;
 }
 
+.adress {
+  display: flex;
+  flex-direction: row;
+  width: 41.5rem;
+}
+
 .postcode {
-  width: 160px;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  flex: 1;
+  border-bottom-right-radius: 0rem;
+  border-top-right-radius: 0rem;
+  padding-left: 0.5rem;
 }
 
 .straatnaam {
-  width: 200px;
+  flex: 2;
+  border-radius: 0;
 }
 
 .huisnummer {
-  width: 105px;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  flex: 1;
+  border-bottom-left-radius: 0rem;
+  border-top-left-radius: 0rem;
+  padding-left: 0.5rem;
+}
+
+input::-moz-placeholder {
+  color: #616060;
 }
 
 input::placeholder {
@@ -122,39 +144,36 @@ input::placeholder {
 }
 
 select {
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  outline-style: solid;
-  outline-width: 3px;
-  outline-color: #000000;
-  margin: 0;
-  margin-bottom: 5px;
-  height: 24px;
-  width: 501px;
+  font-size: 1rem;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  margin-top: 1rem;
+  height: 2rem;
+  width: 41.5rem;
   padding: 0;
   align-items: center;
-  display: flex;
   padding-left: 5px;
+  display: inline-flex;
+}
+
+select::-moz-placeholder {
+  color: #616060;
 }
 
 select::placeholder {
   color: #616060;
 }
 
-.topForm {
-  border-top-right-radius: 7px;
-  border-top-left-radius: 7px;
-}
-
-.bottomForm {
-  border-bottom-right-radius: 7px;
-  border-bottom-left-radius: 7px;
-}
-
 .fmsg {
-  height: 55px;
-  color: #000000;
+  font-size: 1rem;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  margin-top: 1rem;
+  height: 5rem;
   justify-content: start;
   align-items: start;
   display: flex;
@@ -162,33 +181,45 @@ select::placeholder {
   justify-items: start;
   align-content: start;
   text-wrap: wrap;
-  outline-style: solid;
-  outline-width: 3px;
-  outline-color: #000000;
-  margin: 0;
-  margin-bottom: 5px;
-  width: 492px;
+  width: 39.5rem;
   resize: none;
-  font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  padding-left: 5px;
+  padding: 1rem;
+}
+
+textarea::-moz-placeholder {
+  color: #616060;
 }
 
 textarea::placeholder {
   color: #616060;
 }
 
+.label {
+  font-size: 1rem;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  margin-top: 1rem;
+  height: 2rem;
+  width: 40.5rem;
+  padding: 0;
+  padding-left: 1rem;
+}
+
 .submit {
   background-color: rgba(255, 255, 255, 0.5647058824);
-  width: 501px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  height: 36px;
-  font-size: 20px;
+  outline: 0.2rem solid black;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  padding: 0rem;
+  height: 4rem;
+  width: 42rem;
+  font-size: 2.5rem;
   justify-content: center;
   transition: 0.3s;
-  cursor: default;
+  padding: 0;
+  cursor: pointer;
 }
 
 .submit:hover {
@@ -200,4 +231,16 @@ textarea::placeholder {
   outline-color: rgb(194, 0, 0);
   outline-style: solid;
   outline-width: 3px;
+}
+
+@media (max-width: 992px) {
+  .reserveringForm {
+    margin-top: 15rem;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-image: none;
+    background-color: rgb(145, 145, 145);
+    padding-bottom: 10rem;
+  }
 }/*# sourceMappingURL=Reservering.css.map */

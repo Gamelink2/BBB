@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <?php include('navbar.php'); ?>
-    <link rel="stylesheet" href="./Css/navbar.css">
+<?php include('Error-Navbar.php'); ?>
+
 </head>
 <body>
     <div class="errorBody">
         <div class="errors" >
 
             <h1>
-                404
+                403
             </h1>
             <h2>
-                Pagina bestaat niet.
+                U bent niet gemachtigd om deze pagina te bezoeken.
             </h2>
         </div>
     </div>

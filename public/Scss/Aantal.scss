@@ -1,23 +1,84 @@
-:root{
+:root {
     overflow-x: hidden;
     background-image: url(../Images/Home.jpg);
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
 
-ul {
-    display: grid;
-    list-style: none;
-    
+.bg {
+    justify-content: center;
+    text-align: center;
 }
 
-li {
-    display: inline;
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 80%;
+    max-height: fit-content;
+    text-wrap: stable;
+    justify-content: space-between;
+}
 
+.Table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Table-head {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+
+.Table-content {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    width: 200px;
+    display: flex; /* Corrected to flex */
+    flex-direction: row; /* Display horizontally */
+    justify-content: space-between;
+}
+
+.Table-content:nth-child(odd) {
+    background-color: slategrey;
+    color: white;
+}
+
+.Table-content > :first-child {
+    background-color: black;
+    color: white;
 }
 
 .persoonsgegevens {
     opacity: 1;
-    color: rebeccapurple;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Display vertically */
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: black;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+/* Additional style for child elements within persoonsgegevens */
+.persoonsgegevens .Table-content {
+    background-color: black;
+    margin-inline: auto;
+    width: 85%; /* Full width of the container */
+    border-radius: 10%;
 }

@@ -1,62 +1,82 @@
+@use "./Style.scss" as s;
+
+html{
+    @include s.Html
+}
 .campBody {
-    background-image: url('../Images/Home.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include s.Background;
     justify-content: top;
     align-items: top;
-    width: 100%;
-    display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 
 .flex-container {
     display: flex;
-    margin-inline: 10px;
-    margin-top: calc(2.5% + 10px);
-    width: 100%;
+    padding: 5rem;
+    width: calc(100vw - 10rem);
+    height: fit-content;
+    flex-direction: row;
+    gap: 3rem;
 }
-
 .campText {
-    margin-inline: 2.5%;
-    width: calc(45% - 10px);
-    outline: 10px solid #25851c;
-    border-radius: 10px;
-    background-color: #d6edd4;
-    height: calc(90% - 56px);
-    padding-inline: 10px;
+    @include s.Outline;
+    padding: 1rem;
+    flex: 4;
 }
 
 .nested-flex-container {
     display: flex;
     flex-direction: column;
-    width: 45%;
-    height: calc(98.5% - 59px);
+    flex: 3;
+    gap: 3rem;
 }
 
 .campText2 {
-    margin-inline: 2.5%;
-    width: 100%;
-    outline: 10px solid #25851c;
-    border-radius: 10px;
-    background-image: url('../Images/highfidnumbered2background.png'); 
+    @include s.Outline;
+    background-image: url('../Images/camping.jpg'); 
     background-size: cover;
     background-position: center center;
-    height: calc(78% - 60px);
+    background-repeat: no-repeat;
+    flex-grow: 3;
 }
-
 .campText3 {
-    margin-inline: 2.5%;
-    width: calc(100% - 2.5%);
-    outline: 10px solid #25851c;
-    border-radius: 10px;
-    background-color: #d6edd4;
-    margin-top: calc(100% - 78% - 14%);
-    height: 14%;
-    padding-inline: 10px;
+    @include s.Outline;
+    flex-grow: 1;
 }
 
+.title{
+    @include s.TextBig;
+    margin: 0px;
+}
+.caption{
+    @include s.TextMid;
+    font-weight: bold
+}
+.text{
+    @include s.TextSmall;
+}
+.textBold{
+    @include s.TextSmall;
+    font-weight: bold;
+}
+@media (max-width: 992px ){
+    .flex-container {
+        flex-direction: column;
+    }
+    .campBody {
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(145, 145, 145);
+        background-size: cover
+    }
+    .campText2{
+        width: 90%;
+        height: 10rem;
+        background-size: contain
+    }
+
+}
+/*
 .dropdown {
     display: inline-block;
     position: relative;
@@ -96,7 +116,7 @@
 .option-content {
     margin-top: 10px;
     display: block;
-    visibility: hidden; /* Corrected value */
+    visibility: hidden; 
     opacity: 0;
 }
 
@@ -107,12 +127,5 @@
 }
 
 
-.campBackground {
-    width: 100%;
-    height: 100%;
-    background-image: url('../Images/camping.jpg'); /* Updated path */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
 
+*/

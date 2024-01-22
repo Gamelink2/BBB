@@ -1,53 +1,42 @@
 <?php
 
 session_start();
-
-if (!isset($_SESSION['ErrorMessage'])) {}
     ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<?php include('navbar.php'); ?>
-<link rel="stylesheet" href="Css/Reservering.css">
+    <?php include('navbar.php'); ?>
+    <link rel="stylesheet" href="Css/Reservering.css">
 </head>
 <body>
     <div class="bodyReservering">
-            <form class="reserveringForm" id="contactForm" method="post" action="Input.php">
+    <?php
+    if (isset($_SESSION["ErrorMessage"])) {
+        $errorMessage = $_SESSION["ErrorMessage"];
+            echo '
+                <p style="
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: large;
+                    color: red;
+                ">
+                    ' . $errorMessage . '
+                </p>';
+        }
+         ?>
+            <form class="reserveringForm" id="contactForm" method="post" action="Input">
                 
             <?php
-            if (isset($_SESSION["ErrorMessage"])) {
-                $errorMessage = $_SESSION["ErrorMessage"];
-
-                if ($errorMessage !== "Reservering is toegevoegd") {
-                    echo '
-                        <p style="
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: large;
-                            color: red;
-                        ">
-                            ' . $errorMessage . '
-                        </p>';
-                } else {
-                    echo '
-                        <p style="
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: large;
-                            color: green;
-                        ">
-                            ' . $errorMessage . '
-                        </p>';
-                }
-            }        
+                  
             echo '<container class="reserveringContainer">';
             echo '  
             <select class="topForm" name="aanhef" id="aanhef">
-            <option value="">Hoe wilt u geaddreseerd worden?</option>
+            <option value="">Hoe wilt u geaddreseerd worden?*</option>
             <option value="Meneer" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Meneer" ? 'selected' : '').'>Meneer</option>
             <option value="Mevrouw" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Mevrouw" ? 'selected' : '').'>Mevrouw</option>
             <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
             <div id="andersInputA" style="display: none;">
-            <input type="text" name="andersA" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="aanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
             </div>
             ';
 
@@ -93,16 +82,18 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             echo '<container class="reserveringContainer">';
 
             echo '
-            <select class="topForm" name="middelen" id="middelen">
-            <option value="">Waarmee komt u kamperen*</option>
-            <option value="Tent">Tent</option>
-            <option value="caravan" ).>Caravan</option>
-            <option value="Anders">Anders</option>
+            <select class="topForm" name="middelen" id="middelen" onchange="toggleAndersInput()">
+                <option value="">Waarmee komt u kamperen*</option>
+                <option value="Tent" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Tent" ? "selected" : "") . '>Tent</option>
+                <option value="Caravan" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Caravan" ? "selected" : "") . '>Caravan</option>
+                <option value="Anders" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Anders" ? "selected" : "") . '>Anders</option>
             </select>
+            
             <div id="andersInput" style="display: none;">
-            <input type="text" name="anders" id="anders" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
-            </div>
-            ';
+                <input type="text" name=Middelen" id="anders" placeholder="Anders, specificeren:*" value="' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == 'Anders' ? $_SESSION["middelen"] : '') . '">
+            </div>';
+
+        
             
 
             if (isset($_SESSION['verzoek'])) {
@@ -119,12 +110,12 @@ if (!isset($_SESSION['ErrorMessage'])) {}
 
             if (isset($_SESSION['BeginDatum'])) {
                 echo '
-                    <label for="begindatum">Begin datum:</label>
+                    <label class="label "for="begindatum">Begin datum:*</label>
                     <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" value="' . $_SESSION['BeginDatum'] . '">
                 ';
             } else {
                 echo '
-                    <label for="begindatum">Begin datum:</label>
+                    <label class="label for="begindatum">Begin datum:*</label>
                     <input type="date" id="begindatum" name="begindatum" min="' . date('Y-m-d') . '" placeholder="Begin datum?">
                 ';
             }
@@ -132,13 +123,13 @@ if (!isset($_SESSION['ErrorMessage'])) {}
             if (isset($_SESSION['EindDatum'])) {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
-                    <label for="einddatum">Eind datum:</label>
+                    <label class="label for="einddatum">Eind datum:*</label>
                     <input type="date" id="einddatum" name="einddatum" value="' . $_SESSION['EindDatum'] . '" placeholder="Eind datum? * ">
                 ';
             } else {
                 $sixtyDaysLater = date('Y-m-d', strtotime('+60 days'));
                 echo '
-                    <label for="einddatum">Eind datum:</label>
+                    <label class="label for="einddatum">Eind datum:*</label>
                     <input type="date" id="einddatum" name="einddatum" max="' . $sixtyDaysLater . '" placeholder="Eind datum? * ">
                 ';
             }
@@ -218,7 +209,7 @@ function validateForm(excludedIds) {
                     document.getElementById('andersInput').classList.add('emptyField');
                 }
                 else {
-                    input.classList.add('emptyField');
+                    input.classList.remove('emptyField');
                 }
             }
 
@@ -245,15 +236,11 @@ function validateForm(excludedIds) {
             }
         }
     });
-    
 }
+
+
 </script>
 </div>
 
-<?php
-    $_SESSION["loginPerson"] = $logged;
-    session_unset();
-    $logged = $_SESSION["loginPerson"];    
-?>
 </body>
 </html>
