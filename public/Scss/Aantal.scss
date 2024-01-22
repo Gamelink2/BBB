@@ -18,10 +18,12 @@
     text-align: center;
 }
 .Table-head:first-child > li{
-    border-top-left-radius: 1rem;
+    border-top-left-radius: 3rem;
+    color: red;
 } 
 .Table-head:last-child > li{
     border-top-right-radius: 1rem;
+    color: red;
 }
 .persoonsgegevens {
     background-color: black;
