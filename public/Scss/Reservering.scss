@@ -30,27 +30,6 @@
     margin: 0;
     padding: 0;
 }
-h1{
-    color: #000000;
-    font-weight: 500;
-    font-family: 'Centra', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
-    margin: 0;
-    margin-bottom: 20px;
-}
-
-p{
-    color:#d6edd4;
-    outline-style: solid;
-    outline-width: 3px;
-    outline-color:#000000;
-    margin: 0;
-    margin-bottom: 5px;
-    height: 30px;
-    align-items: center;
-    display: flex;
-}
-
 input{
     @include s.TextSmall;
     @include s.OutlineSmall;
