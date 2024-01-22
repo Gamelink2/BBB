@@ -38,14 +38,6 @@ html {
   width: 90%;
 }
 
-/* Additional style for child elements within persoonsgegevens */
-.persoonsgegevens .Table-content {
-  background-color: black;
-  margin-inline: auto;
-  width: 100%; /* Full width of the container */
-  border-radius: 10%;
-}
-
 .Table {
   display: flex;
   flex-direction: column;
