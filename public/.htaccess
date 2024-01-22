@@ -85,7 +85,5 @@ RewriteCond %{REQUEST_FILENAME} !-f [NC]
 RewriteRule ^ - [R=404,L]
 
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_FILENAME} !-/
-
-RewriteRule ^ - [R=404,L]
+RewriteRule ^(.*)$ https://groeneweide.dkorver.com/Home [R=404,L]
 
