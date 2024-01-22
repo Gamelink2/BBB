@@ -1,4 +1,5 @@
 <?php
+include_once('Connection.php')
 function show($PDO) {
     $areaId = $_POST['value'];
     $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
@@ -21,7 +22,8 @@ function show($PDO) {
             ]);
         <?php endforeach; ?>
     </script>
-<?php }} ?>
+    
+<?php }} show($PDO) ?>
         
 <!DOCTYPE html>
 <html lang="nl">
