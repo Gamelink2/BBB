@@ -1,6 +1,6 @@
 @use "./Style.scss" as s;
 
-:root {
+body {
     @include s.Background;
     align-items: center;
     justify-content: center;
