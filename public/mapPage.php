@@ -1,3 +1,25 @@
+<?php
+function show2($pdo) {
+    $areaId = $_POST['value2'];
+    $stmt = $pdo->prepare("SELECT * FROM gebouwPopup");
+    $stmt->execute([$areaId]);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($results) {
+        foreach ($results as $result) {?>
+            <p id="gebouw_<?php echo $result["GebouwID"] ?>" >
+                Dit is een <?php echo $result["Soortgebouw"] ?>
+            
+            </p>
+
+
+            </p>";
+       <?php }
+
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
