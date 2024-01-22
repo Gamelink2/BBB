@@ -69,7 +69,7 @@ ul.Table-content:nth-child(odd) > li:not(:first-child) {
   color: white;
 }
 
-.firstLi {
+ul.Table-content > li:first-child {
   background-color: black;
   color: rgb(255, 255, 255);
 }
