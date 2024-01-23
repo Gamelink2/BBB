@@ -17,7 +17,7 @@
       <div>De Groene Weide</div>
     </a>
     <div class="navlink">
-      <a href="./Home">Home</a>
+      <a href="./ ">Home</a>
       <a href="./camping">De Camping</a>
       <a href="./mapPage">Plattegrond</a>
       <a href="./Reservering">Reserveren</a>

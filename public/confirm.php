@@ -43,7 +43,7 @@ if ($userToken !== $expectedToken) {
                 </ul>
 
                 <h2>Wij wensen u een fijne vakantie!</h2>
-                <a class="button" href="./Home">Terug naar de home pagina</a>
+                <a class="button" href="./">Terug naar de home pagina</a>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@ if (isset($logged)) {
     e.returnValue = confirmationMessage;
 
     return confirmationMessage;
-    cancelled = window.location.href('./Home')
+    cancelled = window.location.href('./')
   };
 </script>
 

@@ -11,19 +11,19 @@
 </head>
 <body class="indexBody">
   <div class="Navbar">
-    <a class="logo" href="/Home">
+    <a class="logo" href="/">
       <img src="/Images/BBB2.png" alt="logo" width="50px" height="50px">
       <div>  </div>
       <div>De Groene Weide</div>
     </a>
     <div class="navlink">
-      <a href="https://groeneweide.dkorver.com/Home">Home</a>
+      <a href="https://groeneweide.dkorver.com/">Home</a>
       <a href="https://groeneweide.dkorver.com/camping">De Camping</a>
       <a href="https://groeneweide.dkorver.com/mapPage">Plattegrond</a>
       <a href="https://groeneweide.dkorver.com/Reservering">Reserveren</a>
       <a href="https://groeneweide.dkorver.com/mapInfo">Map Informatie</a>
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
-      <a href="https://groeneweide.dkorver.com/Aantal_Reserveringen">Reserveringen</a>
+      <a href="https://groeneweide.dkorver.com/Aantal_Reserveringen">Dash-board</a>
 
     </div>
   </div>
