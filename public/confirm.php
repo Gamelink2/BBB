@@ -104,15 +104,15 @@ $_SESSION['$EindDatum'] = $EindDatum;
 
 </body>
 <?php
-if (isset($loginPerson)) {
-    $logged = $loginPerson;
-  }
-session_destroy();
-session_start(); 
+// if (isset($loginPerson)) {
+//     $logged = $loginPerson;
+//   }
+// session_destroy();
+// session_start(); 
 
-if (isset($logged)) {
-  $logged = $loginPerson;
-}
+// if (isset($logged)) {
+//   $logged = $loginPerson;
+// }
 ?>
 
 </html>
