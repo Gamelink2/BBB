@@ -65,20 +65,45 @@ $_SESSION['$EindDatum'] = $EindDatum;
     const handleForm = async () => {
         try {
             const formElement = document.getElementById('contact-form');
-            const formData = new FormData(formElement);
-            console.log('FormData:', formData);
+            console.log('Form Element:', formElement);
 
-            const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
-            console.log('Email response:', response);
-            alert('Email sent successfully!');
+            if (formElement) {
+                const formData = new FormData(formElement);
+                console.log('FormData:', formData);
+
+                const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
+                console.log('Email response:', response);
+                alert('Email sent successfully!');
+            } else {
+                throw new Error('Form element not found.');
+            }
         } catch (error) {
             console.error('Error sending email:', error);
 
-            if (error.text) {
-                console.error('Error details:', error.text);
-            } else {
-                console.error('Error details:', error);
-            }
+            console.groupCollapsed('Detailed Error Information');
+
+            console.error('Error Message:', error.message);
+            console.error('Stack Trace:', error.stack);
+
+            // Log each property individually and recursively for nested properties
+            const logProperties = (obj, prefix = '') => {
+                Object.getOwnPropertyNames(obj).forEach((prop) => {
+                    const propValue = obj[prop];
+                    const propType = typeof propValue;
+
+                    if (propType === 'object' && propValue !== null) {
+                        console.group(`Property (${prefix}${prop}):`);
+                        logProperties(propValue, `${prefix}${prop}.`);
+                        console.groupEnd();
+                    } else {
+                        console.log(`(${prefix}${prop}): Type - ${propType}, Value - ${propValue}`);
+                    }
+                });
+            };
+
+            logProperties(error);
+
+            console.groupEnd();
 
             alert('Failed to send email. Check the console for details.');
         }
@@ -96,6 +121,7 @@ $_SESSION['$EindDatum'] = $EindDatum;
         return confirmationMessage;
     };
 </script>
+
 
 
 
