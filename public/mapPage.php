@@ -1,28 +1,19 @@
 <?php
+include_once('Connection.php');
+
 function show($PDO) {
-    $areaId = $_POST['value'];
     $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
-    $stmt->execute([$areaId]);
+    $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if ($results) {?>
     <script>
-        var plek = [];
-        <?php foreach ($results as $row) : ?>
-            plek.push([
-                '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
-                'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
-                'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
-                'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
-                'Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>',
-                'Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>',
-                'Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.',
-                '</p>'
-            ]);
-        <?php endforeach; ?>
+        var plekData = <?php echo json_encode($results); ?>;
     </script>
-<?php }} ?>
-        
+    
+<?php }} 
+
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -92,6 +83,28 @@ function show($PDO) {
     </div>
     </div>
 </body>
+<?php
+            $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
+            $stmt->execute();
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if ($results) {?>
+                <script>
+                    var plek = [];
+                    <?php foreach ($results as $row) : ?>
+                        plek.push([
+                            '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
+                            'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
+                            'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
+                            'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
+                            'Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>',
+                            'Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>',
+                            'Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.',
+                            '</p>'
+                        ]);
+                    <?php endforeach; ?>
+                </script>
+            <?php } ?>
 <script>
     function groupsSelect(group) {
         var value = $('#plattegrond').mapster('get', group);
