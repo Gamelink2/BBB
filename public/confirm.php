@@ -20,7 +20,7 @@ if ($userToken !== $expectedToken) {
 <body>
     <div class="contact-form">
         <div class="test">
-            <div class="confirm" onload=handleForm() >
+            <div class="confirm">
                 <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
                 <h1>Bedankt voor uw reservering!</h1>
                 <h2>Beste <span name="FirstName"><?php echo $_SESSION["voornaam"]; ?></span> <span name="LastName"><?php echo $_SESSION["achternaam"]; ?></span></h2>
@@ -69,24 +69,26 @@ if (isset($logged)) {
   })();
 </script>
 <script>
-  const handleForm = async (e) => {
-    try {
-      await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
-      alert('email sent!');
-    } catch (error) {
-      console.error(error);
-      alert('Failed to send email');
-    }
-  };
-
-  window.onbeforeunload = function(e) {
-    const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-
-    e.returnValue = confirmationMessage;
-
-    return confirmationMessage;
-    cancelled = window.location.href('./')
-  };
+  window.onload = function() {
+    const handleForm = async () => {
+      try {
+        await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
+        alert('email sent!');
+      } catch (error) {
+        console.error(error);
+        alert('Failed to send email');
+      }
+    };
+  
+    window.onbeforeunload = function(e) {
+      const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
+  
+      e.returnValue = confirmationMessage;
+  
+      return confirmationMessage;
+      cancelled = window.location.href('./')
+    };
+  }
 </script>
 
 </html>
