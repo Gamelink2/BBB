@@ -75,7 +75,7 @@ ErrorDocument 500 /500.php
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ## Redirect from IP to Domain
-RewriteCond %{HTTP_HOST} ^145\.89\.192\.242\
+RewriteCond %{HTTP_HOST} ^145\.89\.192\.242$ [NC]
 # Try our IP, get rick rolled Biatch
 RewriteRule ^(.*)$ https://youtu.be/dQw4w9WgXcQ?si=VYvT63dpcQ1vIJLQ [L,R=301]
 
