@@ -52,7 +52,7 @@ try {
         if ($stmt2->execute()) {
             $ErrorMessage = "Reservering is toegevoegd";
             // include_once("Send_Email.php");
-            header("Location: confirm?token=your_generated_token");
+            header("Location: confirm?");
             die();
         };
         
