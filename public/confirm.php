@@ -79,10 +79,17 @@ $_SESSION['$EindDatum'] = $EindDatum;
         }
     } catch (error) {
         console.error('Error sending email:', error);
-        console.error('Error details:', error.text); // Log the detailed error information
+
+        if (error.text) {
+            console.error('Error details:', error.text);
+        } else {
+            console.error('Error details:', error);
+        }
+
         alert('Failed to send email. Check the console for details.');
     }
 };
+
 
 
 
