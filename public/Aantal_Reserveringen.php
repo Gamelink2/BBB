@@ -13,7 +13,7 @@ include_once("Connection.php");
 <body>
     <div class="BG">
         <ul class="Table-head">
-            <li>
+            <li onclick="contrast()">
                 Reservering:
             </li>
             <li>
@@ -98,7 +98,14 @@ include_once("Connection.php");
             ?>
         </div>
     </div>
-    
+    <script>
+        function contrast(){
+            const rows = document.querySelectorAll('.Table-content');
+            rows.forEach(row => {
+                row.classList.toggle('selected');
+            });
+        }
+    </script>
 </body>
 </html>
 

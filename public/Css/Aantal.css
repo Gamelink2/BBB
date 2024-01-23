@@ -63,8 +63,18 @@ ul.Table-content > li {
   color: black;
 }
 
-ul.Table-content:nth-child(even) > li:not(:first-child) {
+ul.Table-content:nth-child(even) > li {
   background-color: rgb(139, 139, 139);
+  color: white;
+}
+
+ul.Table-content > li.selected {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+ul.Table-content:nth-child(even) > li.selected {
+  background-color: rgb(0, 0, 0);
   color: white;
 }
 
