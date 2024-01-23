@@ -61,7 +61,6 @@ $_SESSION['$EindDatum'] = $EindDatum;
         (function () {
             emailjs.init('RBuOCpeu2TmAUuTAp');
         })();
-
         const handleForm = async () => {
     try {
         const formElement = document.getElementById('contact-form');
@@ -80,10 +79,11 @@ $_SESSION['$EindDatum'] = $EindDatum;
         }
     } catch (error) {
         console.error('Error sending email:', error);
-        console.error('Error details:', error.response?.data); // Log the detailed error information
+        console.error('Error details:', error.text); // Log the detailed error information
         alert('Failed to send email. Check the console for details.');
     }
 };
+
 
 
         window.onload = function () {
