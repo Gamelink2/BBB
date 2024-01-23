@@ -59,12 +59,12 @@ ul.Table-head > li:last-child {
 }
 
 ul.Table-content > li {
-  background-color: lightgrey;
+  background-color: rgb(255, 255, 255);
   color: black;
 }
 
-ul.Table-content:nth-child(odd) > li:not(:first-child) {
-  background-color: slategrey;
+ul.Table-content:nth-child(even) > li:not(:first-child) {
+  background-color: rgb(109, 109, 109);
   color: white;
 }
 
