@@ -12,32 +12,6 @@ function show($PDO) {
     </script>
     
 <?php }} 
-function test($PDO) {
-    $areaId = $_POST['value'];
-    $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
-    $stmt->execute([$areaId]);
-    $results = $stmt->fetchAll(PDO::FETCHASSOC);
-
-    $htmlRows = []; // Array to store HTML content for each row
-
-    if ($results) {
-        foreach ($results as $row) {
-            $htmlRows[] = "
-                <p class='Pop-Up' id='spot{$row['PlekID']}' style='display: none;'>
-                    Deze plek is {$row['Grootte']} m2 groot.<br>
-                    Dit is een {$row['Kampeermiddel']} plek.<br>
-                    Dit is plek nummer {$row['PlekNmr']} <br>
-                    Dit is een plek voor maximaal {$row['Personen']} personen.<br>
-                    Er is op deze plek plaats voor {$row['Bijzettentjes']} bijzettentjes.<br>
-                    Deze plek heeft {$row['Stroom']} beschikking tot stroom, en {$row['Water']} water.
-                </p>";
-        }
-    }
-
-    // Now $htmlRows contains HTML content for each row
-    // You can access individual rows using $htmlRows[index]
-    // For example: echo $htmlRows[0]; // To print the HTML content of the first row
-}
 
 ?>
 
@@ -145,7 +119,7 @@ function test($PDO) {
             function showPopup(id) {
                 document.getElementById('popup').style.display = 'block';
                 document.getElementById('overlay').style.display = 'block';
-                document.getElementById('popupContent').innerHTML = 'Dit is plaats: ' + id;
+                document.getElementById('popupContent').innerHTML = plek[id];
 
                 fetch(`get_data.php?areaId=${id}`)
                     .then(response => {
