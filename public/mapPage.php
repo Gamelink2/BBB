@@ -27,7 +27,7 @@
             function showPopup(id) {
                 document.getElementById('popup').style.display = 'block';
                 document.getElementById('overlay').style.display = 'block';
-                document.getElementById('popupContent').innerHTML = plek[id];
+                document.getElementById('popupContent').innerHTML = plek[id - 1];
                 console.log(plek.get(id -1))
                 
                 fetch(`get_data.php?areaId=${areaId}`)
@@ -84,27 +84,27 @@
         </div>
     </body>
     <?php
-                $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
-                $stmt->execute();
-                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $PDO->prepare("SELECT * FROM popupInhoud");
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                if ($results) {?>
-                    <script>
-                        var plek = [];
-                        <?php foreach ($results as $row) : ?>
-                            plek.push([
-                                '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
-                                'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
-                                'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
-                                'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
-                                'Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>',
-                                'Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>',
-                                'Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.',
-                                '</p>'
-                            ].join(''));
-                        <?php endforeach; ?>
-                    </script>
-                <?php } ?>
+        if ($results) {?>
+            <script>
+                var plek = [];
+                <?php foreach ($results as $row) : ?>
+                    plek.push([
+                        '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
+                        'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
+                        'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
+                        'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
+                        'Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>',
+                        'Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>',
+                        'Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.',
+                        '</p>'
+                    ].join(''));
+                <?php endforeach; ?>
+            </script>
+        <?php } ?>
     <script>
         function groupsSelect(group) {
             var value = $('#plattegrond').mapster('get', group);

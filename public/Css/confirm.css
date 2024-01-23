@@ -36,9 +36,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   outline-color: #000000;
   outline-style: solid;

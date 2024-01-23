@@ -39,9 +39,7 @@ html {
   }
   li::marker {
     font-size: 2rem;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     cursor: pointer;
   }
 }
@@ -119,9 +117,7 @@ button {
 
 li::marker {
   font-size: 4rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 

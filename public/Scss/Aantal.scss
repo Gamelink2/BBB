@@ -16,7 +16,7 @@
     text-align: center;
 }
 ul.Table-head > li{
-    background-color: black;
+    background-color: #086700;
     color: white;
 }
 ul.Table-head > li:first-child{
@@ -48,7 +48,7 @@ ul.Table-content:nth-child(odd) > li:not(:first-child){
     color: white;
 }
 ul.Table-content > li:first-child{
-    background-color: black;
+    background-color: #086700;
     color: rgb(255, 255, 255);
 }
 .persoonsgegevens > ul.Table-content:last-child > li:first-child{
@@ -67,7 +67,7 @@ li{
     padding-bottom: 1rem;
     @include s.TextSmall;
     list-style: none;
-    outline: 1px solid white;
+    outline: 0.2rem solid rgb(0, 0, 0);
     min-width: 0;
 }
 li:first-child{

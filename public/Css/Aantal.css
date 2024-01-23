@@ -30,7 +30,7 @@ html {
 }
 
 ul.Table-head > li {
-  background-color: black;
+  background-color: #086700;
   color: white;
 }
 
@@ -52,7 +52,6 @@ ul.Table-head > li:last-child {
 
 .Table-content {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   display: flex; /* Corrected to flex */
@@ -70,7 +69,7 @@ ul.Table-content:nth-child(odd) > li:not(:first-child) {
 }
 
 ul.Table-content > li:first-child {
-  background-color: black;
+  background-color: #086700;
   color: rgb(255, 255, 255);
 }
 
@@ -93,7 +92,7 @@ li {
   padding-bottom: 1rem;
   font-size: 1.2rem;
   list-style: none;
-  outline: 1px solid white;
+  outline: 0.2rem solid rgb(0, 0, 0);
   min-width: 0;
 }
 
