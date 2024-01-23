@@ -69,6 +69,7 @@ if (isset($logged)) {
       alert('email sent!');
     } catch (error) {
       console.error(error);
+      console.error('error sending the email: ', error)
       alert('Failed to send email');
     }
   };
