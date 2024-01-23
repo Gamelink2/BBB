@@ -92,16 +92,16 @@ function show($PDO) {
                 <script>
                     var plek = [];
                     <?php foreach ($results as $row) : ?>
-                        plek.push([
-                            '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
-                            'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
-                            'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
-                            'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
-                            'Dit is een plek voor maximaal <?php echo $row['Personen']; ?> personen.<br>',
-                            'Er is op deze plek plaats voor <?php echo $row['Bijzettentjes']; ?> bijzettentjes.<br>',
-                            'Deze plek heeft <?php echo $row['Stroom']; ?> beschikking tot stroom, en <?php echo $row['Water']; ?> water.',
+                        '<?php echo implode("", [
+                            '<p class="Pop-Up" id="', $row['PlekID'], '" style="display: block;">',
+                            'Deze plek is ', $row['Grootte'], ' m2 groot.<br>',
+                            'Dit is een ', $row['Kampeermiddel'], ' plek.<br>',
+                            'Dit is plek nummer ', $row['PlekNmr'], ' <br>',
+                            'Dit is een plek voor maximaal ', $row['Personen'], ' personen.<br>',
+                            'Er is op deze plek plaats voor ', $row['Bijzettentjes'], ' bijzettentjes.<br>',
+                            'Deze plek heeft ', $row['Stroom'], ' beschikking tot stroom, en ', $row['Water'], ' water.',
                             '</p>'
-                        ]);
+        	        ]); ?>'
                     <?php endforeach; ?>
                 </script>
             <?php } ?>
