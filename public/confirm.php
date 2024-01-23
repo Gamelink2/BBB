@@ -12,7 +12,8 @@ $_SESSION['aantal'] = $aantal;
 $_SESSION['$BeginDatum'] = $BeginDatum;
 $_SESSION['$EindDatum'] = $EindDatum;
 
-
+// Debugging: Check if session variables are set
+var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
