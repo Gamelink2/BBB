@@ -57,57 +57,53 @@ $_SESSION['$EindDatum'] = $EindDatum;
     
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init('RBuOCpeu2TmAUuTAp');
-        })();
-        const handleForm = async () => {
-    try {
-        const formElement = document.getElementById('contact-form');
-        console.log('Form Element:', formElement);
+<script>
+    (function () {
+        emailjs.init('RBuOCpeu2TmAUuTAp');
+    })();
 
-        if (formElement) {
-            const formData = new FormData(formElement);
-            console.log('FormData:', formData);
+    const handleForm = async () => {
+        try {
+            const formElement = document.getElementById('contact-form');
+            console.log('Form Element:', formElement);
 
-            const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
-            console.log('Email response:', response);
-            alert('Email sent successfully!');
-        } else {
-            console.error('Form element not found.');
-            alert('Failed to send email. Form element not found.');
+            if (formElement) {
+                const formData = new FormData(formElement);
+                console.log('FormData:', formData);
+
+                const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
+                console.log('Email response:', response);
+                alert('Email sent successfully!');
+            } else {
+                console.error('Form element not found.');
+                alert('Failed to send email. Form element not found.');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+
+            if (error.text) {
+                console.error('Error details:', error.text);
+            } else {
+                console.error('Error details:', error);
+            }
+
+            alert('Failed to send email. Check the console for details.');
         }
-    } catch (error) {
-        console.error('Error sending email:', error);
+    };
 
-        if (error.text) {
-            console.error('Error details:', error.text);
-        } else {
-            console.error('Error details:', error);
-        }
+    window.onload = function () {
+        handleForm();
+    };
 
-        alert('Failed to send email. Check the console for details.');
-    }
-};
+    window.onbeforeunload = function (e) {
+        const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
 
+        e.returnValue = confirmationMessage;
 
-
-
-        window.onload = function () {
-            handleForm();
-        };
-
-        window.onbeforeunload = function (e) {
-            const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-
-            e.returnValue = confirmationMessage;
-
-            return confirmationMessage;
-            cancelled = window.location.href('./');
-        };
-    </script>
-
+        return confirmationMessage;
+    };
 </script>
+
 
 </body>
 <?php
