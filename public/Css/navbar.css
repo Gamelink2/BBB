@@ -40,7 +40,6 @@ body {
   box-sizing: border-box;
   margin-block: 0 !important;
   outline: 1px black solid;
-  position: absolute;
 }
 
 a {
