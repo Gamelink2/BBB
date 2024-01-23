@@ -1,14 +1,5 @@
 <?php
 session_start();
-
-$expectedToken = "your_generated_token"; // Retrieve the expected token from your server
-
-$userToken = $_GET['token'] ?? ''; // Get token from the URL
-
-if ($userToken !== $expectedToken) {
-    header("Location: Home");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -48,17 +39,16 @@ if ($userToken !== $expectedToken) {
         </div>
     </div>
     
-</body>
-
-<?php
+    
+    <?php
 if (isset($_SESSION["loginPerson"])) {
     $logged = $_SESSION["loginPerson"];
-}
+  }
 session_destroy();
 session_start(); 
 
 if (isset($logged)) {
-    $logged = $_SESSION["loginPerson"];
+  $logged = $_SESSION["loginPerson"];
 }
 ?>
 
@@ -70,25 +60,28 @@ if (isset($logged)) {
 </script>
 <script>
   window.onload = function() {
-    const handleForm = async () => {
-      try {
-        await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
-        alert('email sent!');
-      } catch (error) {
-        console.error(error);
-        alert('Failed to send email');
-      }
-    };
+    handleForm();
+};
+
+  const handleForm = async (e) => {
+    try {
+      await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
+      alert('email sent!');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send email');
+    }
+  };
   
-    window.onbeforeunload = function(e) {
-      const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-  
-      e.returnValue = confirmationMessage;
-  
-      return confirmationMessage;
-      cancelled = window.location.href('./')
-    };
-  }
+  window.onbeforeunload = function(e) {
+    const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
+    
+    e.returnValue = confirmationMessage;
+    
+    return confirmationMessage;
+    cancelled = window.location.href('./')
+  };
 </script>
 
+</body>
 </html>
