@@ -7,7 +7,11 @@ global $PDO;
 
 try {
     
-    $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['aanhef']) ? trim($_REQUEST['aanhef']) : ''; 
+    if (isset($_REQUEST['aanhef'])) {
+        $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['aanhef']) ? trim($_REQUEST['aanhef']) : '';
+    } else {
+        $_SESSION["aanhef"] = $Aanhef = isset($_REQUEST['andersAanhef']) ? trim($_REQUEST['andersAanhef']) : '';
+    }   
     $_SESSION["voornaam"] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $_SESSION["achternaam"] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
     $_SESSION["nummer"] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';

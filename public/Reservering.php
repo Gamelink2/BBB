@@ -36,7 +36,7 @@ session_start();
             <option value="Anders" '.(isset($_SESSION['aanhef']) && $_SESSION['aanhef'] === "Anders" ? 'selected' : '').'>Anders</option>
             </select>
             <div id="andersInputA" style="display: none;">
-            <input type="text" name="aanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['middelen']) ? $_SESSION["middelen"] : '') .'">
+            <input type="text" name="andersAanhef" id="andersA" placeholder="Anders, specificeren:*" value="'. (isset($_SESSION['aanhef']) ? $_SESSION["aanhef"] : '') .'">
             </div>
             ';
 
