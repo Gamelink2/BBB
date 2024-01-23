@@ -4,7 +4,7 @@ session_start();
 $_SESSION['voornaam'] = $VoorNaam;
 $_SESSION['achternaam'] = $AchterNaam;
 $_SESSION['nummer'] = $TelefoonNummer;
-$_SESSION['email'] = $Email;
+$_SESSION["email"] = $Email;
 $_SESSION['middelen'] = $Middelen;
 $_SESSION['verzoek'] = $Verzoek;
 $_SESSION['Volwassenen'] = $Volwassenen;
