@@ -90,6 +90,7 @@ html {
     flex-direction: column;
   }
   .campBody {
+    height: -moz-fit-content;
     height: fit-content;
     background-image: none;
     background-color: rgb(145, 145, 145);

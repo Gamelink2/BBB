@@ -36,7 +36,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: -moz-fit-content;
   height: fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   outline-color: #000000;
   outline-style: solid;
@@ -79,4 +81,9 @@ h2 {
   text-align: center;
   margin: 10px 0px;
   padding: 0px;
+}
+
+ul {
+  list-style-type: square;
+  font-size: 1rem;
 }/*# sourceMappingURL=confirm.css.map */

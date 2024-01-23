@@ -52,6 +52,7 @@ ul.Table-head > li:last-child {
 
 .Table-content {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   display: flex; /* Corrected to flex */

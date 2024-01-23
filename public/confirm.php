@@ -20,7 +20,7 @@ if ($userToken !== $expectedToken) {
 <body>
     <div class="contact-form">
         <div class="test">
-            <div class="confirm">
+            <div class="confirm" onload=handleForm() >
                 <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
                 <h1>Bedankt voor uw reservering!</h1>
                 <h2>Beste <span name="FirstName"><?php echo $_SESSION["voornaam"]; ?></span> <span name="LastName"><?php echo $_SESSION["achternaam"]; ?></span></h2>
@@ -47,6 +47,7 @@ if ($userToken !== $expectedToken) {
             </div>
         </div>
     </div>
+    
 </body>
 
 <?php
@@ -78,8 +79,13 @@ if (isset($logged)) {
     }
   };
 
-  window.onbeforeunload = function() {
-    window.location.href = "./Home";
+  window.onbeforeunload = function(e) {
+    const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
+
+    e.returnValue = confirmationMessage;
+
+    return confirmationMessage;
+    cancelled = window.location.href('./Home')
   };
 </script>
 
