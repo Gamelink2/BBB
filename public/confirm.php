@@ -42,17 +42,6 @@ session_start();
     </form>
       
     
-    <?php
-if (isset($_SESSION["loginPerson"])) {
-    $logged = $_SESSION["loginPerson"];
-  }
-session_destroy();
-session_start(); 
-
-if (isset($logged)) {
-  $logged = $_SESSION["loginPerson"];
-}
-?>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
@@ -104,4 +93,16 @@ if (isset($logged)) {
 </script>
 
 </body>
+<?php
+if (isset($_SESSION["loginPerson"])) {
+    $logged = $_SESSION["loginPerson"];
+  }
+session_destroy();
+session_start(); 
+
+if (isset($logged)) {
+  $logged = $_SESSION["loginPerson"];
+}
+?>
+
 </html>
