@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="./Css/confirm.css">
 </head>
 <body>
-    <div class="contact-form">
+    <div id="contact-form">
         <div class="test">
             <div class="confirm">
                 <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
