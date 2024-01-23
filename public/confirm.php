@@ -63,25 +63,28 @@ $_SESSION['$EindDatum'] = $EindDatum;
         })();
 
         const handleForm = async () => {
-            try {
-                const formElement = document.getElementById('contact-form');
-                console.log('Form Element:', formElement);
-                const formData = new FormData(formElement);
-                console.log('FormData:', formData);
+    try {
+        const formElement = document.getElementById('contact-form');
+        console.log('Form Element:', formElement);
 
-                if (formElement) {
-                    const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
-                    console.log('Email response:', response);
-                    alert('Email sent successfully!');
-                } else {
-                    console.error('Form element not found.');
-                    alert('Failed to send email. Form element not found.');
-                }
-            } catch (error) {
-                console.error('Error sending email:', error);
-                alert('Failed to send email. Check the console for details.');
-            }
-        };
+        if (formElement) {
+            const formData = new FormData(formElement);
+            console.log('FormData:', formData);
+
+            const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
+            console.log('Email response:', response);
+            alert('Email sent successfully!');
+        } else {
+            console.error('Form element not found.');
+            alert('Failed to send email. Form element not found.');
+        }
+    } catch (error) {
+        console.error('Error sending email:', error);
+        console.error('Error details:', error.response?.data); // Log the detailed error information
+        alert('Failed to send email. Check the console for details.');
+    }
+};
+
 
         window.onload = function () {
             handleForm();
