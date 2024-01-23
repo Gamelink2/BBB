@@ -1,3 +1,5 @@
+# Actually allows someone to pull this and run it
+Options +FollowSymLinks
 ## Flag for GoDaddy
 # Options +MultiViews
 
