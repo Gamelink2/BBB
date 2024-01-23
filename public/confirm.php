@@ -9,36 +9,38 @@ session_start();
     <link rel="stylesheet" href="./Css/confirm.css">
 </head>
 <body>
-    <div id="contact-form">
+    <form id="contact-form">
+      <div class="contact-form">
         <div class="test">
-            <div class="confirm">
-                <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
+          <div class="confirm">
+            <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
                 <h1>Bedankt voor uw reservering!</h1>
                 <h2>Beste <span name="FirstName"><?php echo $_SESSION["voornaam"]; ?></span> <span name="LastName"><?php echo $_SESSION["achternaam"]; ?></span></h2>
                 <h2>U heeft gereserveerd voor <span name="StartDate" ><?php echo $_SESSION['BeginDatum']; ?></span> tot en met <span name="EndDate"><?php echo $_SESSION["EindDatum"]; ?></span></h2>
                 <h2>U heeft het volgende aangegeven:</h2>
                 <ul>
+                  <li>
+                    Aantal personen: <span name="amount" ><?php echo $_SESSION["aantal"]; ?></span><br>
+                    waarvan: <span name="grownups" ><?php echo $_SESSION["Volwassenen"]; ?></span> Volwassenen en <span name="kids"><?php echo $_SESSION["kinderen"]; ?></span> kinderen. 
+                  </li>
+                  <li>
+                    Mobiele nummer:<span name="number"><?php echo $_SESSION['nummer']; ?></span>
+                  </li>
                     <li>
-                        Aantal personen: <span name="amount" ><?php echo $_SESSION["aantal"]; ?></span><br>
-                        waarvan: <span name="grownups" ><?php echo $_SESSION["Volwassenen"]; ?></span> Volwassenen en <span name="kids"><?php echo $_SESSION["kinderen"]; ?></span> kinderen. 
+                      U komt met: een <span name='arrive_with' ><?php echo $_SESSION['middelen']; ?> </span>
                     </li>
                     <li>
-                        Mobiele nummer:<span name="number"><?php echo $_SESSION['nummer']; ?></span>
+                      Met bericht: <span name='request'><?php echo $_SESSION['verzoek']; ?></span> 
                     </li>
-                    <li>
-                        U komt met: een <span name='arrive_with' ><?php echo $_SESSION['middelen']; ?> </span>
-                    </li>
-                    <li>
-                        Met bericht: <span name='request'><?php echo $_SESSION['verzoek']; ?></span> 
-                    </li>
-                </ul>
-
-                <h2>Wij wensen u een fijne vakantie!</h2>
-                <a class="button" href="./">Terug naar de home pagina</a>
+                  </ul>
+                  
+                  <h2>Wij wensen u een fijne vakantie!</h2>
+                  <a class="button" href="./">Terug naar de home pagina</a>
             </div>
         </div>
-    </div>
-    
+      </div>
+    </form>
+      
     
     <?php
 if (isset($_SESSION["loginPerson"])) {
