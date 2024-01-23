@@ -1,5 +1,18 @@
 <?php
 session_start();
+$_SESSION['$voornaam'] = $VoorNaam;
+$_SESSION['$achternaam'] = $AchterNaam;
+$_SESSION['$nummer'] = $TelefoonNummer;
+$_SESSION['$email'] = $Email;
+$_SESSION['$middelen'] = $Middelen;
+$_SESSION['$verzoek'] = $Verzoek;
+$_SESSION['$Volwassenen'] = $Volwassenen;
+$_SESSION['kinderen'] = $Kinderen;
+$_SESSION['aantal'] = $aantal;
+$_SESSION['$BeginDatum'] = $BeginDatum;
+$_SESSION['$EindDatum'] = $EindDatum;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -13,24 +26,24 @@ session_start();
       <div class="contact-form">
         <div class="test">
           <div class="confirm">
-            <input type="email" name="from_email" style="display: none;" value='<?php echo $_SESSION['Email']; ?>'>
+            <input type="email" name="from_email" style="display: none;" value='<?php echo $Email; ?>'>
                 <h1>Bedankt voor uw reservering!</h1>
-                <h2>Beste <span name="FirstName"><?php echo $_SESSION["voornaam"]; ?></span> <span name="LastName"><?php echo $_SESSION["achternaam"]; ?></span></h2>
-                <h2>U heeft gereserveerd voor <span name="StartDate" ><?php echo $_SESSION['BeginDatum']; ?></span> tot en met <span name="EndDate"><?php echo $_SESSION["EindDatum"]; ?></span></h2>
+                <h2>Beste <span name="FirstName"><?php echo $VoorNaam; ?></span> <span name="LastName"><?php echo $AchterNaam; ?></span></h2>
+                <h2>U heeft gereserveerd voor <span name="StartDate" ><?php echo $BeginDatum; ?></span> tot en met <span name="EndDate"><?php echo $EindDatum; ?></span></h2>
                 <h2>U heeft het volgende aangegeven:</h2>
                 <ul>
                   <li>
-                    Aantal personen: <span name="amount" ><?php echo $_SESSION["aantal"]; ?></span><br>
-                    waarvan: <span name="grownups" ><?php echo $_SESSION["Volwassenen"]; ?></span> Volwassenen en <span name="kids"><?php echo $_SESSION["kinderen"]; ?></span> kinderen. 
+                    Aantal personen: <span name="amount" ><?php echo $aantal; ?></span><br>
+                    waarvan: <span name="grownups" ><?php echo $Volwassenen; ?></span> Volwassenen en <span name="kids"><?php echo $kinderen; ?></span> kinderen. 
                   </li>
                   <li>
-                    Mobiele nummer:<span name="number"><?php echo $_SESSION['nummer']; ?></span>
+                    Mobiele nummer:<span name="number"><?php echo $TelefoonNummer; ?></span>
                   </li>
                     <li>
-                      U komt met: een <span name='arrive_with' ><?php echo $_SESSION['middelen']; ?> </span>
+                      U komt met: een <span name='arrive_with' ><?php echo $middelen; ?> </span>
                     </li>
                     <li>
-                      Met bericht: <span name='request'><?php echo $_SESSION['verzoek']; ?></span> 
+                      Met bericht: <span name='request'><?php echo $Verzoek; ?></span> 
                     </li>
                   </ul>
                   
@@ -43,74 +56,59 @@ session_start();
       
     
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init('RBuOCpeu2TmAUuTAp');
-  })();
-</script>
-<script>
-  window.onload = function() {
-    handleForm();
-};
-  // Non-DeBug
-  // const handleForm = async (e) => {
-  //   try {
-  //     await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
-  //     alert('email sent!');
-  //   } catch (error) {
-  //     console.error(error);
-  //     console.error('error sending the email: ', error)
-  //     alert('Failed to send email');
-  //   }
-  // };
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('RBuOCpeu2TmAUuTAp');
+        })();
 
-  // Debug
-  const handleForm = async () => {
-    try {
-        const formElement = document.getElementById('contact-form');
-        console.log('Form Element:', formElement); // Log the form element to ensure it's not null
-        const formData = new FormData(formElement);
-        console.log('FormData:', formData); // Log the form data
+        const handleForm = async () => {
+            try {
+                const formElement = document.getElementById('contact-form');
+                console.log('Form Element:', formElement);
+                const formData = new FormData(formElement);
+                console.log('FormData:', formData);
 
-        // Ensure the form element is not null before calling sendForm
-        if (formElement) {
-            const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
-            console.log('Email response:', response);
-            alert('Email sent successfully!');
-        } else {
-            console.error('Form element not found.');
-            alert('Failed to send email. Form element not found.');
-        }
-    } catch (error) {
-        console.error('Error sending email:', error);
-        alert('Failed to send email. Check the console for details.');
-    }
-};
+                if (formElement) {
+                    const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
+                    console.log('Email response:', response);
+                    alert('Email sent successfully!');
+                } else {
+                    console.error('Form element not found.');
+                    alert('Failed to send email. Form element not found.');
+                }
+            } catch (error) {
+                console.error('Error sending email:', error);
+                alert('Failed to send email. Check the console for details.');
+            }
+        };
 
+        window.onload = function () {
+            handleForm();
+        };
 
+        window.onbeforeunload = function (e) {
+            const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
 
+            e.returnValue = confirmationMessage;
 
-  window.onbeforeunload = function(e) {
-    const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-    
-    e.returnValue = confirmationMessage;
-    
-    return confirmationMessage;
-    cancelled = window.location.href('./')
-  };
+            return confirmationMessage;
+            cancelled = window.location.href('./');
+        };
+    </script>
+
 </script>
 
 </body>
 <?php
-if (isset($_SESSION["loginPerson"])) {
-    $logged = $_SESSION["loginPerson"];
+if (isset($loginPerson)) {
+    $logged = $loginPerson;
   }
 session_destroy();
 session_start(); 
 
 if (isset($logged)) {
-  $logged = $_SESSION["loginPerson"];
+  $logged = $loginPerson;
 }
 ?>
 
