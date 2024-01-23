@@ -37,7 +37,7 @@ function show($PDO) {
                     var plek = [];
                     <?php foreach ($results as $row) : ?>
                         plek.push([
-                            '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: none;">',
+                            '<p class="Pop-Up" id="<?php echo $row['PlekID']; ?>" style="display: block;">',
                             'Deze plek is <?php echo $row['Grootte']; ?> m2 groot.<br>',
                             'Dit is een <?php echo $row['Kampeermiddel']; ?> plek.<br>',
                             'Dit is plek nummer <?php echo $row['PlekNmr']; ?> <br>',
