@@ -23,10 +23,11 @@ try {
     $_SESSION["BeginDatum"] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
     $_SESSION["EindDatum"] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
     $_SESSION["Volwassenen"] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
-    $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : '';
+    $_SESSION["kinderen"] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : 0;
+    $_SESSION['aantal'] = $aantal = (isset($_SESSION["kinderen"]) && isset($_SESSION["Volwassenen"])) ? ($Kinderen + $Volwassenen) : $Volwassenen;    
 
     if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode)) {
-        $aantal = (isset($_SESSION["kinderen"]) && isset($_SESSION["Volwassenen"])) ? ($Kinderen + $Volwassenen) : $Volwassenen;    
+
     
         $sql = "INSERT INTO adresgegevens (Postcode, Huisnummer, Straatnaam, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Straatnaam, :Kampeermiddel)";
         $stmt = $PDO->prepare($sql);
