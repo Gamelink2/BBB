@@ -83,7 +83,7 @@ RewriteRule ^(.*)$ https://youtu.be/dQw4w9WgXcQ?si=VYvT63dpcQ1vIJLQ [L,R=301]
 # Return 404 not 403/401 So it gives away less info if the directory even exists
 # Also try to do this last
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ - [R=404,L]
 
 Options -Indexes
