@@ -60,13 +60,7 @@ include_once("Connection.php");
                             <?php echo $result['UserID']; ?>
                         </li>
                         <li>
-                            <?php 
-                            if (empty($result['Aanhef'])) {
-                                echo '&nbsp;';
-                            } else {
-                                echo $result['Aanhef'];
-                            }
-                            ; ?>
+                            <?php echo $result['Aanhef']; ?>
                         </li>
 
                         <li>
