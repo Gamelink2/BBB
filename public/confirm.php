@@ -1,16 +1,17 @@
 <?php
 session_start();
-$_SESSION['$voornaam'] = $VoorNaam;
-$_SESSION['$achternaam'] = $AchterNaam;
-$_SESSION['$nummer'] = $TelefoonNummer;
-$_SESSION['$email'] = $Email;
-$_SESSION['$middelen'] = $Middelen;
-$_SESSION['$verzoek'] = $Verzoek;
-$_SESSION['$Volwassenen'] = $Volwassenen;
+
+$_SESSION['voornaam'] = $VoorNaam;
+$_SESSION['achternaam'] = $AchterNaam;
+$_SESSION['nummer'] = $TelefoonNummer;
+$_SESSION['email'] = $Email;
+$_SESSION['middelen'] = $Middelen;
+$_SESSION['verzoek'] = $Verzoek;
+$_SESSION['Volwassenen'] = $Volwassenen;
 $_SESSION['kinderen'] = $Kinderen;
 $_SESSION['aantal'] = $aantal;
-$_SESSION['$BeginDatum'] = $BeginDatum;
-$_SESSION['$EindDatum'] = $EindDatum;
+$_SESSION['BeginDatum'] = $BeginDatum;
+$_SESSION['EindDatum'] = $EindDatum;
 
 // Debugging: Check if session variables are set
 var_dump($_SESSION);
