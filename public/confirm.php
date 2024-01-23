@@ -64,18 +64,35 @@ if (isset($logged)) {
   window.onload = function() {
     handleForm();
 };
+  // Non-DeBug
+  // const handleForm = async (e) => {
+  //   try {
+  //     await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
+  //     alert('email sent!');
+  //   } catch (error) {
+  //     console.error(error);
+  //     console.error('error sending the email: ', error)
+  //     alert('Failed to send email');
+  //   }
+  // };
 
-  const handleForm = async (e) => {
+  // Debug
+  const handleForm = async () => {
     try {
-      await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
-      alert('email sent!');
+        const formElement = document.getElementById('contact-form');
+        const formData = new FormData(formElement);
+        console.log('FormData:', formData); // Log the form data
+        const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
+        console.log('Email response:', response);
+        alert('Email sent successfully!');
     } catch (error) {
-      console.error(error);
-      console.error('error sending the email: ', error)
-      alert('Failed to send email');
+        console.error('Error sending email:', error);
+        alert('Failed to send email. Check the console for details.');
     }
-  };
-  
+};
+
+
+
   window.onbeforeunload = function(e) {
     const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
     
