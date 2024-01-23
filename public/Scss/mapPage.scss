@@ -92,8 +92,9 @@ button {
     cursor: pointer;
     box-shadow: none;
 }
-
 li::marker{
+    background: black ;
+    width: auto;
     font-size: 4rem;
     user-select: none;
     cursor: pointer;

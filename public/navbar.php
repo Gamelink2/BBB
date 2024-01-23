@@ -20,9 +20,9 @@
       <a href="./ ">Home</a>
       <a href="./camping">De Camping</a>
       <a href="./mapPage">Plattegrond</a>
-      <a href="./Reservering">Reserveren</a>
+      <a href="./Reservering">Boeken</a>
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
-      <a href="./Aantal_Reserveringen">Dashboard</a>
+      <a href="./Aantal_Reserveringen">Reserveringen</a>
 
     </div>
   </div>
