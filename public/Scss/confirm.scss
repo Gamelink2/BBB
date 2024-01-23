@@ -1,6 +1,6 @@
 @use "./Style.scss" as s;
 
-body{
+.contact-form{
     @include s.Background;
     justify-items: center;
     justify-content: center;
