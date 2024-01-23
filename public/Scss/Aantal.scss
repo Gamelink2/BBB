@@ -40,11 +40,11 @@ ul.Table-head > li:last-child{
     flex-direction: row; /* Display horizontally */
 }
 ul.Table-content > li{
-    background-color: rgb(155, 155, 155);
+    background-color: rgb(197, 196, 196);
     color: black;
 }
 ul.Table-content:nth-child(even) > li:not(:first-child){
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(168, 168, 168);
     color: white;
 }
 ul.Table-content > li:first-child{
