@@ -1,20 +1,20 @@
 <?php
 session_start();
 
-$_COOKIE['voornaam'] = $VoorNaam;
-$_COOKIE['achternaam'] = $AchterNaam;
-$_COOKIE['nummer'] = $TelefoonNummer;
-$_COOKIE["email"] = $Email;
-$_COOKIE['middelen'] = $Middelen;
-$_COOKIE['verzoek'] = $Verzoek;
-$_COOKIE['Volwassenen'] = $Volwassenen;
-$_COOKIE['kinderen'] = $Kinderen;
-$_COOKIE['aantal'] = $aantal;
-$_COOKIE['BeginDatum'] = $BeginDatum;
-$_COOKIE['EindDatum'] = $EindDatum;
+$VoorNaam = $_SESSION['voornaam'];
+$AchterNaam = $_SESSION['achternaam'];
+$TelefoonNummer = $_SESSION['nummer'];
+$Email = $_SESSION['email'];
+$Middelen = $_SESSION['middelen'];
+$Verzoek = $_SESSION['verzoek'];
+$Volwassenen = $_SESSION['Volwassenen'];
+$Kinderen = $_SESSION['kinderen'];
+$aantal = $_SESSION['aantal'];
+$BeginDatum = $_SESSION['BeginDatum'];
+$EindDatum = $_SESSION['EindDatum'];
 
 // Debugging: Check if session variables are set
-var_dump($_COOKIE);
+var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -128,5 +128,16 @@ var_dump($_COOKIE);
 
 
 </body>
+<?php
+// if (isset($loginPerson)) {
+//     $logged = $loginPerson;
+//   }
+// session_destroy();
+// session_start(); 
+
+// if (isset($logged)) {
+//   $logged = $loginPerson;
+// }
+?>
 
 </html>

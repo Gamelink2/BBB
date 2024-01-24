@@ -6,39 +6,31 @@ include_once('Connection.php');
 global $PDO;
 
 try {
+    
     if (isset($_REQUEST['aanhef'])) {
         $_SESSION['aanhef'] = $Aanhef = isset($_REQUEST['aanhef']) ? trim($_REQUEST['aanhef']) : '';
     } else {
         $_SESSION['aanhef'] = $Aanhef = isset($_REQUEST['andersAanhef']) ? trim($_REQUEST['andersAanhef']) : '';
+    }   
+    $_SESSION['voornaam'] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
+    $_SESSION['achternaam'] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
+    $_SESSION['nummer'] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $_SESSION['email'] = $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+    $_SESSION['postcode'] = $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
+    $_SESSION['straatnaam'] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
+    $_SESSION['huisnummer'] = $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
+    $_SESSION['middelen'] = $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '';
+    if (!isset ($Middelen)){
+    $_SESSION['middelen'] = $Middelen = isset($_REQUEST['Middelen']) ? trim($_REQUEST['Middelen']) : '';
     }
+    $_SESSION['verzoek'] = $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '';
+    $_SESSION['BeginDatum'] = $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '';
+    $_SESSION['EindDatum'] = $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '';
+    $_SESSION['Volwassenen'] = $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '';
+    $_SESSION['kinderen'] = $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : 0;
+    $_SESSION['aantal'] = $aantal = (isset($_SESSION['kinderen']) && isset($_SESSION['Volwassenen'])) ? ($Kinderen + $Volwassenen) : $Volwassenen;    
 
-    setcookie('aanhef', $Aanhef, time() + 60);
-
-    // Set other cookies with unique names
-    setcookie('voornaam', $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '', time() + 60);
-    setcookie('achternaam', $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '', time() + 60);
-    setcookie('telNmr', $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '', time() + 60);
-    setcookie('femail', $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '', time() + 60);
-    setcookie('postcode', $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '', time() + 60);
-    setcookie('straat', $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '', time() + 60);
-    setcookie('huisNmr', $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '', time() + 60);
-    setcookie('middelen', $Middelen = isset($_REQUEST['middelen']) ? trim($_REQUEST['middelen']) : '', time() + 60);
-
-    if (!isset($Middelen)) {
-        setcookie('Middelen', $Middelen = isset($_REQUEST['Middelen']) ? trim($_REQUEST['Middelen']) : '', time() + 60);
-    }
-
-    setcookie('verzoek', $Verzoek = isset($_REQUEST['verzoek']) ? trim($_REQUEST['verzoek']) : '', time() + 60);
-    setcookie('begindatum', $BeginDatum = isset($_REQUEST['begindatum']) ? trim($_REQUEST['begindatum']) : '', time() + 60);
-    setcookie('einddatum', $EindDatum = isset($_REQUEST['einddatum']) ? trim($_REQUEST['einddatum']) : '', time() + 60);
-    setcookie('volwassenen', $Volwassenen = isset($_REQUEST['volwassenen']) ? trim($_REQUEST['volwassenen']) : '', time() + 60);
-    setcookie('kinderen', $Kinderen = isset($_REQUEST['kinderen']) ? trim($_REQUEST['kinderen']) : 0, time() + 60);
-
-    // Calculate and set the 'aantal' cookie
-    $aantal = (isset($_SESSION['kinderen']) && isset($_SESSION['Volwassenen'])) ? ($Kinderen + $Volwassenen) : $Volwassenen;
-    setcookie('aantal', $aantal, time() + 60);
-
-   if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode)) {
+    if (!empty($VoorNaam) && !empty($AchterNaam) && !empty($TelefoonNummer) && !empty($Email) && !empty($Middelen) && !empty($Volwassenen) && !empty($EindDatum) && !empty($BeginDatum) && !empty($PostCode)) {
 
     
         $sql = 'INSERT INTO adresgegevens (Postcode, Huisnummer, Straatnaam, Kampeermiddel) VALUES (:Postcode, :Huisnummer, :Straatnaam, :Kampeermiddel)';
@@ -75,7 +67,7 @@ try {
     $ErrorMessage = 'There was an error: ' . $e->getMessage();
 }
 
-setcookie('ErrorMessage', $ErrorMessage, time() + 60); 
+$_SESSION['ErrorMessage'] = $ErrorMessage;
 header('Location: Reservering');
 exit();
 
