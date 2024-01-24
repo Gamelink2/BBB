@@ -2,51 +2,72 @@
 <html lang="nl">
 
 <head>
-    <style>
-body {
-    background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.contact-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
+        .contact-form {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.confirm {
-    text-align: center;
-}
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
+            background-size: cover;
+            opacity: 0.5; /* Adjust the opacity as needed */
+            z-index: -1;
+        }
 
-h1 {
-    color: #333;
-}
+        .confirm {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
 
-h2 {
-    color: #555;
-}
+        h1 {
+            color: #333;
+        }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+        h2 {
+            color: #555;
+        }
 
-li {
-    margin-bottom: 10px;
-}
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-a {
-    text-decoration: none;
-    color: #3498db;
-}
+        li {
+            margin-bottom: 10px;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 
