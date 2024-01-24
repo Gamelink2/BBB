@@ -7,8 +7,6 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        margin-inline: auto;
-        justify-content: center;
     }
 
     .contact-form {
@@ -61,6 +59,8 @@
         color: whitesmoke;
         background-color: rgba(0, 0, 0, 0.3);
         width: fit-content;
+        margin-inline: auto;
+
     }
 
     footer {
