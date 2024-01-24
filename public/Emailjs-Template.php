@@ -26,7 +26,7 @@
             height: 100%;
             background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
             background-size: cover;
-            opacity: 0.5; /* Adjust the opacity as needed */
+            opacity: 0.9; /* Adjust the opacity as needed */
             z-index: -1;
         }
 
@@ -62,12 +62,6 @@
             text-decoration: underline;
         }
 
-        footer {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
     </style>
 </head>
 
