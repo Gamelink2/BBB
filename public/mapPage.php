@@ -65,10 +65,10 @@
             <area id="1" alt="1" title="1" groupKey="1, SP" onclick="showPopupKamp(id)" href="#" coords="200,179,44,47" shape="rect">
             <area id="2" alt="2" title="2" groupKey="2, TT" onclick="showPopupKamp(id)" href="#" coords="23,447,201,608" shape="rect">
             <area id="3" alt="3" title="3" groupKey="3, ZB" onclick="showPopupKamp(id)" href="#" coords="439,449,565,569" shape="rect">
-            <area id="4" alt="4" title="4" groupKey="4, ST" onclick="showPopupGeb(id)" href="#" coords="585,319,714,440" shape="rect">
-            <area id="5" alt="5" title="5" groupKey="5, SP" onclick="showPopupGeb(id)" href="#" coords="438,42,563,150" shape="rect">
-            <area id="6" alt="6" title="6" groupKey="6, TT" onclick="showPopupGeb(id)" href="#" coords="714,152,571,42" shape="rect">
-            <area id="7" alt="7" title="7" groupKey="7, ST" onclick="showPopupGeb(id)" href="#" coords="784,49,914,154" shape="rect">
+            <area id="1" alt="4" title="4" groupKey="4, ST" onclick="showPopupGeb(id)" href="#" coords="585,319,714,440" shape="rect">
+            <area id="2" alt="5" title="5" groupKey="5, SP" onclick="showPopupGeb(id)" href="#" coords="438,42,563,150" shape="rect">
+            <area id="3" alt="6" title="6" groupKey="6, TT" onclick="showPopupGeb(id)" href="#" coords="714,152,571,42" shape="rect">
+            <area id="4" alt="7" title="7" groupKey="7, ST" onclick="showPopupGeb(id)" href="#" coords="784,49,914,154" shape="rect">
             <area id="8" alt="8" title="8" groupKey="8, BB" onclick="showPopup(id)" href="#" coords="785,320,905,449" shape="rect">
             <area id="9" alt="9" title="9" groupKey="9, PP" onclick="showPopup(id)" href="#" coords="919,448,1066,571" shape="rect">
             <area id="10" alt="10" title="10" groupKey="10, PP" onclick="showPopup(id)" href="#" coords="930,154,1072,43" shape="rect">
