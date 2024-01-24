@@ -56,6 +56,67 @@ VALUES
     ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
     ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
     ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
+    ('14', 'tent', '2', '3', '0', 'niet', 'wel'),
+    ('28', 'caravan / camper', '3', '5', '2', 'wel', 'ook');
+    ('28', 'caravan / camper', '1', '5', '2', 'wel', 'ook'),
 
 SELECT * FROM popupInhoud;
 
@@ -68,9 +129,27 @@ CREATE TABLE gebouwPopup(
 
 INSERT INTO gebouwPopup(Soortgebouw, Openingstijd, Sluitingstijd)
 VALUES
-    ('sanitair', '0:00', '0:00'),
-    ('afwasmogelijkheid', '0:00', '0:00'),
-    ('wasserette', '7:00', '21:00'),
-    ('activiteitlocatie', '9:00', '20:00');
+    ('Kinder zwembad', '8:30', '20:00');
+    ('Wasserette', '8:00', '20:00');
+    ('Tennis baan', '10:00', '20:00');
+    ('Voetbalveld 1', '00:00', '00:00');
+    ('Voetbalveld 2', '00:00', '00:00');
+    ('Vollybal veld', '00:00', '00:00');
+    ('Reseptie', '9:30', '16:00');
+    ('Huis Boer Bert', '00:00', '00:00');
+    ('Recreatie tehuis', '9:30', '21:00');
+    ('skelter verhuur', '10:00', '17:00');
+    ('Teras 1', '9:00', '22:00');
+    ('Teras 2', '9:00', '22:00');
+    ('Open veld 1', '00:00', '00:00');
+    ('Open veld 2', '00:00', '00:00');
+    ('Open veld 3', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
+    ('wc', '00:00', '00:00');
 
 SELECT * FROM gebouwPopup;
