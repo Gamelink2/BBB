@@ -3,63 +3,68 @@
 
 <head>
 <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-        .contact-form {
-            position: relative;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .contact-form {
+        position: relative;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .contact-form::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
-            background-size: cover;
-            opacity: 1; /* Adjust the opacity as needed */
-            z-index: -1;
-        }
+    .contact-form::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
+        background-size: cover;
+        opacity: 0.5; /* Adjust the opacity as needed */
+        z-index: -1;
+    }
 
-        .confirm {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
+    .confirm {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
 
-        h1 {
-            color: white;
-        }
+    h1 {
+        color: white;
+    }
 
-        h2 {
-            color: whitesmoke;
-        }
+    h2 {
+        color: whitesmoke;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            color: whitesmoke;
-        }
+    ul {
+        list-style: none;
+        padding: 0;
+        color: whitesmoke;
+    }
 
-        li {
-            margin-bottom: 10px;
-            color: whitesmoke;
-        }
+    li {
+        margin-bottom: 10px;
+        color: whitesmoke;
+    }
 
-        footer {
-            color: whitesmoke;
-        }
+    li:nth-child(3), 
+    li:nth-child(4) {
+        color: black; /* Adjust the color as needed */
+    }
 
-    </style>
+    footer {
+        color: whitesmoke;
+    }
+</style>
+
 </head>
 
 <body>
