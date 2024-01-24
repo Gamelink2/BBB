@@ -112,10 +112,7 @@
                         '<p class="Pop-Up" id="<?php echo $row2['GebouwID']; ?>" style="display: block;">',
                         'Deze plek is <?php echo $row2['Openingstijd']; ?> m2 groot.<br>',
                         'Dit is een <?php echo $row2['Sluitingstijd']; ?> plek.<br>',
-                        'Dit is plek nummer <?php echo $row2['Soortgebouw']; ?> <br>',
-                        'Dit is een plek voor maximaal <?php echo $row2['Personen']; ?> personen.<br>',
-                        'Er is op deze plek plaats voor <?php echo $row2['Bijzettentjes']; ?> bijzettentjes.<br>',
-                        'Deze plek heeft <?php echo $row2['Stroom']; ?> beschikking tot stroom, en <?php echo $row2['Water']; ?> water.',
+                        
                         '</p>'
                     ].join(''));
                 <?php endforeach; ?>
