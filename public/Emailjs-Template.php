@@ -56,7 +56,8 @@
 
     li:nth-child(3), 
     li:nth-child(4) {
-        color: black; /* Adjust the color as needed */
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     footer {
