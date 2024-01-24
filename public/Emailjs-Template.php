@@ -7,6 +7,8 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        margin-inline: auto;
+        justify-content: center;
     }
 
     .contact-form {
