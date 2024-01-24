@@ -36,13 +36,13 @@ var_dump($_SESSION);
                 <ul>
                   <li>
                     Aantal personen: <span name="amount" ><?php echo $aantal; ?></span><br>
-                    waarvan: <span name="grownups" ><?php echo $Volwassenen; ?></span> Volwassenen en <span name="kids"><?php echo $kinderen; ?></span> kinderen. 
+                    waarvan: <span name="grownups" ><?php echo $Volwassenen; ?></span> Volwassenen en <span name="kids"><?php echo $Kinderen; ?></span> kinderen. 
                   </li>
                   <li>
                     Mobiele nummer:<span name="number"><?php echo $TelefoonNummer; ?></span>
                   </li>
                     <li>
-                      U komt met: een <span name='arrive_with' ><?php echo $middelen; ?> </span>
+                      U komt met: een <span name='arrive_with' ><?php echo $Middelen; ?> </span>
                     </li>
                     <li>
                       Met bericht: <span name='request'><?php echo $Verzoek; ?></span> 
