@@ -37,11 +37,11 @@
         }
 
         h1 {
-            color: #333;
+            color: white;
         }
 
         h2 {
-            color: #555;
+            color: whitesmoke;
         }
 
         ul {
@@ -53,14 +53,6 @@
             margin-bottom: 10px;
         }
 
-        a {
-            text-decoration: none;
-            color: #3498db;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
 
     </style>
 </head>
