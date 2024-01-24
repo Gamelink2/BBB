@@ -58,6 +58,7 @@
     li:nth-child(4) {
         color: whitesmoke;
         background-color: rgba(0, 0, 0, 0.3);
+        width: fit-content;
     }
 
     footer {
