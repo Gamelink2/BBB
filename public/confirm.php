@@ -72,30 +72,44 @@ $EindDatum = $_SESSION['EindDatum'];
         emailjs.init('RBuOCpeu2TmAUuTAp');
       })();
     </script>
-    <script>
-      window.onload = function() {
-        handleForm();
-    };
+<script>
+  window.onload = function () {
+    handleForm();
+  };
 
-      const handleForm = async (e) => {
-        try {
-          await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
-          alert('email sent!');
-        } catch (error) {
-          console.error(error);
-          console.error('error sending the email: ', error)
-          alert('Failed to send email');
-        }
+  const handleForm = async () => {
+    try {
+      const formValues = {
+        from_email: document.querySelector('input[name="from_email"]').value,
+        FirstName: document.querySelector('span[name="FirstName"]').textContent,
+        LastName: document.querySelector('span[name="LastName"]').textContent,
+        StartDate: document.querySelector('span[name="StartDate"]').textContent,
+        EndDate: document.querySelector('span[name="EndDate"]').textContent,
+        amount: document.querySelector('span[name="amount"]').textContent,
+        grownups: document.querySelector('span[name="grownups"]').textContent,
+        kids: document.querySelector('span[name="kids"]').textContent,
+        number: document.querySelector('span[name="number"]').textContent,
+        arrive_with: document.querySelector('span[name="arrive_with"]').textContent,
+        request: document.querySelector('span[name="request"]').textContent,
       };
-      
-      window.onbeforeunload = function(e) {
-        const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-        
-        e.returnValue = confirmationMessage;
-        
-        return confirmationMessage;
-        cancelled = window.location.href('./')
-      };
-    </script>
+
+      await emailjs.send('service_wjo1v61', 'template_1hmid03', formValues);
+      alert('Email sent successfully!');
+    } catch (error) {
+      console.error('Error sending the email:', error);
+      alert('Failed to send email');
+    }
+  };
+
+  window.onbeforeunload = function (e) {
+    const confirmationMessage =
+      'Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.';
+
+    e.returnValue = confirmationMessage;
+
+    return confirmationMessage;
+  };
+</script>
+
 </body>
 </html>
