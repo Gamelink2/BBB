@@ -47,10 +47,12 @@
         ul {
             list-style: none;
             padding: 0;
+            color: whitesmoke;
         }
 
         li {
             margin-bottom: 10px;
+            color: whitesmoke;
         }
 
 
