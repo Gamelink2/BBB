@@ -108,7 +108,7 @@ include_once("Connection.php");
     </script>
 </body>
 <?php
-var_dump(!empty($result['Aanhef']))
+//var_dump(!empty($result['Aanhef']))
 
 ?>
 
