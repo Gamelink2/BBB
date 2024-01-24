@@ -26,7 +26,7 @@
             height: 100%;
             background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
             background-size: cover;
-            opacity: 0.9; /* Adjust the opacity as needed */
+            opacity: 0.5; /* Adjust the opacity as needed */
             z-index: -1;
         }
 
@@ -37,25 +37,36 @@
         }
 
         h1 {
-            color: white;
+            color: white;  
         }
 
         h2 {
-            color: whitesmoke;
+            color: whitesmoke; 
         }
 
         ul {
             list-style: none;
             padding: 0;
-            color: whitesmoke;
         }
 
         li {
             margin-bottom: 10px;
-            color: whitesmoke;
+            color: transparent;
+            background-attachment: fixed;
         }
 
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            color: whitesmoke;
+        }
     </style>
 </head>
 
