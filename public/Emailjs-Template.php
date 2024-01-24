@@ -26,7 +26,6 @@
         height: 100%;
         background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg);
         background-size: cover;
-        opacity: 0.5; /* Adjust the opacity as needed */
         z-index: -1;
     }
 
