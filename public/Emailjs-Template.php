@@ -15,6 +15,7 @@
             margin: 20px auto;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: black, 0.7;
         }
 
         .contact-form::before {
