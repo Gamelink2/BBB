@@ -14,7 +14,7 @@ $BeginDatum = $_SESSION['BeginDatum'];
 $EindDatum = $_SESSION['EindDatum'];
 
 // Debugging: Check if session variables are set
-var_dump($_SESSION);
+// var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
