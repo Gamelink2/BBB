@@ -50,6 +50,7 @@ ul.Table-head > li:last-child {
   max-height: 14.4;
   width: 90%;
   overflow-y: scroll;
+  padding: 0.2rem;
 }
 
 .Table-content {
