@@ -47,7 +47,7 @@
         ul {
             list-style: none;
             padding: 0;
-            background-color: black, 0.4;
+            background-color: black, 0.8;
             color: whitesmoke;
         }
 
