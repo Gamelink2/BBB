@@ -114,9 +114,9 @@
                 <?php foreach ($results2 as $row2) : ?>
                     gebouw.push([
                         '<p class="Pop-Up" id="<?php echo $row2['GebouwID']; ?>" style="display: block;">',
-                        'Deze plek is <?php echo $row2['Openingstijd']; ?> m2 groot.<br>',
-                        'Dit is een <?php echo $row2['Sluitingstijd']; ?> plek.<br>',
-                        'Dit is plek nummer <?php echo $row2['Soortgebouw']; ?> <br>',
+                        'Dit is een <?php echo $row2['Soortgebouw']; ?>. <br>',
+                        'Dit gebouw is om exact <?php echo $row2['Openingstijd']; ?> geopend.<br>',
+                        'Het gebouw sluit om exact <?php echo $row2['Sluitingstijd']; ?>.<br>',
                         '</p>'
                     ].join(''));
                 <?php endforeach; ?>
