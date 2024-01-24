@@ -4,6 +4,7 @@
 <head>
     <style>
 body {
+    background-image: url(https://groeneweide.dkorver.com/Images/Home.jpg), 0.9;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
