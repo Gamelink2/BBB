@@ -48,10 +48,12 @@
             list-style: none;
             padding: 0;
             background: rgba(0, 0, 0, 0.1);
+            color: whitesmoke;
         }
 
         li {
             margin-bottom: 10px;
+            color: whitesmoke;
         }
 
     </style>
