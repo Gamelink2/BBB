@@ -144,9 +144,9 @@
             isSelectable: false,
             isDeselectable: false,
             mapKey: 'groupKey',
-            fillColor: "d42e16",
+            fillColor: "ffffff25",
             stroke: true,
-            strokeColor: "ff0000",
+            strokeColor: "fffffff",
             strokeOpacity: 1.0,
             strokeWidth: 2,
             render_highlight:  {
