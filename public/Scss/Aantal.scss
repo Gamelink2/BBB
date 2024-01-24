@@ -31,10 +31,11 @@ ul.Table-head > li:last-child{
     color: white;
     display: flex;
     flex-direction: column; /* Display vertically */
-    max-height: calc(3.6rem * 9);
+    max-height: calc(3.6rem * 15);
     width: 90%;
     overflow-y: scroll;
     padding: 0.2rem;
+    padding-top: 0;
 }
 .Table-content {
     width: 100%;

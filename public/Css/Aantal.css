@@ -48,10 +48,11 @@ ul.Table-head > li:last-child {
   color: white;
   display: flex;
   flex-direction: column; /* Display vertically */
-  max-height: 32.4rem;
+  max-height: 54rem;
   width: 90%;
   overflow-y: scroll;
   padding: 0.2rem;
+  padding-top: 0;
 }
 
 .Table-content {
