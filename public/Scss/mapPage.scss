@@ -22,7 +22,6 @@
         transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem);
         flex-direction: column;
         display: flex;
-
     }
     li::marker{
         font-size: 2rem;
@@ -33,7 +32,10 @@
 area{
     cursor: pointer;
 }
-
+.info{
+    display: flex;
+    flex-direction: column;
+}
 .imageContainer{
     @include s.Outline;
     margin-left: 3em;
@@ -93,16 +95,42 @@ button {
     box-shadow: none;
 }
 li::marker{
+    display: flex;
     background: black ;
-    width: auto;
+    height: 4rem;
     font-size: 4rem;
     user-select: none;
     cursor: pointer;
 }
-
+li{
+    background-color: rgba(75, 75, 75, 0.383);
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    margin: 1.5rem;
+    display: flex;
+    list-style: none;
+    flex: 1;
+    align-items: center;
+    outline : 0.2rem inset rgb(0, 0, 0);
+    cursor: pointer;
+}
+li:hover{
+    background-color: rgba(147, 147, 147, 0.153);
+}
+li.selected{
+    background-color: rgba(255, 255, 255, 0.671);
+}
 $listItems : staanplaatsen toiletten zwembad speeltuin huisBert parkeerplekken;
+
 @each $item in $listItems {
-    .#{$item}{
-        list-style-image: url('../Images/#{$item}.svg');
+    .#{$item}::before {
+        content: '';
+        display: inline-block; /* Ensures the image is treated as a block element */
+        width: 1.75rem; /* Adjust the width as needed */
+        height: 1.75rem; /* Adjust the height as needed */
+        list-style: none;
+        background: url('../Images/#{$item}.svg') no-repeat center center; /* Replace 'image.png' with your image */
+        background-size: contain; /* Optional: Makes the image fit all the way in its container */
+        margin-right: 1rem;
     }
 }

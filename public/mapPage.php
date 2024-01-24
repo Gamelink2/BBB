@@ -51,12 +51,12 @@
         <container class="mapContainer">
             <container class="infoContainer">
                 <div class="info">
-                    <li class="staanplaatsen" onclick="groupsSelect('SP')">Staanplaatsen</li>
-                    <li class="toiletten" onclick="groupsSelect('TT')">Toiletten</li>
-                    <li class="zwembad" onclick="groupsSelect('ZB')">Zwembaden</li>
-                    <li class="speeltuin" onclick="groupsSelect('ST')">Speeltuin</li>
-                    <li class="huisBert" onclick="groupsSelect('BB')">Huis van Bert</li>
-                    <li class="parkeerplekken" onclick="groupsSelect('PP')">Parkeerplekken</li>
+                    <li id="SP" class="staanplaatsen" onclick="groupsSelect('SP')">Staanplaatsen</li>
+                    <li id="TT" class="toiletten" onclick="groupsSelect('TT')">Toiletten</li>
+                    <li id="ZB" class="zwembad" onclick="groupsSelect('ZB')">Zwembaden</li>
+                    <li id="ST" class="speeltuin" onclick="groupsSelect('ST')">Speeltuin</li>
+                    <li id="BB" class="huisBert" onclick="groupsSelect('BB')">Huis van Bert</li>
+                    <li id="PP" class="parkeerplekken" onclick="groupsSelect('PP')">Parkeerplekken</li>
                 </div>
             </container>
             <container class="imageContainer">
@@ -126,11 +126,14 @@
     <script>
         function groupsSelect(group) {
             var value = $('#plattegrond').mapster('get', group);
+            var liElement = $("#" + group);
 
             if (value) {
                 $('#plattegrond').mapster('set', false, group);
+                liElement.removeClass('selected');
             } else {
                 $('#plattegrond').mapster('set', true, group);
+                liElement.addClass('selected');
             }
         }
 
@@ -138,6 +141,8 @@
     {
         $('#plattegrond')
         .mapster({
+            isSelectable: false,
+            isDeselectable: false,
             mapKey: 'groupKey',
             fillColor: "d42e16",
             stroke: true,
@@ -151,13 +156,8 @@
                 strokeOpacity: 1.0,
                 strokeColor: "FF0000",
                 strokeWidth: 2
-            }
+            },
         })
     });
     </script>
     </html>
-
-
-
-
-

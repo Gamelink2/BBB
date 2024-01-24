@@ -49,6 +49,11 @@ area {
   cursor: pointer;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
 .imageContainer {
   outline: 0.2rem solid black;
   border-radius: 1rem;
@@ -118,8 +123,9 @@ button {
 }
 
 li::marker {
+  display: flex;
   background: black;
-  width: auto;
+  height: 4rem;
   font-size: 4rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -127,26 +133,89 @@ li::marker {
   cursor: pointer;
 }
 
-.staanplaatsen {
-  list-style-image: url("../Images/staanplaatsen.svg");
+li {
+  background-color: rgba(75, 75, 75, 0.383);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin: 1.5rem;
+  display: flex;
+  list-style: none;
+  flex: 1;
+  align-items: center;
+  outline: 0.2rem inset rgb(0, 0, 0);
+  cursor: pointer;
 }
 
-.toiletten {
-  list-style-image: url("../Images/toiletten.svg");
+li:hover {
+  background-color: rgba(147, 147, 147, 0.153);
 }
 
-.zwembad {
-  list-style-image: url("../Images/zwembad.svg");
+li.selected {
+  background-color: rgba(255, 255, 255, 0.671);
 }
 
-.speeltuin {
-  list-style-image: url("../Images/speeltuin.svg");
+.staanplaatsen::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/staanplaatsen.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
 }
 
-.huisBert {
-  list-style-image: url("../Images/huisBert.svg");
+.toiletten::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/toiletten.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
 }
 
-.parkeerplekken {
-  list-style-image: url("../Images/parkeerplekken.svg");
+.zwembad::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/zwembad.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
+}
+
+.speeltuin::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/speeltuin.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
+}
+
+.huisBert::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/huisBert.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
+}
+
+.parkeerplekken::before {
+  content: "";
+  display: inline-block; /* Ensures the image is treated as a block element */
+  width: 1.75rem; /* Adjust the width as needed */
+  height: 1.75rem; /* Adjust the height as needed */
+  list-style: none;
+  background: url("../Images/parkeerplekken.svg") no-repeat center center; /* Replace 'image.png' with your image */
+  background-size: contain; /* Optional: Makes the image fit all the way in its container */
+  margin-right: 1rem;
 }/*# sourceMappingURL=mapPage.css.map */
