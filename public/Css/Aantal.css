@@ -28,6 +28,7 @@ html {
   display: flex;
   width: 90%;
   text-align: center;
+  padding: 0.2rem;
 }
 
 ul.Table-head > li {
