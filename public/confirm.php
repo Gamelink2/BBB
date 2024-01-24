@@ -24,8 +24,8 @@ var_dump($_SESSION);
     <link rel="stylesheet" href="./Css/confirm.css">
 </head>
 <body>
-    <form id="contact-form">
-      <div class="contact-form">
+<form id="contact-form" onload="handleForm()">
+    <div class="contact-form">
         <div class="test">
           <div class="confirm">
             <input type="email" name="from_email" style="display: none;" value='<?php echo $Email; ?>'>
@@ -58,72 +58,24 @@ var_dump($_SESSION);
       
     
 
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    (function () {
+    <script>
+      (function () {
         emailjs.init('RBuOCpeu2TmAUuTAp');
-    })();
-
-    const handleForm = async () => {
+      })();
+    </script>
+    <script>
+      const handleForm = async (e) => {
         try {
-            const formElement = document.getElementById('contact-form');
-            console.log('Form Element:', formElement);
-
-            if (formElement) {
-                const formData = new FormData(formElement);
-                console.log('FormData:', formData);
-
-                const response = await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', formData);
-                console.log('Email response:', response);
-                alert('Email sent successfully!');
-            } else {
-                throw new Error('Form element not found.');
-            }
+          await emailjs.sendForm('service_wjo1v61', 'template_1hmid03', document.getElementById('contact-form'));
+          alert('email sent!');
         } catch (error) {
-            console.error('Error sending email:', error);
-
-            console.groupCollapsed('Detailed Error Information');
-
-            console.error('Error Message:', error.message);
-            console.error('Stack Trace:', error.stack);
-
-            // Log each property individually and recursively for nested properties
-            const logProperties = (obj, prefix = '') => {
-                Object.getOwnPropertyNames(obj).forEach((prop) => {
-                    const propValue = obj[prop];
-                    const propType = typeof propValue;
-
-                    if (propType === 'object' && propValue !== null) {
-                        console.group(`Property (${prefix}${prop}):`);
-                        logProperties(propValue, `${prefix}${prop}.`);
-                        console.groupEnd();
-                    } else {
-                        console.log(`(${prefix}${prop}): Type - ${propType}, Value - ${propValue}`);
-                    }
-                });
-            };
-
-            logProperties(error);
-
-            console.groupEnd();
-
-            alert('Failed to send email. Check the console for details.');
+          console.error(error);
+          alert('Failed to send email');
         }
-    };
-
-    window.onload = function () {
-        handleForm();
-    };
-
-    window.onbeforeunload = function (e) {
-        const confirmationMessage = "Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.";
-
-        e.returnValue = confirmationMessage;
-
-        return confirmationMessage;
-    };
-</script>
-
+      };
+    </script>
 
 
 
