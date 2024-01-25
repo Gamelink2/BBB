@@ -11,7 +11,7 @@
 </head>
 <body class="indexBody">
   <div class="Navbar">
-    <a class="logo" href="./Home">
+    <a class="logo" href="./">
       <img src="./Images/BBB2.png" alt="logo" width="50px" height="50px">
       <div>  </div>
       <div>De Groene Weide</div>
