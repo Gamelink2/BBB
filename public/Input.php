@@ -15,7 +15,16 @@ try {
     $_SESSION['voornaam'] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $_SESSION['achternaam'] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
     $_SESSION['nummer'] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
-    $_SESSION['email'] = $Email = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+    $_SESSION['email'] = $FullEmail = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
+// Function to extract the part before '@' in an email address
+    function extractUsername($email) {
+        $parts = explode('@', $email);
+        return $parts[0];
+    }
+    $emailAddress = $FullEmail;
+    $Email = extractUsername($emailAddress);
+
+    
     $_SESSION['postcode'] = $PostCode = isset($_REQUEST['postcode']) ? trim($_REQUEST['postcode']) : '';
     $_SESSION['straatnaam'] = $StraatNaam = isset($_REQUEST['straat']) ? trim($_REQUEST['straat']) : '';
     $_SESSION['huisnummer'] = $HuisNummer = isset($_REQUEST['huisNmr']) ? trim($_REQUEST['huisNmr']) : '';
