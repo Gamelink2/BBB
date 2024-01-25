@@ -168,7 +168,6 @@ function handleSelectChange(selectElement, targetElement, exclusionId) {
             alert(excludedFields);
         }
     }
-    validateForm(excludedFields);
 }
 
 // JavaScript to validate the end date against the start date
@@ -193,8 +192,11 @@ let excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not req
 validateForm(excludedFields);
 let isAlertShown = false;
 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    validateForm(exludedFields);
+});
+
 function validateForm(excludedIds) {
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
         isAlertShown = false; // Reset the flag to false on submit
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
