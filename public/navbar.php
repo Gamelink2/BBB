@@ -18,12 +18,11 @@
     </a>
     <div class="navlink">
       <a href="./ ">Home</a>
-      <a href="./camping">De Camping</a>
+      <a href="./Camping">De Camping</a>
       <a href="./mapPage">Plattegrond</a>
       <a href="./Boeken">Boeken</a>
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
       <a href="./Reserveringen">Reserveringen</a>
-
     </div>
   </div>
 </body>
