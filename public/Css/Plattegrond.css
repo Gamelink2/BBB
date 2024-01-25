@@ -35,7 +35,10 @@ html {
   .infoContainer {
     height: 25rem;
     transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem);
-    width: 100%;
+    width: fit-content;
+  }
+  .imageContainer {
+    margin-left: 0rem;
   }
   .info {
     flex-direction: row;
