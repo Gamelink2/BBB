@@ -189,9 +189,9 @@ document.getElementById('begindatum').addEventListener('input', function () {
     endDateInput.max = maxEndDate.toISOString().split('T')[0];
 });
 
-var excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not required
+let excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not required
 validateForm(excludedFields);
-var isAlertShown = false;
+let isAlertShown = false;
 
 function validateForm(excludedIds) {
     document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -199,7 +199,6 @@ function validateForm(excludedIds) {
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
         var isEmptyFieldFound = false;
-        alert(excludedIds);
         // Loop through each input element
         inputs.forEach(function(input) {
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
