@@ -120,4 +120,16 @@ a {
   font-size: 3rem;
   color: red;
   padding: 0%;
+}
+
+@media (max-width: 992px) {
+  .Navbar {
+    font-family: "Centra", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=navbar.css.map */
