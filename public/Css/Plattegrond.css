@@ -78,6 +78,7 @@ area {
   width: 25rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #popup {
