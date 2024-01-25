@@ -153,7 +153,7 @@ VALUES
     ('Toilet', '00:00', '00:00'),
     ('Toilet', '00:00', '00:00'),
     ('Toilet', '00:00', '00:00'),
-    ('Toilet', '00:00', '00:00');
-    ('het huis van Boer Bert', '00:00', '00:00')
+    ('Toilet', '00:00', '00:00'),
+    ('het huis van Boer Bert', '00:00', '00:00');
 
 SELECT * FROM gebouwPopup;
