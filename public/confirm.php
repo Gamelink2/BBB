@@ -101,14 +101,14 @@ $EindDatum = $_SESSION['EindDatum'];
     }
   };
 
-  window.onbeforeunload = function (e) {
-    const confirmationMessage =
-      'Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.';
+  // window.onbeforeunload = function (e) {
+  //   const confirmationMessage =
+  //     'Bent u zeker dat u de pagina wilt verlaten? Uw e-mail zou mogelijk niet worden verzonden.';
 
-    e.returnValue = confirmationMessage;
+  //   e.returnValue = confirmationMessage;
 
-    return confirmationMessage;
-  };
+  //   return confirmationMessage;
+  // };
 </script>
 
 </body>
