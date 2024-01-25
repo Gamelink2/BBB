@@ -94,7 +94,7 @@ $EindDatum = $_SESSION['EindDatum'];
       };
 
       await emailjs.send('service_wjo1v61', 'template_1hmid03', formValues);
-      alert('Email sent successfully!');
+      alert('Email verzonden.');
     } catch (error) {
       console.error('Error sending the email:', error);
       alert('Failed to send email');
