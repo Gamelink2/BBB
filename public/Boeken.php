@@ -168,6 +168,7 @@ function handleSelectChange(selectElement, targetElement, exclusionId) {
             alert(excludedFields);
         }
     }
+    validateForm(excludedFields);
 }
 
 // JavaScript to validate the end date against the start date
@@ -190,13 +191,10 @@ document.getElementById('begindatum').addEventListener('input', function () {
 
 let excludedFields = ['verzoek', 'anders', 'andersA']; //fields that are not required
 validateForm(excludedFields);
-let isAlertShown = false;
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    validateForm(exludedFields);
-});
+var isAlertShown = false;
 
 function validateForm(excludedIds) {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
         isAlertShown = false; // Reset the flag to false on submit
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
@@ -204,7 +202,6 @@ function validateForm(excludedIds) {
         // Loop through each input element
         inputs.forEach(function(input) {
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
-                alert(input.id);
                 isEmptyFieldFound = true;
                 if (input.id === 'andersA') {
                     document.getElementById('andersInputA').classList.add('emptyField');
@@ -239,6 +236,7 @@ function validateForm(excludedIds) {
                 isAlertShown = true; // Set the flag to true after showing the alert
             }
         }
+    });
 }
 
 
