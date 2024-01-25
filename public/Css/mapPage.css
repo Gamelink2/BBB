@@ -81,7 +81,6 @@ area {
 }
 
 #popup {
-  font-size: 2.2rem;
   display: none;
   position: fixed;
   top: 50%;
@@ -93,6 +92,10 @@ area {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   border-radius: 25px;
+}
+
+.popupText {
+  font-size: 2.2rem;
 }
 
 #overlay {

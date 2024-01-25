@@ -156,7 +156,7 @@
         
         <div id="overlay" onclick="closePopup()"></div>
         <div id="popup">
-            <div id="popupContent"></div>
+            <div id="popupContent" class="popupText"></div>
             <button onclick="closePopup()">Terug</button>
         </div>
         </div>
