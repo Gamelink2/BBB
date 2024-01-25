@@ -61,31 +61,31 @@
             <container class="imageContainer">
         <img src="./Images/high fid.png" class="test" usemap="#image-map" id="plattegrond">
         <map name="image-map" id="image-map">
-            <area id="1" groupKey="1, ST" alt="bigBuilding" title="bigBuilding" onclick="showPopupGeb(id)" href="#" coords="25,22,234,277" shape="rect">
-            <area id="2" groupKey="2, ST" alt="smallBuilding" title="smallBuilding" onclick="showPopupGeb(id)" href="#" coords="56,316,156,388" shape="rect">
-            <area id="3" groupKey="3, ST" alt="bigSpot1" title="bigSpot1" onclick="showPopupGeb(id)" href="#" coords="242,30,451,153" shape="rect">
-            <area id="4" groupKey="4, ST" alt="mediumSpot1" title="mediumSpot1" onclick="showPopupGeb(id)" href="#" coords="459,30,563,153" shape="rect">
-            <area id="5" groupKey="5, ST" alt="mediumSpot2" title="mediumSpot2" onclick="showPopupGeb(id)" href="#" coords="572,31,675,153" shape="rect">
-            <area id="6" groupKey="6, ST" alt="bigSpot2" title="bigSpot2" onclick="showPopupGeb(id)" href="#" coords="243,180,452,302" shape="rect">
-            <area id="7" groupKey="7, ST" alt="mediumSpot3" title="mediumSpot3" onclick="showPopupGeb(id)" href="#" coords="460,302,563,180" shape="rect">
-            <area id="8" groupKey="8, ST" alt="mediumSpot4" title="mediumSpot4" onclick="showPopupGeb(id)" href="#" coords="570,303,675,179" shape="rect">
-            <area id="9" groupKey="9, ST" alt="mediumSpot5" title="mediumSpot5" onclick="showPopupGeb(id)" href="#" coords="242,446,343,311" shape="rect">
-            <area id="10" groupKey="10, ST" alt="mediumSpot6" title="mediumSpot6" onclick="showPopupGeb(id)" href="#" coords="350,446,451,310" shape="rect">
-            <area id="11" groupKey="11, ST" alt="mediumSpot7" title="mediumSpot7" onclick="showPopupGeb(id)" href="#" coords="459,446,564,311" shape="rect">
-            <area id="12" groupKey="12, ZB" alt="zwembadKlein" title="zwembadKlein" onclick="showPopupGeb(id)" href="#" coords="571,446,675,310" shape="rect">
-            <area id="13" groupKey="13, ZB" alt="zwembadGroot" title="zwembadGroot" onclick="showPopupGeb(id)" href="#" coords="476,693,688,557" shape="rect">
-            <area id="14" groupKey="14, ST" alt="mediumBuilding" title="mediumBuilding" onclick="showPopupGeb(id)" href="#" coords="468,694,255,557" shape="rect">
-            <area id="15" groupKey="15, PP" alt="parking" title="parking" onclick="showPopupGeb(id)" href="#" coords="35,682,245,557" shape="rect">
-            <area id="16" groupKey="16, TT" alt="toilet1" title="toilet1" onclick="showPopupGeb(id)" href="#" coords="701,681,723,660" shape="rect">
-            <area id="17" groupKey="17, TT" alt="toilet2" title="toilet2" onclick="showPopupGeb(id)" href="#" coords="701,634,723,614" shape="rect">
-            <area id="18" groupKey="18, TT" alt="toilet3" title="toilet3" onclick="showPopupGeb(id)" href="#" coords="701,589,723,567" shape="rect">
-            <area id="19" groupKey="19, TT" alt="toilet4" title="toilet4" onclick="showPopupGeb(id)" href="#" coords="704,400,683,378" shape="rect">
-            <area id="20" groupKey="20, TT" alt="toilet5" title="toilet5" onclick="showPopupGeb(id)" href="#" coords="704,279,683,257" shape="rect">
-            <area id="21" groupKey="21, TT" alt="toilet6" title="toilet6" onclick="showPopupGeb(id)" href="#" coords="704,154,683,133" shape="rect">
-            <area id="22" groupKey="22, TT" alt="toilet7" title="toilet7" onclick="showPopupGeb(id)" href="#" coords="704,55,683,33" shape="rect">
-            <area id="23" groupKey="87, BB" alt="huisBert" title="huisBert" onclick="showPopupGeb(id)" href="#" coords="31,488,102,487,102,462,155,462,154,435,32,435,31,460" shape="poly">
+            <area id="1" groupKey="1, ST" alt="Recreatie tehuis" title="bigBuilding" onclick="showPopupGeb(id)" href="#" coords="25,22,234,277" shape="rect">
+            <area id="2" groupKey="2, ST" alt="Reseptie" title="smallBuilding" onclick="showPopupGeb(id)" href="#" coords="56,316,156,388" shape="rect">
+            <area id="3" groupKey="3, ST" alt="Tennis baan" title="bigSpot1" onclick="showPopupGeb(id)" href="#" coords="242,30,451,153" shape="rect">
+            <area id="4" groupKey="4, ST" alt="Voetbalveld" title="mediumSpot1" onclick="showPopupGeb(id)" href="#" coords="459,30,563,153" shape="rect">
+            <area id="5" groupKey="5, ST" alt="Vollybalveld" title="mediumSpot2" onclick="showPopupGeb(id)" href="#" coords="572,31,675,153" shape="rect">
+            <area id="6" groupKey="6, ST" alt="Voetbalveld" title="bigSpot2" onclick="showPopupGeb(id)" href="#" coords="243,180,452,302" shape="rect">
+            <area id="7" groupKey="7, ST" alt="Fitniss" title="mediumSpot3" onclick="showPopupGeb(id)" href="#" coords="460,302,563,180" shape="rect">
+            <area id="8" groupKey="8, ST" alt="Fossielen veld" title="mediumSpot4" onclick="showPopupGeb(id)" href="#" coords="570,303,675,179" shape="rect">
+            <area id="9" groupKey="9, ST" alt="Batminton veld" title="mediumSpot5" onclick="showPopupGeb(id)" href="#" coords="242,446,343,311" shape="rect">
+            <area id="10" groupKey="10, ST" alt="Teras" title="mediumSpot6" onclick="showPopupGeb(id)" href="#" coords="350,446,451,310" shape="rect">
+            <area id="11" groupKey="11, ST" alt="Teras" title="mediumSpot7" onclick="showPopupGeb(id)" href="#" coords="459,446,564,311" shape="rect">
+            <area id="12" groupKey="12, ZB" alt="zwembadklein" title="zwembadKlein" onclick="showPopupGeb(id)" href="#" coords="571,446,675,310" shape="rect">
+            <area id="13" groupKey="13, ZB" alt="zwembadgroot" title="zwembadGroot" onclick="showPopupGeb(id)" href="#" coords="476,693,688,557" shape="rect">
+            <area id="14" groupKey="14, ST" alt="Wasserette" title="mediumBuilding" onclick="showPopupGeb(id)" href="#" coords="468,694,255,557" shape="rect">
+            <area id="15" groupKey="15, PP" alt="Parkeerplaats" title="parking" onclick="showPopupGeb(id)" href="#" coords="35,682,245,557" shape="rect">
+            <area id="16" groupKey="16, TT" alt="Toilet" title="toilet1" onclick="showPopupGeb(id)" href="#" coords="701,681,723,660" shape="rect">
+            <area id="17" groupKey="17, TT" alt="Toilet" title="toilet2" onclick="showPopupGeb(id)" href="#" coords="701,634,723,614" shape="rect">
+            <area id="18" groupKey="18, TT" alt="Toilet" title="toilet3" onclick="showPopupGeb(id)" href="#" coords="701,589,723,567" shape="rect">
+            <area id="19" groupKey="19, TT" alt="Toilet" title="toilet4" onclick="showPopupGeb(id)" href="#" coords="704,400,683,378" shape="rect">
+            <area id="20" groupKey="20, TT" alt="Toilet" title="toilet5" onclick="showPopupGeb(id)" href="#" coords="704,279,683,257" shape="rect">
+            <area id="21" groupKey="21, TT" alt="Toilet" title="toilet6" onclick="showPopupGeb(id)" href="#" coords="704,154,683,133" shape="rect">
+            <area id="22" groupKey="22, TT" alt="Toilet" title="toilet7" onclick="showPopupGeb(id)" href="#" coords="704,55,683,33" shape="rect">
+            <area id="23" groupKey="87, BB" alt="het huis van Boer Bert" title="huisBert" onclick="showPopupGeb(id)" href="#" coords="31,488,102,487,102,462,155,462,154,435,32,435,31,460" shape="poly">
             
-            <area id="1" groupKey="23, SP" alt="bigCamp1" title="bigCamp1" onclick="showPopupKamp(id)" href="#" coords="838,701,877,641" shape="rect">
+             <area id="1" groupKey="23, SP" alt="bigCamp1" title="bigCamp1" onclick="showPopupKamp(id)" href="#" coords="838,701,877,641" shape="rect">
             <area id="2" groupKey="24, SP" alt="bigCamp2" title="bigCamp2" onclick="showPopupKamp(id)" href="#" coords="917,641,879,700" shape="rect">
             <area id="3" groupKey="25, SP" alt="bigCamp3" title="bigCamp3" onclick="showPopupKamp(id)" href="#" coords="958,641,919,700" shape="rect">
             <area id="4" groupKey="26, SP" alt="bigCamp4" title="bigCamp4" onclick="showPopupKamp(id)" href="#" coords="998,641,960,700" shape="rect">
@@ -110,45 +110,45 @@
             <area id="23" groupKey="45, SP" alt="smallCamp8" title="smallCamp8" onclick="showPopupKamp(id)" href="#" coords="879,430,918,391" shape="rect">
             <area id="34" groupKey="46, SP" alt="smallCamp9" title="smallCamp9" onclick="showPopupKamp(id)" href="#" coords="919,429,957,391" shape="rect">
             <area id="25" groupKey="47, SP" alt="smallCamp10" title="smallCamp10" onclick="showPopupKamp(id)" href="#" coords="919,350,958,388" shape="rect">
-            <area id="26" groupKey="48, SP" alt="smallCamp12" title="smallCamp12" onclick="showPopupKamp(id)" href="#" coords="960,350,998,388" shape="rect">
-            <area id="27" groupKey="49, SP" alt="smallCamp13" title="smallCamp13" onclick="showPopupKamp(id)" href="#" coords="960,391,998,430" shape="rect">
-            <area id="28" groupKey="50, SP" alt="smallCamp14" title="smallCamp14" onclick="showPopupKamp(id)" href="#" coords="1000,350,1039,388" shape="rect">
-            <area id="29" groupKey="51, SP" alt="smallCamp15" title="smallCamp15" onclick="showPopupKamp(id)" href="#" coords="1000,391,1039,430" shape="rect">
-            <area id="30" groupKey="52, SP" alt="smallCamp16" title="smallCamp16" onclick="showPopupKamp(id)" href="#" coords="756,269,795,307" shape="rect">
-            <area id="31" groupKey="53, SP" alt="smallCamp17" title="smallCamp17" onclick="showPopupKamp(id)" href="#" coords="756,228,795,267" shape="rect">
-            <area id="32" groupKey="54, SP" alt="smallCamp18" title="smallCamp18" onclick="showPopupKamp(id)" href="#" coords="798,269,836,307" shape="rect">
-            <area id="33" groupKey="55, SP" alt="smallCamp19" title="smallCamp19" onclick="showPopupKamp(id)" href="#" coords="796,228,836,267" shape="rect">
-            <area id="34" groupKey="56, SP" alt="smallCamp20" title="smallCamp20" onclick="showPopupKamp(id)" href="#" coords="838,228,876,267" shape="rect">
-            <area id="35" groupKey="57, SP" alt="smallCamp21" title="smallCamp21" onclick="showPopupKamp(id)" href="#" coords="838,269,876,307" shape="rect">
-            <area id="36" groupKey="58, SP" alt="smallCamp22" title="smallCamp22" onclick="showPopupKamp(id)" href="#" coords="879,228,918,267" shape="rect">
-            <area id="37" groupKey="59, SP" alt="smallCamp23" title="smallCamp23" onclick="showPopupKamp(id)" href="#" coords="878,268,917,307" shape="rect">
-            <area id="38" groupKey="60, SP" alt="smallCamp24" title="smallCamp24" onclick="showPopupKamp(id)" href="#" coords="919,227,958,267" shape="rect">
-            <area id="39" groupKey="61, SP" alt="smallCamp25" title="smallCamp25" onclick="showPopupKamp(id)" href="#" coords="919,307,958,269" shape="rect">
-            <area id="40" groupKey="62, SP" alt="smallCamp26" title="smallCamp26" onclick="showPopupKamp(id)" href="#" coords="960,269,998,307" shape="rect">
-            <area id="41" groupKey="63, SP" alt="smallCamp27" title="smallCamp27" onclick="showPopupKamp(id)" href="#" coords="1000,268,1039,307" shape="rect">
-            <area id="42" groupKey="64, SP" alt="smallCamp28" title="smallCamp28" onclick="showPopupKamp(id)" href="#" coords="960,267,998,227" shape="rect">
-            <area id="43" groupKey="65, SP" alt="smallCamp29" title="smallCamp29" onclick="showPopupKamp(id)" href="#" coords="1000,228,1039,267" shape="rect">
-            <area id="44" groupKey="66, SP" alt="smallCamp30" title="smallCamp30" onclick="showPopupKamp(id)" href="#" coords="756,147,795,186" shape="rect">
-            <area id="45" groupKey="67, SP" alt="smallCamp31" title="smallCamp31" onclick="showPopupKamp(id)" href="#" coords="797,147,836,186" shape="rect">
-            <area id="46" groupKey="68, SP" alt="smallCamp32" title="smallCamp32" onclick="showPopupKamp(id)" href="#" coords="756,106,795,145" shape="rect">
-            <area id="47" groupKey="69, SP" alt="smallCamp33" title="smallCamp33" onclick="showPopupKamp(id)" href="#" coords="796,106,836,145" shape="rect">
-            <area id="48" groupKey="70, SP" alt="smallCamp34" title="smallCamp34" onclick="showPopupKamp(id)" href="#" coords="838,107,876,145" shape="rect">
-            <area id="49" groupKey="71, SP" alt="smallCamp35" title="smallCamp35" onclick="showPopupKamp(id)" href="#" coords="838,146,876,186" shape="rect">
-            <area id="50" groupKey="72, SP" alt="smallCamp36" title="smallCamp36" onclick="showPopupKamp(id)" href="#" coords="878,146,917,186" shape="rect">
-            <area id="51" groupKey="73, SP" alt="smallCamp37" title="smallCamp37" onclick="showPopupKamp(id)" href="#" coords="878,106,917,145" shape="rect">
-            <area id="52" groupKey="74, SP" alt="smallCamp38" title="smallCamp38" onclick="showPopupKamp(id)" href="#" coords="919,146,958,186" shape="rect">
-            <area id="53" groupKey="75, SP" alt="smallCamp39" title="smallCamp39" onclick="showPopupKamp(id)" href="#" coords="919,106,957,145" shape="rect">
-            <area id="54" groupKey="76, SP" alt="smallCamp40" title="smallCamp40" onclick="showPopupKamp(id)" href="#" coords="959,146,998,186" shape="rect">
-            <area id="55" groupKey="77, SP" alt="smallCamp41" title="smallCamp41" onclick="showPopupKamp(id)" href="#" coords="960,105,998,145" shape="rect">
-            <area id="56" groupKey="78, SP" alt="smallCamp42" title="smallCamp42" onclick="showPopupKamp(id)" href="#" coords="1000,146,1039,106" shape="rect">
-            <area id="57" groupKey="79, SP" alt="smallCamp43" title="smallCamp43" onclick="showPopupKamp(id)" href="#" coords="1000,186,1039,147" shape="rect">
-            <area id="58" groupKey="80, SP" alt="smallCamp44" title="smallCamp44" onclick="showPopupKamp(id)" href="#" coords="757,25,795,64" shape="rect">
-            <area id="59" groupKey="81, SP" alt="smallCamp45" title="smallCamp45" onclick="showPopupKamp(id)" href="#" coords="797,25,836,64" shape="rect">
-            <area id="60" groupKey="82, SP" alt="smallCamp46" title="smallCamp46" onclick="showPopupKamp(id)" href="#" coords="837,24,877,64" shape="rect">
-            <area id="61" groupKey="83, SP" alt="smallCamp47" title="smallCamp47" onclick="showPopupKamp(id)" href="#" coords="879,25,917,64" shape="rect">
-            <area id="62" groupKey="84, SP" alt="smallCamp48" title="smallCamp48" onclick="showPopupKamp(id)" href="#" coords="919,24,958,64" shape="rect">
-            <area id="63" groupKey="85, SP" alt="smallCamp49" title="smallCamp49" onclick="showPopupKamp(id)" href="#" coords="960,25,998,64" shape="rect">
-            <area id="64" groupKey="86, SP" alt="smallCamp50" title="smallCamp50" onclick="showPopupKamp(id)" href="#" coords="1000,64,1039,25" shape="rect">
+            <area id="26" groupKey="48, SP" alt="smallCamp11" title="smallCamp12" onclick="showPopupKamp(id)" href="#" coords="960,350,998,388" shape="rect">
+            <area id="27" groupKey="49, SP" alt="smallCamp12" title="smallCamp13" onclick="showPopupKamp(id)" href="#" coords="960,391,998,430" shape="rect">
+            <area id="28" groupKey="50, SP" alt="smallCamp13" title="smallCamp14" onclick="showPopupKamp(id)" href="#" coords="1000,350,1039,388" shape="rect">
+            <area id="29" groupKey="51, SP" alt="smallCamp14" title="smallCamp15" onclick="showPopupKamp(id)" href="#" coords="1000,391,1039,430" shape="rect">
+            <area id="30" groupKey="52, SP" alt="smallCamp15" title="smallCamp16" onclick="showPopupKamp(id)" href="#" coords="756,269,795,307" shape="rect">
+            <area id="31" groupKey="53, SP" alt="smallCamp16" title="smallCamp17" onclick="showPopupKamp(id)" href="#" coords="756,228,795,267" shape="rect">
+            <area id="32" groupKey="54, SP" alt="smallCamp17" title="smallCamp18" onclick="showPopupKamp(id)" href="#" coords="798,269,836,307" shape="rect">
+            <area id="33" groupKey="55, SP" alt="smallCamp18" title="smallCamp19" onclick="showPopupKamp(id)" href="#" coords="796,228,836,267" shape="rect">
+            <area id="34" groupKey="56, SP" alt="smallCamp19" title="smallCamp20" onclick="showPopupKamp(id)" href="#" coords="838,228,876,267" shape="rect">
+            <area id="35" groupKey="57, SP" alt="smallCamp20" title="smallCamp21" onclick="showPopupKamp(id)" href="#" coords="838,269,876,307" shape="rect">
+            <area id="36" groupKey="58, SP" alt="smallCamp21" title="smallCamp22" onclick="showPopupKamp(id)" href="#" coords="879,228,918,267" shape="rect">
+            <area id="37" groupKey="59, SP" alt="smallCamp22" title="smallCamp23" onclick="showPopupKamp(id)" href="#" coords="878,268,917,307" shape="rect">
+            <area id="38" groupKey="60, SP" alt="smallCamp23" title="smallCamp24" onclick="showPopupKamp(id)" href="#" coords="919,227,958,267" shape="rect">
+            <area id="39" groupKey="61, SP" alt="smallCamp24" title="smallCamp25" onclick="showPopupKamp(id)" href="#" coords="919,307,958,269" shape="rect">
+            <area id="40" groupKey="62, SP" alt="smallCamp25" title="smallCamp26" onclick="showPopupKamp(id)" href="#" coords="960,269,998,307" shape="rect">
+            <area id="41" groupKey="63, SP" alt="smallCamp26" title="smallCamp27" onclick="showPopupKamp(id)" href="#" coords="1000,268,1039,307" shape="rect">
+            <area id="42" groupKey="64, SP" alt="smallCamp27" title="smallCamp28" onclick="showPopupKamp(id)" href="#" coords="960,267,998,227" shape="rect">
+            <area id="43" groupKey="65, SP" alt="smallCamp28" title="smallCamp29" onclick="showPopupKamp(id)" href="#" coords="1000,228,1039,267" shape="rect">
+            <area id="44" groupKey="66, SP" alt="smallCamp29" title="smallCamp30" onclick="showPopupKamp(id)" href="#" coords="756,147,795,186" shape="rect">
+            <area id="45" groupKey="67, SP" alt="smallCamp30" title="smallCamp31" onclick="showPopupKamp(id)" href="#" coords="797,147,836,186" shape="rect">
+            <area id="46" groupKey="68, SP" alt="smallCamp31" title="smallCamp32" onclick="showPopupKamp(id)" href="#" coords="756,106,795,145" shape="rect">
+            <area id="47" groupKey="69, SP" alt="smallCamp32" title="smallCamp33" onclick="showPopupKamp(id)" href="#" coords="796,106,836,145" shape="rect">
+            <area id="48" groupKey="70, SP" alt="smallCamp33" title="smallCamp34" onclick="showPopupKamp(id)" href="#" coords="838,107,876,145" shape="rect">
+            <area id="49" groupKey="71, SP" alt="smallCamp34" title="smallCamp35" onclick="showPopupKamp(id)" href="#" coords="838,146,876,186" shape="rect">
+            <area id="50" groupKey="72, SP" alt="smallCamp35" title="smallCamp36" onclick="showPopupKamp(id)" href="#" coords="878,146,917,186" shape="rect">
+            <area id="51" groupKey="73, SP" alt="smallCamp36" title="smallCamp37" onclick="showPopupKamp(id)" href="#" coords="878,106,917,145" shape="rect">
+            <area id="52" groupKey="74, SP" alt="smallCamp37" title="smallCamp38" onclick="showPopupKamp(id)" href="#" coords="919,146,958,186" shape="rect">
+            <area id="53" groupKey="75, SP" alt="smallCamp38" title="smallCamp39" onclick="showPopupKamp(id)" href="#" coords="919,106,957,145" shape="rect">
+            <area id="54" groupKey="76, SP" alt="smallCamp39" title="smallCamp40" onclick="showPopupKamp(id)" href="#" coords="959,146,998,186" shape="rect">
+            <area id="55" groupKey="77, SP" alt="smallCamp40" title="smallCamp41" onclick="showPopupKamp(id)" href="#" coords="960,105,998,145" shape="rect">
+            <area id="56" groupKey="78, SP" alt="smallCamp41" title="smallCamp42" onclick="showPopupKamp(id)" href="#" coords="1000,146,1039,106" shape="rect">
+            <area id="57" groupKey="79, SP" alt="smallCamp42" title="smallCamp43" onclick="showPopupKamp(id)" href="#" coords="1000,186,1039,147" shape="rect">
+            <area id="58" groupKey="80, SP" alt="smallCamp43" title="smallCamp44" onclick="showPopupKamp(id)" href="#" coords="757,25,795,64" shape="rect">
+            <area id="59" groupKey="81, SP" alt="smallCamp44" title="smallCamp45" onclick="showPopupKamp(id)" href="#" coords="797,25,836,64" shape="rect">
+            <area id="60" groupKey="82, SP" alt="smallCamp45" title="smallCamp46" onclick="showPopupKamp(id)" href="#" coords="837,24,877,64" shape="rect">
+            <area id="61" groupKey="83, SP" alt="smallCamp46" title="smallCamp47" onclick="showPopupKamp(id)" href="#" coords="879,25,917,64" shape="rect">
+            <area id="62" groupKey="84, SP" alt="smallCamp47" title="smallCamp48" onclick="showPopupKamp(id)" href="#" coords="919,24,958,64" shape="rect">
+            <area id="63" groupKey="85, SP" alt="smallCamp48" title="smallCamp49" onclick="showPopupKamp(id)" href="#" coords="960,25,998,64" shape="rect">
+            <area id="64" groupKey="86, SP" alt="smallCamp49" title="smallCamp50" onclick="showPopupKamp(id)" href="#" coords="1000,64,1039,25" shape="rect">
         </map>
         </container>    
         </container>
