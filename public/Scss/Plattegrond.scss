@@ -23,6 +23,9 @@
         transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem) ;
         width: 100%;
     }
+    ,.imageContainer{
+        margin-left: 0rem;
+    }
     .info{
         
         flex-direction: row;
@@ -44,7 +47,7 @@ area{
 }
 .imageContainer{
     @include s.Outline;
-    margin-left: 3em;
+    margin-left: 3rem;
     aspect-ratio: 1.465;
 }
 
