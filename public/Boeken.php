@@ -6,7 +6,7 @@ session_start();
 <html lang="nl">
 <head>
     <?php include('navbar.php'); ?>
-    <link rel="stylesheet" href="Css/Reservering.css">
+    <link rel="stylesheet" href="Css/Boeken.css">
 </head>
 <body>
     <div class="bodyReservering">
@@ -201,6 +201,7 @@ function validateForm(excludedIds) {
         // Loop through each input element
         inputs.forEach(function(input) {
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
+
                 isEmptyFieldFound = true;
                 if (input.id === 'andersA') {
                     document.getElementById('andersInputA').classList.add('emptyField');
@@ -209,7 +210,7 @@ function validateForm(excludedIds) {
                     document.getElementById('andersInput').classList.add('emptyField');
                 }
                 else {
-                    input.classList.remove('emptyField');
+                    input.classList.add('emptyField');
                 }
             }
 

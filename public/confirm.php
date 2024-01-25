@@ -18,7 +18,7 @@ $EindDatum = $_SESSION['EindDatum'];
 <html lang="nl">
 <head>
     <?php include('navbar.php'); ?>
-    <link rel="stylesheet" href="./Css/confirm.css">
+    <link rel="stylesheet" href="./Css/Confirm.css">
 </head>
 <body>
     <form id="contact-form">

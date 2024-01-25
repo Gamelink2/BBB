@@ -16,8 +16,7 @@
     <html lang="nl">
     <head>
         <?php include('navbar.php'); ?>
-        <link rel="stylesheet" href="./Css/mapPage.css">
-        <link rel="stylesheet" href="./Css/Style.css">
+        <link rel="stylesheet" href="./Css/Plattegrond.css">
         <script type="text/javascript" src="./es6-promise.js"></script>
         <script type="text/javascript" src="./jquery.imagemapster.js"></script>
         <script>
