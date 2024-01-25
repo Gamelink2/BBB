@@ -91,7 +91,7 @@ session_start();
             
             <div id="andersInput" style="display: none;">
                 <input type="text" name=Middelen" id="anders" placeholder="Anders, specificeren:*" value="' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == 'Anders' ? $_SESSION["middelen"] : '') . '">
-            </div>';
+            </div>';    
 
         
             
@@ -159,8 +159,9 @@ function handleSelectChange(selectElement, targetElement, exclusionId) {
     if (selectElement.value === 'Anders') {
         targetElement.style.display = 'block';
         excludedFields = excludedFields.filter(item => item !== exclusionId);
-
-    } else {
+        alert(excludedFields);
+    } 
+    else {
         targetElement.style.display = 'none';
         if (!excludedFields.includes(exclusionId)) {
             excludedFields.push(exclusionId);
