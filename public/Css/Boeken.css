@@ -215,6 +215,6 @@ textarea::placeholder {
     height: fit-content;
     background-image: none;
     gap: 15rem;
-    transform: translateY(-7.5rem) scale(0.45) scaleY(1.4);
+    transform: translateY(-7.5rem) scale(0.6);
   }
 }/*# sourceMappingURL=Boeken.css.map */
