@@ -165,6 +165,7 @@ function handleSelectChange(selectElement, targetElement, exclusionId) {
         targetElement.style.display = 'none';
         if (!excludedFields.includes(exclusionId)) {
             excludedFields.push(exclusionId);
+            alert(excludedFields);
         }
     }
     validateForm(excludedFields);
@@ -198,11 +199,11 @@ function validateForm(excludedIds) {
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
         var isEmptyFieldFound = false;
-
+        alert(excludedIds);
         // Loop through each input element
         inputs.forEach(function(input) {
             if (!input.value.trim() && !excludedIds.includes(input.id)) {
-
+                alert(input.id);
                 isEmptyFieldFound = true;
                 if (input.id === 'andersA') {
                     document.getElementById('andersInputA').classList.add('emptyField');
