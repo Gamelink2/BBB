@@ -43,7 +43,7 @@
                     <div class="text">3981 HS Bunnik</div>
                     <div class="text">Nederland</div>
                     <div class="text">T +31 (0)570 54 63 95</div>
-                    <div class="text">BoerBert@gmail.com</div>
+                    <div class="text">bouwenvoorboerbert@gmail.com</div>
                     <div class="text">Bereikbaar elke dag tussen 08:00 en 16:00</div>
                 </row>
             </column>

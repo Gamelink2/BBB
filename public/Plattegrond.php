@@ -53,7 +53,7 @@
                     <li id="SP" class="staanplaatsen" onclick="groupsSelect('SP')">Staanplaatsen</li>
                     <li id="TT" class="toiletten" onclick="groupsSelect('TT')">Toiletten</li>
                     <li id="ZB" class="zwembad" onclick="groupsSelect('ZB')">Zwembaden</li>
-                    <li id="ST" class="speeltuin" onclick="groupsSelect('ST')">Speeltuin</li>
+                    <li id="ST" class="speeltuin" onclick="groupsSelect('ST')">Activiteiten</li>
                     <li id="BB" class="huisBert" onclick="groupsSelect('BB')">Huis van Bert</li>
                     <li id="PP" class="parkeerplekken" onclick="groupsSelect('PP')">Parkeerplekken</li>
                 </div>
