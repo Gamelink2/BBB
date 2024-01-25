@@ -82,7 +82,7 @@ session_start();
             echo '<container class="reserveringContainer">';
 
             echo '
-            <select class="topForm" name="middelen" id="middelen" onchange="toggleAndersInput()">
+            <select class="topForm" name="middelen" id="middelen">
                 <option value="">Waarmee komt u kamperen*</option>
                 <option value="Tent" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Tent" ? "selected" : "") . '>Tent</option>
                 <option value="Caravan" ' . (isset($_SESSION["middelen"]) && $_SESSION["middelen"] == "Caravan" ? "selected" : "") . '>Caravan</option>
@@ -192,7 +192,6 @@ validateForm(excludedFields);
 var isAlertShown = false;
 
 function validateForm(excludedIds) {
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
         isAlertShown = false; // Reset the flag to false on submit
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
@@ -236,7 +235,7 @@ function validateForm(excludedIds) {
                 isAlertShown = true; // Set the flag to true after showing the alert
             }
         }
-    });
+    
 }
 
 
