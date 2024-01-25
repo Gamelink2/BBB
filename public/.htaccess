@@ -77,7 +77,7 @@ ErrorDocument 500 /500.php
 ## Redirect from IP to Domain
 RewriteCond %{HTTP_HOST} ^145\.89\.192\.242$ [NC]
 # Try our IP, get rick rolled Biatch
-RewriteRule ^(.*)$ https://youtu.be/dQw4w9WgXcQ?si=VYvT63dpcQ1vIJLQ [L,R=301]
+RewriteRule ^(.*)$ https://youtu.be/xvFZjo5PgG0?si=mWhC94yeSyCt2Nst [L,R=301]
 
 ## Forbid access to Directory/Directories:
 # Return 404 not 403/401 So it gives away less info if the directory even exists
