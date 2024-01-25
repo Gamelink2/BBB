@@ -14,30 +14,6 @@
     padding-right: 0;
     margin-right: 0;
 }
-@media (max-width: 992px ){
-    .mapContainer{
-    transform: scale(0.6) rotate(90deg);
-    }
-    .infoContainer{
-        height: 25rem;
-        transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem) ;
-        width: max-content;
-    }
-    .imageContainer{
-        margin-left: 0rem;
-    }
-    .info{
-        
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    li::marker{
-        font-size: 2rem;
-        user-select: none;
-        cursor: pointer;
-    }
-}
 area{
     cursor: pointer;
 }
@@ -143,5 +119,30 @@ $listItems : staanplaatsen toiletten zwembad speeltuin huisBert parkeerplekken;
         background: url('../Images/#{$item}.svg') no-repeat center center; /* Replace 'image.png' with your image */
         background-size: contain; /* Optional: Makes the image fit all the way in its container */
         margin-right: 1rem;
+    }
+}
+
+@media (max-width: 992px ){
+    .mapContainer{
+    transform: scale(0.6) rotate(90deg);
+    }
+    .infoContainer{
+        height: 25rem;
+        transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem) ;
+        width: max-content;
+    }
+    .imageContainer{
+        margin-left: 0rem;
+    }
+    .info{
+        
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li::marker{
+        font-size: 2rem;
+        user-select: none;
+        cursor: pointer;
     }
 }
