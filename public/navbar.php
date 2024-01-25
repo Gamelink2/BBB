@@ -20,7 +20,7 @@
     <div class="navlink">
       <!-- <a href="./ ">Home</a> -->
       <a href="./">De Camping</a>
-      <a href="./mapPage">Plattegrond</a>
+      <a href="./Plattegrond">Plattegrond</a>
       <a href="./Boeken">Boeken</a>
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
       <a href="./Reserveringen">Reserveringen</a>
