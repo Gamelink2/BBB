@@ -239,7 +239,6 @@ function validateForm(excludedIds) {
                 isAlertShown = true; // Set the flag to true after showing the alert
             }
         }
-    });
 }
 
 
