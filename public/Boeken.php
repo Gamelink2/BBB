@@ -192,6 +192,7 @@ validateForm(excludedFields);
 var isAlertShown = false;
 
 function validateForm(excludedIds) {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
         isAlertShown = false; // Reset the flag to false on submit
         // Get all input elements from within the form
         var inputs = this.querySelectorAll('input, select, textarea');
@@ -235,7 +236,7 @@ function validateForm(excludedIds) {
                 isAlertShown = true; // Set the flag to true after showing the alert
             }
         }
-    
+    });
 }
 
 
