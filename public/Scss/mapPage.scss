@@ -59,6 +59,7 @@ area{
 }
 
 #popup {
+    @include s.TextMid;
     display: none;
     position: fixed;
     top: 50%;

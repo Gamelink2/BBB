@@ -39,9 +39,7 @@ html {
   }
   li::marker {
     font-size: 2rem;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     cursor: pointer;
   }
 }
@@ -83,6 +81,7 @@ area {
 }
 
 #popup {
+  font-size: 2.2rem;
   display: none;
   position: fixed;
   top: 50%;
@@ -127,9 +126,7 @@ li::marker {
   background: black;
   height: 4rem;
   font-size: 4rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
