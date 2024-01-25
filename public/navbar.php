@@ -6,7 +6,6 @@
   <link rel="icon" href="./Images/BBB.ico" />
   <meta name="description" content="BBB" />
   <title>BBB</title>
-  <meta http-equiv="refresh" content="10">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" href="./Css/navbar.css">
 </head>
