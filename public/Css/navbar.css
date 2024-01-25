@@ -133,11 +133,6 @@ a {
     flex-direction: column;
   }
   .logo {
-    font-size: 0;
-    font-weight: 700;
-    margin-left: 0px;
-    display: flex;
-    align-items: center; /* Align items vertically within .logo */
-    cursor: pointer;
+    display: none;
   }
 }/*# sourceMappingURL=navbar.css.map */
