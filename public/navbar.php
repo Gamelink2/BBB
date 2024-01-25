@@ -30,6 +30,10 @@
   var currentPageFile = currentPagePath.split('/').pop(); // get path, split by /, get last element
   $('.navlink a').removeClass('active'); // remove active class from all links
 
-  $('.navlink a[href*="' + currentPageFile + '"]').addClass('active'); // add active class to link that contains the current page
+  if (currentPageFile === "") {
+    $('.navlink a[href="./"]').addClass('active');
+  } else {
+    $('.navlink a[href*="' + currentPageFile + '"]').addClass('active');
+  }
   </script>
 </html>
