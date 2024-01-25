@@ -29,7 +29,7 @@
 <script>
   var currentPagePath = window.location.pathname;
   var currentPageFile = currentPagePath.split('/').pop(); // get path, split by /, get last element
-
+  alert(currentPageFile);
   $('.navlink a').removeClass('active'); // remove active class from all links
 
   $('.navlink a[href*="' + currentPageFile + '"]').addClass('active'); // add active class to link that contains the current page
