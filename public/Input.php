@@ -14,7 +14,9 @@ try {
     }   
     $_SESSION['voornaam'] = $VoorNaam = isset($_REQUEST['voornaam']) ? trim($_REQUEST['voornaam']) : '';
     $_SESSION['achternaam'] = $AchterNaam = isset($_REQUEST['achternaam']) ? trim($_REQUEST['achternaam']) : '';
-    $_SESSION['nummer'] = $TelefoonNummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $_SESSION['nummer'] = $Nummer = isset($_REQUEST['telNmr']) ? trim($_REQUEST['telNmr']) : '';
+    $TelefoonNummer = hash('md5', $Nummer);
+    
     $_SESSION['email'] = $FullEmail = isset($_REQUEST['femail']) ? trim($_REQUEST['femail']) : '';
 // Function to extract the part before '@' in an email address
     function extractUsername($email) {
