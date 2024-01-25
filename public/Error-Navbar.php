@@ -17,8 +17,8 @@
       <div>De Groene Weide</div>
     </a>
     <div class="navlink">
-      <a href="https://groeneweide.dkorver.com/">Home</a>
-      <a href="https://groeneweide.dkorver.com/camping">De Camping</a>
+      <!-- <a href="https://groeneweide.dkorver.com/">Home</a> -->
+      <a href="https://groeneweide.dkorver.com/">De Camping</a>
       <a href="https://groeneweide.dkorver.com/mapPage">Plattegrond</a>
       <a href="https://groeneweide.dkorver.com/Boeken">Boeken</a>    
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
