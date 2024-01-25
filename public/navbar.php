@@ -35,13 +35,4 @@
 
   $('.navlink a[href*="' + currentPageFile + '"]').addClass('active'); // add active class to link that contains the current page
   </script>
-      <script>
-        // JavaScript code to perform hard reload
-        // function hardReload() {
-        //     location.reload(true);
-        // }
-
-        // // Set an interval to call the hardReload function every 30 seconds (or your desired interval)
-        // setInterval(hardReload, 20000); // 30 seconds
-    </script>
 </html>
