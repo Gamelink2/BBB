@@ -217,11 +217,6 @@ li.selected {
   .imageContainer {
     margin-left: 0rem;
   }
-  .info {
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-  }
   li::marker {
     font-size: 2rem;
     user-select: none;
