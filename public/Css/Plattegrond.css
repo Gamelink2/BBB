@@ -35,7 +35,7 @@ html {
   .infoContainer {
     height: 25rem;
     transform: rotate(-90deg) scale(0.8) translateY(7.5rem) translateX(-15rem);
-    width: fit-content;
+    width: max-content;
   }
   .imageContainer {
     margin-left: 0rem;
