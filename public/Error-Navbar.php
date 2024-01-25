@@ -22,7 +22,7 @@
       <a href="https://groeneweide.dkorver.com/mapPage">Plattegrond</a>
       <a href="https://groeneweide.dkorver.com/Boeken">Boeken</a>    
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
-      <a href="https://groeneweide.dkorver.com/Reserveringen">Dash-board</a>
+      <a href="https://groeneweide.dkorver.com/Reserveringen">Resrveringen</a>
 
     </div>
   </div>
