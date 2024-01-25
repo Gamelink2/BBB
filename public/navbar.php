@@ -6,6 +6,7 @@
   <link rel="icon" href="./Images/BBB.ico" />
   <meta name="description" content="BBB" />
   <title>BBB</title>
+  <meta http-equiv="refresh" content="10">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <link rel="stylesheet" href="./Css/navbar.css">
 </head>
@@ -18,7 +19,7 @@
     </a>
     <div class="navlink">
       <a href="./ ">Home</a>
-      <a href="./Camping">De Camping</a>
+      <a href="./camping">De Camping</a>
       <a href="./mapPage">Plattegrond</a>
       <a href="./Boeken">Boeken</a>
      <!-- moet eigenlijk worden afgezonderd van de rest, maar voor nu is het prima -->
@@ -34,4 +35,13 @@
 
   $('.navlink a[href*="' + currentPageFile + '"]').addClass('active'); // add active class to link that contains the current page
   </script>
+      <script>
+        // JavaScript code to perform hard reload
+        function hardReload() {
+            location.reload(true);
+        }
+
+        // Set an interval to call the hardReload function every 30 seconds (or your desired interval)
+        setInterval(hardReload, 20000); // 30 seconds
+    </script>
 </html>
