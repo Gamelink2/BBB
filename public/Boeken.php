@@ -159,13 +159,11 @@ function handleSelectChange(selectElement, targetElement, exclusionId) {
     if (selectElement.value === 'Anders') {
         targetElement.style.display = 'block';
         excludedFields = excludedFields.filter(item => item !== exclusionId);
-        alert(excludedFields);
     } 
     else {
         targetElement.style.display = 'none';
         if (!excludedFields.includes(exclusionId)) {
             excludedFields.push(exclusionId);
-            alert(excludedFields);
         }
     }
     validateForm(excludedFields);
